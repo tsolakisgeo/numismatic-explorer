@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Data model for Numismatic Explorer">
+  <title>Data model · Numismatic Explorer</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">N</span><span><strong id="site-title">Numismatic Explorer</strong><small id="site-subtitle">Linked numismatic data</small></span></a>
+    <nav><a href="index.html">Browse</a><a class="active" href="ontology.html">Data model</a></nav>
+  </header>
+  <main class="prose-page">
+    <p class="eyebrow">Data architecture</p>
+    <h1>Ontology-first, interface-ready.</h1>
+    <p class="lede">The Turtle records are authoritative. The website generates a disposable JSON search index without flattening away the original URIs.</p>
+
+    <section class="prose-card">
+      <h2>Primary resource</h2>
+      <p>Every physical coin is represented as <code>nmo:NumismaticObject</code>. Identifiers, dates, measurements, authorities, mints, materials, denominations, collections, findspots, faces, legends, control marks, and type-series links are read from RDF properties.</p>
+    </section>
+
+    <section class="property-grid">
+      <article><code>nmo:hasAuthority</code><span>Issuing authority</span></article>
+      <article><code>nmo:hasMint</code><span>Place of manufacture or issue</span></article>
+      <article><code>nmo:hasMaterial</code><span>Material URI</span></article>
+      <article><code>nmo:hasDenomination</code><span>Denominational assignment</span></article>
+      <article><code>nmo:hasObverse</code><span>Obverse face resource</span></article>
+      <article><code>nmo:hasReverse</code><span>Reverse face resource</span></article>
+      <article><code>nmo:hasTypeSeriesItem</code><span>External typological attribution</span></article>
+      <article><code>nmo:hasFindspot</code><span>Findspot resource</span></article>
+    </section>
+
+    <section class="prose-card">
+      <h2>Archival evidence</h2>
+      <p>Inventory cards remain separate <code>cor:InventoryCard</code> resources connected to the physical coin. Their transcriptions, raw readings, database context, and uncertainty notes remain available in the record data, while card images are intentionally not displayed in this release.</p>
+    </section>
+
+    <section class="prose-card">
+      <h2>Photograph mapping</h2>
+      <p><code>data/coin_photos.csv</code> is a lightweight many-to-one mapping. Repeating a coin identifier creates multiple photograph-resource links. Two-column tab-separated rows are accepted, and optional columns can later provide side labels or direct image URLs.</p>
+      <pre><code>COIN 2025 109    https://metis.ascsa.edu.gr/resource/…
+COIN 2025 109    https://metis.ascsa.edu.gr/resource/…</code></pre>
+    </section>
+
+    <a id="ontology-link" class="primary-button inline-button" href="https://www.nomisma.org/ontology" target="_blank" rel="noreferrer">Open the Nomisma ontology ↗</a>
+  </main>
+  <footer><span id="footer-title">Numismatic Explorer</span><span>Source data: RDF/Turtle</span></footer>
+  <script src="assets/common.js"></script>
+</body>
+</html>

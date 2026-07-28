@@ -1,0 +1,9 @@
+{
+  "title": "Numismatic Explorer",
+  "subtitle": "A linked-data interface for numismatic records",
+  "description": "Browse physical coins described with the Nomisma ontology and connected archival evidence.",
+  "records_per_page": 24,
+  "ontology_uri": "http://nomisma.org/ontology/250402",
+  "ontology_label": "Nomisma Ontology 250402",
+  "repository_url": ""
+}

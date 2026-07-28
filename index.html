@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A linked-data interface for numismatic records.">
+  <title>Numismatic Explorer</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span><strong id="site-title">Numismatic Explorer</strong><small id="site-subtitle">Linked numismatic data</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Browse</a>
+      <a href="ontology.html">Data model</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Nomisma-oriented linked data</p>
+        <h1>Explore coins through their semantic relationships.</h1>
+        <p id="site-description">Browse physical coins described with the Nomisma ontology and connected archival evidence.</p>
+      </div>
+      <a id="ontology-link" class="ontology-pill" href="https://www.nomisma.org/ontology" target="_blank" rel="noreferrer">Nomisma ontology ↗</a>
+    </section>
+
+    <section class="search-panel" aria-label="Search controls">
+      <label class="search-box">
+        <span class="sr-only">Search records</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <input id="search-input" type="search" placeholder="Search identifier, legend, description, mint, authority…" autocomplete="off">
+      </label>
+      <button id="mobile-filter-button" class="secondary-button" type="button">Filters <span id="mobile-filter-count"></span></button>
+    </section>
+
+    <div id="active-filters" class="active-filters" aria-live="polite"></div>
+
+    <div class="browse-layout">
+      <aside id="filter-panel" class="filter-panel" aria-label="Filters">
+        <div class="filter-panel-heading">
+          <h2>Refine results</h2>
+          <button id="close-filters" class="icon-button" type="button" aria-label="Close filters">×</button>
+        </div>
+
+        <details class="filter-section" open>
+          <summary>Chronology</summary>
+          <div class="range-grid">
+            <label>From year<input id="date-min" type="number" placeholder="e.g. -400"></label>
+            <label>To year<input id="date-max" type="number" placeholder="e.g. 300"></label>
+          </div>
+          <p class="field-help">Use negative years for BCE.</p>
+        </details>
+
+        <details class="filter-section">
+          <summary>Measurements</summary>
+          <div class="range-grid">
+            <label>Weight min (g)<input id="weight-min" type="number" step="0.01"></label>
+            <label>Weight max (g)<input id="weight-max" type="number" step="0.01"></label>
+            <label>Diameter min (mm)<input id="diameter-min" type="number" step="0.1"></label>
+            <label>Diameter max (mm)<input id="diameter-max" type="number" step="0.1"></label>
+          </div>
+        </details>
+
+        <div id="facet-sections"></div>
+        <button id="clear-filters" class="text-button" type="button">Clear all filters</button>
+      </aside>
+
+      <section class="results-area" aria-labelledby="results-heading">
+        <div class="results-toolbar">
+          <div>
+            <p id="result-count" class="result-count">Loading records…</p>
+            <h2 id="results-heading" class="sr-only">Coin records</h2>
+          </div>
+          <label class="sort-control">Sort
+            <select id="sort-select">
+              <option value="identifier-asc">Identifier</option>
+              <option value="date-asc">Date, earliest first</option>
+              <option value="date-desc">Date, latest first</option>
+              <option value="weight-desc">Weight, high to low</option>
+              <option value="diameter-desc">Diameter, high to low</option>
+            </select>
+          </label>
+        </div>
+        <div id="results" class="record-grid"></div>
+        <nav id="pagination" class="pagination" aria-label="Results pages"></nav>
+      </section>
+    </div>
+  </main>
+
+  <div id="filter-backdrop" class="filter-backdrop"></div>
+  <footer><span id="footer-title">Numismatic Explorer</span><span>Source data: RDF/Turtle</span></footer>
+  <script src="assets/common.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

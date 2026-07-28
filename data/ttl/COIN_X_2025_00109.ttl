@@ -1,0 +1,9 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Minimal placeholder record. Replace or enrich this file with the full record.
+corid:coin-2025-109
+    a nmo:NumismaticObject ;
+    dcterms:identifier "2025-109" ;
+    dcterms:title "COIN 2025 109" .

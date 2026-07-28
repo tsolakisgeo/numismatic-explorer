@@ -1,0 +1,113 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-241
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-241" ;
+    dcterms:source corid:card-COIN_X_1934_00241_X_sideA ;
+    dcterms:bibliographicCitation "DOC IV¹, p. 429" ;
+    prov:wasDerivedFrom corid:metis-coin-270045473 ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "27"^^xsd:decimal ;
+    nmo:hasWeight "4.22"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-241-obverse ;
+    nmo:hasReverse corid:coin-1934-241-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:coin-1934-241-obverse
+    a nmo:Obverse ;
+    dcterms:description "Bust of Christ facing, with a nimbus containing large pellets."@en .
+
+corid:coin-1934-241-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "A above; N to left; P to right; L below" ;
+    dcterms:description "Cross with letters at the ends and wedge-shaped elements in the angles; the outer part is worn off."@en ;
+    nmo:hasControlmark corid:controlmark-wedges-in-cross-angles .
+
+corid:card-COIN_X_1934_00241_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00241_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-241 ;
+    cor:sourceImageFilename "COIN_X_1934_00241_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-241" ;
+    cor:inventoryNumber "1934-241" ;
+    cor:earlierCardNumberRaw "#206" ;
+    cor:periodRaw "Late Byzantine" ;
+    cor:authorityRaw "uncertain emperor" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "27" ;
+    cor:weightRaw "4.22 gm." ;
+    cor:physicalDescriptionRaw "huge round." ;
+    cor:obverseTypeRaw "Bust of Christ facing; nimbus with •• (large)" ;
+    cor:reverseTypeRaw "Cross with letters and wedge-shaped elements; outer part worn off." ;
+    cor:reverseLegendRaw "A above; N to left; P to right; L below, arranged around the cross as drawn" ;
+    cor:reverseControlMarksRaw "wedge-shaped elements in the angles of the cross" ;
+    cor:bibliographicCitationRaw "DOC. IV¹ p. 429" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/27/1934" ;
+    cor:excavationDate "1934-03-27"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 138 (2-11)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 138 ;
+        cor:notebookPageRaw "138" ;
+        cor:notebookEntryOrRange "2-11" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionMarkRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "NEC '03-19-(0,1) →" ;
+    cor:databaseNotebookReferenceRaw "Notebook 139, p. 138" ;
+    cor:databaseReverseLegendRaw "[ ], A, P, L" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseEarlierCardNumberRaw "Card #206" ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierCardNumberRaw" ;
+        cor:rawValue "#206" ;
+        cor:proposedValue "Card #206" ;
+        cor:reason "The first mark is faint and could resemble the digit 1, although the linked database note identifies Card #206."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "A above; N to left; P to right; L below" ;
+        cor:proposedValue "[ ], A, P, L" ;
+        cor:reason "The card drawing appears to show N at left, while the linked database leaves one letter unread."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "NEC '03-19-(0,1) →" ;
+        cor:reason "The blue archival annotation is only tentatively transcribed."
+    ] ;
+    cor:databaseContext corid:metis-coin-270045473 .
+
+corid:place-agora-se
+    a cor:ExcavationFindspot ;
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:controlmark-wedges-in-cross-angles
+    a cor:ControlMark ;
+    skos:prefLabel "Wedge-shaped elements in the angles of the cross"@en .
+
+corid:metis-coin-270045473
+    a prov:Entity ;
+    dcterms:identifier "270045473" ;
+    dcterms:description "Linked Metis coin record used as supporting database context."@en .
+
+# Human confirmation: verify the faint earlier card number, the left-hand reverse letter, and the blue annotation transcribed as “NEC '03-19-(0,1) →”.

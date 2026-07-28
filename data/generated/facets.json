@@ -1,0 +1,89 @@
+{
+  "authority": {
+    "label": "Authority",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/authority-hadrian",
+        "label": "Hadrian",
+        "count": 1
+      }
+    ]
+  },
+  "issuer": {
+    "label": "Issuer",
+    "values": []
+  },
+  "mint": {
+    "label": "Mint",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/mint-corinth",
+        "label": "Corinth",
+        "count": 2
+      }
+    ]
+  },
+  "material": {
+    "label": "Material",
+    "values": [
+      {
+        "value": "http://nomisma.org/id/ae",
+        "label": "AE",
+        "count": 3
+      }
+    ]
+  },
+  "denomination": {
+    "label": "Denomination",
+    "values": []
+  },
+  "manufacture": {
+    "label": "Manufacture",
+    "values": []
+  },
+  "object_type": {
+    "label": "Object type",
+    "values": []
+  },
+  "collection": {
+    "label": "Collection",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/study-collection",
+        "label": "Study Collection",
+        "count": 2
+      }
+    ]
+  },
+  "findspot": {
+    "label": "Findspot",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/place-agora-se",
+        "label": "Agora Southeast",
+        "count": 2
+      },
+      {
+        "value": "https://example.org/corinth/id/place-north-of-school",
+        "label": "North of School",
+        "count": 1
+      }
+    ]
+  },
+  "type_series": {
+    "label": "Type series",
+    "values": []
+  },
+  "reference_work": {
+    "label": "Reference work",
+    "values": []
+  },
+  "shape": {
+    "label": "Shape",
+    "values": []
+  },
+  "authenticity": {
+    "label": "Authenticity",
+    "values": []
+  }
+}
