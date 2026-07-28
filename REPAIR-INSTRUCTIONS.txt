@@ -1,0 +1,33 @@
+NUMISMATIC EXPLORER — REPAIR UPDATE
+
+The broken page is a mixed-version deployment: the old index.html is being used with the newer CSS/JavaScript.
+
+In the ROOT of the GitHub repository:
+
+1. Replace these files:
+   index.html
+   ontology.html
+   record.html
+
+2. Replace the entire assets folder with the assets folder in this package.
+   It must contain:
+   assets/common.js
+   assets/app.js
+   assets/record.js
+   assets/styles.css
+
+3. Replace scripts/build_data.py and data/generated/*.
+   Do NOT delete or overwrite your own:
+   data/ttl/
+   data/coin_photos.csv
+   data/site.json
+
+4. Commit the changes and wait for the GitHub Pages workflow to finish.
+
+5. Open the site with a hard refresh:
+   Windows: Ctrl+F5
+   macOS: Command+Shift+R
+
+Quick verification in GitHub:
+- Root index.html should contain: <div class="header-inner">
+- Root index.html should NOT contain: <details class="filter-section">
