@@ -9,33 +9,41 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Home">
-      <span class="brand-mark" aria-hidden="true">N</span>
-      <span><strong id="site-title">Numismatic Explorer</strong><small id="site-subtitle">Linked numismatic data</small></span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a class="active" href="index.html">Browse</a>
-      <a href="ontology.html">Data model</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Numismatic Explorer home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-copy"><strong id="site-title">Numismatic Explorer</strong><small id="site-subtitle">Linked numismatic data</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="index.html">Browse</a>
+        <a href="ontology.html">Data model</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="intro-band">
       <div>
-        <p class="eyebrow">Nomisma-oriented linked data</p>
-        <h1>Explore coins through their semantic relationships.</h1>
+        <p class="eyebrow">Ontology-first collection interface</p>
+        <h1>Explore numismatic records through linked data.</h1>
         <p id="site-description">Browse physical coins described with the Nomisma ontology and connected archival evidence.</p>
       </div>
-      <a id="ontology-link" class="ontology-pill" href="https://www.nomisma.org/ontology" target="_blank" rel="noreferrer">Nomisma ontology ↗</a>
+      <a id="ontology-link" class="ontology-link" href="https://www.nomisma.org/ontology" target="_blank" rel="noreferrer">
+        <span>Data model</span><strong>Nomisma ontology</strong><span aria-hidden="true">↗</span>
+      </a>
     </section>
 
-    <section class="search-panel" aria-label="Search controls">
+    <section class="search-toolbar" aria-label="Search and result controls">
       <label class="search-box">
-        <span class="sr-only">Search records</span>
         <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
-        <input id="search-input" type="search" placeholder="Search identifier, legend, description, mint, authority…" autocomplete="off">
+        <span class="sr-only">Search all indexed fields</span>
+        <input id="search-input" type="search" placeholder="Search identifier, authority, mint, legend, type, symbol…" autocomplete="off">
+        <kbd>Ctrl K</kbd>
       </label>
-      <button id="mobile-filter-button" class="secondary-button" type="button">Filters <span id="mobile-filter-count"></span></button>
+      <button id="mobile-filter-button" class="control-button filters-button" type="button">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>
+        Filters <span id="mobile-filter-count" class="button-count"></span>
+      </button>
     </section>
 
     <div id="active-filters" class="active-filters" aria-live="polite"></div>
@@ -43,48 +51,56 @@
     <div class="browse-layout">
       <aside id="filter-panel" class="filter-panel" aria-label="Filters">
         <div class="filter-panel-heading">
-          <h2>Refine results</h2>
+          <div><p class="eyebrow">Advanced search</p><h2>Refine results</h2></div>
           <button id="close-filters" class="icon-button" type="button" aria-label="Close filters">×</button>
         </div>
-
-        <details class="filter-section" open>
-          <summary>Chronology</summary>
-          <div class="range-grid">
-            <label>From year<input id="date-min" type="number" placeholder="e.g. -400"></label>
-            <label>To year<input id="date-max" type="number" placeholder="e.g. 300"></label>
-          </div>
-          <p class="field-help">Use negative years for BCE.</p>
-        </details>
-
-        <details class="filter-section">
-          <summary>Measurements</summary>
-          <div class="range-grid">
-            <label>Weight min (g)<input id="weight-min" type="number" step="0.01"></label>
-            <label>Weight max (g)<input id="weight-max" type="number" step="0.01"></label>
-            <label>Diameter min (mm)<input id="diameter-min" type="number" step="0.1"></label>
-            <label>Diameter max (mm)<input id="diameter-max" type="number" step="0.1"></label>
-          </div>
-        </details>
-
-        <div id="facet-sections"></div>
-        <button id="clear-filters" class="text-button" type="button">Clear all filters</button>
+        <div id="filter-groups"></div>
+        <div class="filter-actions">
+          <button id="clear-filters" class="text-button" type="button">Clear all filters</button>
+          <button id="apply-mobile-filters" class="primary-button mobile-only" type="button">Show results</button>
+        </div>
       </aside>
 
       <section class="results-area" aria-labelledby="results-heading">
         <div class="results-toolbar">
           <div>
+            <p class="eyebrow">Collection results</p>
             <p id="result-count" class="result-count">Loading records…</p>
             <h2 id="results-heading" class="sr-only">Coin records</h2>
           </div>
-          <label class="sort-control">Sort
-            <select id="sort-select">
-              <option value="identifier-asc">Identifier</option>
-              <option value="date-asc">Date, earliest first</option>
-              <option value="date-desc">Date, latest first</option>
-              <option value="weight-desc">Weight, high to low</option>
-              <option value="diameter-desc">Diameter, high to low</option>
-            </select>
-          </label>
+          <div class="results-controls">
+            <button id="export-results" class="control-button" type="button" title="Download the current result set as CSV">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+              Export
+            </button>
+            <div class="view-toggle" role="group" aria-label="Result view">
+              <button type="button" data-view="grid" class="active" aria-label="Grid view" title="Grid view">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"/></svg>
+              </button>
+              <button type="button" data-view="list" aria-label="List view" title="List view">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              </button>
+            </div>
+            <label class="select-control"><span>Sort</span>
+              <select id="sort-select">
+                <option value="identifier-asc">Identifier</option>
+                <option value="date-asc">Date, earliest first</option>
+                <option value="date-desc">Date, latest first</option>
+                <option value="weight-asc">Weight, low to high</option>
+                <option value="weight-desc">Weight, high to low</option>
+                <option value="diameter-asc">Diameter, low to high</option>
+                <option value="diameter-desc">Diameter, high to low</option>
+                <option value="modified-desc">Recently modified</option>
+              </select>
+            </label>
+            <label class="select-control compact"><span>Per page</span>
+              <select id="per-page-select">
+                <option value="24">24</option>
+                <option value="48">48</option>
+                <option value="96">96</option>
+              </select>
+            </label>
+          </div>
         </div>
         <div id="results" class="record-grid"></div>
         <nav id="pagination" class="pagination" aria-label="Results pages"></nav>
@@ -93,7 +109,7 @@
   </main>
 
   <div id="filter-backdrop" class="filter-backdrop"></div>
-  <footer><span id="footer-title">Numismatic Explorer</span><span>Source data: RDF/Turtle</span></footer>
+  <footer><span id="footer-title">Numismatic Explorer</span><span>RDF/Turtle source · Nomisma-oriented data model</span></footer>
   <script src="assets/common.js"></script>
   <script src="assets/app.js"></script>
 </body>

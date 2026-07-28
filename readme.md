@@ -1,19 +1,37 @@
 # Numismatic Explorer
 
-A neutral-titled, ontology-first static website for GitHub Pages. RDF/Turtle files are the authoritative source; a Python build script validates and converts them into compact JSON indexes for faceted browsing.
+A neutral-titled, ontology-first static website for GitHub Pages. RDF/Turtle files are the authoritative source; the Python build validates them and creates disposable JSON indexes for fast searching and faceted browsing.
 
-## What the first version does
+## What this version does
 
-- Reads every `.ttl` file in `data/ttl/`.
-- Finds resources typed `nmo:NumismaticObject`.
-- Preserves Nomisma property URIs and links them from the interface.
-- Merges the same coin when it occurs in more than one Turtle file.
-- Indexes authorities, issuers, mints, materials, denominations, manufacture, object type, collection, findspot, type-series items, reference works, shape, and authenticity.
-- Indexes dates, weights, diameters, axes, obverse and reverse descriptions, legends, control marks, bibliography, and review notes.
-- Connects a coin to any number of METIS photograph resources through `data/coin_photos.csv`.
-- Publishes as a static GitHub Pages site through GitHub Actions.
+- Reads every `.ttl` file below `data/ttl/` and finds each `nmo:NumismaticObject`.
+- Merges descriptions of the same coin when they occur in several Turtle files.
+- Preserves every URI and links controlled values back to Nomisma or the original linked resource.
+- Uses Nomisma properties for authorities, stated authorities, issuers, mints, materials, denominations, manufacture, object type, collection, contexts, type-series items, reference works, shape, authenticity, weight standard, condition, production objects, portraits, iconography, and marks.
+- Uses raw card-derived literals only as clearly marked fallback filter values when no controlled URI is present.
+- Connects each coin to any number of METIS photograph resources through `data/coin_photos.csv`.
+- Generates bookmarkable searches, responsive mobile filters, grid/list views, pagination, sorting, and CSV export.
+- Publishes through the included GitHub Pages workflow.
 
-Inventory-card images are **not displayed in this release**. Card resources and their transcribed data remain in the Turtle files and are available in a collapsed archival section on each record page.
+Inventory-card images and card transcriptions are **not displayed publicly in this version**. They remain in the Turtle source and can still contribute searchable evidence or fallback facets.
+
+## Available filters
+
+The interface combines the most useful search patterns from OCRE, Seleucid Coins Online, RPC Online, and METIS:
+
+- **Identification:** identifier/coin number, catalogue volume or number, title/name, object type, subtype, type series, and reference work.
+- **Chronology:** date from/to, date appearing on the object, and period.
+- **People and authority:** authority, stated authority, issuer, dynasty, reign/issue, person, magistrate, deity, and portrait.
+- **Geography:** mint, region, city, province, conventus, alliance, area, site, and country.
+- **Typology:** material, denomination, manufacture, shape, authenticity, and weight standard.
+- **Faces:** separate obverse/reverse legend and type/design searches.
+- **Iconography and marks:** iconography, symbol, monogram, symbol position, control mark, mint mark, and countermark.
+- **Measurements:** from/to ranges for weight, diameter, axis, height, and width.
+- **Context:** findspot, find context, immediate/local/landscape context, and collection.
+- **Condition and production:** peculiarity, secondary treatment, wear, corrosion, production object, and die.
+- **Record status:** photographs, review status, type-series attribution, measurements, face descriptions, corrected/added types, and additional specimens.
+
+A filter only shows controlled values when those values actually occur in the current data. Text and range searches remain available even when the small demonstration dataset has no matching values yet.
 
 ## Photograph mapping
 
@@ -23,23 +41,23 @@ The active mapping file is:
 data/coin_photos.csv
 ```
 
-The simplest accepted format is exactly two tab-separated columns with no header:
+The simplest accepted format is exactly two tab-separated columns without a header:
 
 ```text
 COIN 2025 109    https://metis.ascsa.edu.gr/resource/cdf99ae9186ffbc2af391d37b95abdc7
 COIN 2025 109    https://metis.ascsa.edu.gr/resource/3850451b05aae51b70f5097246410f36
 ```
 
-Repeated identifiers create multiple photograph links. The parser accepts `COIN 2025 109`, `2025-109`, `coin-2025-109`, and similar forms.
+Repeated identifiers create multiple photograph links. The parser accepts forms such as `COIN 2025 109`, `2025-109`, and `coin-2025-109`.
 
-The two-column URL is treated as a METIS **resource page**, not as a direct image file. The interface therefore displays a photograph-resource panel linking to METIS. When direct image URLs become available, an optional header-based format is already supported:
+The URL is treated as a METIS **resource page**, not as a direct image file. The interface therefore reports the number of linked METIS images and opens the resource page. Optional direct-image data is already supported later:
 
 ```csv
 coin_id,metis_url,side,image_url,label
 COIN 2025 109,https://metis.ascsa.edu.gr/resource/...,obverse,https://.../image.jpg,Obverse
 ```
 
-No side is inferred from row order. Add a `side` column later when the assignment is known.
+No side is inferred from row order.
 
 ## Add Turtle records
 
@@ -49,7 +67,7 @@ Place files anywhere beneath:
 data/ttl/
 ```
 
-A record should at minimum contain:
+A minimal record is:
 
 ```turtle
 @prefix nmo: <http://nomisma.org/ontology#> .
@@ -61,7 +79,7 @@ corid:coin-2025-109
     dcterms:identifier "2025-109" .
 ```
 
-The project currently follows the Nomisma ontology version identified in `data/site.json` (`http://nomisma.org/ontology/250402`). Change that one configuration value when intentionally moving to another version.
+The project is pinned in `data/site.json` to Nomisma ontology version `http://nomisma.org/ontology/250402`.
 
 ## Build locally
 
@@ -73,28 +91,27 @@ python scripts/build_data.py
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000`.
-
-Do not open `index.html` directly from the file system; browsers block its JSON requests. Use the small local HTTP server.
+Open `http://localhost:8000`. Do not open `index.html` directly because browsers block local JSON requests.
 
 ## Generated files
 
-The build script writes:
+The build writes:
 
 - `data/generated/coins.json`
 - `data/generated/facets.json`
+- `data/generated/schema.json`
 - `data/generated/validation-report.json`
 
-These are disposable indexes. Edit the Turtle and CSV source files, not the generated JSON.
+Edit Turtle and CSV sources, not generated JSON.
 
 ## GitHub Pages deployment
 
-1. Create a GitHub repository and copy this project into it.
-2. Push to the `main` branch.
+1. Copy the project into the repository.
+2. Push to `main`.
 3. In **Settings → Pages**, set **Source** to **GitHub Actions**.
-4. The included workflow validates the Turtle and deploys the static site.
+4. The workflow validates the Turtle, rebuilds the indexes, and deploys the site.
 
-The public title is stored only in `data/site.json`, so it can be replaced without editing the templates.
+The public title and subtitle are controlled in `data/site.json`; the title does not identify the collection informally.
 
 ## Repository structure
 
@@ -115,4 +132,4 @@ The public title is stored only in `data/site.json`, so it can be replaced witho
 
 ## Design principle
 
-The interface does not replace RDF with a private schema. Every controlled value retains its URI, and the detail page shows the underlying Nomisma properties. The JSON layer exists only to make a static GitHub Pages site fast and searchable.
+The interface does not replace RDF with a private data model. The JSON layer is only a browser index. The record page exposes the underlying Nomisma properties and the controlled values retain their original URIs.

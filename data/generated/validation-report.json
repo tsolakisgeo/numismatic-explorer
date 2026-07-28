@@ -3,5 +3,6 @@
   "records": 4,
   "photo_mappings": 2,
   "parse_errors": [],
-  "warnings": []
+  "warnings": [],
+  "ontology_version": "http://nomisma.org/ontology/250402"
 }

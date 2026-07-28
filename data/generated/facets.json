@@ -1,48 +1,35 @@
 {
+  "alliance": {
+    "label": "Alliance",
+    "values": []
+  },
+  "area": {
+    "label": "Area",
+    "values": []
+  },
+  "authenticity": {
+    "label": "Authenticity",
+    "values": []
+  },
   "authority": {
     "label": "Authority",
     "values": [
       {
         "value": "https://example.org/corinth/id/authority-hadrian",
         "label": "Hadrian",
+        "source": "rdf",
+        "count": 1
+      },
+      {
+        "value": "uncertain emperor",
+        "label": "uncertain emperor",
+        "source": "archival",
         "count": 1
       }
     ]
   },
-  "issuer": {
-    "label": "Issuer",
-    "values": []
-  },
-  "mint": {
-    "label": "Mint",
-    "values": [
-      {
-        "value": "https://example.org/corinth/id/mint-corinth",
-        "label": "Corinth",
-        "count": 2
-      }
-    ]
-  },
-  "material": {
-    "label": "Material",
-    "values": [
-      {
-        "value": "http://nomisma.org/id/ae",
-        "label": "AE",
-        "count": 3
-      }
-    ]
-  },
-  "denomination": {
-    "label": "Denomination",
-    "values": []
-  },
-  "manufacture": {
-    "label": "Manufacture",
-    "values": []
-  },
-  "object_type": {
-    "label": "Object type",
+  "city": {
+    "label": "City",
     "values": []
   },
   "collection": {
@@ -51,21 +38,227 @@
       {
         "value": "https://example.org/corinth/id/study-collection",
         "label": "Study Collection",
+        "source": "rdf",
         "count": 2
       }
     ]
+  },
+  "controlmark": {
+    "label": "Control mark",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+        "label": "Wedge-shaped elements in the angles of the cross",
+        "source": "rdf",
+        "count": 1
+      },
+      {
+        "value": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+        "label": "Δ to left; oinochoe to right",
+        "source": "rdf",
+        "count": 1
+      }
+    ]
+  },
+  "conventus": {
+    "label": "Conventus",
+    "values": []
+  },
+  "corrosion": {
+    "label": "Corrosion",
+    "values": []
+  },
+  "countermark": {
+    "label": "Countermark",
+    "values": []
+  },
+  "country": {
+    "label": "Country",
+    "values": []
+  },
+  "deity": {
+    "label": "Deity",
+    "values": []
+  },
+  "denomination": {
+    "label": "Denomination",
+    "values": []
+  },
+  "die": {
+    "label": "Die",
+    "values": []
+  },
+  "dynasty": {
+    "label": "Dynasty",
+    "values": []
+  },
+  "find_context": {
+    "label": "Find context",
+    "values": []
   },
   "findspot": {
     "label": "Findspot",
     "values": [
       {
+        "value": "Agora SE",
+        "label": "Agora SE",
+        "source": "archival",
+        "count": 2
+      },
+      {
         "value": "https://example.org/corinth/id/place-agora-se",
         "label": "Agora Southeast",
+        "source": "rdf",
         "count": 2
       },
       {
         "value": "https://example.org/corinth/id/place-north-of-school",
         "label": "North of School",
+        "source": "rdf",
+        "count": 1
+      }
+    ]
+  },
+  "iconography": {
+    "label": "Iconography",
+    "values": []
+  },
+  "immediate_context": {
+    "label": "Immediate context",
+    "values": []
+  },
+  "issuer": {
+    "label": "Issuer",
+    "values": []
+  },
+  "landscape_context": {
+    "label": "Landscape context",
+    "values": []
+  },
+  "local_context": {
+    "label": "Local context",
+    "values": []
+  },
+  "magistrate": {
+    "label": "Magistrate",
+    "values": []
+  },
+  "manufacture": {
+    "label": "Manufacture",
+    "values": []
+  },
+  "material": {
+    "label": "Material",
+    "values": [
+      {
+        "value": "http://nomisma.org/id/ae",
+        "label": "AE",
+        "source": "rdf",
+        "count": 3
+      }
+    ]
+  },
+  "mint": {
+    "label": "Mint",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/mint-corinth",
+        "label": "Corinth",
+        "source": "rdf",
+        "count": 2
+      }
+    ]
+  },
+  "mintmark": {
+    "label": "Mint mark",
+    "values": []
+  },
+  "object_type": {
+    "label": "Object type",
+    "values": []
+  },
+  "peculiarity": {
+    "label": "Peculiarity",
+    "values": []
+  },
+  "period": {
+    "label": "Period",
+    "values": [
+      {
+        "value": "BCE",
+        "label": "BCE",
+        "source": "archival",
+        "count": 1
+      },
+      {
+        "value": "Late Byzantine",
+        "label": "Late Byzantine",
+        "source": "archival",
+        "count": 1
+      }
+    ]
+  },
+  "person": {
+    "label": "Person",
+    "values": []
+  },
+  "portrait": {
+    "label": "Portrait",
+    "values": []
+  },
+  "production_object": {
+    "label": "Production object",
+    "values": []
+  },
+  "province": {
+    "label": "Province",
+    "values": []
+  },
+  "reference_work": {
+    "label": "Reference work",
+    "values": []
+  },
+  "region": {
+    "label": "Region",
+    "values": []
+  },
+  "reign": {
+    "label": "Reign / issue",
+    "values": []
+  },
+  "secondary_treatment": {
+    "label": "Secondary treatment",
+    "values": []
+  },
+  "shape": {
+    "label": "Shape",
+    "values": []
+  },
+  "site": {
+    "label": "Site",
+    "values": []
+  },
+  "stated_authority": {
+    "label": "Stated authority",
+    "values": []
+  },
+  "subtype": {
+    "label": "Subtype",
+    "values": []
+  },
+  "symbol": {
+    "label": "Symbol / monogram",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+        "label": "Wedge-shaped elements in the angles of the cross",
+        "source": "rdf",
+        "count": 1
+      },
+      {
+        "value": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+        "label": "Δ to left; oinochoe to right",
+        "source": "rdf",
         "count": 1
       }
     ]
@@ -74,16 +267,12 @@
     "label": "Type series",
     "values": []
   },
-  "reference_work": {
-    "label": "Reference work",
+  "wear": {
+    "label": "Wear",
     "values": []
   },
-  "shape": {
-    "label": "Shape",
-    "values": []
-  },
-  "authenticity": {
-    "label": "Authenticity",
+  "weight_standard": {
+    "label": "Weight standard",
     "values": []
   }
 }
