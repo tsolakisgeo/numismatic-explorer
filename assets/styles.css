@@ -45,18 +45,10 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .site-header nav a.active { color: var(--accent); border-color: var(--accent); }
 
 main { width: min(100% - 48px, 1580px); margin: 0 auto; }
-.intro-band { display: flex; align-items: end; justify-content: space-between; gap: 44px; padding: 44px 0 30px; }
-.intro-band > div { max-width: 920px; }
 .eyebrow { margin: 0 0 7px; color: var(--accent); font-size: 10px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
-.intro-band h1, .prose-page h1 { max-width: 840px; margin: 0; font-family: var(--serif); font-size: clamp(34px, 4.2vw, 59px); font-weight: 500; letter-spacing: -.025em; line-height: 1.05; }
-.intro-band p:not(.eyebrow) { max-width: 790px; margin: 14px 0 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
-.ontology-link { display: grid; grid-template-columns: 1fr auto; min-width: 230px; padding: 15px 17px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: var(--surface); text-decoration: none; box-shadow: 0 4px 18px rgba(24,43,34,.035); }
-.ontology-link span:first-child { grid-column: 1 / -1; margin-bottom: 3px; color: var(--muted); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.ontology-link strong { color: var(--accent); font-family: var(--serif); font-size: 17px; }
-.ontology-link span:last-child { align-self: center; color: var(--accent); }
-.ontology-link:hover { border-color: #aebfb7; box-shadow: var(--shadow); transform: translateY(-1px); }
+.prose-page h1 { max-width: 840px; margin: 0; font-family: var(--serif); font-size: clamp(34px, 4.2vw, 59px); font-weight: 500; letter-spacing: -.025em; line-height: 1.05; }
 
-.search-toolbar { position: sticky; top: 72px; z-index: 45; display: flex; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.96); box-shadow: var(--shadow); backdrop-filter: blur(12px); }
+.search-toolbar { position: sticky; margin-top: 22px; top: 72px; z-index: 45; display: flex; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.96); box-shadow: var(--shadow); backdrop-filter: blur(12px); }
 .search-box { display: flex; flex: 1; align-items: center; gap: 11px; min-width: 0; padding: 0 15px; border: 1px solid var(--line-strong); border-radius: 10px; color: var(--muted); background: #fbfcfb; }
 .search-box:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(15,93,77,.1); background: white; }
 .search-box input { width: 100%; min-width: 0; height: 46px; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 14px; }
@@ -168,17 +160,29 @@ main { width: min(100% - 48px, 1580px); margin: 0 auto; }
 .media-count { display: inline-flex; align-items: center; gap: 5px; color: var(--accent); font-size: 9px; font-weight: 720; }
 .media-count::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .muted-label { color: var(--muted); font-size: 9px; }
-.coin-photo-strip { display: grid; grid-template-columns: 1fr 1fr; height: 174px; border-bottom: 1px solid var(--line); background: #edf1ef; }
-.coin-photo-strip a { position: relative; display: block; overflow: hidden; }
-.coin-photo-strip a + a { border-left: 1px solid var(--line); }
-.coin-photo-strip img { width: 100%; height: 100%; object-fit: contain; background: #eef2f0; transition: transform .2s ease; }
-.coin-photo-strip a:hover img { transform: scale(1.025); }
-.coin-photo-strip span { position: absolute; right: 7px; bottom: 7px; padding: 3px 6px; border-radius: 5px; color: white; background: rgba(16,31,24,.72); font-size: 8px; }
+.coin-photo-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 174px; border-bottom: 1px solid var(--line); background: #eef2f0; }
+.coin-photo-slot { position: relative; display: flex; min-width: 0; min-height: 174px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; overflow: hidden; color: var(--ink-soft); background: #f2f5f3; text-align: center; text-decoration: none; }
+.coin-photo-slot + .coin-photo-slot { border-left: 1px solid var(--line); }
+.coin-photo-slot img { width: 100%; height: 174px; object-fit: contain; background: #eef2f0; transition: transform .2s ease; }
+.coin-photo-slot.has-image:hover img { transform: scale(1.025); }
+.photo-slot-label { position: absolute; right: 8px; bottom: 8px; padding: 4px 7px; border-radius: 6px; color: white; background: rgba(16,31,24,.76); font-size: 8px; font-weight: 750; }
+.photo-placeholder-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #cad5d0; border-radius: 50%; color: #73827b; background: rgba(255,255,255,.72); }
+.photo-placeholder-icon svg { width: 21px; height: 21px; }
+.coin-photo-slot strong { font-family: var(--serif); font-size: 15px; font-weight: 540; }
+.coin-photo-slot small { color: var(--muted); font-size: 9px; font-weight: 650; }
+.coin-photo-slot.metis-photo { color: var(--accent-dark); background: var(--accent-pale); }
+.coin-photo-slot.metis-photo .photo-placeholder-icon { border-color: #b7cec4; color: var(--accent); background: white; }
+.coin-photo-slot.metis-photo small { color: var(--accent); }
+.coin-photo-slot.metis-photo:hover { background: var(--accent-soft); }
+.coin-photo-slot.empty-photo { background: repeating-linear-gradient(135deg, #f6f8f7, #f6f8f7 9px, #f1f4f2 9px, #f1f4f2 18px); }
+.coin-photo-slot.empty-photo strong { color: #6f7d76; }
+.coin-photo-slot.empty-photo small { color: #8b9690; }
 
 .record-grid.list-view { grid-template-columns: 1fr; }
-.list-view .record-card { display: grid; grid-template-columns: minmax(0, 245px) minmax(0,1fr); }
-.list-view .record-card:not(:has(.coin-photo-strip)) { grid-template-columns: 1fr; }
-.list-view .coin-photo-strip { height: auto; min-height: 250px; border-right: 1px solid var(--line); border-bottom: 0; }
+.list-view .record-card { display: grid; grid-template-columns: minmax(0, 265px) minmax(0,1fr); }
+.list-view .coin-photo-grid { min-height: 250px; border-right: 1px solid var(--line); border-bottom: 0; }
+.list-view .coin-photo-slot { min-height: 250px; }
+.list-view .coin-photo-slot img { height: 250px; }
 .list-view .record-card-body { grid-template-columns: minmax(210px,.72fr) minmax(320px,1.28fr); align-content: start; padding: 23px; }
 .list-view .record-card-header, .list-view .record-meta, .list-view .record-context, .list-view .record-card-footer { grid-column: 1; }
 .list-view .faces-grid { grid-column: 2; grid-row: 1 / span 4; }
@@ -266,8 +270,6 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
 
 @media (max-width: 860px) {
   .header-inner, main { width: min(100% - 28px, 1580px); }
-  .intro-band { align-items: start; padding-top: 32px; }
-  .ontology-link { display: none; }
   .search-toolbar { top: 72px; }
   .filters-button { display: inline-flex; }
   .browse-layout { display: block; padding-top: 15px; }
@@ -288,9 +290,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
 @media (max-width: 620px) {
   .site-header nav a { padding: 0 10px; font-size: 11px; }
   .brand small { display: none; }
-  .intro-band { padding: 27px 0 20px; }
-  .intro-band h1, .prose-page h1 { font-size: 37px; }
-  .intro-band p:not(.eyebrow) { font-size: 13px; }
+  .prose-page h1 { font-size: 37px; }
   .search-toolbar { top: 72px; padding: 8px; }
   .search-box { padding: 0 10px; }
   .search-box input { height: 43px; font-size: 12px; }
@@ -306,7 +306,9 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
   .face-summary { min-height: auto; }
   .record-context { grid-template-columns: 1fr; }
   .record-grid.list-view .record-card { display: block; }
-  .list-view .coin-photo-strip { min-height: 180px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .list-view .coin-photo-grid { min-height: 180px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .list-view .coin-photo-slot { min-height: 180px; }
+  .list-view .coin-photo-slot img { height: 180px; }
   .record-hero { display: block; }
   .hero-actions { justify-content: start; margin-top: 19px; }
   .section-heading { display: block; }
@@ -320,7 +322,6 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
 @media (max-width: 420px) {
   .site-header nav a:last-child { display: none; }
   .brand strong { font-size: 16px; }
-  .intro-band h1 { font-size: 33px; }
   .results-controls .control-button { font-size: 0; }
   .results-controls .control-button svg { margin: 0; }
   .view-toggle { display: none; }

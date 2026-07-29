@@ -327,10 +327,40 @@
     return `<div class="face-summary"><span>${side}</span>${description ? `<p>${NX.escapeHTML(description)}</p>` : '<p class="not-recorded">Description not recorded</p>'}${legend ? `<small>${NX.escapeHTML(legend)}</small>` : ''}</div>`;
   }
 
-  function directPhotoStrip(record) {
-    const photos = (record.photos || []).filter(photo => photo.image_url).slice(0, 2);
-    if (!photos.length) return '';
-    return `<div class="coin-photo-strip">${photos.map(photo => `<a href="${NX.escapeHTML(photo.resource_url)}" target="_blank" rel="noreferrer"><img src="${NX.escapeHTML(photo.image_url)}" alt="${NX.escapeHTML(photo.label)}" loading="lazy"><span>${NX.escapeHTML(photo.label)}</span></a>`).join('')}</div>`;
+  function photoPlaceholderIcon() {
+    return `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7.5h3l1.4-2h7.2l1.4 2h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg>`;
+  }
+
+  function photoSlots(record) {
+    const photos = (record.photos || []).slice(0, 2);
+    const slots = [0, 1].map(index => {
+      const photo = photos[index];
+      const fallbackLabel = `Photograph ${index + 1}`;
+      if (!photo) {
+        return `<div class="coin-photo-slot empty-photo" aria-label="${fallbackLabel}: no photograph available">
+          <span class="photo-placeholder-icon">${photoPlaceholderIcon()}</span>
+          <strong>${fallbackLabel}</strong>
+          <small>No photograph available</small>
+        </div>`;
+      }
+
+      const label = photo.label || fallbackLabel;
+      const href = photo.resource_url || photo.image_url || '';
+      if (photo.image_url) {
+        const media = `<img src="${NX.escapeHTML(photo.image_url)}" alt="${NX.escapeHTML(label)}" loading="lazy">
+          <span class="photo-slot-label">${NX.escapeHTML(label)}</span>`;
+        return href
+          ? `<a class="coin-photo-slot has-image" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer">${media}</a>`
+          : `<div class="coin-photo-slot has-image">${media}</div>`;
+      }
+
+      return `<a class="coin-photo-slot metis-photo" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer" aria-label="Open ${NX.escapeHTML(label)} in METIS">
+        <span class="photo-placeholder-icon">${photoPlaceholderIcon()}</span>
+        <strong>${NX.escapeHTML(label)}</strong>
+        <small>Open in METIS <span aria-hidden="true">↗</span></small>
+      </a>`;
+    });
+    return `<div class="coin-photo-grid" aria-label="Coin photographs">${slots.join('')}</div>`;
   }
 
   function recordDisplayTitle(record) {
@@ -362,7 +392,7 @@
     const typeSeries = NX.firstLabel(record.facets.type_series);
     const photoCount = record.photos?.length || 0;
     return `<article class="record-card">
-      ${directPhotoStrip(record)}
+      ${photoSlots(record)}
       <div class="record-card-body">
         <header class="record-card-header">
           <div><p class="record-id">${NX.escapeHTML(record.identifier)}</p><h3><a href="record.html?id=${encodeURIComponent(record.id)}">${NX.escapeHTML(title)}</a></h3></div>
