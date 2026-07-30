@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Data model for Numismatic Explorer">
+  <title>Data model · Numismatic Explorer</title>
+  <link rel="stylesheet" href="assets/styles.css?v=2.4">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">N</span><span class="brand-copy"><strong id="site-title">Numismatic Explorer</strong><small id="site-subtitle">Linked numismatic data</small></span></a>
+      <nav><a href="index.html">Browse</a><a class="active" href="ontology.html">Data model</a></nav>
+    </div>
+  </header>
+  <main class="prose-page">
+    <p class="eyebrow">Data architecture</p>
+    <h1>Ontology-first, interface-ready.</h1>
+    <p class="lede">The Turtle records are authoritative. The website creates a disposable browser index without flattening away Nomisma classes, properties, or controlled-resource URIs.</p>
+
+    <section class="prose-card">
+      <h2>Physical objects and archival evidence</h2>
+      <p>Every physical coin is represented as <code>nmo:NumismaticObject</code>. Inventory cards remain separate <code>cor:InventoryCard</code> resources connected to the coin. Card-derived readings can support searching, but card transcriptions and card images are intentionally not displayed publicly in this version.</p>
+    </section>
+
+    <section class="property-grid">
+      <article><code>nmo:hasAuthority</code><span>Actual issuing authority</span></article>
+      <article><code>nmo:hasStatedAuthority</code><span>Authority stated on the object</span></article>
+      <article><code>nmo:hasIssuer</code><span>Administrative issuer</span></article>
+      <article><code>nmo:hasMint</code><span>Place of manufacture or issue</span></article>
+      <article><code>nmo:hasMaterial</code><span>Material URI</span></article>
+      <article><code>nmo:hasDenomination</code><span>Denominational assignment</span></article>
+      <article><code>nmo:hasManufacture</code><span>Method of manufacture</span></article>
+      <article><code>nmo:hasObjectType</code><span>Kind of numismatic object</span></article>
+      <article><code>nmo:hasObverse</code><span>Obverse face resource</span></article>
+      <article><code>nmo:hasReverse</code><span>Reverse face resource</span></article>
+      <article><code>nmo:hasIconography</code><span>Iconographic concept</span></article>
+      <article><code>nmo:hasControlmark</code><span>Control mark, symbol, or monogram</span></article>
+      <article><code>nmo:hasTypeSeriesItem</code><span>External typological attribution</span></article>
+      <article><code>nmo:hasReferenceWork</code><span>Linked reference work</span></article>
+      <article><code>nmo:hasFindspot</code><span>Location of discovery</span></article>
+      <article><code>nmo:hasFindContext</code><span>Archaeological discovery context</span></article>
+    </section>
+
+    <section class="prose-card">
+      <h2>Controlled values and fallback literals</h2>
+      <p>URI-backed Nomisma values are always preferred. Where an older or card-derived TTL record contains only a raw literal, the build may expose that literal as a clearly distinguished fallback filter value. It does not invent a Nomisma identifier or claim equivalence without evidence.</p>
+    </section>
+
+    <section class="prose-card">
+      <h2>Photograph mapping</h2>
+      <p><code>data/coin_photos.csv</code> is a lightweight many-to-one mapping. Repeating a coin identifier creates multiple METIS photograph-resource links. The two-column tab-separated format is sufficient; optional columns can later provide side labels or direct image URLs.</p>
+      <pre><code>COIN 2025 109    https://metis.ascsa.edu.gr/resource/…
+COIN 2025 109    https://metis.ascsa.edu.gr/resource/…</code></pre>
+    </section>
+
+    <section class="prose-card">
+      <h2>Static publication</h2>
+      <p>GitHub Actions parses and validates Turtle, builds <code>coins.json</code>, <code>facets.json</code>, and <code>schema.json</code>, then publishes the static interface. The generated JSON is an index only and can always be recreated from the RDF and CSV sources.</p>
+    </section>
+
+    <a id="ontology-link" class="primary-button inline-button" href="https://www.nomisma.org/ontology" target="_blank" rel="noreferrer">Open the Nomisma ontology ↗</a>
+  </main>
+  <footer><span id="footer-title">Numismatic Explorer</span><span>RDF/Turtle source · Nomisma-oriented data model</span></footer>
+  <script src="assets/common.js?v=2.4"></script>
+</body>
+</html>

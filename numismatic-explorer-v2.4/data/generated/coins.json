@@ -1,0 +1,1675 @@
+[
+  {
+    "id": "1934-228",
+    "uri": "https://example.org/corinth/id/coin-1934-228",
+    "identifier": "1934-228",
+    "title": "COIN 1934 228",
+    "modified": null,
+    "date": {
+      "start": -400,
+      "end": -146,
+      "label": "400 BCE–146 BCE"
+    },
+    "measurements": {
+      "weight": 1.85,
+      "diameter": 12.0,
+      "axis": null,
+      "height": null,
+      "width": null
+    },
+    "facets": {
+      "authority": [],
+      "stated_authority": [],
+      "issuer": [],
+      "deity": [],
+      "dynasty": [],
+      "state": [],
+      "mint": [
+        {
+          "label": "Corinth",
+          "uri": "https://example.org/corinth/id/mint-corinth",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "material": [
+        {
+          "label": "AE",
+          "uri": "http://nomisma.org/id/ae",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "denomination": [],
+      "manufacture": [],
+      "object_type": [],
+      "collection": [],
+      "findspot": [
+        {
+          "label": "Agora Southeast",
+          "uri": "https://example.org/corinth/id/place-agora-se",
+          "kind": "uri",
+          "source": "rdf"
+        },
+        {
+          "label": "Agora SE",
+          "value": "Agora SE",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "find_context": [],
+      "immediate_context": [],
+      "local_context": [],
+      "landscape_context": [],
+      "type_series": [],
+      "reference_work": [],
+      "shape": [],
+      "authenticity": [],
+      "weight_standard": [],
+      "peculiarity": [],
+      "secondary_treatment": [],
+      "wear": [],
+      "corrosion": [],
+      "production_object": [],
+      "die": [],
+      "portrait": [],
+      "iconography": [],
+      "controlmark": [
+        {
+          "label": "Δ to left; oinochoe to right",
+          "uri": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "mintmark": [],
+      "countermark": [],
+      "symbol": [
+        {
+          "label": "Δ to left; oinochoe to right",
+          "uri": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "obverse_symbol": [],
+      "reverse_symbol": [
+        {
+          "label": "Δ to left; oinochoe to right",
+          "uri": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "reverse_letter": [],
+      "officina_mark": [],
+      "exergue": [],
+      "notebook": [
+        {
+          "label": "O. Broneer",
+          "value": "O. Broneer",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "period": [
+        {
+          "label": "BCE",
+          "value": "BCE",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "region": [],
+      "reign": [],
+      "subtype": [],
+      "country": [],
+      "area": [],
+      "province": [],
+      "conventus": [],
+      "site": [],
+      "magistrate": [],
+      "city": [],
+      "alliance": [],
+      "person": []
+    },
+    "text_fields": {
+      "identifier": [
+        "1934-228"
+      ],
+      "catalogue": [],
+      "title": [
+        "COIN 1934 228"
+      ],
+      "description": [],
+      "obverse_legend": [
+        "Ϙ"
+      ],
+      "reverse_legend": [
+        "Δ"
+      ],
+      "obverse_type": [
+        "Pegasus left, with koppa beneath"
+      ],
+      "reverse_type": [
+        "Trident, with Δ to the left and an oinochoe to the right"
+      ],
+      "date_on_object": [],
+      "place": [
+        "Corinth",
+        "Agora Southeast",
+        "Agora SE"
+      ],
+      "iconography": [],
+      "symbol": [
+        "Δ to left; oinochoe to right"
+      ],
+      "symbol_position": [],
+      "bibliography": [
+        "Cor. Coins 11"
+      ],
+      "notebook_reference": [
+        "NB 139; O. Broneer p. 103 (6) (7)"
+      ],
+      "notes": [
+        "2 coins",
+        "Coin originally on different card",
+        "1934-810: to l. Σ; to r. club. Second coin: Δ; oinochoe. In Study Collection = 1934-229.",
+        "1934-229",
+        "1934-810",
+        "Edwards 11",
+        "Corinth",
+        "Δ to l.",
+        "Ϙ beneath",
+        "A",
+        "BCE",
+        "12",
+        "1934-228",
+        "Trident; Δ to l.; oinochoe to r.",
+        "Agora SE",
+        "True",
+        "Cor. Coins 11",
+        "Æ",
+        "1934-03-15",
+        "400-146",
+        "85",
+        "1.85",
+        "Pegasos l.; beneath, Ϙ",
+        "3/15/1934",
+        "PD 1934-1",
+        "13, 12"
+      ]
+    },
+    "bibliography": [
+      "Cor. Coins 11"
+    ],
+    "descriptions": [],
+    "obverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-228-obverse",
+      "legend": [
+        "Ϙ"
+      ],
+      "description": [
+        "Pegasus left, with koppa beneath"
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "reverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-228-reverse",
+      "legend": [
+        "Δ"
+      ],
+      "description": [
+        "Trident, with Δ to the left and an oinochoe to the right"
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [
+        {
+          "label": "Δ to left; oinochoe to right",
+          "uri": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "ontology": [
+      {
+        "property": "http://nomisma.org/ontology#hasDiameter",
+        "property_label": "Has Diameter",
+        "values": [
+          {
+            "label": "12",
+            "value": "12",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasEndDate",
+        "property_label": "Has End Date",
+        "values": [
+          {
+            "label": "-0146",
+            "value": "-0146",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasFindspot",
+        "property_label": "Has Findspot",
+        "values": [
+          {
+            "label": "Agora Southeast",
+            "uri": "https://example.org/corinth/id/place-agora-se",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasMaterial",
+        "property_label": "Has Material",
+        "values": [
+          {
+            "label": "AE",
+            "uri": "http://nomisma.org/id/ae",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasMint",
+        "property_label": "Has Mint",
+        "values": [
+          {
+            "label": "Corinth",
+            "uri": "https://example.org/corinth/id/mint-corinth",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasStartDate",
+        "property_label": "Has Start Date",
+        "values": [
+          {
+            "label": "-0400",
+            "value": "-0400",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasWeight",
+        "property_label": "Has Weight",
+        "values": [
+          {
+            "label": "1.85",
+            "value": "1.85",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "uri": "https://example.org/corinth/id/card-COIN_X_1934_00228_X_sideA",
+        "identifier": "COIN_X_1934_00228_X_sideA",
+        "source_filename": "COIN_X_1934_00228_X_sideA.jpg",
+        "transcription_method": "vision analysis from inventory-card image",
+        "requires_review": true,
+        "review_notes": [
+          "Confirm the faint earlier number 85, the assignment of the two diameter and reverse descriptions among coins 1934-228, 1934-810, and 1934-229, and whether Study Collection applies to 1934-228 or specifically to 1934-229."
+        ],
+        "raw_fields": [
+          {
+            "property": "https://example.org/corinth/ontology/relatedInventoryNumber",
+            "local": "relatedInventoryNumber",
+            "label": "Related Inventory Number",
+            "value": "1934-229"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/relatedInventoryNumber",
+            "local": "relatedInventoryNumber",
+            "label": "Related Inventory Number",
+            "value": "1934-810"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseBibliographicCitation",
+            "local": "databaseBibliographicCitation",
+            "label": "Database Bibliographic Citation",
+            "value": "Edwards 11"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/mintRaw",
+            "local": "mintRaw",
+            "label": "Mint  (raw)",
+            "value": "Corinth"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
+            "local": "reverseLegendRaw",
+            "label": "Reverse Legend  (raw)",
+            "value": "Δ to l."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/obverseLegendRaw",
+            "local": "obverseLegendRaw",
+            "label": "Obverse Legend  (raw)",
+            "value": "Ϙ beneath"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/cardSide",
+            "local": "cardSide",
+            "label": "Card Side",
+            "value": "A"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/dateEraNormalized",
+            "local": "dateEraNormalized",
+            "label": "Date Era Normalized",
+            "value": "BCE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
+            "local": "databaseDiameterRaw",
+            "label": "Database Diameter  (raw)",
+            "value": "12"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumber",
+            "local": "inventoryNumber",
+            "label": "Inventory Number",
+            "value": "1934-228"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
+            "local": "reverseTypeRaw",
+            "label": "Reverse Type  (raw)",
+            "value": "Trident; Δ to l.; oinochoe to r."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/findspotRaw",
+            "local": "findspotRaw",
+            "label": "Findspot  (raw)",
+            "value": "Agora SE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseStudyCollectionRaw",
+            "local": "databaseStudyCollectionRaw",
+            "label": "Database Study Collection  (raw)",
+            "value": "True"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
+            "local": "inventoryNumberRaw",
+            "label": "Inventory Number  (raw)",
+            "value": "1934-228"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/multipleObjectAnnotationRaw",
+            "local": "multipleObjectAnnotationRaw",
+            "label": "Multiple Object Annotation  (raw)",
+            "value": "2 coins"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/bibliographicReferenceRaw",
+            "local": "bibliographicReferenceRaw",
+            "label": "Bibliographic Reference  (raw)",
+            "value": "Cor. Coins 11"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/materialRaw",
+            "local": "materialRaw",
+            "label": "Material  (raw)",
+            "value": "Æ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDate",
+            "local": "excavationDate",
+            "label": "Excavation Date",
+            "value": "1934-03-15"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseNoteRaw",
+            "local": "databaseNoteRaw",
+            "label": "Database Note  (raw)",
+            "value": "Coin originally on different card"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/dateRaw",
+            "local": "dateRaw",
+            "label": "Date  (raw)",
+            "value": "400-146"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/earlierInventoryNumberRaw",
+            "local": "earlierInventoryNumberRaw",
+            "label": "Earlier Inventory Number  (raw)",
+            "value": "85"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
+            "local": "databaseWeightRaw",
+            "label": "Database Weight  (raw)",
+            "value": "1.85"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/obverseTypeRaw",
+            "local": "obverseTypeRaw",
+            "label": "Obverse Type  (raw)",
+            "value": "Pegasos l.; beneath, Ϙ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDateRaw",
+            "local": "excavationDateRaw",
+            "label": "Excavation Date  (raw)",
+            "value": "3/15/1934"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/potteryDepositReference",
+            "local": "potteryDepositReference",
+            "label": "Pottery Deposit Reference",
+            "value": "PD 1934-1"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/diameterRaw",
+            "local": "diameterRaw",
+            "label": "Diameter  (raw)",
+            "value": "13, 12"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
+            "local": "archivalAnnotationRaw",
+            "label": "Archival Annotation  (raw)",
+            "value": "1934-810: to l. Σ; to r. club. Second coin: Δ; oinochoe. In Study Collection = 1934-229."
+          }
+        ],
+        "notebooks": [
+          {
+            "name": "O. Broneer",
+            "number": "139",
+            "page": 103,
+            "raw": "NB 139; O. Broneer p. 103 (6) (7)",
+            "entries": [
+              "6",
+              "7"
+            ],
+            "method": "explicit_on_card"
+          }
+        ]
+      }
+    ],
+    "notebooks": [
+      {
+        "name": "O. Broneer",
+        "number": "139",
+        "page": 103,
+        "raw": "NB 139; O. Broneer p. 103 (6) (7)",
+        "entries": [
+          "6",
+          "7"
+        ],
+        "method": "explicit_on_card"
+      }
+    ],
+    "notebook_pages": [
+      103
+    ],
+    "photos": [],
+    "source_files": [
+      "data/ttl/COIN_X_1934_00228_X_sideA.ttl"
+    ],
+    "requires_review": true,
+    "flags": {
+      "has_photos": false,
+      "requires_review": true,
+      "has_type_series": false,
+      "has_measurements": true,
+      "has_obverse": true,
+      "has_reverse": true,
+      "added_type": false,
+      "corrected_type": false,
+      "additional_specimens": false
+    }
+  },
+  {
+    "id": "1934-241",
+    "uri": "https://example.org/corinth/id/coin-1934-241",
+    "identifier": "1934-241",
+    "title": "COIN 1934 241",
+    "modified": null,
+    "date": {
+      "start": null,
+      "end": null,
+      "label": ""
+    },
+    "measurements": {
+      "weight": 4.22,
+      "diameter": 27.0,
+      "axis": 12.0,
+      "height": null,
+      "width": null
+    },
+    "facets": {
+      "authority": [
+        {
+          "label": "uncertain emperor",
+          "value": "uncertain emperor",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "stated_authority": [],
+      "issuer": [],
+      "deity": [],
+      "dynasty": [],
+      "state": [],
+      "mint": [],
+      "material": [
+        {
+          "label": "AE",
+          "uri": "http://nomisma.org/id/ae",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "denomination": [],
+      "manufacture": [],
+      "object_type": [],
+      "collection": [
+        {
+          "label": "Study Collection",
+          "uri": "https://example.org/corinth/id/study-collection",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "findspot": [
+        {
+          "label": "Agora Southeast",
+          "uri": "https://example.org/corinth/id/place-agora-se",
+          "kind": "uri",
+          "source": "rdf"
+        },
+        {
+          "label": "Agora SE",
+          "value": "Agora SE",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "find_context": [],
+      "immediate_context": [],
+      "local_context": [],
+      "landscape_context": [],
+      "type_series": [],
+      "reference_work": [],
+      "shape": [],
+      "authenticity": [],
+      "weight_standard": [],
+      "peculiarity": [],
+      "secondary_treatment": [],
+      "wear": [],
+      "corrosion": [],
+      "production_object": [],
+      "die": [],
+      "portrait": [],
+      "iconography": [],
+      "controlmark": [
+        {
+          "label": "Wedge-shaped elements in the angles of the cross",
+          "uri": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "mintmark": [],
+      "countermark": [],
+      "symbol": [
+        {
+          "label": "Wedge-shaped elements in the angles of the cross",
+          "uri": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "obverse_symbol": [],
+      "reverse_symbol": [
+        {
+          "label": "Wedge-shaped elements in the angles of the cross",
+          "uri": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "reverse_letter": [],
+      "officina_mark": [],
+      "exergue": [],
+      "notebook": [
+        {
+          "label": "O. Broneer",
+          "value": "O. Broneer",
+          "kind": "literal",
+          "source": "archival"
+        },
+        {
+          "label": "Notebook 139",
+          "value": "Notebook 139",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "period": [
+        {
+          "label": "Late Byzantine",
+          "value": "Late Byzantine",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "region": [],
+      "reign": [],
+      "subtype": [],
+      "country": [],
+      "area": [],
+      "province": [],
+      "conventus": [],
+      "site": [],
+      "magistrate": [],
+      "city": [],
+      "alliance": [],
+      "person": []
+    },
+    "text_fields": {
+      "identifier": [
+        "1934-241"
+      ],
+      "catalogue": [],
+      "title": [
+        "COIN 1934 241"
+      ],
+      "description": [],
+      "obverse_legend": [],
+      "reverse_legend": [
+        "A above; N to left; P to right; L below"
+      ],
+      "obverse_type": [
+        "Bust of Christ facing, with a nimbus containing large pellets."
+      ],
+      "reverse_type": [
+        "Cross with letters at the ends and wedge-shaped elements in the angles; the outer part is worn off."
+      ],
+      "date_on_object": [],
+      "place": [
+        "Agora Southeast",
+        "Agora SE"
+      ],
+      "iconography": [],
+      "symbol": [
+        "Wedge-shaped elements in the angles of the cross",
+        "wedge-shaped elements in the angles of the cross"
+      ],
+      "symbol_position": [],
+      "bibliography": [
+        "DOC IV¹, p. 429"
+      ],
+      "notebook_reference": [
+        "O. Broneer p. 138 (2-11)",
+        "Notebook 139, p. 138"
+      ],
+      "notes": [
+        "Notebook 139, p. 138",
+        "NEC '03-19-(0,1) →",
+        "huge round.",
+        "12",
+        "1934-03-27",
+        "DOC. IV¹ p. 429",
+        "Coin = in Study Collection",
+        "3/27/1934",
+        "Bust of Christ facing; nimbus with •• (large)",
+        "1934-241",
+        "A above; N to left; P to right; L below, arranged around the cross as drawn",
+        "4.22 gm.",
+        "Card #206",
+        "Æ",
+        "#206",
+        "Late Byzantine",
+        "wedge-shaped elements in the angles of the cross",
+        "Cross with letters and wedge-shaped elements; outer part worn off.",
+        "uncertain emperor",
+        "27",
+        "Agora SE",
+        "[ ], A, P, L"
+      ]
+    },
+    "bibliography": [
+      "DOC IV¹, p. 429"
+    ],
+    "descriptions": [],
+    "obverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-241-obverse",
+      "legend": [],
+      "description": [
+        "Bust of Christ facing, with a nimbus containing large pellets."
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "reverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-241-reverse",
+      "legend": [
+        "A above; N to left; P to right; L below"
+      ],
+      "description": [
+        "Cross with letters at the ends and wedge-shaped elements in the angles; the outer part is worn off."
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [
+        {
+          "label": "Wedge-shaped elements in the angles of the cross",
+          "uri": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "ontology": [
+      {
+        "property": "http://nomisma.org/ontology#hasAxis",
+        "property_label": "Has Axis",
+        "values": [
+          {
+            "label": "12",
+            "value": "12",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasCollection",
+        "property_label": "Has Collection",
+        "values": [
+          {
+            "label": "Study Collection",
+            "uri": "https://example.org/corinth/id/study-collection",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasDiameter",
+        "property_label": "Has Diameter",
+        "values": [
+          {
+            "label": "27",
+            "value": "27",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasFindspot",
+        "property_label": "Has Findspot",
+        "values": [
+          {
+            "label": "Agora Southeast",
+            "uri": "https://example.org/corinth/id/place-agora-se",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasMaterial",
+        "property_label": "Has Material",
+        "values": [
+          {
+            "label": "AE",
+            "uri": "http://nomisma.org/id/ae",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasWeight",
+        "property_label": "Has Weight",
+        "values": [
+          {
+            "label": "4.22",
+            "value": "4.22",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "uri": "https://example.org/corinth/id/card-COIN_X_1934_00241_X_sideA",
+        "identifier": "COIN_X_1934_00241_X_sideA",
+        "source_filename": "COIN_X_1934_00241_X_sideA.jpg",
+        "transcription_method": "vision analysis from inventory-card image",
+        "requires_review": true,
+        "review_notes": [],
+        "raw_fields": [
+          {
+            "property": "https://example.org/corinth/ontology/databaseAxisRaw",
+            "local": "databaseAxisRaw",
+            "label": "Database Axis  (raw)",
+            "value": "12"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDate",
+            "local": "excavationDate",
+            "label": "Excavation Date",
+            "value": "1934-03-27"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/bibliographicCitationRaw",
+            "local": "bibliographicCitationRaw",
+            "label": "Bibliographic Citation  (raw)",
+            "value": "DOC. IV¹ p. 429"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/studyCollectionMarkRaw",
+            "local": "studyCollectionMarkRaw",
+            "label": "Study Collection Mark  (raw)",
+            "value": "Coin = in Study Collection"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDateRaw",
+            "local": "excavationDateRaw",
+            "label": "Excavation Date  (raw)",
+            "value": "3/27/1934"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/obverseTypeRaw",
+            "local": "obverseTypeRaw",
+            "label": "Obverse Type  (raw)",
+            "value": "Bust of Christ facing; nimbus with •• (large)"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
+            "local": "inventoryNumberRaw",
+            "label": "Inventory Number  (raw)",
+            "value": "1934-241"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
+            "local": "databaseNotebookReferenceRaw",
+            "label": "Database Notebook Reference  (raw)",
+            "value": "Notebook 139, p. 138"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
+            "local": "reverseLegendRaw",
+            "label": "Reverse Legend  (raw)",
+            "value": "A above; N to left; P to right; L below, arranged around the cross as drawn"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/weightRaw",
+            "local": "weightRaw",
+            "label": "Weight  (raw)",
+            "value": "4.22 gm."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseEarlierCardNumberRaw",
+            "local": "databaseEarlierCardNumberRaw",
+            "label": "Database Earlier Card Number  (raw)",
+            "value": "Card #206"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/materialRaw",
+            "local": "materialRaw",
+            "label": "Material  (raw)",
+            "value": "Æ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumber",
+            "local": "inventoryNumber",
+            "label": "Inventory Number",
+            "value": "1934-241"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/earlierCardNumberRaw",
+            "local": "earlierCardNumberRaw",
+            "label": "Earlier Card Number  (raw)",
+            "value": "#206"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/periodRaw",
+            "local": "periodRaw",
+            "label": "Period  (raw)",
+            "value": "Late Byzantine"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseControlMarksRaw",
+            "local": "reverseControlMarksRaw",
+            "label": "Reverse Control Marks  (raw)",
+            "value": "wedge-shaped elements in the angles of the cross"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
+            "local": "reverseTypeRaw",
+            "label": "Reverse Type  (raw)",
+            "value": "Cross with letters and wedge-shaped elements; outer part worn off."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/authorityRaw",
+            "local": "authorityRaw",
+            "label": "Authority  (raw)",
+            "value": "uncertain emperor"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
+            "local": "archivalAnnotationRaw",
+            "label": "Archival Annotation  (raw)",
+            "value": "NEC '03-19-(0,1) →"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/diameterRaw",
+            "local": "diameterRaw",
+            "label": "Diameter  (raw)",
+            "value": "27"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/physicalDescriptionRaw",
+            "local": "physicalDescriptionRaw",
+            "label": "Physical Description  (raw)",
+            "value": "huge round."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/findspotRaw",
+            "local": "findspotRaw",
+            "label": "Findspot  (raw)",
+            "value": "Agora SE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseReverseLegendRaw",
+            "local": "databaseReverseLegendRaw",
+            "label": "Database Reverse Legend  (raw)",
+            "value": "[ ], A, P, L"
+          }
+        ],
+        "notebooks": [
+          {
+            "name": "O. Broneer",
+            "number": "",
+            "page": 138,
+            "raw": "O. Broneer p. 138 (2-11)",
+            "entries": [
+              "2-11"
+            ],
+            "method": "explicit_on_card"
+          }
+        ]
+      }
+    ],
+    "notebooks": [
+      {
+        "name": "O. Broneer",
+        "number": "",
+        "page": 138,
+        "raw": "O. Broneer p. 138 (2-11)",
+        "entries": [
+          "2-11"
+        ],
+        "method": "explicit_on_card"
+      },
+      {
+        "name": "Notebook 139",
+        "page": 138,
+        "raw": "Notebook 139, p. 138",
+        "method": "parsed_from_raw_reference"
+      }
+    ],
+    "notebook_pages": [
+      138
+    ],
+    "photos": [],
+    "source_files": [
+      "data/ttl/COIN_X_1934_00241_X_sideA.ttl"
+    ],
+    "requires_review": true,
+    "flags": {
+      "has_photos": false,
+      "requires_review": true,
+      "has_type_series": false,
+      "has_measurements": true,
+      "has_obverse": true,
+      "has_reverse": true,
+      "added_type": false,
+      "corrected_type": false,
+      "additional_specimens": false
+    }
+  },
+  {
+    "id": "1934-338",
+    "uri": "https://example.org/corinth/id/coin-1934-338",
+    "identifier": "1934-338",
+    "title": "COIN 1934 338",
+    "modified": null,
+    "date": {
+      "start": 117,
+      "end": 138,
+      "label": "117 CE–138 CE"
+    },
+    "measurements": {
+      "weight": 8.45,
+      "diameter": 19.0,
+      "axis": null,
+      "height": null,
+      "width": null
+    },
+    "facets": {
+      "authority": [
+        {
+          "label": "Hadrian",
+          "uri": "https://example.org/corinth/id/authority-hadrian",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "stated_authority": [],
+      "issuer": [],
+      "deity": [],
+      "dynasty": [],
+      "state": [],
+      "mint": [
+        {
+          "label": "Corinth",
+          "uri": "https://example.org/corinth/id/mint-corinth",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "material": [
+        {
+          "label": "AE",
+          "uri": "http://nomisma.org/id/ae",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "denomination": [],
+      "manufacture": [],
+      "object_type": [],
+      "collection": [
+        {
+          "label": "Study Collection",
+          "uri": "https://example.org/corinth/id/study-collection",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "findspot": [
+        {
+          "label": "North of School",
+          "uri": "https://example.org/corinth/id/place-north-of-school",
+          "kind": "uri",
+          "source": "rdf"
+        }
+      ],
+      "find_context": [],
+      "immediate_context": [],
+      "local_context": [],
+      "landscape_context": [],
+      "type_series": [],
+      "reference_work": [],
+      "shape": [],
+      "authenticity": [],
+      "weight_standard": [],
+      "peculiarity": [],
+      "secondary_treatment": [],
+      "wear": [],
+      "corrosion": [],
+      "production_object": [],
+      "die": [],
+      "portrait": [],
+      "iconography": [],
+      "controlmark": [],
+      "mintmark": [],
+      "countermark": [],
+      "symbol": [],
+      "obverse_symbol": [],
+      "reverse_symbol": [],
+      "reverse_letter": [],
+      "officina_mark": [],
+      "exergue": [],
+      "notebook": [
+        {
+          "label": "Notebook 142",
+          "value": "Notebook 142",
+          "kind": "literal",
+          "source": "archival"
+        }
+      ],
+      "region": [],
+      "reign": [],
+      "subtype": [],
+      "country": [],
+      "area": [],
+      "province": [],
+      "conventus": [],
+      "site": [],
+      "magistrate": [],
+      "city": [],
+      "alliance": [],
+      "person": [],
+      "period": []
+    },
+    "text_fields": {
+      "identifier": [
+        "1934-338"
+      ],
+      "catalogue": [],
+      "title": [
+        "COIN 1934 338"
+      ],
+      "description": [],
+      "obverse_legend": [
+        "IMP CAES ---"
+      ],
+      "reverse_legend": [],
+      "obverse_type": [
+        "Laureate bust of Hadrian facing right."
+      ],
+      "reverse_type": [
+        "Propylaea with a central arch and two columns on each side; a facing quadriga above."
+      ],
+      "date_on_object": [],
+      "place": [
+        "Corinth",
+        "North of School"
+      ],
+      "iconography": [],
+      "symbol": [],
+      "symbol_position": [],
+      "bibliography": [
+        "NCP F-XCVII",
+        "Edwards 129"
+      ],
+      "notebook_reference": [
+        "Notebook 142 p.85, 1-2"
+      ],
+      "notes": [
+        "Notebook 142 p.85, 1-2",
+        "19",
+        "NCP F-XCVII; Edwards 129",
+        "Propylaea with central arch and two columns on each side; quadriga facing on top",
+        "Bust of Hadrian facing r.; wearing laureate",
+        "North of School",
+        "6/4/1934",
+        "91-57-1,2,3",
+        "8.45",
+        "Hadrian",
+        "117-138",
+        "1934-338",
+        "Neg. 91-57-1,2,3",
+        "IMP CAES ---",
+        "AE",
+        "Corinth"
+      ]
+    },
+    "bibliography": [
+      "NCP F-XCVII",
+      "Edwards 129"
+    ],
+    "descriptions": [],
+    "obverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-338-obverse",
+      "legend": [
+        "IMP CAES ---"
+      ],
+      "description": [
+        "Laureate bust of Hadrian facing right."
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "reverse": {
+      "uri": "https://example.org/corinth/id/coin-1934-338-reverse",
+      "legend": [],
+      "description": [
+        "Propylaea with a central arch and two columns on each side; a facing quadriga above."
+      ],
+      "iconography": [],
+      "portrait": [],
+      "controlmarks": [],
+      "mintmarks": [],
+      "countermarks": [],
+      "marks": [],
+      "date_on_object": [],
+      "positions": []
+    },
+    "ontology": [
+      {
+        "property": "http://nomisma.org/ontology#hasAuthority",
+        "property_label": "Has Authority",
+        "values": [
+          {
+            "label": "Hadrian",
+            "uri": "https://example.org/corinth/id/authority-hadrian",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasCollection",
+        "property_label": "Has Collection",
+        "values": [
+          {
+            "label": "Study Collection",
+            "uri": "https://example.org/corinth/id/study-collection",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasDiameter",
+        "property_label": "Has Diameter",
+        "values": [
+          {
+            "label": "19",
+            "value": "19",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasEndDate",
+        "property_label": "Has End Date",
+        "values": [
+          {
+            "label": "0138",
+            "value": "0138",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasFindspot",
+        "property_label": "Has Findspot",
+        "values": [
+          {
+            "label": "North of School",
+            "uri": "https://example.org/corinth/id/place-north-of-school",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasMaterial",
+        "property_label": "Has Material",
+        "values": [
+          {
+            "label": "AE",
+            "uri": "http://nomisma.org/id/ae",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasMint",
+        "property_label": "Has Mint",
+        "values": [
+          {
+            "label": "Corinth",
+            "uri": "https://example.org/corinth/id/mint-corinth",
+            "kind": "uri",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasStartDate",
+        "property_label": "Has Start Date",
+        "values": [
+          {
+            "label": "0117",
+            "value": "0117",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      },
+      {
+        "property": "http://nomisma.org/ontology#hasWeight",
+        "property_label": "Has Weight",
+        "values": [
+          {
+            "label": "8.45",
+            "value": "8.45",
+            "kind": "literal",
+            "source": "rdf"
+          }
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "uri": "https://example.org/corinth/id/card-COIN_X_1934_00338_X_sideB",
+        "identifier": "COIN_X_1934_00338_X_sideB",
+        "source_filename": "COIN_X_1934_00338_X_sideB.jpg",
+        "transcription_method": "vision analysis from inventory-card image",
+        "requires_review": false,
+        "review_notes": [],
+        "raw_fields": [
+          {
+            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
+            "local": "databaseDiameterRaw",
+            "label": "Database Diameter  (raw)",
+            "value": "19"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseBibliographicCitationRaw",
+            "local": "databaseBibliographicCitationRaw",
+            "label": "Database Bibliographic Citation  (raw)",
+            "value": "NCP F-XCVII; Edwards 129"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseReverseTypeRaw",
+            "local": "databaseReverseTypeRaw",
+            "label": "Database Reverse Type  (raw)",
+            "value": "Propylaea with central arch and two columns on each side; quadriga facing on top"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseObverseTypeRaw",
+            "local": "databaseObverseTypeRaw",
+            "label": "Database Obverse Type  (raw)",
+            "value": "Bust of Hadrian facing r.; wearing laureate"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseFindspotRaw",
+            "local": "databaseFindspotRaw",
+            "label": "Database Findspot  (raw)",
+            "value": "North of School"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseExcavationDateRaw",
+            "local": "databaseExcavationDateRaw",
+            "label": "Database Excavation Date  (raw)",
+            "value": "6/4/1934"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/negativeReference",
+            "local": "negativeReference",
+            "label": "Negative Reference",
+            "value": "91-57-1,2,3"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
+            "local": "databaseNotebookReferenceRaw",
+            "label": "Database Notebook Reference  (raw)",
+            "value": "Notebook 142 p.85, 1-2"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
+            "local": "databaseWeightRaw",
+            "label": "Database Weight  (raw)",
+            "value": "8.45"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseAuthorityRaw",
+            "local": "databaseAuthorityRaw",
+            "label": "Database Authority  (raw)",
+            "value": "Hadrian"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseDateRaw",
+            "local": "databaseDateRaw",
+            "label": "Database Date  (raw)",
+            "value": "117-138"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumber",
+            "local": "inventoryNumber",
+            "label": "Inventory Number",
+            "value": "1934-338"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/negativeReferenceRaw",
+            "local": "negativeReferenceRaw",
+            "label": "Negative Reference  (raw)",
+            "value": "Neg. 91-57-1,2,3"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseObverseLegendRaw",
+            "local": "databaseObverseLegendRaw",
+            "label": "Database Obverse Legend  (raw)",
+            "value": "IMP CAES ---"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseMaterialRaw",
+            "local": "databaseMaterialRaw",
+            "label": "Database Material  (raw)",
+            "value": "AE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseMintRaw",
+            "local": "databaseMintRaw",
+            "label": "Database Mint  (raw)",
+            "value": "Corinth"
+          }
+        ],
+        "notebooks": []
+      }
+    ],
+    "notebooks": [
+      {
+        "name": "Notebook 142",
+        "page": 85,
+        "raw": "Notebook 142 p.85, 1-2",
+        "method": "parsed_from_raw_reference"
+      }
+    ],
+    "notebook_pages": [
+      85
+    ],
+    "photos": [],
+    "source_files": [
+      "data/ttl/COIN_X_1934_00338_X_sideB.ttl"
+    ],
+    "requires_review": false,
+    "flags": {
+      "has_photos": false,
+      "requires_review": false,
+      "has_type_series": false,
+      "has_measurements": true,
+      "has_obverse": true,
+      "has_reverse": true,
+      "added_type": false,
+      "corrected_type": false,
+      "additional_specimens": false
+    }
+  },
+  {
+    "id": "2025-109",
+    "uri": "https://example.org/corinth/id/coin-2025-109",
+    "identifier": "2025-109",
+    "title": "COIN 2025 109",
+    "modified": null,
+    "date": {
+      "start": null,
+      "end": null,
+      "label": ""
+    },
+    "measurements": {
+      "weight": null,
+      "diameter": null,
+      "axis": null,
+      "height": null,
+      "width": null
+    },
+    "facets": {
+      "authority": [],
+      "stated_authority": [],
+      "issuer": [],
+      "deity": [],
+      "dynasty": [],
+      "state": [],
+      "mint": [],
+      "material": [],
+      "denomination": [],
+      "manufacture": [],
+      "object_type": [],
+      "collection": [],
+      "findspot": [],
+      "find_context": [],
+      "immediate_context": [],
+      "local_context": [],
+      "landscape_context": [],
+      "type_series": [],
+      "reference_work": [],
+      "shape": [],
+      "authenticity": [],
+      "weight_standard": [],
+      "peculiarity": [],
+      "secondary_treatment": [],
+      "wear": [],
+      "corrosion": [],
+      "production_object": [],
+      "die": [],
+      "portrait": [],
+      "iconography": [],
+      "controlmark": [],
+      "mintmark": [],
+      "countermark": [],
+      "symbol": [],
+      "obverse_symbol": [],
+      "reverse_symbol": [],
+      "reverse_letter": [],
+      "officina_mark": [],
+      "exergue": [],
+      "notebook": [],
+      "region": [],
+      "reign": [],
+      "subtype": [],
+      "country": [],
+      "area": [],
+      "province": [],
+      "conventus": [],
+      "site": [],
+      "magistrate": [],
+      "city": [],
+      "alliance": [],
+      "person": [],
+      "period": []
+    },
+    "text_fields": {
+      "identifier": [
+        "2025-109"
+      ],
+      "catalogue": [],
+      "title": [
+        "COIN 2025 109"
+      ],
+      "description": [],
+      "obverse_legend": [],
+      "reverse_legend": [],
+      "obverse_type": [],
+      "reverse_type": [],
+      "date_on_object": [],
+      "place": [],
+      "iconography": [],
+      "symbol": [],
+      "symbol_position": [],
+      "bibliography": [],
+      "notebook_reference": [],
+      "notes": []
+    },
+    "bibliography": [],
+    "descriptions": [],
+    "obverse": null,
+    "reverse": null,
+    "ontology": [],
+    "cards": [],
+    "notebooks": [],
+    "notebook_pages": [],
+    "photos": [
+      {
+        "sequence": 1,
+        "label": "Photograph 1",
+        "side": "",
+        "display_side": "obverse",
+        "side_inferred": true,
+        "resource_url": "https://metis.ascsa.edu.gr/resource/cdf99ae9186ffbc2af391d37b95abdc7",
+        "image_url": ""
+      },
+      {
+        "sequence": 2,
+        "label": "Photograph 2",
+        "side": "",
+        "display_side": "reverse",
+        "side_inferred": true,
+        "resource_url": "https://metis.ascsa.edu.gr/resource/3850451b05aae51b70f5097246410f36",
+        "image_url": ""
+      }
+    ],
+    "source_files": [
+      "data/ttl/COIN_X_2025_00109.ttl"
+    ],
+    "requires_review": false,
+    "flags": {
+      "has_photos": true,
+      "requires_review": false,
+      "has_type_series": false,
+      "has_measurements": false,
+      "has_obverse": false,
+      "has_reverse": false,
+      "added_type": false,
+      "corrected_type": false,
+      "additional_specimens": false
+    }
+  }
+]

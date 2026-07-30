@@ -1,0 +1,116 @@
+{
+  "facet_labels": {
+    "authority": "Authority",
+    "stated_authority": "Stated authority",
+    "issuer": "Issuer",
+    "dynasty": "Dynasty",
+    "reign": "Reign / issue",
+    "person": "Person",
+    "magistrate": "Magistrate",
+    "deity": "Deity",
+    "portrait": "Portrait",
+    "state": "State",
+    "mint": "Mint",
+    "region": "Region",
+    "city": "City",
+    "province": "Province",
+    "conventus": "Conventus",
+    "alliance": "Alliance",
+    "site": "Site",
+    "country": "Country",
+    "area": "Area",
+    "material": "Material",
+    "denomination": "Denomination",
+    "manufacture": "Manufacture",
+    "object_type": "Object type",
+    "subtype": "Subtype",
+    "period": "Period",
+    "shape": "Shape",
+    "authenticity": "Authenticity",
+    "weight_standard": "Weight standard",
+    "collection": "Collection",
+    "findspot": "Findspot",
+    "find_context": "Find context",
+    "immediate_context": "Immediate context",
+    "local_context": "Local context",
+    "landscape_context": "Landscape context",
+    "type_series": "Type series",
+    "reference_work": "Reference work",
+    "iconography": "Iconography",
+    "symbol": "Symbol / monogram",
+    "controlmark": "Control mark",
+    "mintmark": "Mint mark",
+    "countermark": "Countermark",
+    "obverse_symbol": "Obverse symbol — any position",
+    "reverse_symbol": "Reverse symbol — any position",
+    "reverse_letter": "Reverse letter",
+    "officina_mark": "Officina mark",
+    "exergue": "Exergue",
+    "notebook": "Notebook",
+    "peculiarity": "Peculiarity",
+    "secondary_treatment": "Secondary treatment",
+    "wear": "Wear",
+    "corrosion": "Corrosion",
+    "production_object": "Production object",
+    "die": "Die"
+  },
+  "text_field_labels": {
+    "identifier": "Identifier / coin number",
+    "catalogue": "Catalogue volume or number",
+    "title": "Title / name",
+    "description": "General description",
+    "obverse_legend": "Obverse legend",
+    "reverse_legend": "Reverse legend",
+    "obverse_type": "Obverse type / design",
+    "reverse_type": "Reverse type / design",
+    "date_on_object": "Date on object",
+    "place": "Place search",
+    "iconography": "Iconography",
+    "symbol": "Symbol / monogram / mark",
+    "symbol_position": "Symbol position",
+    "bibliography": "Reference / bibliography",
+    "notebook_reference": "Notebook reference",
+    "notes": "Notes / archival transcription"
+  },
+  "numeric_extents": {
+    "weight": {
+      "min": 1.85,
+      "max": 8.45
+    },
+    "diameter": {
+      "min": 12.0,
+      "max": 27.0
+    },
+    "axis": {
+      "min": 12.0,
+      "max": 12.0
+    },
+    "height": {
+      "min": null,
+      "max": null
+    },
+    "width": {
+      "min": null,
+      "max": null
+    },
+    "date": {
+      "min": -400,
+      "max": 138
+    },
+    "notebook_page": {
+      "min": 85,
+      "max": 138
+    }
+  },
+  "flag_labels": {
+    "has_photos": "Has photograph links",
+    "requires_review": "Requires human review",
+    "has_type_series": "Has type-series attribution",
+    "has_measurements": "Has measurements",
+    "has_obverse": "Has obverse description",
+    "has_reverse": "Has reverse description",
+    "added_type": "Additional coin type",
+    "corrected_type": "Corrected coin type",
+    "additional_specimens": "Additional specimens"
+  }
+}

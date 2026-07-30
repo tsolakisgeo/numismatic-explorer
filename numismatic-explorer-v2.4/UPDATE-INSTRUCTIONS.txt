@@ -1,0 +1,38 @@
+NUMISMATIC EXPLORER — v2.4 UPDATE
+
+This update changes the result-card layout, adds the complete supplied
+Numismatics.org/OCRE search model, adds excavation-notebook filters, and
+changes the site to a professional blue palette.
+
+IN THE ROOT OF YOUR GITHUB REPOSITORY
+
+1. Replace these files:
+   index.html
+   record.html
+   ontology.html
+   README.md
+
+2. Replace the entire assets folder:
+   assets/app.js
+   assets/common.js
+   assets/record.js
+   assets/styles.css
+
+3. Replace:
+   scripts/build_data.py
+
+4. DO NOT overwrite or delete your own:
+   data/ttl/
+   data/coin_photos.csv
+   data/site.json
+
+5. Commit the changes. The GitHub Pages Action will rebuild data/generated/
+   automatically from your current Turtle files and CSV.
+
+6. After the deployment finishes, use Ctrl+F5 on Windows or
+   Command+Shift+R on macOS.
+
+PHOTO ORDER
+With the simple two-column coin_photos.csv, the first two rows for a coin are
+placed in the obverse and reverse display panels. This is only a display
+convention. Add a side column with obverse/reverse when the assignment is known.
