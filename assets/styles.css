@@ -132,25 +132,24 @@ main { width: min(100% - 48px, 1580px); margin: 0 auto; }
 .select-control.compact select { min-width: 84px; }
 
 .record-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(520px, 100%), 1fr)); gap: 20px; }
-.record-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 3px 12px rgba(35,55,82,.045); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
-.record-card:hover { border-color: #b4c3d7; box-shadow: var(--shadow); transform: translateY(-2px); }
-.record-card-body { display: grid; gap: 15px; padding: 21px; }
-.record-card-header { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
-.record-card-header > div { min-width: 0; }
-.record-id { margin: 0 0 5px; color: var(--accent-dark); font-size: 10px; font-weight: 850; letter-spacing: .065em; text-transform: uppercase; }
-.record-card h3 { margin: 0; font-family: var(--serif); font-size: 27px; font-weight: 520; line-height: 1.08; }
-.record-card h3 a { text-decoration: none; }
-.record-card h3 a:hover { color: var(--accent-dark); }
+.record-card { position: relative; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 3px 12px rgba(35,55,82,.045); cursor: pointer; transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+.record-card:hover { border-color: #a9bad1; box-shadow: var(--shadow); transform: translateY(-2px); }
+.record-card-target { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.record-card-target:focus-visible { outline: 3px solid rgba(95,127,175,.3); outline-offset: -3px; }
+.record-card-body { position: relative; display: grid; gap: 15px; padding: 21px; }
+.record-card-header { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: start; gap: 14px 22px; }
+.record-heading { min-width: 0; }
+.record-card h3 { min-width: 0; margin: 0; font-family: var(--serif); font-size: 27px; font-weight: 520; line-height: 1.14; }
 .review-badge { flex: none; padding: 5px 8px; border-radius: 10px; color: var(--warning); background: var(--warning-soft); font-size: 8px; font-weight: 850; letter-spacing: .055em; text-transform: uppercase; }
 .review-badge.large { padding: 7px 10px; font-size: 10px; }
-.record-meta { display: flex; flex-wrap: wrap; gap: 6px; }
-.record-meta span { padding: 5px 8px; border-radius: 6px; color: #40516a; background: #f0f3f8; font-size: 9px; font-weight: 720; }
+.record-meta { display: flex; max-width: 315px; align-items: flex-start; justify-content: flex-end; flex-wrap: wrap; gap: 6px; }
+.record-meta span { padding: 5px 8px; border: 1px solid #dfe6f0; border-radius: 999px; color: #40516a; background: #f4f6fa; font-size: 9px; font-weight: 720; white-space: nowrap; }
 .coin-sides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
 .coin-side-panel { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fbfcfe; }
 .coin-side-panel > header { padding: 10px 12px 8px; border-bottom: 1px solid #e6ebf2; background: #f6f8fb; }
 .coin-side-panel > header span { color: var(--accent-dark); font-size: 8px; font-weight: 880; letter-spacing: .1em; text-transform: uppercase; }
 .coin-side-content { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 12px; align-items: stretch; padding: 12px; }
-.face-media { position: relative; display: flex; min-width: 0; min-height: 112px; align-items: center; justify-content: center; flex-direction: column; gap: 7px; overflow: hidden; border: 1px solid #d7e0ec; border-radius: 10px; color: var(--accent-dark); background: #f2f5f9; text-align: center; text-decoration: none; }
+.face-media { position: relative; z-index: 2; display: flex; min-width: 0; min-height: 112px; align-items: center; justify-content: center; flex-direction: column; gap: 7px; overflow: hidden; border: 1px solid #d7e0ec; border-radius: 10px; color: var(--accent-dark); background: #f2f5f9; text-align: center; text-decoration: none; }
 .face-media img { width: 100%; height: 112px; object-fit: contain; background: #edf2f7; transition: transform .2s ease; }
 .face-media.has-image:hover img { transform: scale(1.03); }
 .face-media.metis-photo { background: var(--accent-pale); }
@@ -166,18 +165,20 @@ main { width: min(100% - 48px, 1580px); margin: 0 auto; }
 .side-legend small { display: block; margin-bottom: 4px; color: var(--muted); font-size: 7px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .side-legend strong { display: -webkit-box; overflow: hidden; color: var(--ink-soft); font-size: 10px; font-weight: 700; line-height: 1.35; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .side-legend.empty span { color: #929daa; font-size: 9px; font-style: italic; }
-.record-context { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px 18px; min-height: 32px; }
-.record-context span { min-width: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.4; }
-.record-context small { display: block; margin-bottom: 2px; color: var(--muted); font-size: 8px; font-weight: 820; letter-spacing: .055em; text-transform: uppercase; }
-.record-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-top: 13px; border-top: 1px solid #e7ecf2; }
-.record-link { color: var(--accent-dark); text-decoration: none; font-size: 10px; font-weight: 830; white-space: nowrap; }
+.record-context { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)) auto; align-items: end; gap: 12px 20px; padding-top: 12px; border-top: 1px solid #e7ecf2; }
+.record-context > span { min-width: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.4; }
+.record-context small { display: block; margin-bottom: 3px; color: var(--muted); font-size: 8px; font-weight: 820; letter-spacing: .055em; text-transform: uppercase; }
+.record-context b { display: block; min-height: 1.4em; overflow: hidden; font-weight: 500; text-overflow: ellipsis; white-space: nowrap; }
+.record-link { position: relative; z-index: 3; align-self: end; justify-self: end; padding: 4px 0; color: var(--accent-dark); text-decoration: none; font-size: 10px; font-weight: 830; white-space: nowrap; }
 .record-link:hover { text-decoration: underline; }
 .media-count { display: inline-flex; align-items: center; gap: 5px; color: var(--accent-dark); font-size: 9px; font-weight: 730; }
 .media-count::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .muted-label { color: var(--muted); font-size: 9px; }
 .record-grid.list-view { grid-template-columns: 1fr; }
 .list-view .record-card-body { grid-template-columns: minmax(220px,.56fr) minmax(0,1.44fr); align-content: start; padding: 24px; }
-.list-view .record-card-header, .list-view .record-meta, .list-view .record-context, .list-view .record-card-footer { grid-column: 1; }
+.list-view .record-card-header, .list-view .record-context { grid-column: 1; }
+.list-view .record-context { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.list-view .record-context .record-link { justify-self: start; }
 .list-view .coin-sides-grid { grid-column: 2; grid-row: 1 / span 4; }
 .list-view .coin-side-content { grid-template-columns: 145px minmax(0,1fr); }
 .list-view .face-media, .list-view .face-media img { min-height: 145px; height: 145px; }
@@ -295,11 +296,14 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
   .select-control select { min-width: 150px; }
   .select-control.compact { display: none; }
   .record-card-body { padding: 16px; }
+  .record-card-header { grid-template-columns: 1fr; gap: 10px; }
+  .record-meta { max-width: none; justify-content: flex-start; }
   .record-card h3 { font-size: 23px; }
   .coin-sides-grid { grid-template-columns: 1fr; }
   .coin-side-content, .list-view .coin-side-content { grid-template-columns: 104px minmax(0,1fr); }
   .face-media, .face-media img, .list-view .face-media, .list-view .face-media img { min-height: 104px; height: 104px; }
-  .record-context { grid-template-columns: 1fr; }
+  .record-context { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .record-context .record-link { justify-self: start; }
   .record-grid.list-view .record-card { display: block; }
   .record-hero { display: block; }
   .hero-actions { justify-content: start; margin-top: 19px; }
@@ -317,7 +321,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
   .results-controls .control-button { font-size: 0; }
   .results-controls .control-button svg { margin: 0; }
   .view-toggle { display: none; }
-  .record-card-footer { align-items: start; }
+  .record-context { grid-template-columns: 1fr; }
   .record-hero h1 { font-size: 43px; }
   .ontology-table th, .ontology-table td { padding: 12px; }
 }

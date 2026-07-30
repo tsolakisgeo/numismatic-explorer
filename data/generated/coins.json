@@ -122,17 +122,17 @@
         }
       ],
       "region": [],
-      "reign": [],
+      "magistrate": [],
       "subtype": [],
       "country": [],
-      "area": [],
-      "province": [],
-      "conventus": [],
-      "site": [],
-      "magistrate": [],
       "city": [],
+      "reign": [],
       "alliance": [],
-      "person": []
+      "person": [],
+      "conventus": [],
+      "province": [],
+      "site": [],
+      "area": []
     },
     "text_fields": {
       "identifier": [
@@ -173,32 +173,32 @@
         "NB 139; O. Broneer p. 103 (6) (7)"
       ],
       "notes": [
-        "2 coins",
-        "Coin originally on different card",
         "1934-810: to l. Σ; to r. club. Second coin: Δ; oinochoe. In Study Collection = 1934-229.",
+        "Coin originally on different card",
+        "2 coins",
+        "1934-03-15",
+        "Trident; Δ to l.; oinochoe to r.",
+        "A",
+        "Cor. Coins 11",
+        "Corinth",
+        "85",
+        "BCE",
+        "3/15/1934",
+        "1.85",
         "1934-229",
         "1934-810",
-        "Edwards 11",
-        "Corinth",
-        "Δ to l.",
-        "Ϙ beneath",
-        "A",
-        "BCE",
-        "12",
-        "1934-228",
-        "Trident; Δ to l.; oinochoe to r.",
-        "Agora SE",
         "True",
-        "Cor. Coins 11",
+        "1934-228",
+        "Ϙ beneath",
+        "13, 12",
         "Æ",
-        "1934-03-15",
-        "400-146",
-        "85",
-        "1.85",
-        "Pegasos l.; beneath, Ϙ",
-        "3/15/1934",
         "PD 1934-1",
-        "13, 12"
+        "Edwards 11",
+        "12",
+        "Δ to l.",
+        "Agora SE",
+        "Pegasos l.; beneath, Ϙ",
+        "400-146"
       ]
     },
     "bibliography": [
@@ -344,6 +344,66 @@
         ],
         "raw_fields": [
           {
+            "property": "https://example.org/corinth/ontology/excavationDate",
+            "local": "excavationDate",
+            "label": "Excavation Date",
+            "value": "1934-03-15"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
+            "local": "reverseTypeRaw",
+            "label": "Reverse Type  (raw)",
+            "value": "Trident; Δ to l.; oinochoe to r."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/cardSide",
+            "local": "cardSide",
+            "label": "Card Side",
+            "value": "A"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/bibliographicReferenceRaw",
+            "local": "bibliographicReferenceRaw",
+            "label": "Bibliographic Reference  (raw)",
+            "value": "Cor. Coins 11"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/mintRaw",
+            "local": "mintRaw",
+            "label": "Mint  (raw)",
+            "value": "Corinth"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/earlierInventoryNumberRaw",
+            "local": "earlierInventoryNumberRaw",
+            "label": "Earlier Inventory Number  (raw)",
+            "value": "85"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/dateEraNormalized",
+            "local": "dateEraNormalized",
+            "label": "Date Era Normalized",
+            "value": "BCE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
+            "local": "archivalAnnotationRaw",
+            "label": "Archival Annotation  (raw)",
+            "value": "1934-810: to l. Σ; to r. club. Second coin: Δ; oinochoe. In Study Collection = 1934-229."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDateRaw",
+            "local": "excavationDateRaw",
+            "label": "Excavation Date  (raw)",
+            "value": "3/15/1934"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
+            "local": "databaseWeightRaw",
+            "label": "Database Weight  (raw)",
+            "value": "1.85"
+          },
+          {
             "property": "https://example.org/corinth/ontology/relatedInventoryNumber",
             "local": "relatedInventoryNumber",
             "label": "Related Inventory Number",
@@ -356,46 +416,10 @@
             "value": "1934-810"
           },
           {
-            "property": "https://example.org/corinth/ontology/databaseBibliographicCitation",
-            "local": "databaseBibliographicCitation",
-            "label": "Database Bibliographic Citation",
-            "value": "Edwards 11"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/mintRaw",
-            "local": "mintRaw",
-            "label": "Mint  (raw)",
-            "value": "Corinth"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
-            "local": "reverseLegendRaw",
-            "label": "Reverse Legend  (raw)",
-            "value": "Δ to l."
-          },
-          {
-            "property": "https://example.org/corinth/ontology/obverseLegendRaw",
-            "local": "obverseLegendRaw",
-            "label": "Obverse Legend  (raw)",
-            "value": "Ϙ beneath"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/cardSide",
-            "local": "cardSide",
-            "label": "Card Side",
-            "value": "A"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/dateEraNormalized",
-            "local": "dateEraNormalized",
-            "label": "Date Era Normalized",
-            "value": "BCE"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
-            "local": "databaseDiameterRaw",
-            "label": "Database Diameter  (raw)",
-            "value": "12"
+            "property": "https://example.org/corinth/ontology/databaseStudyCollectionRaw",
+            "local": "databaseStudyCollectionRaw",
+            "label": "Database Study Collection  (raw)",
+            "value": "True"
           },
           {
             "property": "https://example.org/corinth/ontology/inventoryNumber",
@@ -404,94 +428,16 @@
             "value": "1934-228"
           },
           {
-            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
-            "local": "reverseTypeRaw",
-            "label": "Reverse Type  (raw)",
-            "value": "Trident; Δ to l.; oinochoe to r."
-          },
-          {
-            "property": "https://example.org/corinth/ontology/findspotRaw",
-            "local": "findspotRaw",
-            "label": "Findspot  (raw)",
-            "value": "Agora SE"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseStudyCollectionRaw",
-            "local": "databaseStudyCollectionRaw",
-            "label": "Database Study Collection  (raw)",
-            "value": "True"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
-            "local": "inventoryNumberRaw",
-            "label": "Inventory Number  (raw)",
-            "value": "1934-228"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/multipleObjectAnnotationRaw",
-            "local": "multipleObjectAnnotationRaw",
-            "label": "Multiple Object Annotation  (raw)",
-            "value": "2 coins"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/bibliographicReferenceRaw",
-            "local": "bibliographicReferenceRaw",
-            "label": "Bibliographic Reference  (raw)",
-            "value": "Cor. Coins 11"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/materialRaw",
-            "local": "materialRaw",
-            "label": "Material  (raw)",
-            "value": "Æ"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/excavationDate",
-            "local": "excavationDate",
-            "label": "Excavation Date",
-            "value": "1934-03-15"
-          },
-          {
             "property": "https://example.org/corinth/ontology/databaseNoteRaw",
             "local": "databaseNoteRaw",
             "label": "Database Note  (raw)",
             "value": "Coin originally on different card"
           },
           {
-            "property": "https://example.org/corinth/ontology/dateRaw",
-            "local": "dateRaw",
-            "label": "Date  (raw)",
-            "value": "400-146"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/earlierInventoryNumberRaw",
-            "local": "earlierInventoryNumberRaw",
-            "label": "Earlier Inventory Number  (raw)",
-            "value": "85"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
-            "local": "databaseWeightRaw",
-            "label": "Database Weight  (raw)",
-            "value": "1.85"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/obverseTypeRaw",
-            "local": "obverseTypeRaw",
-            "label": "Obverse Type  (raw)",
-            "value": "Pegasos l.; beneath, Ϙ"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/excavationDateRaw",
-            "local": "excavationDateRaw",
-            "label": "Excavation Date  (raw)",
-            "value": "3/15/1934"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/potteryDepositReference",
-            "local": "potteryDepositReference",
-            "label": "Pottery Deposit Reference",
-            "value": "PD 1934-1"
+            "property": "https://example.org/corinth/ontology/obverseLegendRaw",
+            "local": "obverseLegendRaw",
+            "label": "Obverse Legend  (raw)",
+            "value": "Ϙ beneath"
           },
           {
             "property": "https://example.org/corinth/ontology/diameterRaw",
@@ -500,10 +446,64 @@
             "value": "13, 12"
           },
           {
-            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
-            "local": "archivalAnnotationRaw",
-            "label": "Archival Annotation  (raw)",
-            "value": "1934-810: to l. Σ; to r. club. Second coin: Δ; oinochoe. In Study Collection = 1934-229."
+            "property": "https://example.org/corinth/ontology/materialRaw",
+            "local": "materialRaw",
+            "label": "Material  (raw)",
+            "value": "Æ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/potteryDepositReference",
+            "local": "potteryDepositReference",
+            "label": "Pottery Deposit Reference",
+            "value": "PD 1934-1"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseBibliographicCitation",
+            "local": "databaseBibliographicCitation",
+            "label": "Database Bibliographic Citation",
+            "value": "Edwards 11"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
+            "local": "databaseDiameterRaw",
+            "label": "Database Diameter  (raw)",
+            "value": "12"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
+            "local": "reverseLegendRaw",
+            "label": "Reverse Legend  (raw)",
+            "value": "Δ to l."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/multipleObjectAnnotationRaw",
+            "local": "multipleObjectAnnotationRaw",
+            "label": "Multiple Object Annotation  (raw)",
+            "value": "2 coins"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/findspotRaw",
+            "local": "findspotRaw",
+            "label": "Findspot  (raw)",
+            "value": "Agora SE"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/obverseTypeRaw",
+            "local": "obverseTypeRaw",
+            "label": "Obverse Type  (raw)",
+            "value": "Pegasos l.; beneath, Ϙ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/dateRaw",
+            "local": "dateRaw",
+            "label": "Date  (raw)",
+            "value": "400-146"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
+            "local": "inventoryNumberRaw",
+            "label": "Inventory Number  (raw)",
+            "value": "1934-228"
           }
         ],
         "notebooks": [
@@ -513,8 +513,8 @@
             "page": 103,
             "raw": "NB 139; O. Broneer p. 103 (6) (7)",
             "entries": [
-              "6",
-              "7"
+              "7",
+              "6"
             ],
             "method": "explicit_on_card"
           }
@@ -528,8 +528,8 @@
         "page": 103,
         "raw": "NB 139; O. Broneer p. 103 (6) (7)",
         "entries": [
-          "6",
-          "7"
+          "7",
+          "6"
         ],
         "method": "explicit_on_card"
       }
@@ -690,17 +690,17 @@
         }
       ],
       "region": [],
-      "reign": [],
+      "magistrate": [],
       "subtype": [],
       "country": [],
-      "area": [],
-      "province": [],
-      "conventus": [],
-      "site": [],
-      "magistrate": [],
       "city": [],
+      "reign": [],
       "alliance": [],
-      "person": []
+      "person": [],
+      "conventus": [],
+      "province": [],
+      "site": [],
+      "area": []
     },
     "text_fields": {
       "identifier": [
@@ -741,27 +741,27 @@
       ],
       "notes": [
         "Notebook 139, p. 138",
-        "NEC '03-19-(0,1) →",
         "huge round.",
-        "12",
-        "1934-03-27",
-        "DOC. IV¹ p. 429",
-        "Coin = in Study Collection",
-        "3/27/1934",
-        "Bust of Christ facing; nimbus with •• (large)",
+        "NEC '03-19-(0,1) →",
         "1934-241",
-        "A above; N to left; P to right; L below, arranged around the cross as drawn",
+        "Bust of Christ facing; nimbus with •• (large)",
         "4.22 gm.",
-        "Card #206",
-        "Æ",
-        "#206",
-        "Late Byzantine",
-        "wedge-shaped elements in the angles of the cross",
-        "Cross with letters and wedge-shaped elements; outer part worn off.",
-        "uncertain emperor",
         "27",
+        "A above; N to left; P to right; L below, arranged around the cross as drawn",
+        "DOC. IV¹ p. 429",
+        "wedge-shaped elements in the angles of the cross",
+        "[ ], A, P, L",
+        "1934-03-27",
+        "Cross with letters and wedge-shaped elements; outer part worn off.",
+        "Late Byzantine",
         "Agora SE",
-        "[ ], A, P, L"
+        "#206",
+        "uncertain emperor",
+        "12",
+        "Æ",
+        "Card #206",
+        "3/27/1934",
+        "Coin = in Study Collection"
       ]
     },
     "bibliography": [
@@ -891,34 +891,10 @@
         "review_notes": [],
         "raw_fields": [
           {
-            "property": "https://example.org/corinth/ontology/databaseAxisRaw",
-            "local": "databaseAxisRaw",
-            "label": "Database Axis  (raw)",
-            "value": "12"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/excavationDate",
-            "local": "excavationDate",
-            "label": "Excavation Date",
-            "value": "1934-03-27"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/bibliographicCitationRaw",
-            "local": "bibliographicCitationRaw",
-            "label": "Bibliographic Citation  (raw)",
-            "value": "DOC. IV¹ p. 429"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/studyCollectionMarkRaw",
-            "local": "studyCollectionMarkRaw",
-            "label": "Study Collection Mark  (raw)",
-            "value": "Coin = in Study Collection"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/excavationDateRaw",
-            "local": "excavationDateRaw",
-            "label": "Excavation Date  (raw)",
-            "value": "3/27/1934"
+            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
+            "local": "inventoryNumberRaw",
+            "label": "Inventory Number  (raw)",
+            "value": "1934-241"
           },
           {
             "property": "https://example.org/corinth/ontology/obverseTypeRaw",
@@ -927,82 +903,10 @@
             "value": "Bust of Christ facing; nimbus with •• (large)"
           },
           {
-            "property": "https://example.org/corinth/ontology/inventoryNumberRaw",
-            "local": "inventoryNumberRaw",
-            "label": "Inventory Number  (raw)",
-            "value": "1934-241"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
-            "local": "databaseNotebookReferenceRaw",
-            "label": "Database Notebook Reference  (raw)",
-            "value": "Notebook 139, p. 138"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
-            "local": "reverseLegendRaw",
-            "label": "Reverse Legend  (raw)",
-            "value": "A above; N to left; P to right; L below, arranged around the cross as drawn"
-          },
-          {
             "property": "https://example.org/corinth/ontology/weightRaw",
             "local": "weightRaw",
             "label": "Weight  (raw)",
             "value": "4.22 gm."
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseEarlierCardNumberRaw",
-            "local": "databaseEarlierCardNumberRaw",
-            "label": "Database Earlier Card Number  (raw)",
-            "value": "Card #206"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/materialRaw",
-            "local": "materialRaw",
-            "label": "Material  (raw)",
-            "value": "Æ"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/inventoryNumber",
-            "local": "inventoryNumber",
-            "label": "Inventory Number",
-            "value": "1934-241"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/earlierCardNumberRaw",
-            "local": "earlierCardNumberRaw",
-            "label": "Earlier Card Number  (raw)",
-            "value": "#206"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/periodRaw",
-            "local": "periodRaw",
-            "label": "Period  (raw)",
-            "value": "Late Byzantine"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/reverseControlMarksRaw",
-            "local": "reverseControlMarksRaw",
-            "label": "Reverse Control Marks  (raw)",
-            "value": "wedge-shaped elements in the angles of the cross"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
-            "local": "reverseTypeRaw",
-            "label": "Reverse Type  (raw)",
-            "value": "Cross with letters and wedge-shaped elements; outer part worn off."
-          },
-          {
-            "property": "https://example.org/corinth/ontology/authorityRaw",
-            "local": "authorityRaw",
-            "label": "Authority  (raw)",
-            "value": "uncertain emperor"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
-            "local": "archivalAnnotationRaw",
-            "label": "Archival Annotation  (raw)",
-            "value": "NEC '03-19-(0,1) →"
           },
           {
             "property": "https://example.org/corinth/ontology/diameterRaw",
@@ -1011,10 +915,64 @@
             "value": "27"
           },
           {
+            "property": "https://example.org/corinth/ontology/reverseLegendRaw",
+            "local": "reverseLegendRaw",
+            "label": "Reverse Legend  (raw)",
+            "value": "A above; N to left; P to right; L below, arranged around the cross as drawn"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/bibliographicCitationRaw",
+            "local": "bibliographicCitationRaw",
+            "label": "Bibliographic Citation  (raw)",
+            "value": "DOC. IV¹ p. 429"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseControlMarksRaw",
+            "local": "reverseControlMarksRaw",
+            "label": "Reverse Control Marks  (raw)",
+            "value": "wedge-shaped elements in the angles of the cross"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
+            "local": "databaseNotebookReferenceRaw",
+            "label": "Database Notebook Reference  (raw)",
+            "value": "Notebook 139, p. 138"
+          },
+          {
             "property": "https://example.org/corinth/ontology/physicalDescriptionRaw",
             "local": "physicalDescriptionRaw",
             "label": "Physical Description  (raw)",
             "value": "huge round."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/inventoryNumber",
+            "local": "inventoryNumber",
+            "label": "Inventory Number",
+            "value": "1934-241"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseReverseLegendRaw",
+            "local": "databaseReverseLegendRaw",
+            "label": "Database Reverse Legend  (raw)",
+            "value": "[ ], A, P, L"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDate",
+            "local": "excavationDate",
+            "label": "Excavation Date",
+            "value": "1934-03-27"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/reverseTypeRaw",
+            "local": "reverseTypeRaw",
+            "label": "Reverse Type  (raw)",
+            "value": "Cross with letters and wedge-shaped elements; outer part worn off."
+          },
+          {
+            "property": "https://example.org/corinth/ontology/periodRaw",
+            "local": "periodRaw",
+            "label": "Period  (raw)",
+            "value": "Late Byzantine"
           },
           {
             "property": "https://example.org/corinth/ontology/findspotRaw",
@@ -1023,10 +981,52 @@
             "value": "Agora SE"
           },
           {
-            "property": "https://example.org/corinth/ontology/databaseReverseLegendRaw",
-            "local": "databaseReverseLegendRaw",
-            "label": "Database Reverse Legend  (raw)",
-            "value": "[ ], A, P, L"
+            "property": "https://example.org/corinth/ontology/earlierCardNumberRaw",
+            "local": "earlierCardNumberRaw",
+            "label": "Earlier Card Number  (raw)",
+            "value": "#206"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/authorityRaw",
+            "local": "authorityRaw",
+            "label": "Authority  (raw)",
+            "value": "uncertain emperor"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseAxisRaw",
+            "local": "databaseAxisRaw",
+            "label": "Database Axis  (raw)",
+            "value": "12"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/materialRaw",
+            "local": "materialRaw",
+            "label": "Material  (raw)",
+            "value": "Æ"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseEarlierCardNumberRaw",
+            "local": "databaseEarlierCardNumberRaw",
+            "label": "Database Earlier Card Number  (raw)",
+            "value": "Card #206"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/excavationDateRaw",
+            "local": "excavationDateRaw",
+            "label": "Excavation Date  (raw)",
+            "value": "3/27/1934"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/archivalAnnotationRaw",
+            "local": "archivalAnnotationRaw",
+            "label": "Archival Annotation  (raw)",
+            "value": "NEC '03-19-(0,1) →"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/studyCollectionMarkRaw",
+            "local": "studyCollectionMarkRaw",
+            "label": "Study Collection Mark  (raw)",
+            "value": "Coin = in Study Collection"
           }
         ],
         "notebooks": [
@@ -1183,18 +1183,18 @@
         }
       ],
       "region": [],
-      "reign": [],
+      "magistrate": [],
       "subtype": [],
       "country": [],
-      "area": [],
-      "province": [],
-      "conventus": [],
-      "site": [],
-      "magistrate": [],
       "city": [],
+      "reign": [],
       "alliance": [],
       "person": [],
-      "period": []
+      "conventus": [],
+      "province": [],
+      "period": [],
+      "site": [],
+      "area": []
     },
     "text_fields": {
       "identifier": [
@@ -1232,21 +1232,21 @@
       ],
       "notes": [
         "Notebook 142 p.85, 1-2",
-        "19",
-        "NCP F-XCVII; Edwards 129",
+        "Neg. 91-57-1,2,3",
+        "Corinth",
+        "Hadrian",
         "Propylaea with central arch and two columns on each side; quadriga facing on top",
-        "Bust of Hadrian facing r.; wearing laureate",
         "North of School",
+        "19",
+        "117-138",
+        "8.45",
+        "1934-338",
         "6/4/1934",
         "91-57-1,2,3",
-        "8.45",
-        "Hadrian",
-        "117-138",
-        "1934-338",
-        "Neg. 91-57-1,2,3",
-        "IMP CAES ---",
         "AE",
-        "Corinth"
+        "IMP CAES ---",
+        "NCP F-XCVII; Edwards 129",
+        "Bust of Hadrian facing r.; wearing laureate"
       ]
     },
     "bibliography": [
@@ -1406,58 +1406,16 @@
         "review_notes": [],
         "raw_fields": [
           {
-            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
-            "local": "databaseDiameterRaw",
-            "label": "Database Diameter  (raw)",
-            "value": "19"
+            "property": "https://example.org/corinth/ontology/negativeReferenceRaw",
+            "local": "negativeReferenceRaw",
+            "label": "Negative Reference  (raw)",
+            "value": "Neg. 91-57-1,2,3"
           },
           {
-            "property": "https://example.org/corinth/ontology/databaseBibliographicCitationRaw",
-            "local": "databaseBibliographicCitationRaw",
-            "label": "Database Bibliographic Citation  (raw)",
-            "value": "NCP F-XCVII; Edwards 129"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseReverseTypeRaw",
-            "local": "databaseReverseTypeRaw",
-            "label": "Database Reverse Type  (raw)",
-            "value": "Propylaea with central arch and two columns on each side; quadriga facing on top"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseObverseTypeRaw",
-            "local": "databaseObverseTypeRaw",
-            "label": "Database Obverse Type  (raw)",
-            "value": "Bust of Hadrian facing r.; wearing laureate"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseFindspotRaw",
-            "local": "databaseFindspotRaw",
-            "label": "Database Findspot  (raw)",
-            "value": "North of School"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseExcavationDateRaw",
-            "local": "databaseExcavationDateRaw",
-            "label": "Database Excavation Date  (raw)",
-            "value": "6/4/1934"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/negativeReference",
-            "local": "negativeReference",
-            "label": "Negative Reference",
-            "value": "91-57-1,2,3"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
-            "local": "databaseNotebookReferenceRaw",
-            "label": "Database Notebook Reference  (raw)",
-            "value": "Notebook 142 p.85, 1-2"
-          },
-          {
-            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
-            "local": "databaseWeightRaw",
-            "label": "Database Weight  (raw)",
-            "value": "8.45"
+            "property": "https://example.org/corinth/ontology/databaseMintRaw",
+            "local": "databaseMintRaw",
+            "label": "Database Mint  (raw)",
+            "value": "Corinth"
           },
           {
             "property": "https://example.org/corinth/ontology/databaseAuthorityRaw",
@@ -1466,10 +1424,34 @@
             "value": "Hadrian"
           },
           {
+            "property": "https://example.org/corinth/ontology/databaseReverseTypeRaw",
+            "local": "databaseReverseTypeRaw",
+            "label": "Database Reverse Type  (raw)",
+            "value": "Propylaea with central arch and two columns on each side; quadriga facing on top"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseFindspotRaw",
+            "local": "databaseFindspotRaw",
+            "label": "Database Findspot  (raw)",
+            "value": "North of School"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseDiameterRaw",
+            "local": "databaseDiameterRaw",
+            "label": "Database Diameter  (raw)",
+            "value": "19"
+          },
+          {
             "property": "https://example.org/corinth/ontology/databaseDateRaw",
             "local": "databaseDateRaw",
             "label": "Database Date  (raw)",
             "value": "117-138"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseWeightRaw",
+            "local": "databaseWeightRaw",
+            "label": "Database Weight  (raw)",
+            "value": "8.45"
           },
           {
             "property": "https://example.org/corinth/ontology/inventoryNumber",
@@ -1478,16 +1460,22 @@
             "value": "1934-338"
           },
           {
-            "property": "https://example.org/corinth/ontology/negativeReferenceRaw",
-            "local": "negativeReferenceRaw",
-            "label": "Negative Reference  (raw)",
-            "value": "Neg. 91-57-1,2,3"
+            "property": "https://example.org/corinth/ontology/databaseExcavationDateRaw",
+            "local": "databaseExcavationDateRaw",
+            "label": "Database Excavation Date  (raw)",
+            "value": "6/4/1934"
           },
           {
-            "property": "https://example.org/corinth/ontology/databaseObverseLegendRaw",
-            "local": "databaseObverseLegendRaw",
-            "label": "Database Obverse Legend  (raw)",
-            "value": "IMP CAES ---"
+            "property": "https://example.org/corinth/ontology/databaseNotebookReferenceRaw",
+            "local": "databaseNotebookReferenceRaw",
+            "label": "Database Notebook Reference  (raw)",
+            "value": "Notebook 142 p.85, 1-2"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/negativeReference",
+            "local": "negativeReference",
+            "label": "Negative Reference",
+            "value": "91-57-1,2,3"
           },
           {
             "property": "https://example.org/corinth/ontology/databaseMaterialRaw",
@@ -1496,10 +1484,22 @@
             "value": "AE"
           },
           {
-            "property": "https://example.org/corinth/ontology/databaseMintRaw",
-            "local": "databaseMintRaw",
-            "label": "Database Mint  (raw)",
-            "value": "Corinth"
+            "property": "https://example.org/corinth/ontology/databaseObverseLegendRaw",
+            "local": "databaseObverseLegendRaw",
+            "label": "Database Obverse Legend  (raw)",
+            "value": "IMP CAES ---"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseBibliographicCitationRaw",
+            "local": "databaseBibliographicCitationRaw",
+            "label": "Database Bibliographic Citation  (raw)",
+            "value": "NCP F-XCVII; Edwards 129"
+          },
+          {
+            "property": "https://example.org/corinth/ontology/databaseObverseTypeRaw",
+            "local": "databaseObverseTypeRaw",
+            "label": "Database Obverse Type  (raw)",
+            "value": "Bust of Hadrian facing r.; wearing laureate"
           }
         ],
         "notebooks": []
@@ -1593,18 +1593,18 @@
       "exergue": [],
       "notebook": [],
       "region": [],
-      "reign": [],
+      "magistrate": [],
       "subtype": [],
       "country": [],
-      "area": [],
-      "province": [],
-      "conventus": [],
-      "site": [],
-      "magistrate": [],
       "city": [],
+      "reign": [],
       "alliance": [],
       "person": [],
-      "period": []
+      "conventus": [],
+      "province": [],
+      "period": [],
+      "site": [],
+      "area": []
     },
     "text_fields": {
       "identifier": [

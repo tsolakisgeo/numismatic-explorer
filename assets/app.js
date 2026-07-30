@@ -402,7 +402,15 @@
     const mint = NX.firstLabel(record.facets.mint);
     const denomination = NX.firstLabel(record.facets.denomination);
     const title = !/^COIN\s/i.test(record.title || '') ? record.title : '';
-    return authority || issuer || title || [denomination, mint].filter(Boolean).join(' · ') || mint || `Coin ${record.identifier}`;
+    return authority || issuer || title || [denomination, mint].filter(Boolean).join(' · ') || mint || 'Unidentified coin';
+  }
+
+  function recordDisplayIdentifier(record) {
+    const identifier = String(record.identifier || '').trim();
+    if (!identifier) return 'COIN';
+    return /^COIN(?:\s|$)/i.test(identifier)
+      ? identifier.replace(/^COIN/i, 'COIN')
+      : `COIN ${identifier}`;
   }
 
   function metadataLine(record) {
@@ -419,32 +427,33 @@
 
   function recordCard(record) {
     const title = recordDisplayTitle(record);
+    const recordURL = `record.html?id=${encodeURIComponent(record.id)}`;
     const mint = NX.firstLabel(record.facets.mint);
     const region = NX.firstLabel(record.facets.region);
     const findspot = NX.firstLabel(record.facets.findspot);
     const typeSeries = NX.firstLabel(record.facets.type_series);
-    const photoCount = record.photos?.length || 0;
     const sidePhotos = photographsBySide(record);
+    const displayIdentifier = recordDisplayIdentifier(record);
+    const mintAndRegion = [mint, region && region !== mint ? region : ''].filter(Boolean).join(' · ');
     return `<article class="record-card">
+      <a class="record-card-target" href="${recordURL}" aria-label="Open full record for ${NX.escapeHTML(displayIdentifier)}: ${NX.escapeHTML(title)}"></a>
       <div class="record-card-body">
         <header class="record-card-header">
-          <div><p class="record-id">${NX.escapeHTML(record.identifier)}</p><h3><a href="record.html?id=${encodeURIComponent(record.id)}">${NX.escapeHTML(title)}</a></h3></div>
-          ${record.requires_review ? '<span class="review-badge" title="One or more readings require human review">Review</span>' : ''}
+          <div class="record-heading">
+            <h3>${NX.escapeHTML(displayIdentifier)}: ${NX.escapeHTML(title)}</h3>
+          </div>
+          <div class="record-meta" aria-label="Summary">${metadataLine(record)}</div>
         </header>
-        <div class="record-meta">${metadataLine(record)}</div>
         <div class="coin-sides-grid">
           ${facePanel(record.obverse, 'obverse', sidePhotos.obverse)}
           ${facePanel(record.reverse, 'reverse', sidePhotos.reverse)}
         </div>
         <div class="record-context">
-          ${mint ? `<span><small>Mint</small>${NX.escapeHTML(mint)}${region && region !== mint ? ` · ${NX.escapeHTML(region)}` : ''}</span>` : ''}
-          ${findspot ? `<span><small>Findspot</small>${NX.escapeHTML(findspot)}</span>` : ''}
-          ${typeSeries ? `<span><small>Type</small>${NX.escapeHTML(typeSeries)}</span>` : ''}
+          <span><small>Mint</small><b>${mintAndRegion ? NX.escapeHTML(mintAndRegion) : '–'}</b></span>
+          <span><small>Findspot</small><b>${findspot ? NX.escapeHTML(findspot) : '–'}</b></span>
+          <span><small>Type</small><b>${typeSeries ? NX.escapeHTML(typeSeries) : '–'}</b></span>
+          <a class="record-link" href="${recordURL}">View full record <span aria-hidden="true">→</span></a>
         </div>
-        <footer class="record-card-footer">
-          <div class="external-status">${photoCount ? `<span class="media-count">${photoCount} METIS ${photoCount === 1 ? 'image' : 'images'}</span>` : '<span class="muted-label">No linked media</span>'}</div>
-          <a class="record-link" href="record.html?id=${encodeURIComponent(record.id)}">View full record <span aria-hidden="true">→</span></a>
-        </footer>
       </div>
     </article>`;
   }
