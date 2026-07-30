@@ -137,12 +137,12 @@ main { width: min(100% - 48px, 1580px); margin: 0 auto; }
 .record-card-target { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
 .record-card-target:focus-visible { outline: 3px solid rgba(95,127,175,.3); outline-offset: -3px; }
 .record-card-body { position: relative; display: grid; gap: 15px; padding: 21px; }
-.record-card-header { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: start; gap: 14px 22px; }
+.record-card-header { display: grid; grid-template-columns: minmax(0,1fr); align-items: start; gap: 9px; }
 .record-heading { min-width: 0; }
-.record-card h3 { min-width: 0; margin: 0; font-family: var(--serif); font-size: 27px; font-weight: 520; line-height: 1.14; }
+.record-card h3 { min-width: 0; margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 520; line-height: 1.18; }
 .review-badge { flex: none; padding: 5px 8px; border-radius: 10px; color: var(--warning); background: var(--warning-soft); font-size: 8px; font-weight: 850; letter-spacing: .055em; text-transform: uppercase; }
 .review-badge.large { padding: 7px 10px; font-size: 10px; }
-.record-meta { display: flex; max-width: 520px; align-items: flex-start; justify-content: flex-end; flex-wrap: wrap; gap: 6px; }
+.record-meta { display: flex; width: 100%; max-width: none; align-items: flex-start; justify-content: flex-end; flex-wrap: wrap; gap: 6px; }
 .meta-pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border: 1px solid #dfe6f0; border-radius: 999px; color: #40516a; background: #f4f6fa; font-size: 9px; font-weight: 720; white-space: nowrap; }
 .meta-icon { display: inline-flex; width: 12px; height: 12px; color: var(--accent); flex: 0 0 auto; }
 .meta-icon svg { width: 12px; height: 12px; stroke: currentColor; stroke-width: 1.7; fill: none; stroke-linecap: round; stroke-linejoin: round; }
@@ -302,7 +302,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px
   .record-card-body { padding: 16px; }
   .record-card-header { grid-template-columns: 1fr; gap: 10px; }
   .record-meta { max-width: none; justify-content: flex-start; }
-  .record-card h3 { font-size: 23px; }
+  .record-card h3 { font-size: 20px; }
   .coin-sides-grid { grid-template-columns: 1fr; }
   .coin-side-content, .list-view .coin-side-content { grid-template-columns: 104px minmax(0,1fr); }
   .face-media, .face-media img, .list-view .face-media, .list-view .face-media img { min-height: 104px; height: 104px; }
