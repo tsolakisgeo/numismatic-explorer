@@ -15,7 +15,9 @@
     heightMin: { label: 'Height from', field: 'height', side: 'min', unit: 'mm' },
     heightMax: { label: 'Height to', field: 'height', side: 'max', unit: 'mm' },
     widthMin: { label: 'Width from', field: 'width', side: 'min', unit: 'mm' },
-    widthMax: { label: 'Width to', field: 'width', side: 'max', unit: 'mm' }
+    widthMax: { label: 'Width to', field: 'width', side: 'max', unit: 'mm' },
+    notebookPageMin: { label: 'Notebook page from', field: 'notebook_page', side: 'min', unit: '' },
+    notebookPageMax: { label: 'Notebook page to', field: 'notebook_page', side: 'max', unit: '' }
   };
 
   const TEXT_DEFS = {
@@ -28,10 +30,12 @@
     obverse_type: { label: 'Obverse type / design', placeholder: 'Search obverse description' },
     reverse_type: { label: 'Reverse type / design', placeholder: 'Search reverse description' },
     date_on_object: { label: 'Date on object', placeholder: 'Search written date' },
+    place: { label: 'Place search', placeholder: 'Search mint, region, city, or findspot' },
     iconography: { label: 'All iconography', placeholder: 'Search iconography' },
     symbol: { label: 'Symbol / monogram / mark', placeholder: 'Search symbol or monogram' },
     symbol_position: { label: 'Symbol position', placeholder: 'e.g. left field, below' },
     bibliography: { label: 'Reference / bibliography', placeholder: 'Search reference' },
+    notebook_reference: { label: 'Notebook reference', placeholder: 'Search the complete notebook citation' },
     notes: { label: 'Notes / transcription', placeholder: 'Search archival notes' }
   };
 
@@ -40,53 +44,46 @@
       id: 'identification', title: 'Identification', open: true,
       controls: [
         ['text', 'identifier'], ['text', 'catalogue'], ['text', 'title'],
-        ['facet', 'object_type'], ['facet', 'subtype'], ['facet', 'type_series'], ['facet', 'reference_work']
+        ['facet', 'type_series'], ['facet', 'reference_work'], ['facet', 'subtype']
       ]
     },
     {
-      id: 'chronology', title: 'Chronology', open: true,
+      id: 'people', title: 'People and organizations', open: true,
       controls: [
-        ['rangePair', ['dateMin', 'dateMax']], ['text', 'date_on_object'], ['facet', 'period']
+        ['facet', 'authority'], ['facet', 'stated_authority'], ['facet', 'deity'], ['facet', 'dynasty'],
+        ['facet', 'issuer'], ['facet', 'portrait'], ['facet', 'state'], ['facet', 'reign'],
+        ['facet', 'person'], ['facet', 'magistrate']
       ]
     },
     {
-      id: 'people', title: 'People and authority', open: true,
+      id: 'places', title: 'Places', open: true,
       controls: [
-        ['facet', 'authority'], ['facet', 'stated_authority'], ['facet', 'issuer'], ['facet', 'dynasty'],
-        ['facet', 'reign'], ['facet', 'person'], ['facet', 'magistrate'], ['facet', 'deity'], ['facet', 'portrait']
+        ['text', 'place'], ['facet', 'mint'], ['facet', 'region'], ['facet', 'city'],
+        ['facet', 'province'], ['facet', 'conventus'], ['facet', 'alliance'],
+        ['facet', 'area'], ['facet', 'site'], ['facet', 'country']
       ]
     },
     {
-      id: 'geography', title: 'Geography', open: true,
+      id: 'typology', title: 'Typology and chronology', open: true,
       controls: [
-        ['facet', 'mint'], ['facet', 'region'], ['facet', 'city'], ['facet', 'province'], ['facet', 'conventus'],
-        ['facet', 'alliance'], ['facet', 'area'], ['facet', 'site'], ['facet', 'country']
+        ['facet', 'denomination'], ['facet', 'manufacture'], ['facet', 'material'], ['facet', 'object_type'],
+        ['rangePair', ['dateMin', 'dateMax']], ['text', 'date_on_object'], ['facet', 'period'],
+        ['facet', 'shape'], ['facet', 'authenticity'], ['facet', 'weight_standard']
       ]
     },
     {
-      id: 'typology', title: 'Typology', open: true,
+      id: 'obverse-reverse', title: 'Obverse and reverse', open: true,
       controls: [
-        ['facet', 'material'], ['facet', 'denomination'], ['facet', 'manufacture'], ['facet', 'shape'],
-        ['facet', 'authenticity'], ['facet', 'weight_standard']
+        ['text', 'obverse_legend'], ['text', 'reverse_legend'],
+        ['text', 'obverse_type'], ['text', 'reverse_type'], ['text', 'iconography']
       ]
     },
     {
-      id: 'obverse', title: 'Obverse', open: false,
+      id: 'symbols', title: 'Symbols', open: false,
       controls: [
-        ['text', 'obverse_legend'], ['text', 'obverse_type']
-      ]
-    },
-    {
-      id: 'reverse', title: 'Reverse', open: false,
-      controls: [
-        ['text', 'reverse_legend'], ['text', 'reverse_type']
-      ]
-    },
-    {
-      id: 'iconography', title: 'Iconography and marks', open: false,
-      controls: [
-        ['text', 'iconography'], ['text', 'symbol'], ['text', 'symbol_position'],
-        ['facet', 'iconography'], ['facet', 'symbol'], ['facet', 'controlmark'], ['facet', 'mintmark'], ['facet', 'countermark']
+        ['facet', 'obverse_symbol'], ['facet', 'reverse_symbol'], ['facet', 'reverse_letter'],
+        ['facet', 'officina_mark'], ['facet', 'exergue'], ['text', 'symbol'], ['text', 'symbol_position'],
+        ['facet', 'symbol'], ['facet', 'controlmark'], ['facet', 'mintmark'], ['facet', 'countermark']
       ]
     },
     {
@@ -94,6 +91,12 @@
       controls: [
         ['rangePair', ['weightMin', 'weightMax']], ['rangePair', ['diameterMin', 'diameterMax']],
         ['rangePair', ['axisMin', 'axisMax']], ['rangePair', ['heightMin', 'heightMax']], ['rangePair', ['widthMin', 'widthMax']]
+      ]
+    },
+    {
+      id: 'notebooks', title: 'Excavation notebooks', open: true,
+      controls: [
+        ['facet', 'notebook'], ['rangePair', ['notebookPageMin', 'notebookPageMax']], ['text', 'notebook_reference']
       ]
     },
     {
@@ -197,8 +200,12 @@
     if (state.ranges.dateMax !== '' && (start === null || start === undefined || start > Number(state.ranges.dateMax))) return false;
 
     for (const field of ['weight', 'diameter', 'axis', 'height', 'width']) {
-      const capitalized = field[0].toUpperCase() + field.slice(1);
       if (!matchesRange(record.measurements?.[field], state.ranges[`${field}Min`], state.ranges[`${field}Max`])) return false;
+    }
+
+    if (state.ranges.notebookPageMin !== '' || state.ranges.notebookPageMax !== '') {
+      const pages = record.notebook_pages || [];
+      if (!pages.some(page => matchesRange(page, state.ranges.notebookPageMin, state.ranges.notebookPageMax))) return false;
     }
 
     for (const [flag, selected] of Object.entries(state.flags)) {
@@ -249,9 +256,11 @@
   }
 
   function facetControl(name) {
-    const facet = state.facets[name];
-    if (!facet?.values?.length) return '';
+    const facet = state.facets[name] || { label: state.schema.facet_labels?.[name] || name, values: [] };
     const selected = state.selected.get(name) || new Set();
+    if (!facet.values?.length) {
+      return `<section class="facet-block facet-empty-block"><div class="facet-heading"><h4>${NX.escapeHTML(facet.label)}</h4></div><p class="facet-empty">No indexed values</p></section>`;
+    }
     const searchable = facet.values.length > 8;
     const options = facet.values.map((item, index) => {
       const isSelected = selected.has(item.value);
@@ -320,47 +329,71 @@
     });
   }
 
-  function faceSummary(face, side) {
-    if (!face) return `<div class="face-summary empty"><span>${side}</span><p>Not recorded</p></div>`;
-    const description = face.description?.[0] || '';
-    const legend = face.legend?.join(' · ') || '';
-    return `<div class="face-summary"><span>${side}</span>${description ? `<p>${NX.escapeHTML(description)}</p>` : '<p class="not-recorded">Description not recorded</p>'}${legend ? `<small>${NX.escapeHTML(legend)}</small>` : ''}</div>`;
-  }
-
   function photoPlaceholderIcon() {
     return `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7.5h3l1.4-2h7.2l1.4 2h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg>`;
   }
 
-  function photoSlots(record) {
-    const photos = (record.photos || []).slice(0, 2);
-    const slots = [0, 1].map(index => {
-      const photo = photos[index];
-      const fallbackLabel = `Photograph ${index + 1}`;
-      if (!photo) {
-        return `<div class="coin-photo-slot empty-photo" aria-label="${fallbackLabel}: no photograph available">
-          <span class="photo-placeholder-icon">${photoPlaceholderIcon()}</span>
-          <strong>${fallbackLabel}</strong>
-          <small>No photograph available</small>
-        </div>`;
+  function photographsBySide(record) {
+    const photos = [...(record.photos || [])];
+    const used = new Set();
+    const matchSide = side => {
+      const index = photos.findIndex((photo, photoIndex) => {
+        if (used.has(photoIndex)) return false;
+        const value = normalizeText(photo.display_side || photo.side || '');
+        return side === 'obverse' ? value.startsWith('obv') : value.startsWith('rev');
+      });
+      if (index >= 0) {
+        used.add(index);
+        return photos[index];
       }
-
-      const label = photo.label || fallbackLabel;
-      const href = photo.resource_url || photo.image_url || '';
-      if (photo.image_url) {
-        const media = `<img src="${NX.escapeHTML(photo.image_url)}" alt="${NX.escapeHTML(label)}" loading="lazy">
-          <span class="photo-slot-label">${NX.escapeHTML(label)}</span>`;
-        return href
-          ? `<a class="coin-photo-slot has-image" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer">${media}</a>`
-          : `<div class="coin-photo-slot has-image">${media}</div>`;
+      const fallback = photos.findIndex((_photo, photoIndex) => !used.has(photoIndex));
+      if (fallback >= 0) {
+        used.add(fallback);
+        return photos[fallback];
       }
+      return null;
+    };
+    return { obverse: matchSide('obverse'), reverse: matchSide('reverse') };
+  }
 
-      return `<a class="coin-photo-slot metis-photo" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer" aria-label="Open ${NX.escapeHTML(label)} in METIS">
+  function faceMedia(photo, side) {
+    const sideLabel = side === 'obverse' ? 'Obverse' : 'Reverse';
+    if (!photo) {
+      return `<div class="face-media empty-photo" aria-label="${sideLabel}: no photograph available">
         <span class="photo-placeholder-icon">${photoPlaceholderIcon()}</span>
-        <strong>${NX.escapeHTML(label)}</strong>
-        <small>Open in METIS <span aria-hidden="true">↗</span></small>
-      </a>`;
-    });
-    return `<div class="coin-photo-grid" aria-label="Coin photographs">${slots.join('')}</div>`;
+        <small>No photograph available</small>
+      </div>`;
+    }
+
+    const label = photo.label || `${sideLabel} photograph`;
+    const href = photo.resource_url || photo.image_url || '';
+    if (photo.image_url) {
+      const image = `<img src="${NX.escapeHTML(photo.image_url)}" alt="${NX.escapeHTML(label)}" loading="lazy">`;
+      return href
+        ? `<a class="face-media has-image" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer" title="Open ${NX.escapeHTML(label)}">${image}</a>`
+        : `<div class="face-media has-image">${image}</div>`;
+    }
+
+    return `<a class="face-media metis-photo" href="${NX.escapeHTML(href)}" target="_blank" rel="noreferrer" aria-label="Open ${NX.escapeHTML(label)} in METIS">
+      <span class="photo-placeholder-icon">${photoPlaceholderIcon()}</span>
+      <small>Open in METIS <span aria-hidden="true">↗</span></small>
+    </a>`;
+  }
+
+  function facePanel(face, side, photo) {
+    const title = side === 'obverse' ? 'Obverse' : 'Reverse';
+    const description = face?.description?.[0] || '';
+    const legend = face?.legend?.join(' · ') || '';
+    return `<section class="coin-side-panel">
+      <header><span>${title}</span></header>
+      <div class="coin-side-content">
+        ${faceMedia(photo, side)}
+        <div class="coin-side-copy">
+          ${description ? `<p>${NX.escapeHTML(description)}</p>` : '<p class="not-recorded">Description not recorded</p>'}
+          ${legend ? `<div class="side-legend"><small>Legend</small><strong>${NX.escapeHTML(legend)}</strong></div>` : '<div class="side-legend empty"><small>Legend</small><span>Not recorded</span></div>'}
+        </div>
+      </div>
+    </section>`;
   }
 
   function recordDisplayTitle(record) {
@@ -391,15 +424,18 @@
     const findspot = NX.firstLabel(record.facets.findspot);
     const typeSeries = NX.firstLabel(record.facets.type_series);
     const photoCount = record.photos?.length || 0;
+    const sidePhotos = photographsBySide(record);
     return `<article class="record-card">
-      ${photoSlots(record)}
       <div class="record-card-body">
         <header class="record-card-header">
           <div><p class="record-id">${NX.escapeHTML(record.identifier)}</p><h3><a href="record.html?id=${encodeURIComponent(record.id)}">${NX.escapeHTML(title)}</a></h3></div>
           ${record.requires_review ? '<span class="review-badge" title="One or more readings require human review">Review</span>' : ''}
         </header>
         <div class="record-meta">${metadataLine(record)}</div>
-        <div class="faces-grid">${faceSummary(record.obverse, 'Obverse')}${faceSummary(record.reverse, 'Reverse')}</div>
+        <div class="coin-sides-grid">
+          ${facePanel(record.obverse, 'obverse', sidePhotos.obverse)}
+          ${facePanel(record.reverse, 'reverse', sidePhotos.reverse)}
+        </div>
         <div class="record-context">
           ${mint ? `<span><small>Mint</small>${NX.escapeHTML(mint)}${region && region !== mint ? ` · ${NX.escapeHTML(region)}` : ''}</span>` : ''}
           ${findspot ? `<span><small>Findspot</small>${NX.escapeHTML(findspot)}</span>` : ''}
@@ -569,7 +605,7 @@
 
   function exportResults() {
     const records = sortedRecords(filteredRecords());
-    const headers = ['Identifier', 'Title', 'Date', 'Authority', 'Issuer', 'Mint', 'Region', 'Material', 'Denomination', 'Weight (g)', 'Diameter (mm)', 'Axis', 'Obverse legend', 'Obverse type', 'Reverse legend', 'Reverse type', 'Findspot', 'Type series', 'Bibliography', 'METIS resources', 'RDF URI'];
+    const headers = ['Identifier', 'Title', 'Date', 'Authority', 'Issuer', 'Mint', 'Region', 'Material', 'Denomination', 'Weight (g)', 'Diameter (mm)', 'Axis', 'Obverse legend', 'Obverse type', 'Reverse legend', 'Reverse type', 'Findspot', 'Notebook', 'Notebook page', 'Type series', 'Bibliography', 'METIS resources', 'RDF URI'];
     const rows = records.map(record => [
       record.identifier, recordDisplayTitle(record), record.date?.label,
       itemLabels(record.facets.authority).join('; '), itemLabels(record.facets.issuer).join('; '),
@@ -578,7 +614,8 @@
       record.measurements?.weight ?? '', record.measurements?.diameter ?? '', record.measurements?.axis ?? '',
       record.obverse?.legend?.join('; ') || '', record.obverse?.description?.join('; ') || '',
       record.reverse?.legend?.join('; ') || '', record.reverse?.description?.join('; ') || '',
-      itemLabels(record.facets.findspot).join('; '), itemLabels(record.facets.type_series).join('; '),
+      itemLabels(record.facets.findspot).join('; '), itemLabels(record.facets.notebook).join('; '),
+      record.notebook_pages?.join('; ') || '', itemLabels(record.facets.type_series).join('; '),
       record.bibliography?.join('; ') || '', record.photos?.map(photo => photo.resource_url).join('; ') || '', record.uri
     ]);
     const csv = [headers, ...rows].map(row => row.map(csvCell).join(',')).join('\n');
@@ -593,6 +630,7 @@
   }
 
   let searchTimer;
+  let filterTimer;
   els.search.addEventListener('input', event => {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => { state.search = event.target.value; state.page = 1; render(); }, 140);
@@ -619,14 +657,18 @@
   els.filterGroups.addEventListener('input', event => {
     const text = event.target.closest('[data-text-filter]');
     if (text) {
-      clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => { state.texts[text.dataset.textFilter] = text.value; state.page = 1; render(); }, 160);
+      state.texts[text.dataset.textFilter] = text.value;
+      state.page = 1;
+      clearTimeout(filterTimer);
+      filterTimer = setTimeout(render, 160);
       return;
     }
     const range = event.target.closest('[data-range-filter]');
     if (range) {
-      clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => { state.ranges[range.dataset.rangeFilter] = range.value; state.page = 1; render(); }, 160);
+      state.ranges[range.dataset.rangeFilter] = range.value;
+      state.page = 1;
+      clearTimeout(filterTimer);
+      filterTimer = setTimeout(render, 160);
       return;
     }
     const facetSearch = event.target.closest('[data-facet-search]');

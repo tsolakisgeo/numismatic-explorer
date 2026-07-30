@@ -31,6 +31,9 @@ FACET_PROPERTIES: dict[str, URIRef] = {
     "authority": NMO.hasAuthority,
     "stated_authority": NMO.hasStatedAuthority,
     "issuer": NMO.hasIssuer,
+    "deity": NMO.hasDeity,
+    "dynasty": NMO.hasDynasty,
+    "state": NMO.hasState,
     "mint": NMO.hasMint,
     "material": NMO.hasMaterial,
     "denomination": NMO.hasDenomination,
@@ -65,6 +68,7 @@ FACET_LABELS: dict[str, str] = {
     "magistrate": "Magistrate",
     "deity": "Deity",
     "portrait": "Portrait",
+    "state": "State",
     "mint": "Mint",
     "region": "Region",
     "city": "City",
@@ -96,6 +100,12 @@ FACET_LABELS: dict[str, str] = {
     "controlmark": "Control mark",
     "mintmark": "Mint mark",
     "countermark": "Countermark",
+    "obverse_symbol": "Obverse symbol — any position",
+    "reverse_symbol": "Reverse symbol — any position",
+    "reverse_letter": "Reverse letter",
+    "officina_mark": "Officina mark",
+    "exergue": "Exergue",
+    "notebook": "Notebook",
     "peculiarity": "Peculiarity",
     "secondary_treatment": "Secondary treatment",
     "wear": "Wear",
@@ -117,6 +127,7 @@ RAW_FACET_NAMES: dict[str, tuple[str, ...]] = {
     "magistrate": ("magistrate",),
     "deity": ("deity", "god", "goddess"),
     "portrait": ("portrait",),
+    "state": ("state", "politicalentity"),
     "mint": ("mint",),
     "region": ("region",),
     "city": ("city",),
@@ -153,10 +164,12 @@ TEXT_FIELD_LABELS: dict[str, str] = {
     "obverse_type": "Obverse type / design",
     "reverse_type": "Reverse type / design",
     "date_on_object": "Date on object",
+    "place": "Place search",
     "iconography": "Iconography",
     "symbol": "Symbol / monogram / mark",
     "symbol_position": "Symbol position",
     "bibliography": "Reference / bibliography",
+    "notebook_reference": "Notebook reference",
     "notes": "Notes / archival transcription",
 }
 
@@ -359,6 +372,83 @@ def humanized_property(local: str) -> str:
     return text[:1].upper() + text[1:]
 
 
+def parse_integer(value: Any) -> int | None:
+    if value is None:
+        return None
+    match = re.search(r"-?\d+", str(value))
+    return int(match.group()) if match else None
+
+
+def parse_notebook_reference(raw: str) -> dict[str, Any] | None:
+    """Parse fallback notebook strings without treating notebook numbers as pages.
+
+    A page is accepted only when it follows p., p, page, or an equivalent
+    explicit page marker. Structured RDF values always take precedence.
+    """
+    text = re.sub(r"\s+", " ", raw).strip()
+    if not text:
+        return None
+    page_match = re.search(r"\b(?:p|pp|page)\.?\s*[-–—]?\s*\(?\s*(\d+)", text, re.I)
+    page = int(page_match.group(1)) if page_match else None
+    name = ""
+    if page_match:
+        prefix = text[:page_match.start()].strip(" ;,:-–—()")
+        # In strings such as "NB 139; O. Broneer p. 103", the final
+        # semicolon-delimited segment is the notebook name.
+        name = prefix.split(";")[-1].strip(" ;,:-–—()")
+    elif re.search(r"\bnotebook\b|\bNB\b", text, re.I):
+        name = text.strip(" ;,:-–—()")
+    if not name and page is None:
+        return None
+    return {
+        "name": name or "Notebook not named",
+        "page": page,
+        "raw": text,
+        "method": "parsed_from_raw_reference",
+    }
+
+
+def notebook_nodes(graph: Graph, card: URIRef) -> list[dict[str, Any]]:
+    output: list[dict[str, Any]] = []
+    seen: set[tuple[str, int | None, str]] = set()
+    for node in graph.objects(card, COR.notebookReference):
+        raw = first_value(graph, node, COR.notebookReferenceRaw) or ""
+        name = first_value(graph, node, COR.notebookName) or ""
+        number = first_value(graph, node, COR.notebookNumber) or ""
+        page_values = [parse_integer(value) for value in graph.objects(node, COR.notebookPage)]
+        page_values = [value for value in page_values if value is not None]
+        if not page_values:
+            page_raw = first_value(graph, node, COR.notebookPageRaw)
+            page = parse_integer(page_raw)
+            if page is not None:
+                page_values = [page]
+        if not name and number:
+            name = f"Notebook {number}"
+        parsed = parse_notebook_reference(raw) if raw else None
+        if not name and parsed:
+            name = parsed["name"]
+        if not page_values and parsed and parsed.get("page") is not None:
+            page_values = [parsed["page"]]
+        if not page_values:
+            page_values = [None]
+        method = first_value(graph, node, COR.notebookIdentificationMethod) or "structured_rdf"
+        entries = values(graph, node, COR.notebookEntryOrRange)
+        for page in page_values:
+            key = (name or "Notebook not named", page, raw)
+            if key in seen:
+                continue
+            seen.add(key)
+            output.append({
+                "name": name or "Notebook not named",
+                "number": number,
+                "page": page,
+                "raw": raw,
+                "entries": entries,
+                "method": method,
+            })
+    return output
+
+
 def card_data(graph: Graph, coin: URIRef) -> list[dict[str, Any]]:
     output: list[dict[str, Any]] = []
     for card in card_resources(graph, coin):
@@ -388,7 +478,33 @@ def card_data(graph: Graph, coin: URIRef) -> list[dict[str, Any]]:
             "requires_review": (first_value(graph, card, COR.requiresHumanReview) or "").lower() == "true",
             "review_notes": values(graph, card, COR.humanConfirmationNote),
             "raw_fields": raw_fields,
+            "notebooks": notebook_nodes(graph, card),
         })
+    return output
+
+
+def collect_notebooks(cards: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    output: list[dict[str, Any]] = []
+    seen: set[tuple[str, int | None, str]] = set()
+    for card in cards:
+        for notebook in card.get("notebooks", []):
+            key = (notebook.get("name", ""), notebook.get("page"), notebook.get("raw", ""))
+            if key not in seen:
+                seen.add(key)
+                output.append(notebook)
+        # Older TTL files sometimes preserve the reference only as a direct raw
+        # literal rather than a structured cor:notebookReference node.
+        for field in card.get("raw_fields", []):
+            normalized = normalize_field_name(field.get("local", ""))
+            if "notebook" not in normalized:
+                continue
+            parsed = parse_notebook_reference(field.get("value", ""))
+            if not parsed:
+                continue
+            key = (parsed.get("name", ""), parsed.get("page"), parsed.get("raw", ""))
+            if key not in seen:
+                seen.add(key)
+                output.append(parsed)
     return output
 
 
@@ -469,6 +585,8 @@ def collect_text_fields(
     cards: list[dict[str, Any]],
     bibliography: list[str],
     descriptions: list[str],
+    facets: dict[str, list[dict[str, str]]],
+    notebooks: list[dict[str, Any]],
 ) -> dict[str, list[str]]:
     all_raw = [field["value"] for card in cards for field in card.get("raw_fields", []) if field.get("value")]
     catalogue = raw_values_containing(cards, ("volume", "catalog", "referencenumber", "coinnumber", "coinno", "typenumber"))
@@ -484,6 +602,18 @@ def collect_text_fields(
     symbol_raw = raw_values_containing(cards, ("symbol", "controlmark", "mintmark", "monogram", "countermark"))
     position_raw = raw_values_containing(cards, ("symbolposition", "controlmarkposition", "mintmarkposition", "positiononcoin"))
     notes = raw_values_containing(cards, ("note", "annotation", "comment", "physicaldescription"))
+    place_values: list[str] = []
+    for facet_name in ("mint", "region", "city", "province", "conventus", "alliance", "area", "site", "country", "findspot"):
+        place_values.extend(item.get("label", "") for item in facets.get(facet_name, []))
+    notebook_values = [
+        notebook.get("raw") or " ".join(
+            part for part in (
+                notebook.get("name", ""),
+                f"p. {notebook['page']}" if notebook.get("page") is not None else "",
+            ) if part
+        )
+        for notebook in notebooks
+    ]
     return {
         "identifier": [identifier],
         "catalogue": catalogue,
@@ -494,10 +624,12 @@ def collect_text_fields(
         "obverse_type": list(dict.fromkeys((obverse or {}).get("description", []))),
         "reverse_type": list(dict.fromkeys((reverse or {}).get("description", []))),
         "date_on_object": list(dict.fromkeys(date_on_object)),
+        "place": list(dict.fromkeys(value for value in place_values if value)),
         "iconography": list(dict.fromkeys([item["label"] for item in iconography_refs])),
         "symbol": list(dict.fromkeys([item["label"] for item in mark_refs] + symbol_raw)),
         "symbol_position": list(dict.fromkeys((obverse or {}).get("positions", []) + (reverse or {}).get("positions", []) + position_raw)),
         "bibliography": list(dict.fromkeys(bibliography)),
+        "notebook_reference": list(dict.fromkeys(value for value in notebook_values if value)),
         "notes": list(dict.fromkeys(notes + all_raw)),
     }
 
@@ -594,12 +726,15 @@ def build(root: Path) -> int:
         key = compact_id(identifier)
         title = first_value(graph, coin, DCTERMS.title) or f"COIN {identifier.replace('-', ' ')}"
         cards = card_data(graph, coin)
+        notebooks = collect_notebooks(cards)
 
         facets: dict[str, list[dict[str, str]]] = {
             name: refs(graph, coin, predicate) for name, predicate in FACET_PROPERTIES.items()
         }
 
-        faces = face_nodes(graph, coin)
+        obverse_nodes = list(graph.objects(coin, NMO.hasObverse))
+        reverse_nodes = list(graph.objects(coin, NMO.hasReverse))
+        faces = [*obverse_nodes, *reverse_nodes]
         facets["portrait"] = objects_from_subjects(graph, [coin, *faces], NMO.hasPortrait)
         facets["iconography"] = objects_from_subjects(graph, [coin, *faces], NMO.hasIconography)
         facets["controlmark"] = objects_from_subjects(graph, [coin, *faces], NMO.hasControlmark)
@@ -609,6 +744,34 @@ def build(root: Path) -> int:
             *objects_from_subjects(graph, [coin, *faces], NMO.hasMark),
             *facets["controlmark"], *facets["mintmark"], *facets["countermark"],
         ])
+        facets["obverse_symbol"] = unique_refs([
+            *objects_from_subjects(graph, obverse_nodes, NMO.hasMark),
+            *objects_from_subjects(graph, obverse_nodes, NMO.hasControlmark),
+            *objects_from_subjects(graph, obverse_nodes, NMO.hasMintmark),
+            *objects_from_subjects(graph, obverse_nodes, NMO.hasCountermark),
+        ])
+        facets["reverse_symbol"] = unique_refs([
+            *objects_from_subjects(graph, reverse_nodes, NMO.hasMark),
+            *objects_from_subjects(graph, reverse_nodes, NMO.hasControlmark),
+            *objects_from_subjects(graph, reverse_nodes, NMO.hasMintmark),
+            *objects_from_subjects(graph, reverse_nodes, NMO.hasCountermark),
+        ])
+        facets["reverse_letter"] = unique_refs(
+            fallback_ref(value, "reverse_letter")
+            for value in raw_values_containing(cards, ("reverseletter", "symbolrevletter", "lettermark"))
+        )
+        facets["officina_mark"] = unique_refs([
+            *objects_from_subjects(graph, reverse_nodes, NMO.hasMintmark),
+            *(fallback_ref(value, "officina_mark") for value in raw_values_containing(cards, ("officina", "officinamark"))),
+        ])
+        facets["exergue"] = unique_refs(
+            fallback_ref(value, "exergue")
+            for value in raw_values_containing(cards, ("exergue", "exergual"))
+        )
+        facets["notebook"] = unique_refs(
+            fallback_ref(notebook["name"], "notebook")
+            for notebook in notebooks if notebook.get("name")
+        )
 
         # Raw card fields extend filters only where the controlled model does not
         # already express the concept.
@@ -631,10 +794,14 @@ def build(root: Path) -> int:
         photo_items: list[dict[str, Any]] = []
         for i, item in enumerate(photos_by_key.get(key, []), start=1):
             matched_photo_keys.add(key)
+            explicit_side = item["side"].strip().lower()
+            display_side = explicit_side or ("obverse" if i == 1 else "reverse" if i == 2 else "")
             photo_items.append({
                 "sequence": i,
                 "label": item["label"] or (item["side"].title() if item["side"] else f"Photograph {i}"),
-                "side": item["side"],
+                "side": explicit_side,
+                "display_side": display_side,
+                "side_inferred": not bool(explicit_side) and bool(display_side),
                 "resource_url": item["resource_url"],
                 "image_url": item["image_url"],
             })
@@ -644,7 +811,7 @@ def build(root: Path) -> int:
         obverse = face_data(graph, coin, NMO.hasObverse)
         reverse = face_data(graph, coin, NMO.hasReverse)
         text_fields = collect_text_fields(
-            graph, coin, identifier, title, obverse, reverse, cards, bibliography, descriptions
+            graph, coin, identifier, title, obverse, reverse, cards, bibliography, descriptions, facets, notebooks
         )
 
         modified = first_value(graph, coin, DCTERMS.modified)
@@ -670,6 +837,8 @@ def build(root: Path) -> int:
             "reverse": reverse,
             "ontology": generic_ontology(graph, coin),
             "cards": cards,
+            "notebooks": notebooks,
+            "notebook_pages": sorted({notebook["page"] for notebook in notebooks if notebook.get("page") is not None}),
             "photos": photo_items,
             "source_files": sorted(coin_sources.get(str(coin), [])),
         }
@@ -721,6 +890,11 @@ def build(root: Path) -> int:
     numeric_extents["date"] = {
         "min": min(date_starts + date_ends) if date_starts or date_ends else None,
         "max": max(date_starts + date_ends) if date_starts or date_ends else None,
+    }
+    notebook_pages = [page for record in records for page in record.get("notebook_pages", [])]
+    numeric_extents["notebook_page"] = {
+        "min": min(notebook_pages) if notebook_pages else None,
+        "max": max(notebook_pages) if notebook_pages else None,
     }
 
     validation = {

@@ -9,6 +9,7 @@
     "magistrate": "Magistrate",
     "deity": "Deity",
     "portrait": "Portrait",
+    "state": "State",
     "mint": "Mint",
     "region": "Region",
     "city": "City",
@@ -40,6 +41,12 @@
     "controlmark": "Control mark",
     "mintmark": "Mint mark",
     "countermark": "Countermark",
+    "obverse_symbol": "Obverse symbol — any position",
+    "reverse_symbol": "Reverse symbol — any position",
+    "reverse_letter": "Reverse letter",
+    "officina_mark": "Officina mark",
+    "exergue": "Exergue",
+    "notebook": "Notebook",
     "peculiarity": "Peculiarity",
     "secondary_treatment": "Secondary treatment",
     "wear": "Wear",
@@ -57,10 +64,12 @@
     "obverse_type": "Obverse type / design",
     "reverse_type": "Reverse type / design",
     "date_on_object": "Date on object",
+    "place": "Place search",
     "iconography": "Iconography",
     "symbol": "Symbol / monogram / mark",
     "symbol_position": "Symbol position",
     "bibliography": "Reference / bibliography",
+    "notebook_reference": "Notebook reference",
     "notes": "Notes / archival transcription"
   },
   "numeric_extents": {
@@ -86,6 +95,10 @@
     },
     "date": {
       "min": -400,
+      "max": 138
+    },
+    "notebook_page": {
+      "min": 85,
       "max": 138
     }
   },

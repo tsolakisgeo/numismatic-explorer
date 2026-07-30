@@ -12,26 +12,27 @@ A neutral-titled, ontology-first static website for GitHub Pages. RDF/Turtle fil
 - Connects each coin to any number of METIS photograph resources through `data/coin_photos.csv`.
 - Generates bookmarkable searches, responsive mobile filters, grid/list views, pagination, sorting, and CSV export.
 - Publishes through the included GitHub Pages workflow.
+- Uses a restrained blue research-catalogue palette and places the obverse/reverse photograph beside the corresponding description and legend within each result card.
 
 Inventory-card images and card transcriptions are **not displayed publicly in this version**. They remain in the Turtle source and can still contribute searchable evidence or fallback facets.
 
 ## Available filters
 
-The interface combines the most useful search patterns from OCRE, Seleucid Coins Online, RPC Online, and METIS:
+The interface includes every search field present in the supplied Numismatics.org/OCRE advanced-search page, while retaining the additional archaeological and collection filters required by this project.
 
-- **Identification:** identifier/coin number, catalogue volume or number, title/name, object type, subtype, type series, and reference work.
-- **Chronology:** date from/to, date appearing on the object, and period.
-- **People and authority:** authority, stated authority, issuer, dynasty, reign/issue, person, magistrate, deity, and portrait.
-- **Geography:** mint, region, city, province, conventus, alliance, area, site, and country.
-- **Typology:** material, denomination, manufacture, shape, authenticity, and weight standard.
-- **Faces:** separate obverse/reverse legend and type/design searches.
-- **Iconography and marks:** iconography, symbol, monogram, symbol position, control mark, mint mark, and countermark.
+- **Keyword:** one global search across all indexed fields.
+- **People and organizations:** authority, deity, dynasty, issuer, portrait, and state; plus stated authority, reign/issue, person, and magistrate.
+- **Places:** place search and mint; plus region, city, province, conventus, alliance, area, site, and country.
+- **Typology and chronology:** denomination, manufacture, material, object type, date from/to, date on object, period, shape, authenticity, and weight standard.
+- **Obverse and reverse:** separate obverse legend, reverse legend, obverse type, reverse type, and all-iconography searches.
+- **Symbols:** obverse symbol at any position; reverse symbol at any position; reverse letter; officina mark; exergue; symbol text and position; control mark, mint mark, and countermark.
 - **Measurements:** from/to ranges for weight, diameter, axis, height, and width.
+- **Excavation notebooks:** notebook as a multiple-choice facet, notebook page from/to, and complete-reference text search.
 - **Context:** findspot, find context, immediate/local/landscape context, and collection.
 - **Condition and production:** peculiarity, secondary treatment, wear, corrosion, production object, and die.
 - **Record status:** photographs, review status, type-series attribution, measurements, face descriptions, corrected/added types, and additional specimens.
 
-A filter only shows controlled values when those values actually occur in the current data. Text and range searches remain available even when the small demonstration dataset has no matching values yet.
+Facet headings remain visible even when the demonstration dataset has no indexed values, making the full search model clear before the complete corpus is added.
 
 ## Photograph mapping
 
@@ -48,7 +49,7 @@ COIN 2025 109    https://metis.ascsa.edu.gr/resource/cdf99ae9186ffbc2af391d37b95
 COIN 2025 109    https://metis.ascsa.edu.gr/resource/3850451b05aae51b70f5097246410f36
 ```
 
-Repeated identifiers create multiple photograph links. The parser accepts forms such as `COIN 2025 109`, `2025-109`, and `coin-2025-109`.
+Repeated identifiers create multiple photograph links. The parser accepts forms such as `COIN 2025 109`, `2025-109`, and `coin-2025-109`. In the simple two-column format, the first two rows are placed in the obverse and reverse display slots respectively. This is a presentation convention only and is not written back into the RDF as a semantic face assignment.
 
 The URL is treated as a METIS **resource page**, not as a direct image file. The interface therefore reports the number of linked METIS images and opens the resource page. Optional direct-image data is already supported later:
 
@@ -57,7 +58,7 @@ coin_id,metis_url,side,image_url,label
 COIN 2025 109,https://metis.ascsa.edu.gr/resource/...,obverse,https://.../image.jpg,Obverse
 ```
 
-No side is inferred from row order.
+When a `side` column is supplied, it overrides the display-order convention and should contain `obverse` or `reverse`.
 
 ## Add Turtle records
 

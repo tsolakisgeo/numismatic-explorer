@@ -92,6 +92,10 @@
     "label": "Dynasty",
     "values": []
   },
+  "exergue": {
+    "label": "Exergue",
+    "values": []
+  },
   "find_context": {
     "label": "Find context",
     "values": []
@@ -173,8 +177,39 @@
     "label": "Mint mark",
     "values": []
   },
+  "notebook": {
+    "label": "Notebook",
+    "values": [
+      {
+        "value": "O. Broneer",
+        "label": "O. Broneer",
+        "source": "archival",
+        "count": 2
+      },
+      {
+        "value": "Notebook 139",
+        "label": "Notebook 139",
+        "source": "archival",
+        "count": 1
+      },
+      {
+        "value": "Notebook 142",
+        "label": "Notebook 142",
+        "source": "archival",
+        "count": 1
+      }
+    ]
+  },
   "object_type": {
     "label": "Object type",
+    "values": []
+  },
+  "obverse_symbol": {
+    "label": "Obverse symbol — any position",
+    "values": []
+  },
+  "officina_mark": {
+    "label": "Officina mark",
     "values": []
   },
   "peculiarity": {
@@ -226,6 +261,27 @@
     "label": "Reign / issue",
     "values": []
   },
+  "reverse_letter": {
+    "label": "Reverse letter",
+    "values": []
+  },
+  "reverse_symbol": {
+    "label": "Reverse symbol — any position",
+    "values": [
+      {
+        "value": "https://example.org/corinth/id/controlmark-wedges-in-cross-angles",
+        "label": "Wedge-shaped elements in the angles of the cross",
+        "source": "rdf",
+        "count": 1
+      },
+      {
+        "value": "https://example.org/corinth/id/controlmark-1934-228-reverse",
+        "label": "Δ to left; oinochoe to right",
+        "source": "rdf",
+        "count": 1
+      }
+    ]
+  },
   "secondary_treatment": {
     "label": "Secondary treatment",
     "values": []
@@ -236,6 +292,10 @@
   },
   "site": {
     "label": "Site",
+    "values": []
+  },
+  "state": {
+    "label": "State",
     "values": []
   },
   "stated_authority": {

@@ -26,7 +26,7 @@
 
   function photoPanel(photos) {
     if (!photos?.length) return '';
-    return `<section class="detail-section"><div class="section-heading"><div><p class="eyebrow">External media</p><h2>Coin photographs</h2></div><p>Photograph resources are linked through <code>data/coin_photos.csv</code>. The order does not imply an obverse/reverse assignment.</p></div>
+    return `<section class="detail-section"><div class="section-heading"><div><p class="eyebrow">External media</p><h2>Coin photographs</h2></div><p>Photograph resources are linked through <code>data/coin_photos.csv</code>. An explicit side column is authoritative; otherwise row order is used only for display placement.</p></div>
       <div class="detail-photo-grid">${photos.map(photo => photo.image_url
         ? `<a class="detail-photo" href="${NX.escapeHTML(photo.resource_url)}" target="_blank" rel="noreferrer"><img src="${NX.escapeHTML(photo.image_url)}" alt="${NX.escapeHTML(photo.label)}"><strong>${NX.escapeHTML(photo.label)}</strong><span>Open resource in METIS ↗</span></a>`
         : `<a class="detail-photo resource-only" href="${NX.escapeHTML(photo.resource_url)}" target="_blank" rel="noreferrer"><strong>${NX.escapeHTML(photo.label)}</strong><span>Open photograph resource in METIS ↗</span></a>`).join('')}</div>
