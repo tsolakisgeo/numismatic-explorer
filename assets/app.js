@@ -416,11 +416,11 @@
   function metaIcon(kind) {
     const icons = {
       date: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>',
-      material: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7v10M7 12h10"></path></svg>',
-      denomination: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-8-8 8-8 8 8z"></path><path d="M9 12h6"></path></svg>',
-      weight: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-6 6h12l-6-6z"></path><path d="M7 11l-2 8h14l-2-8"></path><path d="M12 5V3"></path></svg>',
-      diameter: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><path d="M7 17L17 7"></path></svg>',
-      axis: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v5l3 2"></path></svg>'
+      material: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h10l3 5H8L5 7z"></path><path d="M8 12l-2 5h10l2-5"></path><path d="M5 7l-2 5h5"></path></svg>',
+      denomination: '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="7" rx="7" ry="3"></ellipse><path d="M5 7v4c0 1.7 3.1 3 7 3s7-1.3 7-3V7"></path><path d="M5 11v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-4"></path></svg>',
+      weight: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17M5 6h14M8 20h8"></path><path d="M7 6l-3 6h6L7 6zM17 6l-3 6h6l-3-6z"></path></svg>',
+      diameter: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M5 12h14M8 9l-3 3 3 3M16 9l3 3-3 3"></path></svg>',
+      axis: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 5v14M9 8l3-3 3 3M9 16l3 3 3-3"></path></svg>'
     };
     return icons[kind] || '';
   }
