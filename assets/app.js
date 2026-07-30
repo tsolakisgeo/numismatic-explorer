@@ -413,16 +413,32 @@
       : `COIN ${identifier}`;
   }
 
+  function metaIcon(kind) {
+    const icons = {
+      date: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>',
+      material: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7v10M7 12h10"></path></svg>',
+      denomination: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-8-8 8-8 8 8z"></path><path d="M9 12h6"></path></svg>',
+      weight: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-6 6h12l-6-6z"></path><path d="M7 11l-2 8h14l-2-8"></path><path d="M12 5V3"></path></svg>',
+      diameter: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><path d="M7 17L17 7"></path></svg>',
+      axis: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v5l3 2"></path></svg>'
+    };
+    return icons[kind] || '';
+  }
+
+  function metaPill(kind, label, value) {
+    const display = value || '–';
+    return `<span class="meta-pill" title="${NX.escapeHTML(label)}"><span class="meta-icon" aria-hidden="true">${metaIcon(kind)}</span><span class="meta-label sr-only">${NX.escapeHTML(label)}: </span><span class="meta-value">${NX.escapeHTML(display)}</span></span>`;
+  }
+
   function metadataLine(record) {
-    const values = [
-      record.date?.label,
-      NX.firstLabel(record.facets.material),
-      NX.firstLabel(record.facets.denomination),
-      NX.formatMeasurement(record.measurements?.weight, 'g'),
-      NX.formatMeasurement(record.measurements?.diameter, 'mm'),
-      Number.isFinite(record.measurements?.axis) ? `${record.measurements.axis}h` : ''
-    ].filter(Boolean);
-    return values.map(value => `<span>${NX.escapeHTML(value)}</span>`).join('');
+    return [
+      metaPill('date', 'Date', record.date?.label || '–'),
+      metaPill('material', 'Material', NX.firstLabel(record.facets.material)),
+      metaPill('denomination', 'Denomination', NX.firstLabel(record.facets.denomination)),
+      metaPill('weight', 'Weight (g)', NX.formatMeasurement(record.measurements?.weight, 'g')),
+      metaPill('diameter', 'Diameter (mm)', NX.formatMeasurement(record.measurements?.diameter, 'mm')),
+      metaPill('axis', 'Axis', Number.isFinite(record.measurements?.axis) ? `${record.measurements.axis} h` : '')
+    ].join('');
   }
 
   function recordCard(record) {
