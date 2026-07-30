@@ -1,0 +1,136 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-325
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-325" ;
+    dcterms:source corid:card-COIN_X_1934_00325_X_sideA ;
+    nmo:hasAuthority corid:authority-tiberius ;
+    nmo:hasIssuer corid:issuer-l-arrius-peregrinus ;
+    nmo:hasIssuer corid:issuer-l-furius-labeo ;
+    nmo:hasStartDate "0032"^^xsd:gYear ;
+    nmo:hasEndDate "0034"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-as ;
+    nmo:hasDiameter "21.5"^^xsd:decimal ;
+    nmo:hasAxis 1 ;
+    nmo:hasObverse corid:coin-1934-325-obverse ;
+    nmo:hasReverse corid:coin-1934-325-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 43" ;
+    dcterms:bibliographicCitation "Amandry XVI, 32/3-33/4 AD" ;
+    cor:dateAssignmentBasis "The card cites Amandry XVI and writes 32/3-33/4 AD; the linked database normalizes the range to AD 32-34." ;
+    cor:denominationAssignmentBasis "The denomination 'as' is supplied by the linked database and is not explicitly written on the card." ;
+    cor:axisAssignmentBasis "Die axis 1 is supplied by the linked database and is not explicitly written on the card." .
+
+corid:authority-tiberius
+    a nmo:Authority ;
+    skos:prefLabel "Tiberius"@en .
+
+corid:issuer-l-arrius-peregrinus
+    a nmo:Issuer ;
+    skos:prefLabel "L. Arrius Peregrinus"@en .
+
+corid:issuer-l-furius-labeo
+    a nmo:Issuer ;
+    skos:prefLabel "L. Furius Labeo"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-as
+    a nmo:Denomination ;
+    skos:prefLabel "As"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-325-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "L ARRIO PEREGRINO IIVIR" ;
+    dcterms:description "Laureate bust of Tiberius left"@en .
+
+corid:coin-1934-325-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "L FVRIO LABEONE IIVIR / GENT IVL / COR" ;
+    dcterms:description "Temple inscribed GENT IVL, with COR below"@en .
+
+corid:card-COIN_X_1934_00325_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00325_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-325 ;
+    cor:sourceImageFilename "COIN_X_1934_00325_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-325" ;
+    cor:inventoryNumber "1934-325" ;
+    cor:earlierInventoryNumberRaw "52" ;
+    cor:earlierInventoryNumber "52" ;
+    cor:mintRaw "Corinth" ;
+    cor:magistracyRaw "IIVIR" ;
+    cor:authorityRaw "Tiberius" ;
+    cor:issuerRaw "L. Arrius Peregrinus & L. Furius Labeo" ;
+    cor:dateRaw "32/3-33/4 AD" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21.5" ;
+    cor:obverseLegendRaw "L ARRIO PE REGRINO IIVIR" ;
+    cor:obverseTypeRaw "Bust of Tiberius l., laureate" ;
+    cor:reverseLegendRaw "L FVRIO LABEONE IIVIR; GENT IVL; below, COR" ;
+    cor:reverseTypeRaw "Temple inscribed GENT IVL; below, COR" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 43" ;
+    cor:bibliographicReferenceRaw "Amandry XVI, 32/3-33/4 AD" ;
+    cor:conditionNoteRaw "(excellent example)" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "5/16/1934" ;
+    cor:excavationDate "1934-05-16"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 114 (11), NB 143" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 114 ;
+        cor:notebookPageRaw "114" ;
+        cor:notebookEntryOrRange "11" ;
+        cor:notebookNumber 143 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1242294812" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseDynastyRaw "Corinth Duoviri" ;
+    cor:databaseAuthorityRaw "Peregrinus-Labeo" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "32-34" ;
+    cor:databaseObverseLegendRaw "L ARRIO PE REGRINO IIVIR" ;
+    cor:databaseObverseTypeRaw "bust of Tiberius l., laureate" ;
+    cor:databaseReverseLegendRaw "L FURIO LABEONE IIVIR" ;
+    cor:databaseReverseTypeRaw "hexastyle temple, inscribed GENT IUL, COR in exergue" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "as" ;
+    cor:databaseDiameterRaw "21.5" ;
+    cor:databaseAxisRaw "1" ;
+    cor:databaseBibliographicReferenceRaw "Ed. 43; Amandry XVI" ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 5/16/1934, #11; Notebook 143, p. 114" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the earlier number 52 and the exact reverse inscription, especially whether the temple legend reads GENT IVL or GENT IUL." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "GENT IVL" ;
+        cor:proposedValue "GENT IUL" ;
+        cor:reason "The card appears to read GENT IVL, while the linked database expands it as GENT IUL."
+    ] .

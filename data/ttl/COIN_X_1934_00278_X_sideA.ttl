@@ -1,0 +1,127 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-278
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-278" ;
+    dcterms:source corid:card-COIN_X_1934_00278_X_sideA ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-jeton ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-278-obverse ;
+    nmo:hasReverse corid:coin-1934-278-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    cor:materialAssignmentBasis "The linked coin database records AE; the card appears to contain a crossed-out reading 'Billon'." .
+
+corid:denomination-jeton
+    a nmo:Denomination ;
+    skos:prefLabel "Jeton"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-278-obverse
+    a nmo:Obverse ;
+    dcterms:description "Unidentified central object within a border of dots and concentric circles"@en .
+
+corid:coin-1934-278-reverse
+    a nmo:Reverse ;
+    dcterms:description "Two keys within a border of dots and concentric circles"@en .
+
+corid:negative-92-56-23
+    a cor:PhotographicNegative ;
+    dcterms:identifier "92-56-23" ;
+    cor:depictsNumismaticObject corid:coin-1934-278 .
+
+corid:negative-92-56-24
+    a cor:PhotographicNegative ;
+    dcterms:identifier "92-56-24" ;
+    cor:depictsNumismaticObject corid:coin-1934-278 .
+
+corid:card-COIN_X_1934_00278_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00278_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-278 ;
+    cor:sourceImageFilename "COIN_X_1934_00278_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-278" ;
+    cor:inventoryNumber "1934-278" ;
+    cor:earlierInventoryNumberRaw "406" ;
+    cor:earlierInventoryNumber "406" ;
+    cor:classificationRaw "Jeton" ;
+    cor:materialRaw "Billon (crossed out)" ;
+    cor:diameterRaw "21" ;
+    cor:obverseTypeRaw "Border of dots within circles; drawn central object" ;
+    cor:reverseTypeRaw "Two keys; border of dots within circles" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/7/1934" ;
+    cor:excavationDate "1934-05-07"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142; Morgan-Harland p. 168 (7)" ;
+        cor:notebookNumber 142 ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 168 ;
+        cor:notebookPageRaw "168" ;
+        cor:notebookEntryOrRange "7" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= in STUDY COLL." ;
+    cor:negativeReferenceRaw "Neg. 92-56-23/24" ;
+    cor:photographicNegative corid:negative-92-56-23 ;
+    cor:photographicNegative corid:negative-92-56-24 ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs showing the two faces of the jeton." ;
+    cor:archivalAnnotationRaw "8 (circled)" ;
+    cor:databaseCoinId "622871301" ;
+    cor:databaseDepartmentRaw "ME" ;
+    cor:databaseObverseTypeRaw "Border of dots within circles; object in center" ;
+    cor:databaseReverseTypeRaw "Border of dots within circles; two keys in center" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Jeton" ;
+    cor:databaseDiameterRaw "21" ;
+    cor:databaseAxisRaw "4 or 10" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/7/1934; Notebook 142 p.168, 7" ;
+    cor:databaseNoteRaw "See coin card for drawing of obverse type" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the crossed-out material reading, the unidentified central obverse object, the die axis ('4 or 10'), and which negative number belongs to each attached photograph." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "material" ;
+        cor:rawValue "Billon (crossed out)" ;
+        cor:proposedValue "AE" ;
+        cor:reason "The linked database records AE, while the visible card appears to preserve a crossed-out material reading."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseType" ;
+        cor:rawValue "drawn central object" ;
+        cor:reason "The central obverse device is drawn but not identified in words."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "axis" ;
+        cor:rawValue "not securely legible on card" ;
+        cor:proposedValue "4 or 10" ;
+        cor:reason "The linked database gives two alternative die-axis values."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "negativeToPhotographAssignment" ;
+        cor:rawValue "Neg. 92-56-23/24" ;
+        cor:reason "The collective caption does not explicitly assign one negative number to each photograph."
+    ] .

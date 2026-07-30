@@ -1,0 +1,57 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-392
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-392" ;
+    dcterms:source corid:card-COIN_X_1934_00392_X_sideA ;
+    nmo:hasObverse corid:coin-1934-392-obverse ;
+    nmo:hasReverse corid:coin-1934-392-reverse .
+
+corid:card-COIN_X_1934_00392_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00392_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-392 ;
+    cor:sourceImageFilename "COIN_X_1934_00392_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-392" ;
+    cor:inventoryNumber "1934-392" ;
+    cor:groupRaw "Gru 40" ;
+    cor:negativeNumberRaw "08-94-33A/34A" ;
+    cor:photographicEvidence [
+        a cor:CoinPhotographPair ;
+        cor:leftPhotographDescription "Indistinct central bust or monogram-like device surrounded by a marginal legend." ;
+        cor:rightPhotographDescription "Indistinct central figure or cross-like device surrounded by a marginal legend."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 40" ;
+        cor:proposedValue "Group 40" ;
+        cor:reason "The handwritten abbreviation is not expanded on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Two pasted photographs without written obverse/reverse labels" ;
+        cor:proposedValue "Left photograph as obverse; right photograph as reverse" ;
+        cor:reason "The assignment follows the photographs' placement and is not explicitly stated on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that 'Gru 40' means Group 40, the proposed left-obverse/right-reverse assignment, and the indistinct face descriptions." .
+
+corid:coin-1934-392-obverse
+    a nmo:Obverse ;
+    dcterms:description "Indistinct central bust or monogram-like device surrounded by a marginal legend."@en .
+
+corid:coin-1934-392-reverse
+    a nmo:Reverse ;
+    dcterms:description "Indistinct central figure or cross-like device surrounded by a marginal legend."@en .

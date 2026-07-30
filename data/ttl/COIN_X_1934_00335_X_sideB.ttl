@@ -1,0 +1,76 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-335
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-335" ;
+    dcterms:source corid:card-COIN_X_1934_00335_X_sideB ;
+    nmo:hasStartDate "-0333"^^xsd:gYear ;
+    nmo:hasEndDate "-0304"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rhodes ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "11"^^xsd:decimal ;
+    nmo:hasWeight "1.15"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-335-obverse ;
+    nmo:hasReverse corid:coin-1934-335-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Caria), pp. 238–239" .
+
+corid:mint-rhodes
+    a nmo:Mint ;
+    skos:prefLabel "Rhodes"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora SE, South Stoa, Well VIII"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-335-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of Rhodos right, with the hair in a coil at the back of the neck"@en .
+
+corid:coin-1934-335-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Ρ - Ο" ;
+    dcterms:description "Rose with bud; symbol to the right"@en .
+
+corid:card-COIN_X_1934_00335_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00335_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-335 ;
+    cor:sourceImageFilename "COIN_X_1934_00335_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00335_X_sideA ;
+    cor:archivalAnnotationRaw "S. Stoa fill by well (VIII) + date (next to #40, 4-2-34)" ;
+    cor:findspotRaw "S. Stoa fill by well (VIII)" ;
+    cor:excavationDateRaw "4-2-34" ;
+    cor:excavationDate "1934-04-02"^^xsd:date ;
+    cor:databaseCoinId "1276323995" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Rhodes" ;
+    cor:databaseDateRaw "-333 to -304" ;
+    cor:databaseObverseTypeRaw "Head of Rhodes facing r.; hair in coil at back of neck" ;
+    cor:databaseReverseLegendRaw "<gr>R - O<gr>" ;
+    cor:databaseReverseTypeRaw "Rose with bud; symbol to right" ;
+    cor:databaseSymbolRaw "Letters; symbol on reverse" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "1.15" ;
+    cor:databaseDiameterRaw "11" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "BMC Caria p.238-239" ;
+    cor:databaseExcavationContextRaw "Agora SE; South Stoa Well VIII; excavation date 4/2/1934; Notebook 139 p.156, 18-25" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint archival phrase after 'well (VIII)' and whether it reads 'next to #40'." .

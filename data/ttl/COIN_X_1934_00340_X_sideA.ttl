@@ -1,0 +1,111 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-340
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-340" ;
+    dcterms:source corid:card-COIN_X_1934_00340_X_sideA ;
+    dcterms:bibliographicCitation "Schlumb., p. 309, pl. XIII, 8" ;
+    prov:wasDerivedFrom corid:metis-coin-1510057495 ;
+    nmo:hasAuthority corid:authority-guy-ii-of-athens ;
+    nmo:hasStartDate "1287"^^xsd:gYear ;
+    nmo:hasEndDate "1308"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-obol ;
+    nmo:hasObverse corid:coin-1934-340-obverse ;
+    nmo:hasReverse corid:coin-1934-340-reverse ;
+    nmo:hasFindspot corid:place-agora-se .
+
+corid:coin-1934-340-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "+ GVIOT . DVX . ATH'" ;
+    dcterms:description "Cross with small trefoils in the quarters."@en .
+
+corid:coin-1934-340-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+ [symbol] THEBE : CIVIS" ;
+    dcterms:description "Castle with a high central tower and lower side towers."@en .
+
+corid:card-COIN_X_1934_00340_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00340_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-340 ;
+    cor:sourceImageFilename "COIN_X_1934_00340_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-340" ;
+    cor:inventoryNumber "1934-340" ;
+    cor:secondaryNumberRaw "1266", "59" ;
+    cor:authorityRaw "Guy II of Athens" ;
+    cor:dateRaw "1287-1308" ;
+    cor:historicalNoteRaw "Regency of Hugo de Brienne." ;
+    cor:materialRaw "Æ" ;
+    cor:denominationRaw "obol" ;
+    cor:obverseLegendRaw "+ GVIOT . DVX . ATH'" ;
+    cor:obverseTypeRaw "Cross cantonnée with small trefoils." ;
+    cor:reverseLegendRaw "+ [unclear symbol] THEBE : CIVIS" ;
+    cor:reverseTypeRaw "Castle with high central tower and lower side-towers." ;
+    cor:bibliographicCitationRaw "Schlumb. p. 309. pl. XIII 8" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "6/4/1934" ;
+    cor:excavationDate "1934-06-04"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 109 (10-15)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 109 ;
+        cor:notebookPageRaw "109" ;
+        cor:notebookEntryOrRange "10-15" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseStudyCollectionRaw "True" ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "historicalNoteRaw" ;
+        cor:rawValue "Regency of Hugo de Brienne." ;
+        cor:reason "The first name in the handwritten regency note is not fully clear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "+ [unclear symbol] THEBE : CIVIS" ;
+        cor:reason "A small symbol between the opening cross and THEBE cannot be identified securely."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicCitationRaw" ;
+        cor:rawValue "Schlumb. p. 309. pl. XIII 8" ;
+        cor:reason "The handwritten Roman numeral for the plate is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "collection" ;
+        cor:rawValue "Database IsStudyCollection=True" ;
+        cor:reason "Study Collection is present only in the linked database and is not visibly marked on this card, so no collection relationship was asserted."
+    ] ;
+    cor:databaseContext corid:metis-coin-1510057495 .
+
+corid:authority-guy-ii-of-athens
+    a nmo:Authority ;
+    skos:prefLabel "Guy II of Athens"@en .
+
+corid:denomination-obol
+    a nmo:Denomination ;
+    skos:prefLabel "Obol"@en .
+
+corid:place-agora-se
+    a cor:ExcavationFindspot ;
+    skos:prefLabel "Agora SE"@en .
+
+corid:metis-coin-1510057495
+    a prov:Entity ;
+    dcterms:identifier "1510057495" ;
+    dcterms:description "Linked Metis coin record used as supporting database context."@en .
+
+# Human confirmation: verify the first name in the regency note, the small symbol before THEBE, and the plate numeral in the Schlumberger citation.

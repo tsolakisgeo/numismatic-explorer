@@ -1,0 +1,113 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-327
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-327" ;
+    dcterms:source corid:card-COIN_X_1934_00327_X_sideA ;
+    nmo:hasAuthority corid:authority-nicephorus-ii ;
+    nmo:hasStartDate "0963"^^xsd:gYear ;
+    nmo:hasEndDate "0969"^^xsd:gYear ;
+    nmo:hasMint corid:mint-constantinople ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "26"^^xsd:decimal ;
+    nmo:hasAxis 7 ;
+    nmo:hasObverse corid:coin-1934-327-obverse ;
+    nmo:hasReverse corid:coin-1934-327-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 473, type 1" ;
+    dcterms:bibliographicCitation "D.O.C. III², pp. 587–588, no. 7 or 8" ;
+    cor:mintAssignmentBasis "Constantinople is supplied by the linked database and is not written on the card." ;
+    cor:denominationAssignmentBasis "Follis is supplied by the linked database and is not written on the card." ;
+    cor:axisAssignmentBasis "Die axis 7 is supplied by the linked database and is not written on the card." .
+
+corid:authority-nicephorus-ii
+    a nmo:Authority ;
+    skos:prefLabel "Nicephorus II"@en .
+
+corid:mint-constantinople
+    a nmo:Mint ;
+    skos:prefLabel "Constantinople"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-327-obverse
+    a nmo:Obverse ;
+    dcterms:description "Facing bust of Nicephorus II, holding a labarum in the right hand and a globus cruciger in the left"@en .
+
+corid:coin-1934-327-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+NICHF / +E" ;
+    dcterms:description "Four-line inscription with a central pellet"@en ;
+    cor:descriptionAssignmentBasis "The general reverse type is supplied by the linked database; only fragments of the inscription are visible on the card." .
+
+corid:card-COIN_X_1934_00327_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00327_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-327 ;
+    cor:sourceImageFilename "COIN_X_1934_00327_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-327" ;
+    cor:inventoryNumber "1934-327" ;
+    cor:earlierInventoryNumberRaw "498" ;
+    cor:earlierInventoryNumber "498" ;
+    cor:authorityRaw "Nicephorus II" ;
+    cor:dateRaw "963-969" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "26" ;
+    cor:obverseTypeRaw "Bust of Nicephorus II; in r. labarum, in l. globus cr." ;
+    cor:reverseLegendRaw "+NICHF / +E" ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 473, type 1" ;
+    cor:bibliographicReferenceRaw "D.O.C. III² p. 587-8, 7 or 8" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "5/19/1934" ;
+    cor:excavationDate "1934-05-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 128 (5-17), NB 143" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 128 ;
+        cor:notebookPageRaw "128" ;
+        cor:notebookEntryOrRange "5-17" ;
+        cor:notebookNumber 143 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-619299274" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Nicephorus II" ;
+    cor:databaseMintRaw "Constantinople" ;
+    cor:databaseDateRaw "963-969" ;
+    cor:databaseObverseLegendRaw "traces: [+NICIFR b-ASILEV R]" ;
+    cor:databaseObverseTypeRaw "Bust facing, bearded, crowned with cross and pendilia; holds labarum in right hand and globus cruciger in left hand" ;
+    cor:databaseReverseLegendRaw "+NICHF' / [E]nΘEΥbA / [S]ILEVSRΩ / [MAIΩn]" ;
+    cor:databaseReverseTypeRaw "Four-line inscription with central pellet" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseDiameterRaw "26" ;
+    cor:databaseAxisRaw "7" ;
+    cor:databaseBibliographicReferenceRaw "BMC, p. 473 (type 1), 8; DOC III, pp. 587-588, 8" ;
+    cor:databaseNoteRaw "DOC: Class 2" ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 05/19/1934, #5-17; Notebook 143 (Davidson), p. 128; Card #498" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact reverse legend fragments and whether the D.O.C. reference ends in 7 or 8." .

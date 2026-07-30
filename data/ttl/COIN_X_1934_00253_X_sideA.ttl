@@ -1,0 +1,107 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-253
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-253" ;
+    dcterms:source corid:card-COIN_X_1934_00253_X_sideA ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasWeight "4.68"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-253-obverse ;
+    nmo:hasReverse corid:coin-1934-253-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:coin-1934-253-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head right, much worn; a slight incuse containing an amphora is visible in the centre"@en ;
+    nmo:hasControlmark corid:controlmark-1934-253-amphora .
+
+corid:controlmark-1934-253-amphora
+    skos:prefLabel "Amphora in a slight central incuse"@en .
+
+corid:coin-1934-253-reverse
+    a nmo:Reverse ;
+    dcterms:description "No indication of stamping"@en .
+
+corid:card-COIN_X_1934_00253_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00253_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-253 ;
+    cor:sourceImageFilename "COIN_X_1934_00253_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-253" ;
+    cor:inventoryNumber "1934-253" ;
+    cor:earlierInventoryNumberRaw "80" ;
+    cor:earlierInventoryNumber "80" ;
+    cor:classificationRaw "Corinth- (coin?)" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:weightRaw "4.68 g." ;
+    cor:obverseTypeRaw "Head r., much worn; slight incuse with amphora in it" ;
+    cor:reverseTypeRaw "no indication of stamping" ;
+    cor:archivalAnnotationRaw "Two other coins (?) have been found in Corinth with amphorae on them, all in the pottery deposit." ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "4/3/1934" ;
+    cor:excavationDate "1934-04-03"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 70 (1-8)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 70 ;
+        cor:notebookPageRaw "70" ;
+        cor:notebookEntryOrRange "1-8" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= IN STUDY COLLECTION" ;
+    cor:archivalAnnotationRaw "X" ;
+    cor:databaseCoinId "-2143199174" ;
+    cor:databaseDepartmentRaw "OT" ;
+    cor:databaseRegionRaw "Corinth" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "21" ;
+    cor:databaseWeightRaw "4.68" ;
+    cor:databaseObverseTypeRaw "Head facing r.; incuse with amphora" ;
+    cor:databaseReverseTypeRaw "not stamped" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 4/3/1934; Notebook 142 p. 70, 1-8" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the object is a coin, the exact wording of the note about two comparable Corinth finds and the pottery deposit, and the function of the isolated archival mark X." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "classificationRaw" ;
+        cor:rawValue "Corinth- (coin?)" ;
+        cor:reason "The card itself questions whether the object is a coin."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "Two other coins (?) have been found in Corinth with amphorae on them, all in the pottery deposit." ;
+        cor:reason "Several words in the handwritten comparative note are faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "X" ;
+        cor:reason "The isolated mark is visible, but its archival function is unclear."
+    ] .

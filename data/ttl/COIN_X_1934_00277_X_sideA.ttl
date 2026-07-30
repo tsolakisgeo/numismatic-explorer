@@ -1,0 +1,149 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-277
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-277" ;
+    dcterms:source corid:card-COIN_X_1934_00277_X_sideA ;
+    nmo:hasAuthority corid:authority-hadrian ;
+    nmo:hasStartDate "0118"^^xsd:gYear ;
+    nmo:hasEndDate "0122"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "2.10"^^xsd:decimal ;
+    nmo:hasAxis 7 ;
+    nmo:hasObverse corid:coin-1934-277-obverse ;
+    nmo:hasReverse corid:coin-1934-277-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C.R.E. III, p. 248, no. 70a, or p. 273, no. 270" ;
+    dcterms:bibliographicCitation "R.I.C. II, p. 355, no. 122" ;
+    cor:productionDateAssignmentBasis "The card distinguishes AD 118 for COS II from AD 119-122 for COS III; the linked database assigns AD 118-122." ;
+    cor:axisAssignmentBasis "The die axis 7 is supplied by the linked coin database and is not visibly written on the card." .
+
+corid:authority-hadrian
+    a nmo:Authority ;
+    skos:prefLabel "Hadrian"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-277-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "... TRAI ... VS ..." ;
+    dcterms:description "Laureate, undraped bust of Hadrian right"@en .
+
+corid:coin-1934-277-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "P M TR P COS II or III" ;
+    nmo:hasMintmark corid:mintmark-fort-red ;
+    dcterms:description "Fortuna draped, seated left, holding a rudder and cornucopia; FORT RED in the exergue"@en .
+
+corid:mintmark-fort-red
+    a nmo:Mintmark ;
+    skos:prefLabel "FORT RED" ;
+    skos:notation "FORT RED" .
+
+corid:card-COIN_X_1934_00277_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00277_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-277 ;
+    cor:sourceImageFilename "COIN_X_1934_00277_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-277" ;
+    cor:inventoryNumber "1934-277" ;
+    cor:earlierInventoryNumberRaw "163" ;
+    cor:earlierInventoryNumber "163" ;
+    cor:classificationRaw "Rom. Imp. Coin" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:dateRaw "117-138" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "den." ;
+    cor:diameterRaw "18" ;
+    cor:weightRaw "2.10 gr." ;
+    cor:obverseLegendRaw "... TRAI ... VS ..." ;
+    cor:obverseTypeRaw "Bust r., laureate (undraped)" ;
+    cor:reverseLegendRaw "P M TR P COS II or III" ;
+    cor:reverseTypeRaw "Fortuna draped, seated l., holding rudder, and cornucopia; in exergue: FORT RED" ;
+    cor:chronologyAnnotationRaw "118 AD = COS II; 119-122 = COS III" ;
+    cor:bibliographicReferenceRaw "cf. BMC III, p. 248, 70a or p. 273, 270" ;
+    cor:bibliographicReferenceRaw "RIC II, p. 355, 122" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/4/1934" ;
+    cor:excavationDate "1934-05-04"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142; Morgan-Harland p. 158 (6)" ;
+        cor:notebookNumber 142 ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 158 ;
+        cor:notebookPageRaw "158" ;
+        cor:notebookEntryOrRange "6" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-1270116703" ;
+    cor:databaseDepartmentRaw "RM" ;
+    cor:databaseAuthorityRaw "Hadrian" ;
+    cor:databaseMintRaw "Rome" ;
+    cor:databaseDateRaw "118-122" ;
+    cor:databaseObverseLegendRaw "] TRAI [ ] VS [" ;
+    cor:databaseObverseTypeRaw "Bust r., laureate, undraped" ;
+    cor:databaseReverseLegendRaw "P M TR P COS II[I?]" ;
+    cor:databaseReverseTypeRaw "Fortuna seated l., draped, holding rudder in r. and cornucopiae in l.; in exergue FORT RED" ;
+    cor:databaseSymbolRaw "in exergue, FORT RED" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseWeightRaw "2.10" ;
+    cor:databaseDiameterRaw "18" ;
+    cor:databaseAxisRaw "7" ;
+    cor:databaseBibliographicReferenceRaw "BMCRE III, p. 248, #70a / p. 273, #270; RIC II, p. 355, #122" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/4/1934, #6; Notebook 142, p. 158" ;
+    cor:databaseNoteRaw "Card 163; poor condition; possibly COS II or COS III, therefore either AD 118 or AD 119-122" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the fragmentary obverse legend and whether the reverse reads COS II or COS III, which determines AD 118 versus AD 119-122." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "... TRAI ... VS ..." ;
+        cor:proposedValue "] TRAI [ ] VS [" ;
+        cor:reason "The obverse legend is fragmentary and partly overwritten; the proposed bracketed form comes from the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "P M TR P COS II or III" ;
+        cor:proposedValue "P M TR P COS II[I?]" ;
+        cor:reason "The final consular numeral is uncertain on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDateAssignment" ;
+        cor:rawValue "118 AD = COS II; 119-122 = COS III" ;
+        cor:proposedValue "AD 118-122" ;
+        cor:reason "The broad range combines two alternatives dependent on the uncertain consular numeral."
+    ] .

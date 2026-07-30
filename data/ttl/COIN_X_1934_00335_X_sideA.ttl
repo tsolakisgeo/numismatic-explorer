@@ -1,0 +1,108 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-335
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-335" ;
+    dcterms:source corid:card-COIN_X_1934_00335_X_sideA ;
+    nmo:hasStartDate "-0333"^^xsd:gYear ;
+    nmo:hasEndDate "-0304"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rhodes ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "11"^^xsd:decimal ;
+    nmo:hasWeight "1.15"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-335-obverse ;
+    nmo:hasReverse corid:coin-1934-335-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Caria), pp. 238–239" ;
+    cor:axisAssignmentBasis "The card shows an upward axis arrow, normalized as die axis 12." .
+
+corid:mint-rhodes
+    a nmo:Mint ;
+    skos:prefLabel "Rhodes"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora SE, South Stoa, Well VIII"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-335-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of Rhodos right, with the hair in a coil at the back of the neck"@en .
+
+corid:coin-1934-335-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Ρ - Ο" ;
+    nmo:hasControlmark corid:controlmark-1934-335-reverse-symbol ;
+    dcterms:description "Rose with bud to the right; symbol in the right field"@en .
+
+corid:controlmark-1934-335-reverse-symbol
+    a nmo:Controlmark ;
+    skos:prefLabel "Branch- or radiate-shaped symbol"@en ;
+    skos:note "The card depicts the symbol graphically rather than naming it."@en .
+
+corid:card-COIN_X_1934_00335_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00335_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-335 ;
+    cor:sourceImageFilename "COIN_X_1934_00335_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00335_X_sideB ;
+    cor:inventoryNumberRaw "1934-335" ;
+    cor:inventoryNumber "1934-335" ;
+    cor:earlierInventoryNumberRaw "280" ;
+    cor:earlierInventoryNumber "280" ;
+    cor:mintRaw "Rhodes" ;
+    cor:dateRaw "333-304" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "11 mm." ;
+    cor:weightRaw "1.15 gm." ;
+    cor:axisRaw "↑" ;
+    cor:obverseTypeRaw "Head of Rhodos r., hair in coil at back of neck" ;
+    cor:reverseLegendRaw "Ρ Ο" ;
+    cor:reverseTypeRaw "Rose with bud to r.; symbol" ;
+    cor:reverseControlmarkRaw "drawn branch- or radiate-shaped symbol" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Caria) pp. 238-239" ;
+    cor:findspotRaw "Agora SE; Well VIII, South Stoa" ;
+    cor:excavationDateRaw "4/2/1934" ;
+    cor:excavationDate "1934-04-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 156 (18-25)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 156 ;
+        cor:notebookPageRaw "156" ;
+        cor:notebookEntryOrRange "18-25" ;
+        cor:notebookNumber 139 ;
+        cor:notebookIdentificationMethod "Name, page, and distinct circled range are explicit on the card; notebook number 139 is supplied by the linked database."
+    ] ;
+    cor:studyCollectionRaw "in Study Collection" ;
+    cor:databaseCoinId "1276323995" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Rhodes" ;
+    cor:databaseDateRaw "-333 to -304" ;
+    cor:databaseObverseTypeRaw "Head of Rhodes facing r.; hair in coil at back of neck" ;
+    cor:databaseReverseLegendRaw "<gr>R - O<gr>" ;
+    cor:databaseReverseTypeRaw "Rose with bud; symbol to right" ;
+    cor:databaseSymbolRaw "Letters; symbol on reverse" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "1.15" ;
+    cor:databaseDiameterRaw "11" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "BMC Caria p.238-239" ;
+    cor:databaseExcavationContextRaw "Agora SE; South Stoa Well VIII; excavation date 4/2/1934; Notebook 139 p.156, 18-25" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the obverse name is written 'Rhodos' or 'Rhodes' and identify the exact form of the drawn reverse symbol." .

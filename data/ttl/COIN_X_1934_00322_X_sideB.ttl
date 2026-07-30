@@ -1,0 +1,109 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-322
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-322" ;
+    dcterms:source corid:card-COIN_X_1934_00322_X_sideB ;
+    nmo:hasAuthority nm:hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "22"^^xsd:decimal ;
+    nmo:hasWeight "7.90"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-322-obverse ;
+    nmo:hasReverse corid:coin-1934-322-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Hesperia 1980, p. 17, 87a" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-322-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP CAESAR TRA HADRIANVS" ;
+    dcterms:description "Laureate head of Hadrian right"@en .
+
+corid:coin-1934-322-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "COL IVL COR" ;
+    dcterms:description "Hexastyle Doric temple"@en .
+
+corid:negative-77-9-19
+    a cor:PhotographicNegative ;
+    dcterms:identifier "77-9-19" ;
+    cor:depictsNumismaticObject corid:coin-1934-322 ;
+    cor:depictsFace corid:coin-1934-322-obverse .
+
+corid:negative-77-9-18
+    a cor:PhotographicNegative ;
+    dcterms:identifier "77-9-18" ;
+    cor:depictsNumismaticObject corid:coin-1934-322 ;
+    cor:depictsFace corid:coin-1934-322-reverse .
+
+corid:photo-print-1934-322-left
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00322_X_sideB ;
+    cor:positionOnCard "upper left" ;
+    cor:depictsNumismaticObject corid:coin-1934-322 ;
+    cor:depictsFace corid:coin-1934-322-obverse ;
+    cor:associatedNegative corid:negative-77-9-19 ;
+    dcterms:description "Mounted black-and-white photograph of the coin's portrait face with a scale beneath"@en .
+
+corid:photo-print-1934-322-right
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00322_X_sideB ;
+    cor:positionOnCard "upper centre-left" ;
+    cor:depictsNumismaticObject corid:coin-1934-322 ;
+    cor:depictsFace corid:coin-1934-322-reverse ;
+    cor:associatedNegative corid:negative-77-9-18 ;
+    dcterms:description "Mounted black-and-white photograph of the temple face with a scale beneath"@en .
+
+corid:card-COIN_X_1934_00322_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00322_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-322 ;
+    cor:sourceImageFilename "COIN_X_1934_00322_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00322_X_sideA ;
+    cor:attachedPhotograph corid:photo-print-1934-322-left ;
+    cor:attachedPhotograph corid:photo-print-1934-322-right ;
+    cor:negativeReferenceRaw "77-9-19; 77-9-18" ;
+    cor:photographicNegative corid:negative-77-9-19 ;
+    cor:photographicNegative corid:negative-77-9-18 ;
+    cor:databaseCoinId "-354762174" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseAuthorityRaw "Hadrian" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "117-138" ;
+    cor:databaseObverseLegendRaw "IMP CAESAR TRA - HADRIANVS" ;
+    cor:databaseObverseTypeRaw "Head of Hadrian facing r.; wearing laureate" ;
+    cor:databaseReverseLegendRaw "COL IVL COR" ;
+    cor:databaseReverseTypeRaw "Hexastyle Doric temple" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "7.90" ;
+    cor:databaseDiameterRaw "22" ;
+    cor:databasePublicationRaw "Hesperia 1980, p. 17, 87a" ;
+    cor:databaseNoteRaw "Temple on reverse perhaps is Temple of Apollo" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/15/1934; Notebook 142 p.17, 130" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the inferred face assignments: negative 77-9-19 as obverse and negative 77-9-18 as reverse." .

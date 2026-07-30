@@ -1,0 +1,136 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-273
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-273" ;
+    dcterms:source corid:card-COIN_X_1934_00273_X_sideA ;
+    nmo:hasAuthority corid:authority-domitian ;
+    nmo:hasStartDate "0081"^^xsd:gYear ;
+    nmo:hasEndDate "0096"^^xsd:gYear ;
+    nmo:hasMint corid:mint-thespiae ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "3.68"^^xsd:decimal ;
+    nmo:hasAxis 10 ;
+    nmo:hasObverse corid:coin-1934-273-obverse ;
+    nmo:hasReverse corid:coin-1934-273-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Central Greece), no. 27, pl. XVI, no. 14" ;
+    dcterms:bibliographicCitation "RPC II 272" ;
+    cor:productionDateAssignmentBasis "Reign of Domitian, supported by the linked coin database record." .
+
+corid:authority-domitian
+    a nmo:Authority ;
+    skos:prefLabel "Domitian"@en .
+
+corid:mint-thespiae
+    a nmo:Mint ;
+    skos:prefLabel "Thespiae"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "Area North of School"@en .
+
+corid:coin-1934-273-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "ΑΥ ΔΟ ΚΑΙ ΣΕ ΓΕΡ" ;
+    dcterms:description "Laureate head of Domitian right"@en .
+
+corid:coin-1934-273-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΘΕΣΠΙ[ΕΩΝ]" ;
+    dcterms:description "Female figure standing right, holding an uncertain object"@en .
+
+corid:card-COIN_X_1934_00273_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00273_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-273 ;
+    cor:sourceImageFilename "COIN_X_1934_00273_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "34-273" ;
+    cor:inventoryNumber "1934-273" ;
+    cor:earlierInventoryNumberRaw "97" ;
+    cor:earlierInventoryNumber "97" ;
+    cor:mintRaw "Thespiae" ;
+    cor:authorityRaw "Domitian" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "18" ;
+    cor:weightRaw "3.68 g." ;
+    cor:axisRaw "axe: 10" ;
+    cor:obverseLegendRaw "AV' DO KAI CEΓEP" ;
+    cor:obverseLegendNormalized "ΑΥ ΔΟ ΚΑΙ ΣΕ ΓΕΡ" ;
+    cor:obverseTypeRaw "Head of Domitian r., laureate." ;
+    cor:reverseLegendRaw "ΘΕΣΠΙ [ΕΩΝ]" ;
+    cor:reverseLegendNormalized "ΘΕΣΠΙ[ΕΩΝ]" ;
+    cor:reverseTypeRaw "Apollo Kitharoidos standing facing with lyre in l. hand." ;
+    cor:revisedReverseTypeRaw "Female figure stg. r., holding ?" ;
+    cor:archivalAnnotationRaw "Object to r. is held too low to be a kithara, which in every example of the Apollo Kitharoidos type has body at chest height, and plectrum arm away from body but turned in at waist." ;
+    cor:bibliographicReferenceRaw "B.M.C. (Cent. Gr.) no. 27; pl. XVI, 14" ;
+    cor:bibliographicReferenceRaw "RPC 2.272" ;
+    cor:findspotRaw "Area North of School" ;
+    cor:excavationDateRaw "5/2/1934" ;
+    cor:excavationDate "1934-05-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. H. Howland p. 147 (1-2)" ;
+        cor:notebookName "R. H. Howland" ;
+        cor:notebookPage 147 ;
+        cor:notebookPageRaw "147" ;
+        cor:notebookEntryOrRange "1-2" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "In Study Coll." ;
+    cor:databaseCoinId "1276495948" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseAuthorityRaw "Domitian" ;
+    cor:databaseMintRaw "Thespiae" ;
+    cor:databaseDateRaw "81-96" ;
+    cor:databaseObverseLegendRaw "AY DO KAI - SE GER" ;
+    cor:databaseObverseTypeRaw "Head of Emperor r., laureate" ;
+    cor:databaseReverseLegendRaw "UESPI - [EVN]" ;
+    cor:databaseReverseTypeRaw "Female figure standing r., holding ?" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "3.68" ;
+    cor:databaseDiameterRaw "18" ;
+    cor:databaseAxisRaw "10" ;
+    cor:databaseBibliographicReferenceRaw "RPC 2.272" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/2/1934; Notebook 142 p.147, 1-2" ;
+    cor:databaseNoteRaw "Card describes the reverse as Apollo Kitharoidos, but the object is too low to be a kithara; the reverse is better treated as an uncertain female figure standing right." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact obverse and reverse legend letters and the reverse figure/object identification; the original Apollo Kitharoidos description was subsequently questioned on the card." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "AV' DO KAI CEΓEP" ;
+        cor:proposedValue "ΑΥ ΔΟ ΚΑΙ ΣΕ ΓΕΡ" ;
+        cor:reason "Several handwritten Greek letters and separations are not fully secure."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "ΘΕΣΠΙ [ΕΩΝ]" ;
+        cor:proposedValue "ΘΕΣΠΙ[ΕΩΝ]" ;
+        cor:reason "The bracketed ending is supplied rather than fully visible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseType" ;
+        cor:rawValue "Apollo Kitharoidos standing facing with lyre in l. hand." ;
+        cor:proposedValue "Female figure standing right, holding an uncertain object" ;
+        cor:reason "A later note on the card rejects the kithara identification because the object is held too low."
+    ] .

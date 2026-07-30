@@ -1,0 +1,96 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-349
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-349" ;
+    dcterms:source corid:card-COIN_X_1934_00349_X_sideA ;
+    nmo:hasAuthority corid:authority-leo-v-and-constantine ;
+    nmo:hasStartDate "0813"^^xsd:gYear ;
+    nmo:hasEndDate "0820"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasMint corid:mint-syracuse ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasWeight "4.20"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-349-obverse ;
+    nmo:hasReverse corid:coin-1934-349-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 412, nos. 22–25" ;
+    dcterms:bibliographicCitation "D.O.C. III¹, p. 386, no. 19" .
+
+corid:card-COIN_X_1934_00349_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00349_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-349 ;
+    cor:sourceImageFilename "COIN_X_1934_00349_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-349" ;
+    cor:inventoryNumber "1934-349" ;
+    cor:cardNumber "414" ;
+    cor:authorityRaw "Leo V, + Constantine his son. 813-820" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:axisRaw "downward arrow" ;
+    cor:weightRaw "4.20 gm." ;
+    cor:obverseLegendRaw "No inscription" ;
+    cor:obverseTypeRaw "On l., bust of Leo V, bearded; on r., bust of Constantine, beardless; both facing, wearing crown with [unclear] and robes; above, +; between, pellet." ;
+    cor:reverseLegendRaw "Λ · K" ;
+    cor:reverseLegendNormalized "Λ·Κ" ;
+    cor:reverseTypeRaw "Cross above; pellet between letters" ;
+    cor:findspotRaw "Agora S.W." ;
+    cor:excavationDateRaw "11/1/1934" ;
+    cor:excavationDate "1934-11-01"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 144; G. Davidson p. 150 (2-12)" ;
+        cor:notebookNumber "144" ;
+        cor:notebookName "G. Davidson" ;
+        cor:notebookPage "150"^^xsd:integer ;
+        cor:notebookEntryOrRange "2-12" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseTypeRaw" ;
+        cor:rawValue "both facing, wearing crown with [unclear] and robes" ;
+        cor:reason "The word or phrase after 'crown with' is not securely legible on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the unclear phrase in the obverse description following 'wearing crown with'." .
+
+corid:coin-1934-349-obverse
+    a nmo:Obverse ;
+    dcterms:description "Facing bust of Leo V on the left, bearded, and facing bust of Constantine on the right, beardless; a cross appears above and a pellet between them."@en .
+
+corid:coin-1934-349-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Λ · K" ;
+    dcterms:description "The letters Lambda and Kappa with a pellet between them and a cross above."@en .
+
+corid:authority-leo-v-and-constantine
+    a nmo:Authority ;
+    skos:prefLabel "Leo V and Constantine"@en .
+
+corid:mint-syracuse
+    a nmo:Mint ;
+    skos:prefLabel "Syracuse"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora S.W."@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

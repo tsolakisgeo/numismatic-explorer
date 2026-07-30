@@ -1,0 +1,66 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+corid:coin-1934-371
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-371" ;
+    dcterms:source corid:card-COIN_X_1934_00371_X_sideA ;
+    nmo:hasObverse corid:coin-1934-371-obverse ;
+    nmo:hasReverse corid:coin-1934-371-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00371_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00371_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-371 ;
+    cor:sourceImageFilename "COIN_X_1934_00371_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-371" ;
+    cor:inventoryNumber "1934-371" ;
+    cor:groupRaw "Gru 19" ;
+    cor:findspotRaw "Agora SW / Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-93-28/29" ;
+    cor:photographicEvidence [
+        a cor:CoinPhotographPair ;
+        cor:leftPhotographDescription "Central castle-like or architectural device with two upper pellets and curved side elements, surrounded by an indistinct marginal legend." ;
+        cor:rightPhotographDescription "Cross within an inner circular border, surrounded by an indistinct marginal legend."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 19" ;
+        cor:proposedValue "Group 19" ;
+        cor:reason "The abbreviated handwritten notation beside COIN is not fully explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDateRaw" ;
+        cor:rawValue "5/8/34" ;
+        cor:proposedValue "1934-05-08" ;
+        cor:reason "The numeric date is likely May 8, 1934, but its order is not explicit on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Two pasted photographs without written obverse/reverse labels" ;
+        cor:proposedValue "Left photograph as obverse; right photograph as reverse" ;
+        cor:reason "The assignment follows the photographs' left-to-right placement and is not explicitly stated on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that 'Gru 19' means Group 19, that 5/8/34 is May 8, 1934, and that the left photograph is the obverse and the right photograph the reverse." .
+
+corid:coin-1934-371-obverse
+    a nmo:Obverse ;
+    dcterms:description "Central castle-like or architectural device with two upper pellets and curved side elements, surrounded by an indistinct marginal legend."@en .
+
+corid:coin-1934-371-reverse
+    a nmo:Reverse ;
+    dcterms:description "Cross within an inner circular border, surrounded by an indistinct marginal legend."@en .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW hoard"@en .

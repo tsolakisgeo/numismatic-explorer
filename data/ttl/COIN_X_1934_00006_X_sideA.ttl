@@ -1,0 +1,100 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-6
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-6" ;
+    dcterms:source corid:card-COIN_X_1934_00006_X_sideA ;
+    nmo:hasAuthority corid:authority-justin-ii ;
+    nmo:hasStartDate "0565"^^xsd:gYear ;
+    nmo:hasEndDate "0578"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "22"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-6-obverse ;
+    nmo:hasReverse corid:coin-1934-6-reverse ;
+    nmo:hasFindspot corid:place-crucifixion ;
+    dcterms:bibliographicCitation "B.M.C., pp. 84-86" .
+
+corid:authority-justin-ii
+    a nmo:Authority ;
+    skos:prefLabel "Justin II"@en .
+
+corid:coin-1934-6-obverse
+    a nmo:Obverse ;
+    dcterms:description "Justin II and Sophia seated facing"@en .
+
+corid:coin-1934-6-reverse
+    a nmo:Reverse ;
+    dcterms:description "Large K; ANNO vertically to left; cross above; uncertain regnal-year mark to right; TES below"@en ;
+    nmo:hasMintmark corid:mintmark-1934-6-reverse .
+
+corid:mintmark-1934-6-reverse
+    skos:prefLabel "TES" ;
+    cor:mintIdentificationProposed "Thessalonica" ;
+    cor:identificationMethod "inferred_from_mint_mark" ;
+    cor:inferenceBasis "TES is read below the large K and is tentatively interpreted as a Thessalonica mint mark." .
+
+corid:place-crucifixion
+    skos:prefLabel "Crucifixion"@en .
+
+corid:card-COIN_X_1934_00006_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00006_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-6 ;
+    cor:sourceImageFilename "COIN_X_1934_00006_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "Coin 34-6" ;
+    cor:inventoryNumber "1934-6" ;
+    cor:earlierInventoryNumber "785" ;
+    cor:authorityRaw "Justin II" ;
+    cor:dateRaw "565-578" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "22" ;
+    cor:obverseLegendRaw "- ...." ;
+    cor:obverseTypeRaw "Justin II and Sophia seated facing." ;
+    cor:reverseTypeRaw "ANNO vertically left of large K; cross above; uncertain mark to right; TES below" ;
+    cor:mintMarkRaw "TES" ;
+    cor:findspotRaw "Crucifixion" ;
+    cor:excavationContextRaw "cleaning narthex E. above burned layer" ;
+    cor:excavationYear "1934"^^xsd:gYear ;
+    cor:archivalAnnotationRaw "NB -" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "J. de Waele, p. ①" ;
+        cor:notebookName "J. de Waele" ;
+        cor:notebookPage 1 ;
+        cor:notebookPageRaw "①" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "785" ;
+        cor:proposedValue "785" ;
+        cor:reason "The red corner number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseRegnalYearMark" ;
+        cor:rawValue "?" ;
+        cor:reason "The symbol or numeral to the right of the large K is not identified on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintMarkIdentification" ;
+        cor:rawValue "TES" ;
+        cor:proposedValue "Thessalonica" ;
+        cor:reason "The mint identification is inferred from the visible mark rather than explicitly written."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationContextRaw" ;
+        cor:rawValue "cleaning narthex E. above burned layer" ;
+        cor:reason "The middle word is read as 'narthex', but the handwriting is not fully clear."
+    ] .

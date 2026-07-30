@@ -1,0 +1,111 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-332
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-332" ;
+    dcterms:source corid:card-COIN_X_1934_00332_X_sideC ;
+    nmo:hasAuthority corid:authority-anonymous-byzantine-hybrid-c-d ;
+    nmo:hasStartDate "1050"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "26.5"^^xsd:decimal ;
+    nmo:hasWeight "4.635"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-332-obverse ;
+    nmo:hasReverse corid:coin-1934-332-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    cor:dateQualification "after" ;
+    cor:authorityAssignmentBasis "The issuing classification is supplied by the linked database and the related side-A card; side C itself records only 'Late Byz.; 11th/12th cent.'." ;
+    cor:denominationAssignmentBasis "Follis is supplied by the linked database and the related side-A card, not explicitly written on side C." ;
+    cor:axisAssignmentBasis "The upward arrow on the card is interpreted as die axis 12, agreeing with the linked database." .
+
+corid:authority-anonymous-byzantine-hybrid-c-d
+    a nmo:Authority ;
+    skos:prefLabel "Anonymous Byzantine imitative issue, hybrid Classes C/D"@en ;
+    skos:altLabel "Imitative follis, hybrid Classes C/D"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-332-obverse
+    a nmo:Obverse ;
+    dcterms:description "Christ seated on a backed throne"@en .
+
+corid:coin-1934-332-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "IC - [ ] / AK - NI" ;
+    dcterms:description "Jeweled cross with letters in the angles"@en ;
+    cor:legendAssignmentBasis "Side C preserves the reverse as a drawing; the normalized letter arrangement is supplied by the linked database and related side-A card." .
+
+corid:card-COIN_X_1934_00332_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00332_X_sideC" ;
+    cor:documentsNumismaticObject corid:coin-1934-332 ;
+    cor:sourceImageFilename "COIN_X_1934_00332_X_sideC.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "C" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00332_X_sideA ;
+    cor:inventoryNumberRaw "34-332" ;
+    cor:inventoryNumber "1934-332" ;
+    cor:classificationRaw "Byz." ;
+    cor:dateRaw "Late Byz.; 11th/12th cent." ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "26.5 mm" ;
+    cor:weightRaw "4.635 g." ;
+    cor:axisRaw "↑" ;
+    cor:obverseTypeRaw "Christ seat on throne with back." ;
+    cor:reverseTypeRaw "Drawing of a cross with letters in the angles" ;
+    cor:reverseDiagramRaw "Cross; upper-left ΠΜ or similar, upper-right uncertain letters, lower-right reversed or rotated letters, lower-left hatched field" ;
+    cor:conditionRaw "Cracked" ;
+    cor:archivalAnnotationRaw "Original card missing, 11/2007." ;
+    cor:findspotRaw "AGORA SE" ;
+    cor:excavationDateRaw "30/V/1934 (5-31)" ;
+    cor:excavationDate "1934-05-30"^^xsd:date ;
+    cor:excavationPositionRaw "5-31" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "OB p. 88" ;
+        cor:notebookNameRaw "OB" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 88 ;
+        cor:notebookPageRaw "88" ;
+        cor:notebookIdentificationMethod "The initials OB and page 88 are explicit on the card; expansion to O. Broneer is supported by the related card and database."
+    ] ;
+    cor:studyCollectionRaw "STUDY COLLECTION" ;
+    cor:databaseCoinId "-909037747" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Anonymous Series Hybrid Classes C/D (after 1050)" ;
+    cor:databaseObverseLegendRaw "uncertain" ;
+    cor:databaseObverseTypeRaw "Half-length figure of Christ" ;
+    cor:databaseReverseLegendRaw "IC - [ ] / AK - NI" ;
+    cor:databaseReverseTypeRaw "Jeweled cross with letters in angles" ;
+    cor:databaseInformationRaw "Imitative" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseWeightRaw "4.635" ;
+    cor:databaseDiameterRaw "26" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "DOC III.2, p. 681-687; cf Edwards, 105" ;
+    cor:databaseNoteRaw "Imitation Follis, Class C1-?, Hybrid? Constantine IX, 1042-1055 (incorrectly stamped)" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 5/30/1934, #5-31; Notebook 139, p. 88" ;
+    cor:databaseConflictNote "Side C gives diameter 26.5 mm and notebook initials OB without a notebook number; the linked database gives diameter 26 mm and Notebook 139. The related side-A card gives Notebook 141." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the reverse diagram's letters, whether the obverse says 'seat' or 'seated,' and the conflicting notebook numbers 139 and 141." .

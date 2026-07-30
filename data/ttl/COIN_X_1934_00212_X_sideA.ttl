@@ -1,0 +1,94 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-212
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-212" ;
+    dcterms:source corid:card-COIN_X_1934_00212_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasWeight "1.81"^^xsd:decimal ;
+    nmo:hasShape corid:shape-oval-flan ;
+    nmo:hasObverse corid:coin-1934-212-obverse ;
+    nmo:hasReverse corid:coin-1934-212-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:shape-oval-flan
+    a nmo:Shape ;
+    skos:prefLabel "Oval flan"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-212-obverse
+    a nmo:Obverse ;
+    dcterms:description "Pegasus"@en .
+
+corid:coin-1934-212-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Σ" ;
+    dcterms:description "Trident, with Σ to left and caduceus to right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-212-reverse .
+
+corid:controlmark-1934-212-reverse
+    skos:prefLabel "Σ to left; caduceus to right"@en .
+
+corid:card-COIN_X_1934_00212_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00212_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-212 ;
+    cor:sourceImageFilename "COIN_X_1934_00212_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-212" ;
+    cor:inventoryNumber "1934-212" ;
+    cor:classificationRaw "Gr." ;
+    cor:classificationNormalized "Greek" ;
+    cor:mintRaw "CORINTH" ;
+    cor:databaseDateRaw "400-146 BCE" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "13" ;
+    cor:weightRaw "1.81 g." ;
+    cor:obverseTypeRaw "Pegasus" ;
+    cor:reverseLegendRaw "Σ to l." ;
+    cor:reverseTypeRaw "Trident; to l., Σ; to r., CADUCEUS" ;
+    cor:shapeRaw "oval flan" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationContextRaw "Pottery Deposit 1934-1" ;
+    cor:excavationDateRaw "10.iii.1934 (1-41)" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:excavationReferenceRange "1-41" ;
+    cor:basketRaw "-" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139 p. 85" ;
+        cor:notebookNumber 139 ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "STUDY COLL." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the production range 400-146 BCE, which is supplied by the linked Metis record rather than written on the card." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDateRange" ;
+        cor:proposedValue "400-146 BCE" ;
+        cor:reason "The inventory card leaves the coin-date field blank; the range comes from the linked Metis record."
+    ] .

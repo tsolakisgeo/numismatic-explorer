@@ -1,0 +1,110 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-343
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-343" ;
+    dcterms:source corid:card-COIN_X_1934_00343_X_sideA ;
+    nmo:hasAuthority corid:authority-theodore-i-komnenos-laskaris ;
+    nmo:hasStartDate "1208"^^xsd:gYear ;
+    nmo:hasEndDate "1222"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "0.745"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasShape corid:shape-scyphate ;
+    nmo:hasObverse corid:coin-1934-343-obverse ;
+    nmo:hasReverse corid:coin-1934-343-reverse ;
+    nmo:hasFindspot corid:place-christian-basilica-narthex-wall ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "DOC IV², p. 461, no. 6" ;
+    dcterms:bibliographicCitation "Hendy, pl. 31, 1–5 (2nd coinage)" .
+
+corid:card-COIN_X_1934_00343_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00343_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-343 ;
+    cor:sourceImageFilename "COIN_X_1934_00343_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-343" ;
+    cor:inventoryNumber "1934-343" ;
+    cor:cardNumber "24" ;
+    cor:authorityRaw "Theodore I, Comn.-Lascaris, Emp. Nicaea, 1208-1222" ;
+    cor:supersededAttributionRaw "John II, 1118-1143" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "18" ;
+    cor:axisRaw "downward arrow" ;
+    cor:shapeRaw "scyph." ;
+    cor:weightRaw "0.745 gs." ;
+    cor:obverseLegendRaw "XC" ;
+    cor:obverseTypeRaw "Christ seated facing on throne without back; right hand raised in benediction; left hand holding Book marked with four pellets; asterisk in field above" ;
+    cor:reverseLegendRaw "ιω ... K" ;
+    cor:reverseTypeRaw "Emperor standing facing, holding in right hand sceptre-cruciger; in left, globus cr. (?); manus Dei crowning him from right" ;
+    cor:findspotRaw "Christian Basilica (C.C.G.), from narthex-wall" ;
+    cor:excavationDateRaw "11/6/1934" ;
+    cor:excavationDate "1934-06-11"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "Pearce-Shelley p. 165-21" ;
+        cor:notebookName "Pearce-Shelley" ;
+        cor:notebookPage "165"^^xsd:integer ;
+        cor:notebookEntryOrRange "21" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:cataloguerNoteRaw "new type?" ;
+    cor:databaseDisagreement [
+        a cor:SourceDisagreement ;
+        cor:field "reverseType" ;
+        cor:cardValue "Emperor standing facing, holding in right hand sceptre-cruciger; in left, globus cr. (?); manus Dei crowning him from right" ;
+        cor:databaseValue "Full-length figure of emperor holding a sceptre cruciger in the right hand and an anexikakia in the left; Manus Dei in the upper right field" ;
+        cor:reason "The card tentatively identifies the left-hand object as a globus cruciger, while the linked database record identifies it as an anexikakia."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "ιω ... K" ;
+        cor:reason "Only faint, isolated legend fragments are visible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "findspotRaw" ;
+        cor:rawValue "Christian Basilica (C.C.G.), from narthex-wall" ;
+        cor:reason "The parenthetical abbreviation appears to read C.C.G., but the handwriting is not fully clear."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint reverse legend fragments ('ιω' and 'K'), whether the emperor's left-hand object is a globus cruciger or an anexikakia, and the parenthetical findspot abbreviation 'C.C.G.'." .
+
+corid:coin-1934-343-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "XC" ;
+    dcterms:description "Christ seated facing on a backless throne, raising the right hand in benediction and holding a book marked with four pellets in the left; an asterisk appears in the field above."@en .
+
+corid:coin-1934-343-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ιω ... K" ;
+    dcterms:description "Emperor standing facing, holding a sceptre cruciger in the right hand and a tentatively identified globus cruciger in the left; the Manus Dei crowns him from the right."@en .
+
+corid:authority-theodore-i-komnenos-laskaris
+    a nmo:Authority ;
+    skos:prefLabel "Theodore I Komnenos Laskaris"@en ;
+    cor:titleRaw "Emperor of Nicaea" .
+
+corid:shape-scyphate
+    a nmo:Shape ;
+    skos:prefLabel "Scyphate"@en .
+
+corid:place-christian-basilica-narthex-wall
+    a dcterms:Location ;
+    skos:prefLabel "Christian Basilica, narthex wall"@en ;
+    cor:placeNameRaw "Christian Basilica (C.C.G.), from narthex-wall" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

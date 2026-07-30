@@ -1,0 +1,139 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-260
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-260" ;
+    dcterms:source corid:card-COIN_X_1934_00260_X_sideA ;
+    nmo:hasAuthority corid:authority-justin-ii ;
+    nmo:hasStartDate "0571"^^xsd:gYear ;
+    nmo:hasEndDate "0572"^^xsd:gYear ;
+    nmo:hasMint corid:mint-antioch ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "30"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-260-obverse ;
+    nmo:hasReverse corid:coin-1934-260-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 93, no. 200" .
+
+corid:authority-justin-ii
+    a nmo:Authority ;
+    skos:prefLabel "Justin II"@en .
+
+corid:mint-antioch
+    a nmo:Mint ;
+    skos:prefLabel "Antioch (Theoupolis)"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:mintmark-1934-260-theup
+    a nmo:Mintmark ;
+    skos:prefLabel "THEΥP′" .
+
+corid:controlmark-1934-260-cross-and-gamma
+    skos:prefLabel "Cross above M; Γ below M"@en .
+
+corid:coin-1934-260-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "..... TOOΛI" ;
+    dcterms:description "Justin II and Sophia seated facing on a double throne, with a globus cruciger between them"@en .
+
+corid:coin-1934-260-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ANNO M Ч II THEΥP′" ;
+    dcterms:description "Large M; ANNO vertically to left; regnal-year mark at right; cross above; Γ below; mintmark in exergue"@en ;
+    nmo:hasMintmark corid:mintmark-1934-260-theup ;
+    nmo:hasControlmark corid:controlmark-1934-260-cross-and-gamma .
+
+corid:card-COIN_X_1934_00260_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00260_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-260 ;
+    cor:sourceImageFilename "COIN_X_1934_00260_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-260" ;
+    cor:inventoryNumber "1934-260" ;
+    cor:earlierInventoryNumberRaw "402" ;
+    cor:earlierInventoryNumber "402" ;
+    cor:authorityRaw "Justin II" ;
+    cor:authorityReignDateRaw "565-578" ;
+    cor:dateRaw "year 571/572" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "30" ;
+    cor:obverseLegendRaw "..... TOOΛI" ;
+    cor:obverseLegendNormalized "[--] TOOLI" ;
+    cor:obverseTypeRaw "Justin II and Sophia seated on throne" ;
+    cor:reverseTypeRaw "[diagram: ANNO to left of large M; cross above; Γ below; Ч II to right; THEΥP′ in exergue]" ;
+    cor:regnalYearMarkRaw "Ч II" ;
+    cor:mintmarkRaw "THEΥP′" ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 93, no. 200" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "4/17/1934" ;
+    cor:excavationDate "1934-04-17"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 169 (22)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 169 ;
+        cor:notebookPageRaw "169" ;
+        cor:notebookEntryOrRange "22" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= Study Coll." ;
+    cor:databaseCoinId "-1989063230" ;
+    cor:databaseClassificationRaw "Byzantine Copper/Bronze Follis" ;
+    cor:databaseAuthorityRaw "Justin II" ;
+    cor:databaseMintRaw "Antioch" ;
+    cor:databaseDateRaw "571-572" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseObverseLegendRaw "[--] TOOLI" ;
+    cor:databaseObverseTypeRaw "Justin and Sophia, seated on double throne, facing, gl.-cr between them." ;
+    cor:databaseReverseTypeRaw "M, ANNO <8>" ;
+    cor:databaseSymbolRaw "rev.: cross above letter, G below; in ex. THEYP" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "30" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "DOC I, 152b-c" ;
+    cor:databaseNoteRaw "DOC I describes the obverse inscription as blundered." ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date IV.17.1934, #22; Notebook 144 (Davidson), p. 169; Card #402" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact obverse legend, the reverse regnal-year mark (card: Ч II; database: <8>), and the exergual mintmark THEΥP′." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "..... TOOΛI" ;
+        cor:proposedValue "[--] TOOLI" ;
+        cor:reason "The visible letters are faint and the database describes the inscription as blundered."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "regnalYearMarkRaw" ;
+        cor:rawValue "Ч II" ;
+        cor:proposedValue "<8>" ;
+        cor:reason "The card drawing and linked database disagree on the regnal-year mark."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintmarkRaw" ;
+        cor:rawValue "THEΥP′" ;
+        cor:proposedValue "THEUP" ;
+        cor:reason "The exergual letters are handwritten and partly stylized."
+    ] .

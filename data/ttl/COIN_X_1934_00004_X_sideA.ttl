@@ -1,0 +1,107 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-4
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-4" ;
+    dcterms:source corid:card-COIN_X_1934_00004_X_sideA ;
+    nmo:hasAuthority corid:authority-theodosius-i ;
+    nmo:hasStartDate "0379"^^xsd:gYear ;
+    nmo:hasEndDate "0395"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-4-obverse ;
+    nmo:hasReverse corid:coin-1934-4-reverse ;
+    nmo:hasFindspot corid:place-lerna ;
+    dcterms:bibliographicCitation "Cohen 30" .
+
+corid:authority-theodosius-i
+    a nmo:Authority ;
+    skos:prefLabel "Theodosius I"@en .
+
+corid:coin-1934-4-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "-- ODO SIVS --" ;
+    dcterms:description "Diademed bust right"@en .
+
+corid:coin-1934-4-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "SALVS [REIPVB]LICAE" ;
+    dcterms:description "Victory standing left, holding a trophy, with a captive"@en ;
+    nmo:hasControlmark corid:controlmark-1934-4 .
+
+corid:controlmark-1934-4
+    skos:prefLabel "Two horizontal strokes, the upper longer than the lower"@en .
+
+corid:place-lerna
+    skos:prefLabel "Lerna"@en .
+
+corid:card-COIN_X_1934_00004_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00004_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-4 ;
+    cor:sourceImageFilename "COIN_X_1934_00004_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "Coin 34-4" ;
+    cor:inventoryNumber "1934-4" ;
+    cor:earlierInventoryNumber "495" ;
+    cor:authorityRaw "Theodosius I" ;
+    cor:dateRaw "379-398" ;
+    cor:dateNormalizedFrom 379 ;
+    cor:dateNormalizedTo 395 ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:obverseLegendRaw "-- ODO SIVS --" ;
+    cor:obverseLegendNormalized "THEODOSIVS" ;
+    cor:obverseTypeRaw "Bust r., diademed." ;
+    cor:reverseLegendRaw "SALVS [REIPVB]LICAE" ;
+    cor:reverseLegendNormalized "SALVS REIPVBLICAE" ;
+    cor:reverseTypeRaw "Victory l., with trophy and captive." ;
+    cor:controlMarkRaw "two horizontal strokes, upper longer than lower" ;
+    cor:findspotRaw "Lerna" ;
+    cor:excavationDateRaw "1933-1934" ;
+    cor:archivalAnnotationRaw "coins found in cleaning" ;
+    cor:archivalAnnotationRaw "NB -" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "J. de Waele, ②" ;
+        cor:notebookName "J. de Waele" ;
+        cor:notebookPage 2 ;
+        cor:notebookPageRaw "②" ;
+        cor:notebookIdentificationMethod "inferred" ;
+        cor:notebookInferenceBasis "The circled number immediately following the notebook name is interpreted as the page number, following the card series' notation."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateNormalizedTo" ;
+        cor:rawValue "379-398" ;
+        cor:proposedValue "379-395" ;
+        cor:reason "The card appears to end the reign range at 398, while the appended Metis record gives 395."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendNormalized" ;
+        cor:rawValue "-- ODO SIVS --" ;
+        cor:proposedValue "THEODOSIVS" ;
+        cor:reason "The complete obverse legend is reconstructed from a fragmentary card transcription."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendNormalized" ;
+        cor:rawValue "SALVS [REIPVB]LICAE" ;
+        cor:proposedValue "SALVS REIPVBLICAE" ;
+        cor:reason "The bracketed central letters are a restoration rather than continuously visible text."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookPage" ;
+        cor:rawValue "J. de Waele, ②" ;
+        cor:proposedValue "2" ;
+        cor:reason "The circled number is interpreted as the notebook page, although no explicit page abbreviation is clearly visible."
+    ] .

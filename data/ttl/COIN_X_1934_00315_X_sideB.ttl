@@ -1,0 +1,113 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-315
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-315" ;
+    dcterms:source corid:card-COIN_X_1934_00315_X_sideB ;
+    nmo:hasStartDate "-0197"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-histiaea ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-tetrobol ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasWeight "1.82"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-315-obverse ;
+    nmo:hasReverse corid:coin-1934-315-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    dcterms:bibliographicCitation "BMC 34 ff." ;
+    dcterms:bibliographicCitation "McClean 5731 ff." ;
+    cor:numismaticDataAssignmentBasis "Linked coin database and related inventory-card side A; side B primarily preserves photographs and negative numbers." .
+
+corid:mint-histiaea
+    a nmo:Mint ;
+    skos:prefLabel "Histiaea"@en .
+
+corid:denomination-tetrobol
+    a nmo:Denomination ;
+    skos:prefLabel "Tetrobol"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-315-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of a maenad right, wearing an earring, necklace, and vine wreath"@en .
+
+corid:coin-1934-315-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΙΣΤΙ / ΙΣΤΙΑ" ;
+    dcterms:description "Histiaea seated right on the stern of a vessel, holding a stylis"@en .
+
+corid:negative-74-81-34
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-34" ;
+    cor:depictsNumismaticObject corid:coin-1934-315 ;
+    cor:depictsFace corid:coin-1934-315-reverse .
+
+corid:negative-74-81-35
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-35" ;
+    cor:depictsNumismaticObject corid:coin-1934-315 ;
+    cor:depictsFace corid:coin-1934-315-obverse .
+
+corid:photo-print-1934-315-reverse
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00315_X_sideB ;
+    cor:sourceNegative corid:negative-74-81-34 ;
+    cor:depictsFace corid:coin-1934-315-reverse ;
+    cor:captionRaw "74-81-34" ;
+    cor:orientationOnCard "Mounted upside down relative to the scan orientation" .
+
+corid:photo-print-1934-315-obverse
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00315_X_sideB ;
+    cor:sourceNegative corid:negative-74-81-35 ;
+    cor:depictsFace corid:coin-1934-315-obverse ;
+    cor:captionRaw "-35" ;
+    cor:orientationOnCard "Mounted upside down relative to the scan orientation" .
+
+corid:card-COIN_X_1934_00315_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00315_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-315 ;
+    cor:sourceImageFilename "COIN_X_1934_00315_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00315_X_sideA ;
+    cor:inventoryNumber "1934-315" ;
+    cor:archivalAnnotationRaw "113" ;
+    cor:negativeReferenceRaw "74-81-34; -35" ;
+    cor:photographicNegative corid:negative-74-81-34 ;
+    cor:photographicNegative corid:negative-74-81-35 ;
+    cor:attachedPhotograph corid:photo-print-1934-315-reverse ;
+    cor:attachedPhotograph corid:photo-print-1934-315-obverse ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs showing the two faces of the coin." ;
+    cor:imageArrangementRaw "The photographs and their handwritten negative captions are mounted upside down relative to the scan orientation." ;
+    cor:databaseCoinId "-1219138710" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Histiaea" ;
+    cor:databaseDateRaw "197-146 BC" ;
+    cor:databaseObverseTypeRaw "Head of Maenad r.; wearing earring, necklace, and vine-wreath" ;
+    cor:databaseReverseLegendRaw "[ISTI] above; I]STIA below" ;
+    cor:databaseReverseTypeRaw "Histiaea r.; seated on stern of vessel r.; holding stylis" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Tetrobol" ;
+    cor:databaseWeightRaw "1.82" ;
+    cor:databaseDiameterRaw "13" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseBibliographicReferenceRaw "BMC 34ff.; McClean 5731ff." ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/9/1934; Notebook 142 p.176" ;
+    cor:databaseStudyCollectionRaw "True" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the meaning of the isolated number '113' and the face assignments of negatives 74-81-34 and 74-81-35." .

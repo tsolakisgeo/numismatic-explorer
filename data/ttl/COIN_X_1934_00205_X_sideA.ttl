@@ -1,0 +1,109 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-205
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-205" ;
+    dcterms:source corid:card-COIN_X_1934_00205_X_sideA ;
+    nmo:hasAuthority corid:authority-titus ;
+    nmo:hasIssuer corid:issuer-domitian ;
+    nmo:hasStartDate "0080"^^xsd:gYear ;
+    nmo:hasEndDate "0080"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "17"^^xsd:decimal ;
+    nmo:hasAxis "10"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-205-obverse ;
+    nmo:hasReverse corid:coin-1934-205-reverse ;
+    nmo:hasFindspot corid:place-agora-se-section-t ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "R.I.C. II, p. 122, no. 50" ;
+    cor:diameterEvidence "Linked Metis coin record" ;
+    cor:axisEvidence "Linked Metis coin record" .
+
+corid:authority-titus
+    a nmo:Authority ;
+    skos:prefLabel "Titus"@en .
+
+corid:issuer-domitian
+    skos:prefLabel "Domitian"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-section-t
+    skos:prefLabel "Agora Southeast, Section T"@en .
+
+corid:coin-1934-205-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "CAES[A]R DIVI F. DOMITIANVS / COS VII" ;
+    dcterms:description "Laureate head right"@en .
+
+corid:coin-1934-205-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "PRINCEPS IVVENTVTIS" ;
+    dcterms:description "Garlanded and lighted altar"@en .
+
+corid:card-COIN_X_1934_00205_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00205_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-205 ;
+    cor:sourceImageFilename "COIN_X_1934_00205_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-205" ;
+    cor:inventoryNumber "1934-205" ;
+    cor:legacyCardNumber "294" ;
+    cor:authorityRaw "(Titus) Domitian" ;
+    cor:mintRaw "Roman Imperial mint" ;
+    cor:dateRaw "80 A.D." ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "denarius" ;
+    cor:obverseLegendRaw "CAES[A]R DIVI F. DOMITIANVS / COS VII" ;
+    cor:obverseLegendNormalized "CAESAR DIVI F DOMITIANVS COS VII" ;
+    cor:obverseTypeRaw "Head r., laureate" ;
+    cor:reverseLegendRaw "PRINCEPS IVVENTVTIS" ;
+    cor:reverseTypeRaw "Altar, garlanded and lighted" ;
+    cor:findspotRaw "Agora SE, T" ;
+    cor:excavationDateRaw "3/1/1934" ;
+    cor:excavationDate "1934-03-01"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 66 (1-29)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 66 ;
+        cor:notebookPageRaw "66" ;
+        cor:notebookEntryOrRange "1-29" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "coin = in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the top-left number 294 is a legacy card number and the exact bracketed restoration in the obverse legend." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "legacyCardNumber" ;
+        cor:rawValue "294" ;
+        cor:proposedValue "legacy card number" ;
+        cor:reason "The linked Metis record identifies it as 'Card 294', but the card itself gives only the number."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "CAES[A]R DIVI F. DOMITIANVS / COS VII" ;
+        cor:reason "The exact status of the bracketed or corrected letter in CAESAR should be checked against the original card."
+    ] .

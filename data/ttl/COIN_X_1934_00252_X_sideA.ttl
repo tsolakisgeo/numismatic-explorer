@@ -1,0 +1,117 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-252
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-252" ;
+    dcterms:source corid:card-COIN_X_1934_00252_X_sideA ;
+    nmo:hasAuthority corid:authority-corinth-anonymous-series ;
+    nmo:hasStartDate "-0027"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "15"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-252-obverse ;
+    nmo:hasReverse corid:coin-1934-252-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 84" ;
+    dcterms:bibliographicCitation "Bellinger no. 52" .
+
+corid:authority-corinth-anonymous-series
+    a nmo:Authority ;
+    skos:prefLabel "Corinth, Anonymous Series"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:coin-1934-252-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "C · OL" ;
+    dcterms:description "Head of Poseidon right, bound with a taenia; trident behind the neck, with C above"@en .
+
+corid:coin-1934-252-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "CO R" ;
+    dcterms:description "Two naked boxers standing face to face"@en .
+
+corid:card-COIN_X_1934_00252_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00252_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-252 ;
+    cor:sourceImageFilename "COIN_X_1934_00252_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-252" ;
+    cor:inventoryNumber "1934-252" ;
+    cor:earlierInventoryNumberRaw "67" ;
+    cor:earlierInventoryNumber "67" ;
+    cor:classificationRaw "Corinth - Anonymous" ;
+    cor:authorityRaw "Anonymous" ;
+    cor:databaseAuthorityRaw "Anonymous Series" ;
+    cor:databaseDateRaw "27 B.C." ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "15" ;
+    cor:obverseLegendRaw "C · OL" ;
+    cor:obverseLegendNormalized "C-OL" ;
+    cor:obverseTypeRaw "Head of Poseidon r., bound with taenia; trident behind neck (above C)" ;
+    cor:reverseLegendRaw "CO R" ;
+    cor:reverseLegendNormalized "CO-R" ;
+    cor:reverseTypeRaw "two naked boxers face to face" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 84" ;
+    cor:bibliographicReferenceRaw "Bellinger no. 52 (same coin)" ;
+    cor:archivalAnnotationRaw "This one is obverse" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "4/2/1934" ;
+    cor:excavationDate "1934-04-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 67 (1-4)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 67 ;
+        cor:notebookPageRaw "67" ;
+        cor:notebookEntryOrRange "1-4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "X." ;
+    cor:databaseCoinId "-1386970754" ;
+    cor:databaseClassificationRaw "Greek Imperial/Roman Provincial Copper/Bronze Coin" ;
+    cor:databaseNotebookReferenceRaw "Notebook 142 p. 67, 1-4" ;
+    cor:databaseObverseLegendRaw "C-OL" ;
+    cor:databaseReverseLegendRaw "CO-R" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the precise spacing and punctuation of the legends C · OL and CO R, the meaning of the isolated archival mark X., and whether the note 'This one is obverse' refers specifically to Bellinger no. 52." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "C · OL" ;
+        cor:proposedValue "C-OL" ;
+        cor:reason "The card separates the letters with a faint mark, while the linked database gives C-OL."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "CO R" ;
+        cor:proposedValue "CO-R" ;
+        cor:reason "The spacing or separator between the letter groups is not fully clear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "X." ;
+        cor:reason "The isolated mark at lower left is visible but its archival function is unclear."
+    ] .

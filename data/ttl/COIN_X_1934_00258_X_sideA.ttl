@@ -1,0 +1,140 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-258
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-258" ;
+    dcterms:source corid:card-COIN_X_1934_00258_X_sideA ;
+    nmo:hasAuthority corid:authority-hethum-i ;
+    nmo:hasStartDate "1226"^^xsd:gYear ;
+    nmo:hasEndDate "1270"^^xsd:gYear ;
+    nmo:hasMint corid:mint-sis ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "28"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-258-obverse ;
+    nmo:hasReverse corid:coin-1934-258-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Victor Langlois, Numismatique de l'Arménie au moyen âge (Paris, 1855), p. 59, no. 20, 2°, 5°; pl. VII, 3-4." .
+
+corid:authority-hethum-i
+    a nmo:Authority ;
+    skos:prefLabel "Hethum I, King of Armenia"@en ;
+    skos:altLabel "Héthum I"@en .
+
+corid:mint-sis
+    a nmo:Mint ;
+    skos:prefLabel "Sis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:coin-1934-258-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "+ ՀԵԹՈՒՄ ԹԱԳԱՒՈՐ ՀԱՅՈՑ" ;
+    dcterms:description "Crowned king seated facing on a throne, holding a sceptre in his right hand and a globus cruciger in his left"@en .
+
+corid:coin-1934-258-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ՇԻՆԵԱԼ Ի ՔԱՂԱՔՆ ՍԻՍ" ;
+    dcterms:description "Cross with forked ends (fourchée), with small orbs or pellets in the angles"@en .
+
+corid:card-COIN_X_1934_00258_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00258_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-258 ;
+    cor:sourceImageFilename "COIN_X_1934_00258_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-258" ;
+    cor:inventoryNumber "1934-258" ;
+    cor:earlierInventoryNumberRaw "485" ;
+    cor:earlierInventoryNumber "485" ;
+    cor:authorityRaw "Héthum, king of Armenia" ;
+    cor:dateRaw "1226-1270" ;
+    cor:mintRaw "Struck in city of Sis" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "28" ;
+    cor:obverseLegendRaw "+ [Armenian legend]" ;
+    cor:obverseLegendNormalized "+ ՀԵԹՈՒՄ ԹԱԳԱՒՈՐ ՀԱՅՈՑ" ;
+    cor:obverseLegendTranslationRaw "(Héthum, king of the Armenians)" ;
+    cor:obverseTypeRaw "king, crowned, seated on throne facing, holding in r. sceptre; in l. globus cr." ;
+    cor:reverseLegendRaw "[Armenian legend]" ;
+    cor:reverseLegendNormalized "ՇԻՆԵԱԼ Ի ՔԱՂԱՔՆ ՍԻՍ" ;
+    cor:reverseLegendTranslationRaw "Struck in city of Sis" ;
+    cor:reverseTypeRaw "Cross with forked ends (fourchée), with orbs in angles" ;
+    cor:bibliographicReferenceRaw "Langlois, Victor. Numismatique de l'Arménie au moyen âge. Paris 1855. p. 59, no. 20, 2°, 5°; pl. VII 3, 4." ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "4/16/1934" ;
+    cor:excavationDate "1934-04-16"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 96 (4-6)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 96 ;
+        cor:notebookPageRaw "96" ;
+        cor:notebookEntryOrRange "4-6" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "(wm?)" ;
+    cor:databaseCoinId "1268086182" ;
+    cor:databaseDepartmentRaw "OT" ;
+    cor:databaseRegionRaw "Armenia" ;
+    cor:databaseAuthorityRaw "Hethum" ;
+    cor:databaseMintRaw "Sis" ;
+    cor:databaseDateRaw "1226-1270" ;
+    cor:databaseObverseLegendRaw "Armenia letters (reads Hethum, king of the Armenians)" ;
+    cor:databaseObverseTypeRaw "King facing; crowned and seated on throne; holding scepter in right hand; holding globus in left hand" ;
+    cor:databaseReverseLegendRaw "Armenian letters (reads Struck in city of Sis)" ;
+    cor:databaseReverseTypeRaw "Cross with forked ends" ;
+    cor:databaseSymbolRaw "Armenian letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "28" ;
+    cor:databaseBibliographicReferenceRaw "Langlois Numismatique de l'Armenie en Moyen Age p.59 no.20 pl.VII.3-4" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 4/16/1934; Notebook 142 p.96, 4-6" ;
+    cor:databaseCardNumberRaw "238" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact Armenian legend transcriptions, whether the reverse description says 'orbs' in the angles, the small lower-right initials, and the card's earlier number 485 versus database card number 238." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendNormalized" ;
+        cor:rawValue "+ [Armenian legend]" ;
+        cor:proposedValue "+ ՀԵԹՈՒՄ ԹԱԳԱՒՈՐ ՀԱՅՈՑ" ;
+        cor:reason "The Armenian transcription is reconstructed from the visible script and the card's English translation."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendNormalized" ;
+        cor:rawValue "[Armenian legend]" ;
+        cor:proposedValue "ՇԻՆԵԱԼ Ի ՔԱՂԱՔՆ ՍԻՍ" ;
+        cor:reason "The Armenian transcription is reconstructed from the visible script and the card's translation 'Struck in city of Sis'."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Cross with forked ends (fourchée), with orbs in angles" ;
+        cor:reason "The noun following 'with' is difficult to read and may describe pellets or orbs."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "(wm?)" ;
+        cor:reason "The small parenthetical initials at lower right are faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "485" ;
+        cor:proposedValue "238" ;
+        cor:reason "The card visibly bears 485 at upper left, while the linked database records Card #238."
+    ] .

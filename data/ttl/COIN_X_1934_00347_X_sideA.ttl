@@ -1,0 +1,101 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-347
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-347" ;
+    dcterms:source corid:card-COIN_X_1934_00347_X_sideA ;
+    nmo:hasAuthority corid:authority-commodus ;
+    nmo:hasStartDate "0176"^^xsd:gYear ;
+    nmo:hasEndDate "0192"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasMint corid:mint-patrae ;
+    nmo:hasDiameter "28"^^xsd:decimal ;
+    nmo:hasWeight "9.10"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-347-obverse ;
+    nmo:hasReverse corid:coin-1934-347-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 343 (see reference)" .
+
+corid:card-COIN_X_1934_00347_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00347_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-347 ;
+    cor:sourceImageFilename "COIN_X_1934_00347_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-347" ;
+    cor:inventoryNumber "1934-347" ;
+    cor:earlierInventoryNumberRaw "105-" ;
+    cor:authorityRaw "Commodus 176-192" ;
+    cor:mintRaw "Patrae" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "28" ;
+    cor:weightRaw "9.10 gm." ;
+    cor:obverseLegendRaw "IMPCOM(MOD)VS ANT / ON." ;
+    cor:obverseTypeRaw "Bust r., laureate" ;
+    cor:reverseLegendRaw "COLAA / PATR" ;
+    cor:reverseTypeRaw "Goddess, with both hands outstretched; (Demeter with corn ?) in high cart drawn by oxen r." ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "10/24/1934" ;
+    cor:excavationDate "1934-10-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 117 (17-28)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage "117"^^xsd:integer ;
+        cor:notebookEntryOrRange "17-28" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseContext [
+        a cor:DatabaseContext ;
+        cor:notebookNumber "144" ;
+        cor:sourceDescription "linked Corinth coin database"
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumberRaw" ;
+        cor:rawValue "105-" ;
+        cor:proposedValue "105" ;
+        cor:reason "The small pencil number in the upper-left corner ends with a faint dash."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "(Demeter with corn ?)" ;
+        cor:proposedValue "Demeter with corn" ;
+        cor:reason "The parenthetical identification and the word following 'with' are faint."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the small upper-left number as 105 and the parenthetical reverse description as 'Demeter with corn?'." .
+
+corid:coin-1934-347-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMPCOM(MOD)VS ANTON." ;
+    dcterms:description "Laureate bust of Commodus facing right."@en .
+
+corid:coin-1934-347-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "COLAA / PATR" ;
+    dcterms:description "A goddess, perhaps Demeter holding corn, stands with both hands outstretched in a high cart drawn right by oxen."@en .
+
+corid:authority-commodus
+    a nmo:Authority ;
+    skos:prefLabel "Commodus"@en .
+
+corid:mint-patrae
+    a nmo:Mint ;
+    skos:prefLabel "Patrae"@en .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

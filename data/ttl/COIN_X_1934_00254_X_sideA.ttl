@@ -1,0 +1,114 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-254
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-254" ;
+    dcterms:source corid:card-COIN_X_1934_00254_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0048"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corcyra ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "26"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-254-obverse ;
+    nmo:hasReverse corid:coin-1934-254-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Thes.), p. 152, nos. 559-560" .
+
+corid:mint-corcyra
+    a nmo:Mint ;
+    skos:prefLabel "Corcyra"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-254-obverse
+    a nmo:Obverse ;
+    dcterms:description "Jugate heads right of laureate Herakles and Corcyra wearing an ivy wreath; bucranium countermark"@en ;
+    nmo:hasControlmark corid:countermark-1934-254-bucranium .
+
+corid:countermark-1934-254-bucranium
+    skos:prefLabel "Bucranium countermark"@en .
+
+corid:coin-1934-254-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[ΚΟΡ]ΚΥΡΑΙΩΝ [ΦΙΛ]ΩΤΑΣ" ;
+    dcterms:description "Forepart of galley right; dolphin left below, uncertain"@en ;
+    nmo:hasControlmark corid:controlmark-1934-254-dolphin .
+
+corid:controlmark-1934-254-dolphin
+    skos:prefLabel "Dolphin left below the galley, uncertain"@en .
+
+corid:card-COIN_X_1934_00254_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00254_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-254 ;
+    cor:sourceImageFilename "COIN_X_1934_00254_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-254" ;
+    cor:inventoryNumber "1934-254" ;
+    cor:earlierInventoryNumberRaw "83" ;
+    cor:earlierInventoryNumber "83" ;
+    cor:mintRaw "Corcyra" ;
+    cor:dateRaw "229-48 (Roman Repub.) B.M.C.; 400-300 McClean" ;
+    cor:databaseDateRaw "400-48 B.C." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "26" ;
+    cor:obverseTypeRaw "Heads jugate r. of Herakles, laureate, and Corcyra, wearing ivy-wreath; countermark, bucranium" ;
+    cor:reverseLegendRaw "[ΚΟΡ]ΚΥΡΑΙΩΝ [ΦΙΛ]ΩΤΑΣ" ;
+    cor:reverseTypeRaw "Forepart of galley, r.; below, (dolphin l.)?" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Thes.) p. 152, nos. 559, 560" ;
+    cor:chronologyReferenceRaw "229-48 (Roman Repub.) B.M.C." ;
+    cor:chronologyReferenceRaw "400-300 McClean" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "4/3/1934" ;
+    cor:excavationDate "1934-04-03"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 140 (3-14)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 140 ;
+        cor:notebookPageRaw "140" ;
+        cor:notebookEntryOrRange "3-14" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "In Study Collection" ;
+    cor:databaseCoinId "1587326558" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Corcyra" ;
+    cor:databaseObverseTypeRaw "Heads jugate of Herakles and Corcyra; Herakles with laurel; Corcyra with ivy wreath" ;
+    cor:databaseReverseLegendRaw "<gr>[KOR]KYRAIWN [FIL]WTAS<gr>" ;
+    cor:databaseReverseTypeRaw "Forepart of galley facing r.; [dolphin] below" ;
+    cor:databaseSymbolRaw "Letters and hamster" ;
+    cor:databaseCountermarkRaw "Bucranium" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the restored reverse legend, the uncertain dolphin below the galley, and the exact McClean annotation accompanying the alternative 400-300 chronology." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "[ΚΟΡ]ΚΥΡΑΙΩΝ [ΦΙΛ]ΩΤΑΣ" ;
+        cor:reason "Several letters are restored in brackets rather than fully visible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Forepart of galley, r.; below, (dolphin l.)?" ;
+        cor:reason "The card itself marks the dolphin identification as uncertain."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "chronologyReferenceRaw" ;
+        cor:rawValue "400-300 McClean" ;
+        cor:reason "The small parenthetical annotation following McClean is not securely legible."
+    ] .

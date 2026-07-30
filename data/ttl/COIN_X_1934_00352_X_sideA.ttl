@@ -1,0 +1,86 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-352
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-352" ;
+    dcterms:source corid:card-COIN_X_1934_00352_X_sideA ;
+    nmo:hasAuthority corid:authority-domitian ;
+    nmo:hasStartDate "0081"^^xsd:gYear ;
+    nmo:hasEndDate "0096"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-352-obverse ;
+    nmo:hasReverse corid:coin-1934-352-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 102" .
+
+corid:card-COIN_X_1934_00352_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00352_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-352 ;
+    cor:sourceImageFilename "COIN_X_1934_00352_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-352" ;
+    cor:inventoryNumber "1934-352" ;
+    cor:earlierInventoryNumber "70" ;
+    cor:authorityRaw "Domitian 81-96" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:obverseLegendRaw "IMP CAES DOMIT ......" ;
+    cor:obverseTypeRaw "Head r., laureate" ;
+    cor:reverseLegendRaw "COL IVL AVG [COR]" ;
+    cor:reverseTypeRaw "Dionysos, wearing himation around his loins, standing l., holding kantharos in r., and leaning on pillar. (no thyrsus nor panther)" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "11/9/1934" ;
+    cor:excavationDate "1934-11-09"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. Howland p. 13 (2-17)" ;
+        cor:notebookName "R. Howland" ;
+        cor:notebookPage "13"^^xsd:integer ;
+        cor:notebookEntryOrRange "2-17" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "(no thyrsus nor panther)" ;
+        cor:reason "The parenthetical phrase is faint and should be checked against the original card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that the faint parenthetical reverse note reads 'no thyrsus nor panther'." .
+
+corid:coin-1934-352-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP CAES DOMIT ......" ;
+    dcterms:description "Laureate head of Domitian facing right."@en .
+
+corid:coin-1934-352-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "COL IVL AVG [COR]" ;
+    dcterms:description "Dionysos stands left, wearing a himation around his loins, holding a kantharos in his right hand and leaning on a pillar."@en .
+
+corid:authority-domitian
+    a nmo:Authority ;
+    skos:prefLabel "Domitian"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

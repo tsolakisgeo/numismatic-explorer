@@ -1,0 +1,131 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-270
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-270" ;
+    dcterms:source corid:card-COIN_X_1934_00270_X_sideA ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0338"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-drachma ;
+    nmo:hasDiameter "16.5"^^xsd:decimal ;
+    nmo:hasWeight "2.27"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-270-obverse ;
+    nmo:hasReverse corid:coin-1934-270-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-well ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., pl. XI, no. 15" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-drachma
+    a nmo:Denomination ;
+    skos:prefLabel "Drachma"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw-well
+    skos:prefLabel "Agora Southwest, well"@en ;
+    skos:altLabel "Agora SW; well 10.10 m"@en .
+
+corid:controlmark-koppa
+    a nmo:Controlmark ;
+    skos:prefLabel "Koppa"@en ;
+    skos:notation "Ϙ" .
+
+corid:controlmark-letter-a
+    a nmo:Controlmark ;
+    skos:prefLabel "Letter A"@en ;
+    skos:notation "A" .
+
+corid:coin-1934-270-obverse
+    a nmo:Obverse ;
+    dcterms:description "Pegasus flying left; koppa beneath"@en ;
+    nmo:hasControlmark corid:controlmark-koppa .
+
+corid:coin-1934-270-reverse
+    a nmo:Reverse ;
+    dcterms:description "Head of Aphrodite left, hair rolled with the ends hanging in curls down the neck; wearing earring and necklace; letter A to right"@en ;
+    nmo:hasControlmark corid:controlmark-letter-a .
+
+corid:card-COIN_X_1934_00270_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00270_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-270 ;
+    cor:sourceImageFilename "COIN_X_1934_00270_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-270" ;
+    cor:inventoryNumber "1934-270" ;
+    cor:earlierInventoryNumberRaw "1" ;
+    cor:earlierInventoryNumber "1" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "350-338" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "drachma" ;
+    cor:dimensionsRaw "16.5 × 14" ;
+    cor:diameterRaw "16.5 × 14" ;
+    cor:weightRaw "2.27 gr." ;
+    cor:obverseTypeRaw "Pegasos flying l.; beneath, Ϙ" ;
+    cor:reverseTypeRaw "Head of Aphrodite l.; hair rolled with ends hanging in curls down neck; wears ear-ring + necklace; to r., A" ;
+    cor:reverseAnnotationRaw "for R cf. B.M.C. pl. XI 15 (wearing same die). The lower letter cannot be Π nor Γ; perhaps more like Δ; is curl of hair." ;
+    cor:bibliographicReferenceRaw "B.M.C. pl. XI 15" ;
+    cor:findspotRaw "Agora SW; well 10.10 m" ;
+    cor:excavationDateRaw "4/27/1934" ;
+    cor:excavationDate "1934-04-27"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. Davidson p. 38 (74)" ;
+        cor:notebookName "G. Davidson" ;
+        cor:notebookPage 38 ;
+        cor:notebookPageRaw "38" ;
+        cor:notebookEntryOrRange "74" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:negativeReferenceRaw "74-81-9, 10 (cover)" ;
+    cor:studyCollectionRaw "in Study Collection" ;
+    cor:databaseCoinId "514559218" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "350 BC-338 BC" ;
+    cor:databaseObverseLegendRaw "koppa" ;
+    cor:databaseObverseTypeRaw "Pegasus flg l.; pointed wing" ;
+    cor:databaseReverseLegendRaw "A" ;
+    cor:databaseReverseTypeRaw "Head of Peirene/Aphrodite l.; hair rolled with end hanging in curls down neck; wearing earring and necklace" ;
+    cor:databaseSymbolRaw "letter" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Drachma" ;
+    cor:databaseWeightRaw "2.27" ;
+    cor:databaseDiameterRaw "16.5" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseBibliographicReferenceRaw "BMC pl.XI.15" ;
+    cor:databaseExcavationContextRaw "Agora SW; found in well; excavation date 4/27/1934; Notebook 143 p.38" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the small pencil '1' is an earlier inventory number and whether the apparent lower reverse mark is a letter or merely a curl of hair." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumberRaw" ;
+        cor:rawValue "1" ;
+        cor:reason "The small pencil number in the upper-left corner may be a legacy card number."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseAnnotationRaw" ;
+        cor:rawValue "The lower letter cannot be Π nor Γ; perhaps more like Δ; is curl of hair." ;
+        cor:reason "The card itself questions whether the lower feature is a letter or part of the hair."
+    ] .

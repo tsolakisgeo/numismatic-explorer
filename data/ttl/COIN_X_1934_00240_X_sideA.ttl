@@ -1,0 +1,105 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-240
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-240" ;
+    dcterms:source corid:card-COIN_X_1934_00240_X_sideA ;
+    nmo:hasAuthority corid:authority-antigonus-gonatas ;
+    nmo:hasStartDate "-0277"^^xsd:gYear ;
+    nmo:hasEndDate "-0239"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "17"^^xsd:decimal ;
+    nmo:hasWeight "3.53"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-240-obverse ;
+    nmo:hasReverse corid:coin-1934-240-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-iv-fill-2 ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "McCl. 3609" ;
+    dcterms:bibliographicCitation "Price, Hesp. '67" .
+
+corid:authority-antigonus-gonatas
+    a nmo:Authority ;
+    skos:prefLabel "Antigonus Gonatas"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-iv-fill-2
+    skos:prefLabel "Agora Southeast, South Stoa, Well IV, Fill 2"@en .
+
+corid:coin-1934-240-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of young Heracles right, wearing a lion skin"@en .
+
+corid:coin-1934-240-reverse
+    a nmo:Reverse ;
+    dcterms:description "Young rider on a horse stepping right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-240-reverse .
+
+corid:controlmark-1934-240-reverse
+    skos:prefLabel "B above left; A in front; uncertain letters below and uncertain mark between the horse's forelegs"@en .
+
+corid:card-COIN_X_1934_00240_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00240_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-240 ;
+    cor:sourceImageFilename "COIN_X_1934_00240_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-240" ;
+    cor:inventoryNumber "1934-240" ;
+    cor:earlierInventoryNumber "172" ;
+    cor:authorityRaw "Antigonus Gonatas" ;
+    cor:dateRaw "277-239" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "17" ;
+    cor:weightRaw "3.53 g." ;
+    cor:obverseTypeRaw "Head of young Herakles r., in lion-skin" ;
+    cor:reverseLegendRaw "B (abv. l.) A (in front); below, AN; between forelegs + (or monogram)" ;
+    cor:reverseTypeRaw "Young rider on horse stepping r." ;
+    cor:databaseReverseLegendRaw "B above l.; A in front; letters below and between horse legs" ;
+    cor:bibliographicReferenceRaw "McCl. 3609" ;
+    cor:bibliographicReferenceRaw "Price Hesp '67" ;
+    cor:findspotRaw "Agora SE; South Stoa, Well IV, Fill 2" ;
+    cor:excavationDateRaw "3/24/1939 corrected to 3/24/1934" ;
+    cor:excavationDate "1934-03-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 132 (8); NB 139" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 132 ;
+        cor:notebookPageRaw "132" ;
+        cor:notebookEntryOrRange "8" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= Study Collect." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the reverse letters and monogram, the faint citation 'Price Hesp. '67', and the excavation-year correction from 1939 to 1934." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "B (abv. l.) A (in front); below, AN; between forelegs + (or monogram)" ;
+        cor:reason "The letters below the horse and the mark between the forelegs are difficult to distinguish."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "Price Hesp '67" ;
+        cor:reason "The faint pencil citation is abbreviated and not fully secure."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDateRaw" ;
+        cor:rawValue "3/24/1939 corrected to 3/24/1934" ;
+        cor:proposedValue "1934-03-24" ;
+        cor:reason "The year 1939 is crossed out and 1934 is written above it."
+    ] .

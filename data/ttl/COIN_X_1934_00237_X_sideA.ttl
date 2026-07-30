@@ -1,0 +1,83 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-237
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-237" ;
+    dcterms:source corid:card-COIN_X_1934_00237_X_sideA ;
+    nmo:hasStartDate "-0323"^^xsd:gYear ;
+    nmo:hasEndDate "-0251"^^xsd:gYear ;
+    nmo:hasMint corid:mint-sicyon ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "14"^^xsd:decimal ;
+    nmo:hasWeight "1.70"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-237-obverse ;
+    nmo:hasReverse corid:coin-1934-237-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-iv-fill-2 ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 313" ;
+    dcterms:bibliographicCitation "Warren, gr. 4A, 5" .
+
+corid:mint-sicyon
+    a nmo:Mint ;
+    skos:prefLabel "Sicyon"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-iv-fill-2
+    skos:prefLabel "Agora Southeast, South Stoa, Well IV, Fill 2"@en .
+
+corid:coin-1934-237-obverse
+    a nmo:Obverse ;
+    dcterms:description "Dove flying right"@en .
+
+corid:coin-1934-237-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Σ" ;
+    dcterms:description "Large sigma within an olive wreath tied below"@en .
+
+corid:card-COIN_X_1934_00237_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00237_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-237 ;
+    cor:sourceImageFilename "COIN_X_1934_00237_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-237" ;
+    cor:inventoryNumber "1934-237" ;
+    cor:earlierInventoryNumber "216" ;
+    cor:mintRaw "Sicyon" ;
+    cor:dateRaw "323-251" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "14" ;
+    cor:weightRaw "1.70 g." ;
+    cor:obverseTypeRaw "Dove flying r." ;
+    cor:reverseLegendRaw "Σ" ;
+    cor:reverseTypeRaw "Σ in olive-wreath (wreath tying below)" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 313" ;
+    cor:bibliographicReferenceRaw "Warren, gr. 4A, 5" ;
+    cor:databaseBibliographicCitation "Edwards no. 313" ;
+    cor:findspotRaw "Agora SE; Well IV, South Stoa; Fill 2" ;
+    cor:excavationDateRaw "3/22/1934" ;
+    cor:excavationDate "1934-03-22"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 123 (1)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 123 ;
+        cor:notebookPageRaw "123" ;
+        cor:notebookEntryOrRange "1" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 135 ;
+    cor:studyCollectionRaw "in Study Collect." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact Warren citation, read as 'Warren, gr. 4A, 5'." .

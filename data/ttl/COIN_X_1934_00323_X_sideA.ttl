@@ -1,0 +1,118 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-323
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-323" ;
+    dcterms:source corid:card-COIN_X_1934_00323_X_sideA ;
+    nmo:hasStartDate "-0027"^^xsd:gYear ;
+    nmo:hasEndDate "-0027"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-tessera ;
+    nmo:hasDiameter "21.5"^^xsd:decimal ;
+    nmo:hasWeight "4.85"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-323-obverse ;
+    nmo:hasReverse corid:coin-1934-323-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 230" ;
+    cor:productionDateAssignmentBasis "The card describes the tessera as belonging to early colonial times; the specific date 27 BCE is supplied by the linked database." .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-tessera
+    a nmo:Denomination ;
+    skos:prefLabel "Tessera"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-323-obverse
+    a nmo:Obverse ;
+    dcterms:description "Unstamped"@en .
+
+corid:coin-1934-323-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "D D" ;
+    dcterms:description "Melicertes lying right on a dolphin beneath a pine tree; D D below"@en .
+
+corid:card-COIN_X_1934_00323_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00323_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-323 ;
+    cor:sourceImageFilename "COIN_X_1934_00323_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-323" ;
+    cor:inventoryNumber "1934-323" ;
+    cor:earlierInventoryNumberRaw "55" ;
+    cor:earlierInventoryNumber "55" ;
+    cor:mintRaw "Corinth" ;
+    cor:denominationRaw "Tessera" ;
+    cor:dateRaw "early colonial times" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21.5" ;
+    cor:weightRaw "4.85 g." ;
+    cor:obverseTypeRaw "unstamped" ;
+    cor:reverseLegendRaw "D D" ;
+    cor:reverseTypeRaw "Melicertes lying on dolphin r., under pine-tree; below D D" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 230" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "5/15/1934" ;
+    cor:excavationDate "1934-05-15"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. H. Howland p. 11 (5)" ;
+        cor:notebookName "R. H. Howland" ;
+        cor:notebookPage 11 ;
+        cor:notebookPageRaw "11" ;
+        cor:notebookEntryOrRange "5" ;
+        cor:notebookNumber 142 ;
+        cor:notebookIdentificationMethod "name, page, and distinct circled entry explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin = in STUDY COLLECTION" ;
+    cor:databaseCoinId "-2142239792" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseRegionRaw "Corinth" ;
+    cor:databaseAuthorityRaw "Unknown" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "27 BC" ;
+    cor:databaseObverseTypeRaw "Unstruck" ;
+    cor:databaseReverseLegendRaw "DD below Melicertes" ;
+    cor:databaseReverseTypeRaw "Melicertes lying on dolphin r.; under pine tree" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Tessera" ;
+    cor:databaseWeightRaw "4.88" ;
+    cor:databaseDiameterRaw "21.5" ;
+    cor:databaseBibliographicReferenceRaw "Edwards no. 230" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/15/1934; Notebook 142 p.11, 5" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 55 and whether the card's red weight reads 4.85 g rather than the database value 4.88 g." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "55" ;
+        cor:reason "The small pencil number at the upper left is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "weight" ;
+        cor:rawValue "4.85 g." ;
+        cor:proposedValue "4.88 g." ;
+        cor:reason "The visible red annotation appears to read 4.85 g, while the linked database records 4.88 g; the card reading is retained as primary."
+    ] .

@@ -1,0 +1,118 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-250
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-250" ;
+    dcterms:source corid:card-COIN_X_1934_00250_X_sideA ;
+    nmo:hasAuthority corid:authority-corinth ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-250-obverse ;
+    nmo:hasReverse corid:coin-1934-250-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:authority-corinth
+    a nmo:Authority ;
+    skos:prefLabel "Corinth"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-250-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus facing left, with koppa beneath"@en .
+
+corid:coin-1934-250-reverse
+    a nmo:Reverse ;
+    dcterms:description "Trident, with torch to left and an uncertain symbol or inscription to right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-250-reverse-left ;
+    nmo:hasControlmark corid:controlmark-1934-250-reverse-right .
+
+corid:controlmark-1934-250-reverse-left
+    skos:prefLabel "Torch to left of trident"@en .
+
+corid:controlmark-1934-250-reverse-right
+    skos:prefLabel "Uncertain symbol or inscription to right of trident"@en .
+
+corid:card-COIN_X_1934_00250_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00250_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-250 ;
+    cor:sourceImageFilename "COIN_X_1934_00250_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-250" ;
+    cor:inventoryNumber "1934-250" ;
+    cor:crossedOutInventoryNumberRaw "1934-930?" ;
+    cor:classificationRaw "Gr." ;
+    cor:authorityRaw "Corinth" ;
+    cor:dateRaw "400-146 BC" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "12" ;
+    cor:axisRaw "↓" ;
+    cor:obverseLegendRaw "Ϙ beneath" ;
+    cor:obverseTypeRaw "Pegasus l.; Ϙ beneath" ;
+    cor:reverseTypeRaw "Trident; to l. torch; to r. uncertain mark" ;
+    cor:findspotRaw "Agora S E" ;
+    cor:excavationDateRaw "III/30/1934" ;
+    cor:excavationDate "1934-03-30"^^xsd:date ;
+    cor:excavationEntryOrRangeRaw "#23-43" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB Broneer p. 152" ;
+        cor:notebookName "Broneer" ;
+        cor:notebookPage 152 ;
+        cor:notebookPageRaw "152" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:databaseStudyCollection false ;
+    cor:archivalAnnotationRaw "Originally on card #43 with 13 other coins" ;
+    cor:archivalAnnotationRaw "Note attached to card #43: CHECK: some coins mixed-up (check envelopes: Drawer 6)" ;
+    cor:archivalAnnotationRaw "Envelopes not found in Drawer 6 (III/5/2010)" ;
+    cor:negativeReferenceRaw "CONS.03.4" ;
+    cor:databaseCoinId "3016789164754925568" ;
+    cor:databaseClassificationRaw "Greek Copper/Bronze Coin" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "400 BC-146 BC" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the crossed-out earlier inventory number, the mark to the right of the trident, and the visible Study Collection designation versus the database value False." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "crossedOutInventoryNumberRaw" ;
+        cor:rawValue "1934-930?" ;
+        cor:reason "The crossed-out blue number is partly obscured."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseControlmarkRaw" ;
+        cor:rawValue "to r. uncertain mark" ;
+        cor:reason "The handwriting after 'to r.' is not securely legible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "studyCollectionStatus" ;
+        cor:rawValue "Study Collection" ;
+        cor:proposedValue "Not in Study Collection" ;
+        cor:reason "The card visibly says Study Collection, while the linked database records IsStudyCollection=False."
+    ] .

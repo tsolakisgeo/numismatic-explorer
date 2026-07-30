@@ -1,0 +1,108 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-204
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-204" ;
+    dcterms:source corid:card-COIN_X_1934_00204_X_sideA ;
+    nmo:hasAuthority corid:authority-alexius-i ;
+    nmo:hasStartDate "1092"^^xsd:gYear ;
+    nmo:hasEndDate "1118"^^xsd:gYear ;
+    nmo:hasMint corid:mint-thessalonica ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-tetarteron ;
+    nmo:hasDiameter "28"^^xsd:decimal ;
+    nmo:hasWeight "3.44"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-204-obverse ;
+    nmo:hasReverse corid:coin-1934-204-reverse ;
+    nmo:hasFindspot corid:place-agora-southwest ;
+    dcterms:bibliographicCitation "Hendy, DOC, p. 237, 40a.4" ;
+    dcterms:bibliographicCitation "Hendy, pl. 8:10" ;
+    cor:overstruckOnType corid:anonymous-follis-class-k .
+
+corid:authority-alexius-i
+    a nmo:Authority ;
+    skos:prefLabel "Alexius I"@en .
+
+corid:mint-thessalonica
+    a nmo:Mint ;
+    skos:prefLabel "Thessalonica"@en .
+
+corid:denomination-tetarteron
+    a nmo:Denomination ;
+    skos:prefLabel "Tetarteron"@en .
+
+corid:anonymous-follis-class-k
+    skos:prefLabel "Anonymous follis, Class K"@en .
+
+corid:coin-1934-204-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "C, Φ, M, Δ" ;
+    dcterms:description "Jeweled radiate cross on two steps, with letters C, Φ, M, and Δ in the angles; the ends of the limbs are decorated with globules"@en ;
+    cor:overtypeRaw "Red drawing beside 'over:' showing a circular arrangement of globules" .
+
+corid:coin-1934-204-reverse
+    a nmo:Reverse ;
+    dcterms:description "Bust of the emperor wearing stemma, divitision, and jeweled loros, holding a scepter cruciger in the right hand and a globus cruciger in the left"@en ;
+    cor:overtypeRaw "-" .
+
+corid:place-agora-southwest
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:card-COIN_X_1934_00204_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00204_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-204 ;
+    cor:sourceImageFilename "COIN_X_1934_00204_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-204" ;
+    cor:inventoryNumber "1934-204" ;
+    cor:classificationRaw "Byz." ;
+    cor:classificationNormalized "Byzantine" ;
+    cor:findspotRaw "AGORA SW" ;
+    cor:mintRaw "Thes." ;
+    cor:authorityRaw "Alexius I" ;
+    cor:dateRaw "1092-1118" ;
+    cor:excavationDateRaw "22.ii.1934" ;
+    cor:excavationDate "1934-02-22"^^xsd:date ;
+    cor:basketRaw "-" ;
+    cor:materialRaw "AE" ;
+    cor:axisRaw "↑" ;
+    cor:diameterRaw "28" ;
+    cor:weightRaw "3.44 g." ;
+    cor:denominationNormalized "tetarteron" ;
+    cor:obverseLegendRaw "C, Φ, M, Δ" ;
+    cor:obverseTypeRaw "Jeweled cross w/ C, Φ, M, Δ" ;
+    cor:reverseTypeRaw "Emp. bust" ;
+    cor:overstrikeRaw "Overstruck on Class K" ;
+    cor:conditionRaw "Large flan; cracked at edges" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "GRD. p. 40" ;
+        cor:notebookName "GRD." ;
+        cor:notebookPage 40 ;
+        cor:notebookPageRaw "40" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookReference "140 p. 40" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the notebook designation, which appears to read 'GRD.' on the card but is represented as '140' in Metis, and confirm the interpretation of the red obverse overstrike sketch as a circular arrangement of globules." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookName" ;
+        cor:rawValue "GRD." ;
+        cor:proposedValue "140" ;
+        cor:reason "The visible card appears to read 'GRD.', while the appended Metis context gives notebook 140; page 40 is clear in both."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseOvertypeRaw" ;
+        cor:rawValue "Red circular sketch of globules beside 'over:'" ;
+        cor:reason "The drawing is visible, but its precise numismatic interpretation is not explicit on the card."
+    ] .

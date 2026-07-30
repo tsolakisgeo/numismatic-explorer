@@ -1,0 +1,134 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-246
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-246" ;
+    dcterms:source corid:card-COIN_X_1934_00246_X_sideA ;
+    nmo:hasAuthority corid:authority-caligula ;
+    nmo:hasIssuer corid:issuer-p-vipsanius-agrippa ;
+    nmo:hasIssuer corid:issuer-m-bellius-proculus ;
+    nmo:hasStartDate "0037"^^xsd:gYear ;
+    nmo:hasEndDate "0038"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-as ;
+    nmo:hasDiameter "20"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-246-obverse ;
+    nmo:hasReverse corid:coin-1934-246-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 48" ;
+    dcterms:bibliographicCitation "Fox 34" ;
+    dcterms:bibliographicCitation "Amandry XVII" .
+
+corid:authority-caligula
+    a nmo:Authority ;
+    skos:prefLabel "Caligula"@en .
+
+corid:issuer-p-vipsanius-agrippa
+    a nmo:Issuer ;
+    skos:prefLabel "P. Vipsanius Agrippa"@en .
+
+corid:issuer-m-bellius-proculus
+    a nmo:Issuer ;
+    skos:prefLabel "M. Bellius Proculus"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-as
+    a nmo:Denomination ;
+    skos:prefLabel "As"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-246-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "GERMANI CAESAR" ;
+    dcterms:description "Laureate head of Germanicus left"@en .
+
+corid:coin-1934-246-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "M BELLIO PROCVLO [II VIR] COR" ;
+    dcterms:description "Rudder and globe"@en .
+
+corid:card-COIN_X_1934_00246_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00246_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-246 ;
+    cor:sourceImageFilename "COIN_X_1934_00246_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-246" ;
+    cor:inventoryNumber "1934-246" ;
+    cor:earlierInventoryNumberRaw "128" ;
+    cor:earlierInventoryNumber "128" ;
+    cor:classificationRaw "Corinth II VIR" ;
+    cor:authorityRaw "Caligula 37-41" ;
+    cor:dateRaw "AD 37/38" ;
+    cor:issuerRaw "P. Vipsanius Agrippa + M. Bellius Proculus" ;
+    cor:databaseIssuerRaw "P. Vipsarius Agrippa - M. Bellius Proculus" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "20" ;
+    cor:databaseDenominationRaw "as" ;
+    cor:obverseLegendRaw "GERMANI CAESAR" ;
+    cor:obverseTypeRaw "Head of Germanicus l., lau." ;
+    cor:reverseLegendRaw "M BELLIO PROCVLO [II VIR] COR" ;
+    cor:reverseTypeRaw "Rudder & globe" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 48" ;
+    cor:bibliographicReferenceRaw "Fox 34 (head r.)" ;
+    cor:bibliographicReferenceRaw "Amandry XVII" ;
+    cor:findspotRaw "Agora SE (well VIII), South Stoa" ;
+    cor:excavationDateRaw "3/29/1934" ;
+    cor:excavationDate "1934-03-29"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 145 (1)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 145 ;
+        cor:notebookPageRaw "145" ;
+        cor:notebookEntryOrRange "1" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "Card #128 in South Stoa Well files" ;
+    cor:archivalAnnotationRaw "E.E." ;
+    cor:databaseCoinId "2105240192" ;
+    cor:databaseDateRaw "37-38" ;
+    cor:databaseExcavationDateRaw "3/29/1930" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the first issuer's surname (Vipsanius on the card versus Vipsarius in the database), the parenthetical note after Fox 34, and the database excavation year 1930 versus 1934 on the card." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "issuerRaw" ;
+        cor:rawValue "P. Vipsanius Agrippa" ;
+        cor:proposedValue "P. Vipsarius Agrippa" ;
+        cor:reason "The image and linked database use different spellings."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "Fox 34 (head r.)" ;
+        cor:reason "The short parenthetical annotation is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDate" ;
+        cor:rawValue "3/29/1934" ;
+        cor:proposedValue "3/29/1930" ;
+        cor:reason "The visible card and linked database disagree on the excavation year."
+    ] .

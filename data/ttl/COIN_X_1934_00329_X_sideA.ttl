@@ -1,0 +1,107 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-329
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-329" ;
+    dcterms:source corid:card-COIN_X_1934_00329_X_sideA ;
+    nmo:hasStartDate "-0417"^^xsd:gYear ;
+    nmo:hasEndDate "-0370"^^xsd:gYear ;
+    nmo:hasMint corid:mint-heraea ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "14"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-329-obverse ;
+    nmo:hasReverse corid:coin-1934-329-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 183, no. 19ff. (with 4 dots)" .
+
+corid:mint-heraea
+    a nmo:Mint ;
+    skos:prefLabel "Heraea"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-329-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of Athena right, wearing a crested Athenian helmet"@en .
+
+corid:coin-1934-329-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Η" ;
+    dcterms:description "Eta with a dot above"@en .
+
+corid:card-COIN_X_1934_00329_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00329_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-329 ;
+    cor:sourceImageFilename "COIN_X_1934_00329_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-329" ;
+    cor:inventoryNumber "1934-329" ;
+    cor:earlierInventoryNumberRaw "115" ;
+    cor:earlierInventoryNumber "115" ;
+    cor:mintRaw "Heraea" ;
+    cor:dateRaw "417-370" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "14" ;
+    cor:axisRaw "↔" ;
+    cor:obverseTypeRaw "Head of Athena r., in crested Athenian helmet" ;
+    cor:reverseLegendRaw "Η with dot above" ;
+    cor:reverseTypeRaw "Eta with dot above" ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 183, no. 19ff. (with 4 dots)" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "5/21/1934" ;
+    cor:excavationDate "1934-05-21"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 134 (1-23)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 134 ;
+        cor:notebookPageRaw "134" ;
+        cor:notebookEntryOrRange "1-23" ;
+        cor:notebookNumber 143 ;
+        cor:notebookIdentificationMethod "name, page, and distinct circled range explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1942947079" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Heraea" ;
+    cor:databaseDateRaw "-417 to -370" ;
+    cor:databaseObverseTypeRaw "Head of Athena facing r.; wearing crested Corinthian helmet" ;
+    cor:databaseReverseTypeRaw "Eta; dot above" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "14" ;
+    cor:databaseAxisRaw "3 or 9" ;
+    cor:databaseBibliographicReferenceRaw "BMC p.183 no.19ff." ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 5/21/1934; Notebook 143 p.134, 1-23" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the helmet is correctly described as Athenian or Corinthian, and whether the card's horizontal axis mark corresponds to the database reading '3 or 9'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseTypeRaw" ;
+        cor:rawValue "Head of Athena r., in crested Athenian helmet" ;
+        cor:proposedValue "Head of Athena right, wearing a crested Corinthian helmet" ;
+        cor:reason "The card appears to say Athenian helmet, while the linked database records Corinthian helmet."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "axisRaw" ;
+        cor:rawValue "↔" ;
+        cor:proposedValue "3 or 9" ;
+        cor:reason "The card uses a horizontal double-headed arrow rather than a numeral; the linked database records 3 or 9."
+    ] .

@@ -1,0 +1,72 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-7
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-7" ;
+    dcterms:source corid:card-COIN_X_1934_00007_X_sideA_etc ;
+    dcterms:description "Illegible Late Roman coin"@en ;
+    nmo:hasFindspot corid:place-asklepieion .
+
+corid:coin-1934-8
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-8" ;
+    dcterms:source corid:card-COIN_X_1934_00007_X_sideA_etc ;
+    dcterms:description "Illegible Late Roman coin"@en ;
+    nmo:hasFindspot corid:place-asklepieion .
+
+corid:coin-1934-9
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-9" ;
+    dcterms:source corid:card-COIN_X_1934_00007_X_sideA_etc ;
+    dcterms:description "Illegible Late Roman coin"@en ;
+    nmo:hasFindspot corid:place-asklepieion .
+
+corid:place-asklepieion
+    skos:prefLabel "Asklepieion"@en .
+
+corid:card-COIN_X_1934_00007_X_sideA_etc
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00007_X_sideA_etc" ;
+    cor:documentsNumismaticObject
+        corid:coin-1934-7,
+        corid:coin-1934-8,
+        corid:coin-1934-9 ;
+    cor:sourceImageFilename "COIN_X_1934_00007_X_sideA_etc.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "34-7 to 9" ;
+    cor:inventoryNumber "1934-7 to 1934-9" ;
+    cor:multipleReference true ;
+    cor:coinCountRaw "3 illeg. late Rom." ;
+    cor:coinCount 3 ;
+    cor:chronologyRaw "late Rom." ;
+    cor:chronologyNormalized "Late Roman" ;
+    cor:conditionRaw "illeg." ;
+    cor:findspotRaw "Asklepieion" ;
+    cor:excavationContextRaw "cleaning" ;
+    cor:excavationYear "1934"^^xsd:gYear ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB - p. -" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:archivalAnnotationRaw "6 coins reported, found only 3 (1-2009)" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the parenthetical notation '(1-2009)' in the comment and whether the card's three illegible Late Roman coins correspond exactly to inventory numbers 1934-7 through 1934-9." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "6 coins reported, found only 3 (1-2009)" ;
+        cor:reason "The parenthetical notation is difficult to interpret and may be a date or later archival annotation."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "inventoryNumberRange" ;
+        cor:rawValue "34-7 to 9" ;
+        cor:proposedValue "1934-7 to 1934-9" ;
+        cor:reason "The normalized range is inferred from the card heading and filename; the appended database context links only coin 1934-7 while marking the card as a multiple reference."
+    ] .

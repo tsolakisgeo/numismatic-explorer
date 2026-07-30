@@ -1,0 +1,114 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-206
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-206" ;
+    dcterms:source corid:card-COIN_X_1934_00206_X_sideA ;
+    nmo:hasAuthority corid:authority-tiberius-ii ;
+    nmo:hasStartDate "0578"^^xsd:gYear ;
+    nmo:hasEndDate "0582"^^xsd:gYear ;
+    nmo:hasMint corid:mint-constantinople ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-three-quarter-follis ;
+    nmo:hasDiameter "35"^^xsd:decimal ;
+    nmo:hasWeight "11.855"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-206-obverse ;
+    nmo:hasReverse corid:coin-1934-206-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 110, no. 38" ;
+    dcterms:bibliographicCitation "D.O.C. I, p. 272, no. 15b" .
+
+corid:authority-tiberius-ii
+    a nmo:Authority ;
+    skos:prefLabel "Tiberius II"@en .
+
+corid:mint-constantinople
+    a nmo:Mint ;
+    skos:prefLabel "Constantinople"@en .
+
+corid:denomination-three-quarter-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Three-quarter follis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-206-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "d M TIb CONS TANT PP AVI" ;
+    dcterms:description "Facing bust"@en .
+
+corid:coin-1934-206-reverse
+    a nmo:Reverse ;
+    dcterms:description "Large XXX with a cross above and CONA in the exergue"@en ;
+    nmo:hasMintmark corid:mintmark-1934-206-reverse ;
+    nmo:hasControlmark corid:controlmark-1934-206-reverse .
+
+corid:mintmark-1934-206-reverse
+    skos:prefLabel "CONA" .
+
+corid:controlmark-1934-206-reverse
+    skos:prefLabel "Cross above XXX"@en .
+
+corid:card-COIN_X_1934_00206_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00206_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-206 ;
+    cor:sourceImageFilename "COIN_X_1934_00206_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-206" ;
+    cor:inventoryNumber "1934-206" ;
+    cor:earlierInventoryNumber "498" ;
+    cor:authorityRaw "Tiberius II" ;
+    cor:dateRaw "578-582" ;
+    cor:mintRaw "mint = Constantinople" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "35" ;
+    cor:weightRaw "11.855 gm." ;
+    cor:denominationNormalized "3/4 follis" ;
+    cor:axisRaw "6" ;
+    cor:obverseLegendRaw "d M TIb CONS TANT PP AVI" ;
+    cor:obverseTypeRaw "Bust facing" ;
+    cor:reverseTypeRaw "XXX; cross above; CONA in exergue" ;
+    cor:mintMarkRaw "CONA" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/2/34" ;
+    cor:excavationDate "1934-03-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 67 (41-64)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 67 ;
+        cor:notebookPageRaw "67" ;
+        cor:notebookEntryOrRange "41-64" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "In Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the opening letters of the obverse legend, read here as 'd M', and whether notebook number 139 should be associated with the visible O. Broneer page 67 reference." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "d M TIb CONS TANT PP AVI" ;
+        cor:reason "The first two letters are not completely clear on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookNumber" ;
+        cor:rawValue "O. Broneer p. 67 (41-64)" ;
+        cor:proposedValue "Notebook 139" ;
+        cor:reason "The card explicitly gives the notebook name and page, while the linked Metis record additionally supplies notebook number 139."
+    ] .

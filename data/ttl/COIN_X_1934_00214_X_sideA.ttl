@@ -1,0 +1,119 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-214
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-214" ;
+    dcterms:source corid:card-COIN_X_1934_00214_X_sideA ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0228"^^xsd:gYear ;
+    nmo:hasMint corid:mint-argos ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDiameter "12"^^xsd:decimal ;
+    nmo:hasWeight "0.86"^^xsd:decimal ;
+    nmo:hasAxis "3"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-214-obverse ;
+    nmo:hasReverse corid:coin-1934-214-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Pel.), p. 142, no. 84 ff." ;
+    cor:proposedDenomination corid:denomination-obol .
+
+corid:mint-argos
+    a nmo:Mint ;
+    skos:prefLabel "Argos"@en .
+
+corid:denomination-obol
+    a nmo:Denomination ;
+    skos:prefLabel "Obol"@en ;
+    cor:identificationMethod "linked_Metis_record" ;
+    cor:identificationStatus "uncertain" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-214-obverse
+    a nmo:Obverse ;
+    dcterms:description "Wolf at bay left; an unclear symbol is indicated above"@en .
+
+corid:coin-1934-214-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "A P" ;
+    dcterms:description "Corinthian helmet left"@en .
+
+corid:card-COIN_X_1934_00214_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00214_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-214 ;
+    cor:sourceImageFilename "COIN_X_1934_00214_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "34-214" ;
+    cor:inventoryNumber "1934-214" ;
+    cor:earlierInventoryNumber "261" ;
+    cor:mintRaw "Argos" ;
+    cor:dateRaw "350-228" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "AR" ;
+    cor:diameterRaw "12 mm" ;
+    cor:weightRaw "0.86 grammes" ;
+    cor:axisRaw "right-pointing arrow" ;
+    cor:denominationDatabaseRaw "Obol (?)" ;
+    cor:obverseTypeRaw "wolf at bay, l.; above, [ ]" ;
+    cor:reverseLegendRaw "A P" ;
+    cor:reverseLegendNormalized "ΑΡ" ;
+    cor:reverseTypeRaw "Corinthian helmet l." ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:excavationContextRaw "S. Stoa Pottery Deposit, Shop I" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "March 3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 86 (60); NB 134" ;
+        cor:notebookNumber 134 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 86 ;
+        cor:notebookPageRaw "86" ;
+        cor:notebookEntryOrRange "60" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookReference "Notebook 139, p. 85" ;
+    cor:photographicNegativeReferenceRaw "Neg. 78-33-31/72" ;
+    cor:publicationAnnotationRaw "pub'd, Hesp. 1967 p. 383, 112 - descr. slipped to 113" ;
+    cor:studyCollectionRaw "coin = In Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the proposed obol denomination, the card-versus-Metis notebook conflict (NB 134 p. 86 versus NB 139 p. 85), and the exact negative and publication annotations." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denomination" ;
+        cor:proposedValue "Obol" ;
+        cor:reason "The denomination is absent from the visible card and appears as 'Obol (?)' only in the linked Metis record."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookReference" ;
+        cor:rawValue "O. Broneer p. 86 (60); NB 134" ;
+        cor:proposedValue "Notebook 139, p. 85" ;
+        cor:reason "The visible card and linked Metis record give different notebook numbers and pages."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographicNegativeReferenceRaw" ;
+        cor:rawValue "Neg. 78-33-31/72" ;
+        cor:reason "The final digits and separator are faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "publicationAnnotationRaw" ;
+        cor:rawValue "pub'd, Hesp. 1967 p. 383, 112 - descr. slipped to 113" ;
+        cor:reason "The faint pencilled publication note requires verification."
+    ] .

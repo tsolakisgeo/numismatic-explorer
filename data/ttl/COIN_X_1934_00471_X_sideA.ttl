@@ -1,0 +1,57 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-471
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-471" ;
+    dcterms:source corid:card-COIN_X_1934_00471_X_sideA ;
+    nmo:hasObverse corid:coin-1934-471-obverse ;
+    nmo:hasReverse corid:coin-1934-471-reverse .
+
+corid:card-COIN_X_1934_00471_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00471_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-471 ;
+    cor:sourceImageFilename "COIN_X_1934_00471_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-471" ;
+    cor:inventoryNumber "1934-471" ;
+    cor:groupRaw "Gru 119" ;
+    cor:negativeNumberRaw "08-99-13A/14A" ;
+    cor:leftPhotographDescription "Coin face with a central rectangular or monogrammatic device and a surrounding marginal legend."@en ;
+    cor:rightPhotographDescription "Coin face with a central circular or monogrammatic device and a surrounding marginal legend."@en ;
+    cor:databaseLookupSource "direct_csv_index" ;
+    cor:databaseLinkMethod "composite_inventory_key" ;
+    cor:databaseInventoryCardID "6577136462307377152" ;
+    cor:databaseLinkedCoinID "-632611366" ;
+    cor:databaseStudyCollectionStatus false ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 119" ;
+        cor:proposedValue "Group 119" ;
+        cor:reason "The expansion of the handwritten abbreviation is inferred."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographFaceAssignment" ;
+        cor:rawValue "Two unlabeled coin photographs, left and right" ;
+        cor:proposedValue "left photograph = obverse; right photograph = reverse" ;
+        cor:reason "The photographs are not explicitly labeled on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether 'Gru 119' means 'Group 119' and the assignment of the two photographs to obverse and reverse." .
+
+corid:coin-1934-471-obverse
+    a nmo:Obverse .
+
+corid:coin-1934-471-reverse
+    a nmo:Reverse .

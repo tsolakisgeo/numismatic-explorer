@@ -1,0 +1,72 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-224
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-224" ;
+    dcterms:source corid:card-COIN_X_1934_00224_X_sideB ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasObverse corid:coin-1934-224-obverse ;
+    nmo:hasReverse corid:coin-1934-224-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-224-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus facing left"@en .
+
+corid:coin-1934-224-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "A" ;
+    dcterms:description "Trident, with A to the left and a possible wreath to the right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-224-reverse .
+
+corid:controlmark-1934-224-reverse
+    skos:prefLabel "A to left; possible wreath to right"@en .
+
+corid:card-COIN_X_1934_00224_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00224_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-224 ;
+    cor:sourceImageFilename "COIN_X_1934_00224_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00224_X_sideA ;
+    cor:archivalAnnotationRaw "C-63-64: Proto-Mycenaean Bowl" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "400-146 BCE" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseObverseLegendRaw "Koppa" ;
+    cor:databaseObverseTypeRaw "Pegasus facing l." ;
+    cor:databaseReverseLegendRaw "A to left" ;
+    cor:databaseReverseTypeRaw "Trident; wreath (?) to right" ;
+    cor:databaseSymbolRaw "Letters and wreath (?)" ;
+    cor:databaseFindspotRaw "Agora SE; Pottery Deposit 1934-1" ;
+    cor:databaseExcavationDateRaw "3/13/1934" ;
+    cor:databaseNotebookReference "Notebook 139 p. 95, 12-15" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact handwritten annotation, read as 'C-63-64: Proto-Mycenaean Bowl'." .
+
+corid:card-COIN_X_1934_00224_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00224_X_sideA" .

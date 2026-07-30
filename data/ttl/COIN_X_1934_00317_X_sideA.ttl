@@ -1,0 +1,110 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-317
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-317" ;
+    dcterms:source corid:card-COIN_X_1934_00317_X_sideA ;
+    nmo:hasAuthority nm:hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-amman ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-317-obverse ;
+    nmo:hasReverse corid:coin-1934-317-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cf. de Saulcy, Numismatique de la Terre Sainte, p. 329, no. 3, pl. XIII, 5" ;
+    cor:mintAssignmentBasis "The card heading reads 'Palestine — Syria (Amman)'." .
+
+corid:mint-amman
+    a nmo:Mint ;
+    skos:prefLabel "Amman"@en ;
+    skos:altLabel "Philadelphia (Amman)"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-317-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "...A..." ;
+    dcterms:description "Laureate bust of Hadrian right"@en .
+
+corid:coin-1934-317-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "CAM / CΘ?" ;
+    dcterms:description "CAM within a wreath; uncertain letters below"@en .
+
+corid:card-COIN_X_1934_00317_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00317_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-317 ;
+    cor:sourceImageFilename "COIN_X_1934_00317_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-317" ;
+    cor:inventoryNumber "1934-317" ;
+    cor:earlierInventoryNumberRaw "321" ;
+    cor:earlierInventoryNumber "321" ;
+    cor:geographicAttributionRaw "Palestine — Syria (Amman)" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:dateRaw "117-138" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:denominationRaw "quarter nummus?" ;
+    cor:obverseLegendRaw "...A..." ;
+    cor:obverseTypeRaw "Bust of Hadrian r., laur." ;
+    cor:reverseLegendRaw "CAM; below CΘ?" ;
+    cor:reverseTypeRaw "CAM within wreath; below, CΘ?" ;
+    cor:bibliographicReferenceRaw "cf. Saulcy, Num. de Terre Sainte p. 329, no. 3, pl. XIII, 5" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/11/1934" ;
+    cor:excavationDate "1934-05-11"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "E. H. Morgan p. 108 (13-14)" ;
+        cor:notebookName "E. H. Morgan" ;
+        cor:notebookPage 108 ;
+        cor:notebookPageRaw "108" ;
+        cor:notebookEntryOrRange "13-14" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the denomination, the fragmentary obverse legend, the reverse letters below CAM, and whether Amman should be normalized as Philadelphia." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denominationRaw" ;
+        cor:rawValue "quarter nummus?" ;
+        cor:reason "The denomination line is difficult to read and may use a different abbreviation."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "...A..." ;
+        cor:reason "Only a small fragment of the obverse legend is legible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "CAM; below CΘ?" ;
+        cor:reason "The letters below CAM are faint and uncertain."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mint" ;
+        cor:rawValue "Palestine — Syria (Amman)" ;
+        cor:proposedValue "Philadelphia (Amman)" ;
+        cor:reason "The card gives the modern place-name Amman; identification with ancient Philadelphia should be confirmed."
+    ] .

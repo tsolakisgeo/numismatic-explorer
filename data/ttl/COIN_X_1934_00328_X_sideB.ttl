@@ -1,0 +1,118 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-328
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-328" ;
+    dcterms:source corid:card-COIN_X_1934_00328_X_sideB ;
+    nmo:hasAuthority corid:authority-william-ii-villehardouin ;
+    nmo:hasFindspot corid:place-north-of-school .
+
+corid:authority-william-ii-villehardouin
+    a nmo:Authority ;
+    skos:prefLabel "William II of Villehardouin"@en ;
+    skos:altLabel "Wm. Villehardouin"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:negative-88-37-1
+    a cor:PhotographicNegative ;
+    dcterms:identifier "88-37-1" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 .
+
+corid:negative-88-37-2
+    a cor:PhotographicNegative ;
+    dcterms:identifier "88-37-2" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 .
+
+corid:negative-89-57-20
+    a cor:PhotographicNegative ;
+    dcterms:identifier "89-57-20" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 .
+
+corid:negative-89-57-21
+    a cor:PhotographicNegative ;
+    dcterms:identifier "89-57-21" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 .
+
+corid:photo-print-1934-328-lower-left-1
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00328_X_sideB ;
+    cor:positionOnCard "lower left, left print" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 ;
+    cor:associatedNegative corid:negative-88-37-1 ;
+    dcterms:description "Mounted black-and-white photograph of one face of the coin with a scale below"@en .
+
+corid:photo-print-1934-328-lower-left-2
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00328_X_sideB ;
+    cor:positionOnCard "lower left, right print" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 ;
+    cor:associatedNegative corid:negative-88-37-2 ;
+    dcterms:description "Mounted black-and-white photograph of the other face of the coin with a scale below"@en .
+
+corid:photo-print-1934-328-lower-middle-1
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00328_X_sideB ;
+    cor:positionOnCard "lower middle, left print" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 ;
+    cor:associatedNegative corid:negative-89-57-20 ;
+    dcterms:description "Mounted black-and-white photograph of one face of the coin with a scale below"@en .
+
+corid:photo-print-1934-328-lower-middle-2
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00328_X_sideB ;
+    cor:positionOnCard "lower middle, right print" ;
+    cor:depictsNumismaticObject corid:coin-1934-328 ;
+    cor:associatedNegative corid:negative-89-57-21 ;
+    dcterms:description "Mounted black-and-white photograph of the other face of the coin with a scale below"@en .
+
+corid:card-COIN_X_1934_00328_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00328_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-328 ;
+    cor:sourceImageFilename "COIN_X_1934_00328_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00328_X_sideA ;
+    cor:inventoryNumberRaw "34-328" ;
+    cor:inventoryNumber "1934-328" ;
+    cor:classificationRaw "Frank. Ven." ;
+    cor:authorityRaw "Wm. Villehardouin" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "5-21-34" ;
+    cor:excavationDate "1934-05-21"^^xsd:date ;
+    cor:excavationBasketRaw "# 6" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB p. 40" ;
+        cor:notebookPage 40 ;
+        cor:notebookPageRaw "40" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:negativeReferenceRaw "Neg. 88-37-1, -2; 89-57-20; 89-57-21" ;
+    cor:photographicNegative corid:negative-88-37-1 ;
+    cor:photographicNegative corid:negative-88-37-2 ;
+    cor:photographicNegative corid:negative-89-57-20 ;
+    cor:photographicNegative corid:negative-89-57-21 ;
+    cor:attachedPhotograph corid:photo-print-1934-328-lower-left-1 ;
+    cor:attachedPhotograph corid:photo-print-1934-328-lower-left-2 ;
+    cor:attachedPhotograph corid:photo-print-1934-328-lower-middle-1 ;
+    cor:attachedPhotograph corid:photo-print-1934-328-lower-middle-2 ;
+    cor:databaseCoinId "1114516154" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Alexius" ;
+    cor:databaseNoteRaw "Alexius I. Record generated from NB catalogue." ;
+    cor:databaseStudyCollectionRaw "False" ;
+    cor:databaseConflictNote "The linked database identifies the coin as Alexius I, while the visible card identifies Wm. Villehardouin." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the lower-right photographic reference is 89-57-21 and whether the checked classification is intended specifically as 'Frank. Ven.'." .

@@ -1,0 +1,119 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-334
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-334" ;
+    dcterms:source corid:card-COIN_X_1934_00334_X_sideA ;
+    nmo:hasAuthority corid:authority-ancona-anonymous-civic ;
+    nmo:hasStartDate "1247"^^xsd:gYear ;
+    nmo:hasMint corid:mint-ancona ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-denaro ;
+    nmo:hasDiameter "17.5"^^xsd:decimal ;
+    nmo:hasWeight "0.67"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-334-obverse ;
+    nmo:hasReverse corid:coin-1934-334-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Engel-Serrure, Traité II, p. 795" ;
+    cor:dateQualification "post" ;
+    cor:dateAssignmentBasis "The card notes Ancona's autonomy from the thirteenth century and the earliest notice of anonymous currency in 1247; the linked database specifies post-1247." ;
+    cor:weightAssignmentBasis "Weight 0.67 g is supplied by the linked database and is not visibly written on the card." ;
+    cor:axisAssignmentBasis "Die axis 9 is supplied by the linked database and is not visibly written on the card." .
+
+corid:authority-ancona-anonymous-civic
+    a nmo:Authority ;
+    skos:prefLabel "Ancona, anonymous civic issue"@en .
+
+corid:mint-ancona
+    a nmo:Mint ;
+    skos:prefLabel "Ancona"@en .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-denaro
+    a nmo:Denomination ;
+    skos:prefLabel "Denaro"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-334-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "+ · EPS · S · QVIRIACVS" ;
+    dcterms:description "Cross pattée within an inner circle"@en .
+
+corid:coin-1934-334-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+ DE ANCONA" ;
+    dcterms:description "Letter A with surrounding pellets"@en .
+
+corid:card-COIN_X_1934_00334_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00334_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-334 ;
+    cor:sourceImageFilename "COIN_X_1934_00334_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-334" ;
+    cor:inventoryNumber "1934-334" ;
+    cor:earlierInventoryNumberRaw "1280" ;
+    cor:earlierInventoryNumber "1280" ;
+    cor:mintRaw "Ancona" ;
+    cor:dateRaw "auton. from XIII century; earliest notice of anon. currency, 1247" ;
+    cor:materialRaw "Billon" ;
+    cor:denominationRaw "den." ;
+    cor:diameterRaw "17.5" ;
+    cor:obverseLegendRaw "+ · EPS · S · QVIRIACVS" ;
+    cor:obverseTypeRaw "Cross pattée in inner circle" ;
+    cor:reverseLegendRaw "+ dE ANCONA" ;
+    cor:reverseTypeRaw "A with pellets" ;
+    cor:bibliographicReferenceRaw "Engel-Serrure Traité II p. 795" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "5/31/1934" ;
+    cor:excavationDate "1934-05-31"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 94 (37-38), NB 141" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 94 ;
+        cor:notebookPageRaw "94" ;
+        cor:notebookEntryOrRange "37-38" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= Study Coll." ;
+    cor:databaseCoinId "-1712974971" ;
+    cor:databaseDepartmentRaw "OT" ;
+    cor:databaseMintRaw "Ancona" ;
+    cor:databaseDateRaw "1247; post-1247" ;
+    cor:databaseObverseLegendRaw "+ EPS S QVIRIACVS" ;
+    cor:databaseObverseTypeRaw "Cross patee within circle" ;
+    cor:databaseReverseLegendRaw "+ dE ANCONA" ;
+    cor:databaseReverseTypeRaw "A" ;
+    cor:databaseMaterialRaw "Bi" ;
+    cor:databaseDenominationRaw "denaro" ;
+    cor:databaseWeightRaw "0.67" ;
+    cor:databaseDiameterRaw "17.5" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseBibliographicReferenceRaw "Engel-Serrure II, p.795." ;
+    cor:databaseNoteRaw "Post-1247: Ancona was autonomous from the 13th c., with the earliest notice of anonymous currency in 1247." ;
+    cor:databaseExcavationContextRaw "Agora S.E.; excavation date 05/31/1934, #37-38; Notebook 141 (Broneer), p.94; Card #1280." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact punctuation of both legends, whether the reverse device is simply the letter A with pellets, and that 17.5 is the diameter rather than part of the denomination notation." .

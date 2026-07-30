@@ -1,0 +1,107 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-235
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-235" ;
+    dcterms:source corid:card-COIN_X_1934_00235_X_sideA ;
+    nmo:hasAuthority corid:authority-cassander ;
+    nmo:hasStartDate "-0316"^^xsd:gYear ;
+    nmo:hasEndDate "-0297"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "6.28"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-235-obverse ;
+    nmo:hasReverse corid:coin-1934-235-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "McClean 3554 ff." .
+
+corid:authority-cassander
+    a nmo:Authority ;
+    skos:prefLabel "Cassander"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-235-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of young Heracles right, wearing a lion skin"@en .
+
+corid:coin-1934-235-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΚΑΣΣΑΝΔΡΟΥ" ;
+    dcterms:description "Rider on a horse stepping right; star to right; cross between the forelegs and another cross beneath the horse"@en ;
+    nmo:hasControlmark corid:controlmark-1934-235-reverse .
+
+corid:controlmark-1934-235-reverse
+    skos:prefLabel "Star to right; crosses between the forelegs and beneath the horse"@en .
+
+corid:card-COIN_X_1934_00235_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00235_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-235 ;
+    cor:sourceImageFilename "COIN_X_1934_00235_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-235" ;
+    cor:inventoryNumber "1934-235" ;
+    cor:earlierInventoryNumber "163" ;
+    cor:authorityRaw "Cassander" ;
+    cor:dateRaw "316-297" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "19" ;
+    cor:databaseWeightRaw "6.28" ;
+    cor:weightSource "linked_Metis_record" ;
+    cor:obverseTypeRaw "Head of young Herakles in lion-skin" ;
+    cor:reverseLegendRaw "(ΚΑΣΣΑΝΔΡΟΥ) at bottom" ;
+    cor:reverseLegendNormalized "ΚΑΣΣΑΝΔΡΟΥ" ;
+    cor:reverseTypeRaw "Rider on horse stepping r.; to r., star; between fore legs, cross; beneath horse, cross" ;
+    cor:mintAnnotationRaw "Macedonian mint" ;
+    cor:additionalNumismaticAnnotationRaw "AH = Antigonus Gonatas" ;
+    cor:bibliographicReferenceRaw "cf. McCl. 3554 ff." ;
+    cor:findspotRaw "Agora S.E." ;
+    cor:excavationDateRaw "3/20/1934" ;
+    cor:excavationDate "1934-03-20"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 116 (2)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 116 ;
+        cor:notebookPageRaw "116" ;
+        cor:notebookEntryOrRange "2" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint marginal readings 'Macedonian mint' and 'AH = Antigonus Gonatas', and whether ΚΑΣΣΑΝΔΡΟΥ is visibly preserved or editorially supplied." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintAnnotationRaw" ;
+        cor:rawValue "Macedonian mint" ;
+        cor:reason "The small right-margin annotation is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "additionalNumismaticAnnotationRaw" ;
+        cor:rawValue "AH = Antigonus Gonatas" ;
+        cor:reason "The marginal letters and personal name are faint and may represent a later attribution note."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "(ΚΑΣΣΑΝΔΡΟΥ) at bottom" ;
+        cor:proposedValue "ΚΑΣΣΑΝΔΡΟΥ" ;
+        cor:reason "The legend is written in parentheses on the card and may be an editorial restoration rather than a fully visible coin legend."
+    ] .

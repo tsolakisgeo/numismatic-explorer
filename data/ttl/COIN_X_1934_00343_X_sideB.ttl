@@ -1,0 +1,40 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-343
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-343" ;
+    dcterms:source corid:card-COIN_X_1934_00343_X_sideB ;
+    dcterms:bibliographicCitation "B.M.C., pl. LXVIII, 2 (electrum)" ;
+    dcterms:bibliographicCitation "Cor. Coins 139" .
+
+corid:card-COIN_X_1934_00343_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00343_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-343 ;
+    cor:sourceImageFilename "COIN_X_1934_00343_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumber "1934-343" ;
+    cor:cardSide "B" ;
+    cor:noteRaw "The Christ is similar to the reverse of B.M.C. pl. LXVIII, 2 (Electrum) for *; cf. Cor. Coins 139." ;
+    cor:comparisonNote "The image of Christ is compared with the reverse type illustrated in B.M.C., plate LXVIII, no. 2, an electrum coin; compare Cor. Coins 139."@en ;
+    cor:databaseDisagreement [
+        a cor:SourceDisagreement ;
+        cor:field "cardNote" ;
+        cor:cardValue "The Christ is similar to the reverse of B.M.C. pl. LXVIII, 2 (Electrum) for *; cf. Cor. Coins 139." ;
+        cor:databaseValue "The Christ is similar to the reverse of BMC pl LXVIII, 2 (electrum) for X. cf. Edwards, 139" ;
+        cor:reason "The visible card appears to show an asterisk after 'for' and cites 'Cor. Coins 139', whereas the linked database note records 'X' and 'Edwards, 139'."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "noteRaw" ;
+        cor:rawValue "*" ;
+        cor:proposedValue "asterisk symbol" ;
+        cor:reason "The handwritten mark after 'for' appears to be an asterisk rather than the letter X."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that the mark after 'for' is an asterisk and that the final citation reads 'Cor. Coins 139' rather than 'Edwards, 139'." .
+

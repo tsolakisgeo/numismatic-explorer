@@ -1,0 +1,126 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-320
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-320" ;
+    dcterms:source corid:card-COIN_X_1934_00320_X_sideA ;
+    nmo:hasAuthority nm:trajan ;
+    nmo:hasStartDate "0098"^^xsd:gYear ;
+    nmo:hasEndDate "0117"^^xsd:gYear ;
+    nmo:hasMint corid:mint-nicopolis-epirus ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasWeight "3.73"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-320-obverse ;
+    nmo:hasReverse corid:coin-1934-320-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Head, p. 321" ;
+    cor:productionDateAssignmentBasis "The reign dates 98-117 CE are supplied by the linked database; the card itself names Trajan without writing a date range." .
+
+corid:mint-nicopolis-epirus
+    a nmo:Mint ;
+    skos:prefLabel "Nicopolis, Epirus"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-320-obverse
+    a nmo:Obverse ;
+    dcterms:description "Bust of Trajan right, probably laureate"@en .
+
+corid:coin-1934-320-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "NEI[KO]ΠΟΛΙC" ;
+    dcterms:description "Nike advancing right, holding a palm branch and wreath"@en .
+
+corid:card-COIN_X_1934_00320_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00320_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-320 ;
+    cor:sourceImageFilename "COIN_X_1934_00320_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-320" ;
+    cor:inventoryNumber "1934-320" ;
+    cor:earlierInventoryNumberRaw "44" ;
+    cor:earlierInventoryNumber "44" ;
+    cor:mintRaw "Nicopolis, Epirus" ;
+    cor:authorityRaw "Trajan" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "?" ;
+    cor:weightRaw "3.73 gr." ;
+    cor:obverseTypeRaw "Bust of Trajan r., laur.?" ;
+    cor:reverseLegendRaw "NEI[KO]ΠΟΛΙC" ;
+    cor:reverseLegendNormalized "ΝΕΙΚΟΠΟΛΙΣ" ;
+    cor:reverseTypeRaw "Nike advancing r., holding palm and wreath" ;
+    cor:bibliographicReferenceRaw "Head. p. 321" ;
+    cor:bibliographicReferenceRaw "E. [illegible] collection" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/14/'34" ;
+    cor:excavationDate "1934-05-14"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. Howland p. 8 (19)" ;
+        cor:notebookName "R. Howland" ;
+        cor:notebookPage 8 ;
+        cor:notebookPageRaw "8" ;
+        cor:notebookEntryOrRange "19" ;
+        cor:notebookNumber 146 ;
+        cor:notebookIdentificationMethod "name, page, and entry explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "STUDY COLLECTION" ;
+    cor:databaseCoinId "1142343655" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseAuthorityRaw "Trajan" ;
+    cor:databaseMintRaw "Nicopolis" ;
+    cor:databaseDateRaw "98-117" ;
+    cor:databaseObverseTypeRaw "Bust of Trajan facing r; laureate (?)" ;
+    cor:databaseReverseLegendRaw "<gr>NEI[KO]POLIS<gr>" ;
+    cor:databaseReverseTypeRaw "Nike advancing r.; holding palm and wreath" ;
+    cor:databaseSymbolRaw "Letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "3.73" ;
+    cor:databaseBibliographicReferenceRaw "Head p.321" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/14/1934; NB 146 p.8, 19" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the unknown diameter, whether the bust is laureate, the bracketed letters in NEI[KO]ΠΟΛΙC, and the illegible collection reference beginning with 'E.'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameterRaw" ;
+        cor:rawValue "?" ;
+        cor:reason "The card places a question mark after the material and gives no secure diameter."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseTypeRaw" ;
+        cor:rawValue "Bust of Trajan r., laur.?" ;
+        cor:proposedValue "Bust of Trajan right, laureate" ;
+        cor:reason "The word 'laur.' and its question mark are faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "NEI[KO]ΠΟΛΙC" ;
+        cor:proposedValue "ΝΕΙΚΟΠΟΛΙΣ" ;
+        cor:reason "The letters KO are bracketed on the card and the legend is partly transliterated."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "E. [illegible] collection" ;
+        cor:reason "The surname or collection name after the initial E. is not securely legible."
+    ] .

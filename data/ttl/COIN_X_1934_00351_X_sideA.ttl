@@ -1,0 +1,114 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-351
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-351" ;
+    dcterms:source corid:card-COIN_X_1934_00351_X_sideA ;
+    nmo:hasAuthority corid:authority-constantine-x ;
+    nmo:hasStartDate "1059"^^xsd:gYear ;
+    nmo:hasEndDate "1067"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "27"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-351-obverse ;
+    nmo:hasReverse corid:coin-1934-351-reverse ;
+    nmo:hasFindspot corid:place-christian-basilica-narthex ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "DOC III², p. 777, no. 9 (Class 2)" .
+
+corid:card-COIN_X_1934_00351_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00351_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-351 ;
+    cor:sourceImageFilename "COIN_X_1934_00351_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-351" ;
+    cor:inventoryNumber "1934-351" ;
+    cor:cardNumber "14" ;
+    cor:authorityRaw "Constantine X, 1059-1067" ;
+    cor:supersededAttributionRaw "Michael VII, 1071-1078" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "27" ;
+    cor:axisRaw "downward arrow" ;
+    cor:obverseLegendRaw "[+ MIX (off flan)] ΔΗΛ RACIOΔ" ;
+    cor:obverseTypeRaw "Bust of Michael VII facing, wearing jewelled nimbus, holding labarum and globus cruciger" ;
+    cor:reverseLegendRaw "IC XC" ;
+    cor:reverseTypeRaw "Bust of Christ facing; right hand in benediction, left holds Book marked with star on cover; stars to right and left below IC XC" ;
+    cor:overstrikeNoteRaw "Overstruck on Class 1 (DOC, p. 774, 8)" ;
+    cor:findspotRaw "Christian Basilica (C.C.G.) (from narthex)" ;
+    cor:excavationDateRaw "11/6/1934" ;
+    cor:excavationDate "1934-11-06"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 98; Pease-Shelley p. 165 (2-2)" ;
+        cor:notebookNumber "98" ;
+        cor:notebookName "Pease-Shelley" ;
+        cor:notebookPage "165"^^xsd:integer ;
+        cor:notebookEntryOrRange "2-2" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:supersededBibliographicCitation "B.M.C., p. 533" ;
+    cor:databaseContext [
+        a cor:DatabaseContext ;
+        cor:databaseObverseLegend "traces: [+EMMANOVHL]" ;
+        cor:databaseObverseType "Christ bust facing, with cross-nimbus; right hand raised in blessing and left hand holding a book" ;
+        cor:databaseReverseLegend "traces, perhaps obscured by overstrike" ;
+        cor:databaseReverseType "Emperor bust facing, crowned with cross and pendilia; holds cross in right hand and akakia in left" ;
+        cor:databaseOverstrikeNote "Overstruck on a follis of Constantine X, Class 1 (DOC III, p. 774, no. 8)"
+    ] ;
+    cor:databaseDisagreement [
+        a cor:SourceDisagreement ;
+        cor:field "faceAssignments" ;
+        cor:cardValue "The card describes Michael VII on the obverse and Christ on the reverse." ;
+        cor:databaseValue "The linked database describes Christ on the obverse and the emperor on the reverse." ;
+        cor:reason "The handwritten card and database assign the visible types to opposite faces and preserve different interpretations of the overstrike."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "[+ MIX (off flan)] ΔΗΛ RACIOΔ" ;
+        cor:reason "The legend is faint, abbreviated, and partly marked as off flan."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookEntryOrRange" ;
+        cor:rawValue "2-2" ;
+        cor:proposedValue "22" ;
+        cor:reason "The circled notation appears as '2-2' on the card but may represent excavation entry 22, as recorded in the linked database."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint obverse legend, whether the circled notebook notation is '2-2' or entry 22, and the correct obverse/reverse assignment of the overstruck types." .
+
+corid:coin-1934-351-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "[+ MIX (off flan)] ΔΗΛ RACIOΔ" ;
+    dcterms:description "Facing bust identified on the card as Michael VII, wearing a jewelled nimbus and holding a labarum and globus cruciger."@en .
+
+corid:coin-1934-351-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "IC XC" ;
+    dcterms:description "Facing bust of Christ, raising the right hand in benediction and holding a book in the left; the book bears a star, and stars appear to either side below IC XC."@en .
+
+corid:authority-constantine-x
+    a nmo:Authority ;
+    skos:prefLabel "Constantine X"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-christian-basilica-narthex
+    a dcterms:Location ;
+    skos:prefLabel "Christian Basilica, narthex"@en ;
+    cor:placeNameRaw "Christian Basilica (C.C.G.) (from narthex)" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

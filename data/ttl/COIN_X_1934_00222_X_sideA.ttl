@@ -1,0 +1,110 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-222
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-222" ;
+    dcterms:source corid:card-COIN_X_1934_00222_X_sideA ;
+    nmo:hasStartDate "-0338"^^xsd:gYear ;
+    nmo:hasEndDate "-0243"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-drachma ;
+    nmo:hasDiameter "15"^^xsd:decimal ;
+    nmo:hasWeight "1.96"^^xsd:decimal ;
+    nmo:hasAxis "3"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-222-obverse ;
+    nmo:hasReverse corid:coin-1934-222-reverse ;
+    nmo:hasFindspot corid:place-agora-se-threshold ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "cf. B.M.C. 322 (Δ-I drachms)" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-drachma
+    a nmo:Denomination ;
+    skos:prefLabel "Drachma"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-threshold
+    skos:prefLabel "Agora Southeast, Threshold"@en .
+
+corid:coin-1934-222-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus with pointed wing, flying left; koppa beneath"@en .
+
+corid:coin-1934-222-reverse
+    a nmo:Reverse ;
+    dcterms:description "Head of Aphrodite left, with hair in a sakkos"@en .
+
+corid:card-COIN_X_1934_00222_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00222_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-222 ;
+    cor:sourceImageFilename "COIN_X_1934_00222_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-222" ;
+    cor:inventoryNumber "1934-222" ;
+    cor:earlierInventoryNumber "110" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "338-243" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "drachma" ;
+    cor:diameterRaw "15 mm" ;
+    cor:weightRaw "1.96 grammes" ;
+    cor:axisRaw "right-pointing arrow" ;
+    cor:obverseLegendRaw "koppa beneath" ;
+    cor:obverseTypeRaw "Pegasos, with pointed wing, flying l.; beneath, Ϙ" ;
+    cor:reverseTypeRaw "Head of Aphrodite l., with hair in saccos" ;
+    cor:databaseReverseTypeRaw "Head of Peirene/Aphrodite l.; with hair in saccos" ;
+    cor:legendConditionRaw "all letters obliterated in cleaning" ;
+    cor:archivalAnnotationRaw "all letters obliterated in cleaning + bad work" ;
+    cor:bibliographicReferenceRaw "cf. BMC, 322 (Δ-I drs.)" ;
+    cor:findspotRaw "Agora SE; Threshold" ;
+    cor:excavationDateRaw "March 12/1934" ;
+    cor:excavationDate "1934-03-12"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 91 (2)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 91 ;
+        cor:notebookPageRaw "91" ;
+        cor:notebookEntryOrRange "2" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 110, whether the female head should be identified specifically as Aphrodite or more cautiously as Peirene/Aphrodite, and the exact parenthetical wording in the B.M.C. 322 reference." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "110" ;
+        cor:reason "The upper-left pencil number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeIdentification" ;
+        cor:rawValue "Head of Aphrodite l., with hair in saccos" ;
+        cor:proposedValue "Head of Peirene/Aphrodite left, with hair in a sakkos" ;
+        cor:reason "The visible card identifies Aphrodite, while the linked database preserves the broader identification Peirene/Aphrodite."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "cf. BMC, 322 (Δ-I drs.)" ;
+        cor:reason "The abbreviated parenthetical designation is handwritten and should be checked."
+    ] .

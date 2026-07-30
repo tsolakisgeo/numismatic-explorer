@@ -1,0 +1,126 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-223
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-223" ;
+    dcterms:source corid:card-COIN_X_1934_00223_X_sideA ;
+    nmo:hasAuthority corid:authority-agostino-barbarigo ;
+    nmo:hasStartDate "1486"^^xsd:gYear ;
+    nmo:hasEndDate "1501"^^xsd:gYear ;
+    nmo:hasMint corid:mint-venetian-colonial ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-tornesello ;
+    nmo:hasDiameter "15"^^xsd:decimal ;
+    nmo:hasAxis "7"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-223-obverse ;
+    nmo:hasReverse corid:coin-1934-223-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-dump ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Schlumberger, p. 474" ;
+    dcterms:bibliographicCitation "Papadopoli II, p. 83, no. 64" .
+
+corid:authority-agostino-barbarigo
+    a nmo:Authority ;
+    skos:prefLabel "Agostino Barbarigo"@en .
+
+corid:mint-venetian-colonial
+    a nmo:Mint ;
+    skos:prefLabel "Venetian Colonial mint"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-tornesello
+    a nmo:Denomination ;
+    skos:prefLabel "Tornesello"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw-dump
+    skos:prefLabel "Agora Southwest, dump"@en .
+
+corid:coin-1934-223-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend ".AVG. BARBADICO REX" ;
+    dcterms:description "Short cross"@en .
+
+corid:coin-1934-223-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+ S. MARCVS. VENETI." ;
+    dcterms:description "Lion of Saint Mark"@en .
+
+corid:card-COIN_X_1934_00223_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00223_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-223 ;
+    cor:sourceImageFilename "COIN_X_1934_00223_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-223" ;
+    cor:inventoryNumber "1934-223" ;
+    cor:earlierInventoryNumber "1278" ;
+    cor:authorityRaw "Agostino Barbarigo, Doge" ;
+    cor:dateRaw "1486-1501" ;
+    cor:databaseDateRaw "1485-1501" ;
+    cor:materialRaw "Bill." ;
+    cor:denominationRaw "den." ;
+    cor:databaseDenominationRaw "tornesello" ;
+    cor:databaseDiameterRaw "15" ;
+    cor:databaseAxisRaw "7" ;
+    cor:obverseLegendRaw ".AVG. BARBADICO REX" ;
+    cor:obverseLegendDatabaseRaw ".AVG.BARBADICO DVX" ;
+    cor:obverseTypeRaw "Short cross" ;
+    cor:databaseObverseTypeRaw "Cross pattée, within circle" ;
+    cor:reverseLegendRaw "+ S. MARCVS. VENETI." ;
+    cor:reverseTypeRaw "Lion of St. Mark" ;
+    cor:databaseReverseTypeRaw "Lion of St. Mark, nimbate, holding book, three-quarter view to left, within circle" ;
+    cor:findspotRaw "Agora S.W." ;
+    cor:excavationContextRaw "dump" ;
+    cor:excavationDateRaw "3/12/1934" ;
+    cor:excavationDate "1934-03-12"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 68 (39-43); NB 140" ;
+        cor:notebookNumber 140 ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 68 ;
+        cor:notebookPageRaw "68" ;
+        cor:notebookEntryOrRange "39-43" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Study Coll." ;
+    cor:confirmationMarkRaw "CONF. ✓" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the obverse legend ending REX versus database DVX, the card date 1486 versus database 1485, and whether 'den.' should be retained as denaro or normalized to tornesello." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue ".AVG. BARBADICO REX" ;
+        cor:proposedValue ".AVG. BARBADICO DVX" ;
+        cor:reason "The visible card appears to end REX, while the linked database gives DVX."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionStartDate" ;
+        cor:rawValue "1486" ;
+        cor:proposedValue "1485" ;
+        cor:reason "The card and linked database disagree on the first year."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denomination" ;
+        cor:rawValue "den." ;
+        cor:proposedValue "tornesello" ;
+        cor:reason "The card uses an abbreviation, while the linked database identifies the denomination as tornesello."
+    ] .

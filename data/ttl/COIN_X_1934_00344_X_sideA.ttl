@@ -1,0 +1,112 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-344
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-344" ;
+    dcterms:source corid:card-COIN_X_1934_00344_X_sideA ;
+    nmo:hasAuthority corid:authority-claudius ;
+    nmo:hasIssuer corid:issuer-l-paconius-flam ,
+                  corid:issuer-cn-publicius-regulus ;
+    nmo:hasStartDate "0050"^^xsd:gYear ;
+    nmo:hasEndDate "0051"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-as ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasDiameter "22"^^xsd:decimal ;
+    nmo:hasAxis "10"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-344-obverse ;
+    nmo:hasReverse corid:coin-1934-344-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 51" ;
+    dcterms:bibliographicCitation "B.M.C. 542" ;
+    dcterms:bibliographicCitation "Fox 38" ;
+    dcterms:bibliographicCitation "Amandry XIX" .
+
+corid:card-COIN_X_1934_00344_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00344_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-344 ;
+    cor:sourceImageFilename "COIN_X_1934_00344_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-344" ;
+    cor:inventoryNumber "1934-344" ;
+    cor:cardNumber "60" ;
+    cor:mintRaw "Corinth" ;
+    cor:magistracyRaw "II VIR" ;
+    cor:authorityRaw "Claudius" ;
+    cor:issuerRaw "L. Paconius Flam. + Cn. Publicius Regulus" ;
+    cor:dateAssignmentRaw "AD 50/51 (Amandry)" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "22" ;
+    cor:axisRaw "X/X" ;
+    cor:obverseLegendRaw "TI. CLAVDIVS CAESAR" ;
+    cor:obverseTypeRaw "Head of Claudius l., laureate" ;
+    cor:reverseLegendRaw "L PACO FLAM · CN · PVBL REG II VIR / COR" ;
+    cor:reverseTypeRaw "Nero and Britannicus standing face to face; beneath them, NE and BR" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "10/19/1934" ;
+    cor:excavationDate "1934-10-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 144; G. R. Davidson 90 (1-15)" ;
+        cor:notebookNumber "144" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage "90"^^xsd:integer ;
+        cor:notebookEntryOrRange "1-15" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "axis" ;
+        cor:rawValue "X/X" ;
+        cor:proposedValue "10" ;
+        cor:reason "The mark is interpreted as the die-axis notation corresponding to 10, supported by the linked database record."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that the handwritten axis mark 'X/X' denotes die axis 10." .
+
+corid:coin-1934-344-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "TI. CLAVDIVS CAESAR" ;
+    dcterms:description "Laureate head of Claudius facing left."@en .
+
+corid:coin-1934-344-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "L PACO FLAM · CN · PVBL REG II VIR / COR" ;
+    dcterms:description "Nero and Britannicus standing face to face; NE and BR appear beneath them."@en .
+
+corid:authority-claudius
+    a nmo:Authority ;
+    skos:prefLabel "Claudius"@en .
+
+corid:issuer-l-paconius-flam
+    a foaf:Person ;
+    skos:prefLabel "L. Paconius Flam."@en .
+
+corid:issuer-cn-publicius-regulus
+    a foaf:Person ;
+    skos:prefLabel "Cn. Publicius Regulus"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-as
+    a nmo:Denomination ;
+    skos:prefLabel "As"@en .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

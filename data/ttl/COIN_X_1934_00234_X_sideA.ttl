@@ -1,0 +1,83 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-234
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-234" ;
+    dcterms:source corid:card-COIN_X_1934_00234_X_sideA ;
+    nmo:hasAuthority corid:authority-antiochus-iii ;
+    nmo:hasStartDate "-0222"^^xsd:gYear ;
+    nmo:hasEndDate "-0187"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-234-obverse ;
+    nmo:hasReverse corid:coin-1934-234-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Sel.), p. 29, nos. 57-58; pl. IX, 13" .
+
+corid:authority-antiochus-iii
+    a nmo:Authority ;
+    skos:prefLabel "Antiochus III"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-234-obverse
+    a nmo:Obverse ;
+    dcterms:description "Laureate head of Apollo right, with rolled hair"@en .
+
+corid:coin-1934-234-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΒΑΣΙΛΕΩΣ / ΑΝΤΙΟΧΟΥ" ;
+    dcterms:description "Elephant left; inverted anchor in front"@en ;
+    nmo:hasControlmark corid:controlmark-1934-234-reverse .
+
+corid:controlmark-1934-234-reverse
+    skos:prefLabel "Inverted anchor in front of elephant"@en .
+
+corid:card-COIN_X_1934_00234_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00234_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-234 ;
+    cor:sourceImageFilename "COIN_X_1934_00234_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-234" ;
+    cor:inventoryNumber "1934-234" ;
+    cor:earlierInventoryNumber "282" ;
+    cor:authorityRaw "Antiochus III" ;
+    cor:databaseAuthorityRaw "Antiochus II" ;
+    cor:dateRaw "222-187" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "12" ;
+    cor:obverseTypeRaw "Head of Apollo r., laureate, hair rolled" ;
+    cor:reverseLegendRaw "ΒΑΣΙΛΕΩΣ / ΑΝΤΙΟΧΟΥ" ;
+    cor:reverseTypeRaw "Elephant l.; in front, anchor inverted" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Sel.) p. 29, nos. 57, 58; pl. IX, 13" ;
+    cor:findspotRaw "Agora S.E.; Well VIII; South Stoa" ;
+    cor:excavationDateRaw "3/30/1934" ;
+    cor:excavationDate "1934-03-30"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 151 (4-9)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 151 ;
+        cor:notebookPageRaw "151" ;
+        cor:notebookEntryOrRange "4-9" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the authority disagreement: the card reads Antiochus III, while the linked database says Antiochus II; also confirm the reference-work abbreviation '(Sel.)'." .

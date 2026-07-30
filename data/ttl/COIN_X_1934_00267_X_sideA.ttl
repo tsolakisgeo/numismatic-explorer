@@ -1,0 +1,104 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-267
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-267" ;
+    dcterms:source corid:card-COIN_X_1934_00267_X_sideA ;
+    dcterms:relation corid:coin-1926-661 ;
+    nmo:hasAuthority corid:authority-philip-v-spain ;
+    nmo:hasStartDate "1721"^^xsd:gYear ;
+    nmo:hasEndDate "1721"^^xsd:gYear ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasObverse corid:coin-1934-267-obverse ;
+    nmo:hasReverse corid:coin-1934-267-reverse ;
+    nmo:hasFindspot corid:place-north-of-school-top-fill ;
+    nmo:hasCollection corid:study-collection .
+
+corid:authority-philip-v-spain
+    a nmo:Authority ;
+    skos:prefLabel "Philip V of Spain"@en ;
+    skos:altLabel "Philip V"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school-top-fill
+    skos:prefLabel "North of School, in top fill"@en .
+
+corid:coin-1926-661
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1926-661" .
+
+corid:coin-1934-267-obverse
+    a nmo:Obverse ;
+    dcterms:description "Crown above a coat of arms"@en .
+
+corid:coin-1934-267-reverse
+    a nmo:Reverse ;
+    dcterms:description "Square cross with alternating rampant lions and castles"@en .
+
+corid:card-COIN_X_1934_00267_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00267_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-267 ;
+    cor:sourceImageFilename "COIN_X_1934_00267_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-267" ;
+    cor:inventoryNumber "1934-267" ;
+    cor:earlierInventoryNumberRaw "Card no. 408" ;
+    cor:earlierInventoryNumber "408" ;
+    cor:classificationRaw "Mod." ;
+    cor:regionRaw "Spain" ;
+    cor:authorityRaw "Philip V" ;
+    cor:dateRaw "1721" ;
+    cor:materialRaw "AR" ;
+    cor:obverseLegendRaw "[Insc.]" ;
+    cor:obverseTypeRaw "Crown over coat-of-arms" ;
+    cor:reverseTypeRaw "Square cross with alternating lions rampant and castles" ;
+    cor:physicalConditionRaw "Coin-clipped" ;
+    cor:findspotRaw "No. of School; \"East of area W\"; in top fill" ;
+    cor:excavationDateRaw "April 24, 1934 (4)" ;
+    cor:excavationDate "1934-04-24"^^xsd:date ;
+    cor:excavationEntryRaw "4" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142 p. 122" ;
+        cor:notebookNumber 142 ;
+        cor:notebookPage 122 ;
+        cor:notebookPageRaw "122" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:relatedCoinRaw "See also '26-661 (Similar AR)" ;
+    cor:negativeReferenceRaw "--" ;
+    cor:databaseCoinId "-444491276" ;
+    cor:databaseDepartmentRaw "MO" ;
+    cor:databaseRegionRaw "Spain" ;
+    cor:databaseAuthorityRaw "Philip V" ;
+    cor:databaseDateRaw "1721" ;
+    cor:databaseObverseLegendRaw "[Inscription]" ;
+    cor:databaseObverseTypeRaw "Crown over coat-of-arms" ;
+    cor:databaseReverseTypeRaw "Square cross with alternating lions and castles" ;
+    cor:databaseSymbolRaw "[Letters]" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseNoteRaw "Clipped; see also 1926-661" ;
+    cor:databaseExcavationContextRaw "North of School; in top fill; excavation date 4/24/1934; Notebook 142 p.122" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the quoted findspot annotation reads 'East of area W'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "findspotRaw" ;
+        cor:rawValue "\"East of area W\"" ;
+        cor:reason "The quoted handwritten area designation is not fully secure."
+    ] .

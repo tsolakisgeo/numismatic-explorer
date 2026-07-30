@@ -1,0 +1,96 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-495
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-495" ;
+    dcterms:source corid:card-COIN_X_1934_00495_X_sideA ;
+    nmo:hasObverse corid:coin-1934-495-obverse ;
+    nmo:hasReverse corid:coin-1934-495-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00495_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00495_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-495 ;
+    cor:sourceImageFilename "COIN_X_1934_00495_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-495" ;
+    cor:inventoryNumber "1934-495" ;
+    cor:groupRaw "Gru 143" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-100-24/25" ;
+    cor:databaseContext corid:metis-inventory-card-4989484716596664320,
+                        corid:metis-coin-minus-994219234 ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 143" ;
+        cor:proposedValue "Group 143" ;
+        cor:reason "The expansion of the handwritten abbreviation is inferred."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDateRaw" ;
+        cor:rawValue "5/8/34" ;
+        cor:reason "The written date is clear, but the month-day order is not explicit on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographFaceAssignment" ;
+        cor:rawValue "Two unlabeled coin photographs, left and right" ;
+        cor:proposedValue "left photograph = obverse; right photograph = reverse" ;
+        cor:reason "The photographs are not explicitly assigned to the printed obverse and reverse fields."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the expansion of 'Gru 143', the calendar interpretation of 5/8/34, and the assignment of the left and right photographs to obverse and reverse." .
+
+corid:coin-1934-495-obverse
+    a nmo:Obverse ;
+    dcterms:description "Unlabeled left photograph: coin face with a central monogrammatic or linear device and traces of a surrounding marginal legend."@en ;
+    cor:photographPosition "left" .
+
+corid:coin-1934-495-reverse
+    a nmo:Reverse ;
+    dcterms:description "Unlabeled right photograph: coin face with a central circular or monogrammatic device and traces of a surrounding marginal legend."@en ;
+    cor:photographPosition "right" .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .
+
+corid:metis-inventory-card-4989484716596664320
+    a cor:DatabaseRecord ;
+    dcterms:identifier "4989484716596664320" ;
+    cor:databaseObjectType "COIN" ;
+    cor:databaseYearRaw "1934.0" ;
+    cor:databaseCardSide "A" ;
+    cor:databaseNumberRaw "495.0" ;
+    cor:databaseIconPath "\\InventoryCards\\COIN\\1934\\COIN_X_1934_00495_X_sideA.jpg" ;
+    cor:databaseFilename "COIN_X_1934_00495_X_sideA.jpg" ;
+    cor:databaseCoinOrObject "coin" ;
+    dcterms:created "2025-02-19T16:09:09+02:00"^^xsd:dateTime ;
+    dcterms:modified "2026-01-14T11:35:18+02:00"^^xsd:dateTime ;
+    dcterms:creator "ESPA2025. Herbst, J." ;
+    cor:databaseMultipleReference false ;
+    cor:databaseUserGroup "Corinth,Staff,Public" ;
+    cor:lookupSource "direct_csv_index" ;
+    cor:linkMethod "composite_inventory_key" .
+
+corid:metis-coin-minus-994219234
+    a cor:DatabaseRecord ;
+    dcterms:identifier "-994219234" ;
+    cor:databaseCoinNumber "495" ;
+    cor:databaseYear "1934" ;
+    dcterms:created "2013-11-12T14:02:27+02:00"^^xsd:dateTime ;
+    cor:databaseStudyCollectionStatus false ;
+    cor:databaseUserGroup "Corinth,Staff,Public" .

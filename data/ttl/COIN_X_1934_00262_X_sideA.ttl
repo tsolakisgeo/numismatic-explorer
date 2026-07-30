@@ -1,0 +1,103 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-262
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-262" ;
+    dcterms:source corid:card-COIN_X_1934_00262_X_sideA ;
+    nmo:hasStartDate "-0431"^^xsd:gYear ;
+    nmo:hasEndDate "-0370"^^xsd:gYear ;
+    nmo:hasMint corid:mint-pheneus ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-262-obverse ;
+    nmo:hasReverse corid:coin-1934-262-reverse ;
+    nmo:hasFindspot corid:place-north-of-school-close-to-drain ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Pel.), p. 193, no. 7" .
+
+corid:mint-pheneus
+    a nmo:Mint ;
+    skos:prefLabel "Pheneus"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school-close-to-drain
+    skos:prefLabel "North of School, close to drain"@en .
+
+corid:coin-1934-262-obverse
+    a nmo:Obverse ;
+    dcterms:description "Bust of Hermes right, with petasus suspended from the neck"@en .
+
+corid:coin-1934-262-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΦΕ" ;
+    dcterms:description "Ram standing right"@en .
+
+corid:card-COIN_X_1934_00262_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00262_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-262 ;
+    cor:sourceImageFilename "COIN_X_1934_00262_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-262" ;
+    cor:inventoryNumber "1934-262" ;
+    cor:earlierInventoryNumberRaw "145" ;
+    cor:earlierInventoryNumber "145" ;
+    cor:mintRaw "Pheneus" ;
+    cor:dateRaw "431-370" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:physicalConditionRaw "edge broken" ;
+    cor:obverseTypeRaw "Bust of Hermes r., petasus suspended from neck." ;
+    cor:reverseLegendRaw "ΦΕ" ;
+    cor:reverseTypeRaw "Ram r." ;
+    cor:reverseAnnotationRaw "[below,]" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Pel.) p. 193, no. 7" ;
+    cor:findspotRaw "N. of School; close to drain" ;
+    cor:excavationDateRaw "4/17/1934" ;
+    cor:excavationDate "1934-04-17"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 103 (4)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 103 ;
+        cor:notebookPageRaw "103" ;
+        cor:notebookEntryOrRange "4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "in Study Collection" ;
+    cor:databaseCoinId "-1775397968" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Pheneus" ;
+    cor:databaseDateRaw "431 BC-370 BC" ;
+    cor:databaseObverseTypeRaw "Bust of Hermes facing r.; petasus suspended from neck" ;
+    cor:databaseReverseLegendRaw "ΦΕ" ;
+    cor:databaseReverseTypeRaw "Ram facing r." ;
+    cor:databaseSymbolRaw "Letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "13" ;
+    cor:databaseBibliographicReferenceRaw "BMC Pelop. p.193 no.7" ;
+    cor:databaseExcavationContextRaw "North of School; close to drain; excavation date 4/17/1934; Notebook 142 p.103, 4" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the bracketed reverse note '[below,]' indicates a missing control mark and verify the catalogue number written after 'no.'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseAnnotationRaw" ;
+        cor:rawValue "[below,]" ;
+        cor:reason "The card leaves the bracketed annotation incomplete and shows no clearly identifiable symbol beneath the ram."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "B.M.C. (Pel.) p. 193, no. 7" ;
+        cor:reason "The final catalogue number is overwritten or reinforced in blue ink, though the database also reads no. 7."
+    ] .

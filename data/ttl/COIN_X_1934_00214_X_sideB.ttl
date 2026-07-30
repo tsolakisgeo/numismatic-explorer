@@ -1,0 +1,112 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-214
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-214" ;
+    dcterms:source corid:card-COIN_X_1934_00214_X_sideB ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0228"^^xsd:gYear ;
+    nmo:hasMint corid:mint-argos ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-obol ;
+    nmo:hasWeight "0.86"^^xsd:decimal ;
+    nmo:hasAxis "3"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-214-obverse ;
+    nmo:hasReverse corid:coin-1934-214-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. 84 ff." .
+
+corid:mint-argos
+    a nmo:Mint ;
+    skos:prefLabel "Argos"@en .
+
+corid:denomination-obol
+    a nmo:Denomination ;
+    skos:prefLabel "Obol"@en ;
+    cor:identificationStatus "uncertain" ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-214-obverse
+    a nmo:Obverse ;
+    dcterms:description "Wolf at bay left"@en .
+
+corid:coin-1934-214-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[ΑΡ]" ;
+    dcterms:description "Helmet left"@en .
+
+corid:card-COIN_X_1934_00214_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00214_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-214 ;
+    cor:sourceImageFilename "COIN_X_1934_00214_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00214_X_sideA ;
+    cor:visibleCardNumberRaw "114" ;
+    cor:attachedPhotographCount 2 ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-214-obverse ;
+        cor:photographicNegativeReferenceRaw "78-33-31" ;
+        cor:positionOnCard "left"
+    ] ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-214-reverse ;
+        cor:photographicNegativeReferenceRaw "78-33-32" ;
+        cor:positionOnCard "right"
+    ] ;
+    cor:databaseMintRaw "Argos" ;
+    cor:databaseDateRaw "350-228 BCE" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Obol (?)" ;
+    cor:databaseWeightRaw "0.86" ;
+    cor:databaseAxisRaw "3" ;
+    cor:databaseObverseTypeRaw "Wolf at bay l." ;
+    cor:databaseReverseLegendRaw "[AR]" ;
+    cor:databaseReverseTypeRaw "Helmet l." ;
+    cor:databaseFindspotRaw "Agora SE: S. Stoa Pottery Deposit, Shop I" ;
+    cor:databaseExcavationDateRaw "3/10/1934" ;
+    cor:databaseNotebookReference "Notebook 139 p. 85" ;
+    cor:databaseNoteRaw "Coin card in deposits drawer (S. Stoa Pottery Deposit)" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that the faint upper-left number is 114 and that the two photograph labels should be read as 78-33-31 and 78-33-32, with the left image as obverse and the right image as reverse." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "visibleCardNumberRaw" ;
+        cor:rawValue "114" ;
+        cor:reason "The pencilled number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographicNegativeReferenceRaw" ;
+        cor:rawValue "78-33-31; -32" ;
+        cor:proposedValue "78-33-31 and 78-33-32" ;
+        cor:reason "The second label is abbreviated on the card as '-32'."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographFaceAssignment" ;
+        cor:rawValue "left photograph and right photograph" ;
+        cor:proposedValue "left = obverse; right = reverse" ;
+        cor:reason "The assignment is inferred from the visible coin types and the side-A description."
+    ] .
+
+corid:card-COIN_X_1934_00214_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00214_X_sideA" .

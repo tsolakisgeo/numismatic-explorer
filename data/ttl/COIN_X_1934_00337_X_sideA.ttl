@@ -1,0 +1,123 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-337
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-337" ;
+    dcterms:source corid:card-COIN_X_1934_00337_X_sideA ;
+    nmo:hasAuthority corid:authority-gallienus ;
+    nmo:hasStartDate "0253"^^xsd:gYear ;
+    nmo:hasEndDate "0268"^^xsd:gYear ;
+    nmo:hasMint corid:mint-mediolanum ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-antoninianus ;
+    nmo:hasDiameter "20"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-337-obverse ;
+    nmo:hasReverse corid:coin-1934-337-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 861" ;
+    dcterms:bibliographicCitation "R.I.C. V, i, p. 175, no. 508" ;
+    cor:diameterAssignmentBasis "Diameter 20 mm is supplied by the linked database and is not visibly written on the card." ;
+    cor:axisAssignmentBasis "Die axis 12 is supplied by the linked database and is not visibly written on the card." .
+
+corid:authority-gallienus
+    a nmo:Authority ;
+    skos:prefLabel "Gallienus"@en .
+
+corid:mint-mediolanum
+    a nmo:Mint ;
+    skos:prefLabel "Mediolanum (Milan)"@en .
+
+corid:denomination-antoninianus
+    a nmo:Denomination ;
+    skos:prefLabel "Antoninianus"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-337-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "GALLIENVS AVG" ;
+    dcterms:description "Radiate head of Gallienus right"@en .
+
+corid:coin-1934-337-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "PROVI[D AVG]" ;
+    nmo:hasControlmark corid:controlmark-1934-337-reverse-p ;
+    dcterms:description "Providentia standing left, holding a globe and transverse sceptre"@en .
+
+corid:controlmark-1934-337-reverse-p
+    a nmo:Controlmark ;
+    skos:prefLabel "P in the left field"@en .
+
+corid:card-COIN_X_1934_00337_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00337_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-337 ;
+    cor:sourceImageFilename "COIN_X_1934_00337_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-337" ;
+    cor:inventoryNumber "1934-337" ;
+    cor:earlierInventoryNumberRaw "299" ;
+    cor:earlierInventoryNumber "299" ;
+    cor:authorityRaw "Gallienus" ;
+    cor:dateRaw "253-268" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "(denarius) Antoninianus" ;
+    cor:denominationCorrectionRaw "denarius corrected to Antoninianus" ;
+    cor:mintRaw "mint: mediolanum" ;
+    cor:obverseLegendRaw "GALLIENVS AVG" ;
+    cor:obverseTypeRaw "Head r., radiate" ;
+    cor:reverseLegendRaw "PROVI[D AVG]" ;
+    cor:reverseTypeRaw "Providentia standing l., holding globe and sceptre transversely" ;
+    cor:reverseControlmarkRaw "P in field to left" ;
+    cor:bibliographicReferenceRaw "Cohen 861" ;
+    cor:bibliographicReferenceRaw "R.I.C. V, i, p. 175, no. 508" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "6/2/1934" ;
+    cor:excavationDate "1934-06-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 104 (30), NB 141" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 104 ;
+        cor:notebookPageRaw "104" ;
+        cor:notebookEntryOrRange "30" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-781703479" ;
+    cor:databaseDepartmentRaw "RM" ;
+    cor:databaseAuthorityRaw "Gallienus" ;
+    cor:databaseMintRaw "Milan" ;
+    cor:databaseDateRaw "253-268" ;
+    cor:databaseObverseLegendRaw "GALLIENVS AVG" ;
+    cor:databaseObverseTypeRaw "Emperor head r., radiate" ;
+    cor:databaseReverseLegendRaw "PROVI[D AVG]" ;
+    cor:databaseReverseTypeRaw "Providentia standing l., holding globe and transverse scepter; P in field to l. of figure" ;
+    cor:databaseSymbolRaw "Rev: P" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "antoninianus" ;
+    cor:databaseDiameterRaw "20" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "RIC V, i, p. 175, #508; Cohen 861" ;
+    cor:databaseNoteRaw "Card 299; AE washed in AR" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 6/2/1934, #30; Notebook 141, p. 104" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the material line denotes silver or a bronze coin silver-washed, and confirm the bracketed D in the reverse legend PROVI[D AVG]." .

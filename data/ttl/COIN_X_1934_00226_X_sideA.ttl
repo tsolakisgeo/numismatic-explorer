@@ -1,0 +1,113 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-226
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-226" ;
+    dcterms:source corid:card-COIN_X_1934_00226_X_sideA ;
+    nmo:hasStartDate "-0387"^^xsd:gYear ;
+    nmo:hasEndDate "-0300"^^xsd:gYear ;
+    nmo:hasMint corid:mint-clazomenae ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasWeight "6.15"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-226-obverse ;
+    nmo:hasReverse corid:coin-1934-226-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. Ionia, p. 25, nos. 73-80" .
+
+corid:mint-clazomenae
+    a nmo:Mint ;
+    skos:prefLabel "Clazomenae"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-226-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of Athena three-quarter right, wearing a triple-crested helmet"@en .
+
+corid:coin-1934-226-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΚΛΑΖΟΜΕ / ΝΙΩΝ" ;
+    dcterms:description "Forepart of a ram right; monogram below"@en ;
+    nmo:hasControlmark corid:controlmark-1934-226-reverse .
+
+corid:controlmark-1934-226-reverse
+    skos:prefLabel "Monogram below the ram"@en .
+
+corid:card-COIN_X_1934_00226_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00226_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-226 ;
+    cor:sourceImageFilename "COIN_X_1934_00226_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-226" ;
+    cor:inventoryNumber "1934-226" ;
+    cor:earlierInventoryNumber "277" ;
+    cor:mintRaw "Clazomenae" ;
+    cor:dateRaw "387-300 B.C." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:weightRaw "6.15 g." ;
+    cor:axisRaw "upward arrow" ;
+    cor:obverseTypeRaw "Head of Athena in triple-crested helmet 3/4 r." ;
+    cor:reverseLegendRaw "ΚΛΑΖΟΜΕ / ΝΙΩΝ" ;
+    cor:reverseLegendNormalized "ΚΛΑΖΟΜΕΝΙΩΝ" ;
+    cor:reverseTypeRaw "Forepart of ram r.; below, monogram" ;
+    cor:bibliographicReferenceRaw "cf. B.M.C. (Ionia) p. 25, nos. 73-80" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/14/1934" ;
+    cor:excavationDate "1934-03-14"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 97 (1-4)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 97 ;
+        cor:notebookPageRaw "97" ;
+        cor:notebookEntryOrRange "1-4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "Envelope = in S. Stoa wells drawer, under Pottery Deposit, Shop I" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 277, the exact spacing and letters of the reverse ethnic, the monogram below the ram, and the wording of the envelope-location annotation." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "277" ;
+        cor:reason "The upper-left pencil number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "ΚΛΑΖΟΜΕ / ΝΙΩΝ" ;
+        cor:proposedValue "ΚΛΑΖΟΜΕΝΙΩΝ" ;
+        cor:reason "The ethnic is divided across two lines and some letter forms require confirmation."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseControlMark" ;
+        cor:rawValue "drawn monogram below the ram" ;
+        cor:reason "The exact components of the monogram are not securely identifiable from the card image."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "Envelope = in S. Stoa wells drawer, under Pottery Deposit, Shop I" ;
+        cor:reason "The lower-right pencil annotation is faint."
+    ] .

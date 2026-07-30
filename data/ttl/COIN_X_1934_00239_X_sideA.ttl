@@ -1,0 +1,127 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-239
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-239" ;
+    dcterms:source corid:card-COIN_X_1934_00239_X_sideA ;
+    nmo:hasAuthority corid:authority-julian-ii ;
+    nmo:hasStartDate "0355"^^xsd:gYear ;
+    nmo:hasEndDate "0360"^^xsd:gYear ;
+    nmo:hasMint corid:mint-siscia ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-ae3 ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasAxis 1 ;
+    nmo:hasObverse corid:coin-1934-239-obverse ;
+    nmo:hasReverse corid:coin-1934-239-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 14" ;
+    dcterms:bibliographicCitation "RIC VIII, p. 377, no. 370" .
+
+corid:authority-julian-ii
+    a nmo:Authority ;
+    skos:prefLabel "Julian II"@en .
+
+corid:mint-siscia
+    a nmo:Mint ;
+    skos:prefLabel "Siscia"@en .
+
+corid:denomination-ae3
+    a nmo:Denomination ;
+    skos:prefLabel "AE3"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-239-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "DN IVLIANVS NOB CAES" ;
+    dcterms:description "Bare-headed bust of Julian II right"@en .
+
+corid:coin-1934-239-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "FEL TEMP REPARATIO" ;
+    dcterms:description "Soldier spearing a fallen horseman"@en ;
+    nmo:hasControlmark corid:controlmark-1934-239-reverse ;
+    nmo:hasMintmark corid:mintmark-1934-239-reverse .
+
+corid:controlmark-1934-239-reverse
+    skos:prefLabel "H in field"@en .
+
+corid:mintmark-1934-239-reverse
+    skos:prefLabel "ΔSISZ in exergue"@en .
+
+corid:card-COIN_X_1934_00239_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00239_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-239 ;
+    cor:sourceImageFilename "COIN_X_1934_00239_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-239" ;
+    cor:inventoryNumber "1934-239" ;
+    cor:earlierInventoryNumber "249" ;
+    cor:authorityRaw "Julian II" ;
+    cor:dateRaw "355-360" ;
+    cor:databaseDateRaw "355-361" ;
+    cor:mintRaw "Siscia" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "18" ;
+    cor:databaseDenominationRaw "AE3" ;
+    cor:databaseAxisRaw "1" ;
+    cor:obverseLegendRaw "DN IVLIANVS NOB CAES" ;
+    cor:obverseTypeRaw "Bust r., head bare" ;
+    cor:reverseLegendRaw "FEL TEMP REPARATIO" ;
+    cor:reverseTypeRaw "Soldier spearing fallen horseman" ;
+    cor:databaseReverseTypeRaw "Emperor standing l., spearing fallen horseman" ;
+    cor:reverseControlMarkRaw "H" ;
+    cor:reverseMintmarkRaw "ΔSISZ" ;
+    cor:bibliographicReferenceRaw "Cohen 14" ;
+    cor:databaseBibliographicCitation "RIC VIII, p. 377, #370" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "3/23/1934" ;
+    cor:excavationDate "1934-03-23"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 107 (2)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 107 ;
+        cor:notebookPageRaw "107" ;
+        cor:notebookEntryOrRange "2" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 140 ;
+    cor:studyCollectionRaw "= Study Coll." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the card date ending in 360 versus the database date ending in 361, the exergual mintmark read as ΔSISZ, and the database wording 'Emperor' versus the card's 'Soldier'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateTo" ;
+        cor:rawValue "360" ;
+        cor:proposedValue "361" ;
+        cor:reason "The card reads 355-360, while the linked database gives 355-361."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseMintmarkRaw" ;
+        cor:rawValue "ΔSISZ" ;
+        cor:reason "The handwritten exergual mintmark is compact and should be checked against the coin."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Soldier spearing fallen horseman" ;
+        cor:proposedValue "Emperor standing l., spearing fallen horseman" ;
+        cor:reason "The visible card says 'Soldier', while the linked database uses 'Emperor'."
+    ] .

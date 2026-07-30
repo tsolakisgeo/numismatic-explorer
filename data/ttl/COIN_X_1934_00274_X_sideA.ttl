@@ -1,0 +1,129 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-274
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-274" ;
+    dcterms:source corid:card-COIN_X_1934_00274_X_sideA ;
+    nmo:hasAuthority corid:authority-nerva ;
+    nmo:hasStartDate "0096"^^xsd:gYear ;
+    nmo:hasEndDate "0098"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "3.02"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-274-obverse ;
+    nmo:hasReverse corid:coin-1934-274-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 25" ;
+    dcterms:bibliographicCitation "R.I.C. II, p. 223, no. 3" ;
+    cor:mintAssignmentBasis "linked coin database record" ;
+    cor:axisSource "linked coin database record" ;
+    cor:productionDateAssignmentBasis "The inventory card visibly gives Nerva, 96-98; the linked database records 96." .
+
+corid:authority-nerva
+    a nmo:Authority ;
+    skos:prefLabel "Nerva"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-274-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP NERVA CAES AVG P M TR P COS II P P" ;
+    dcterms:description "Laureate head of Nerva right"@en .
+
+corid:coin-1934-274-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "CONCORDIA EXERCITVVM" ;
+    dcterms:description "Two hands clasped, holding a legionary eagle resting on a prow"@en .
+
+corid:card-COIN_X_1934_00274_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00274_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-274 ;
+    cor:sourceImageFilename "COIN_X_1934_00274_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-274" ;
+    cor:inventoryNumber "1934-274" ;
+    cor:earlierInventoryNumberRaw "161" ;
+    cor:earlierInventoryNumber "161" ;
+    cor:classificationRaw "Rom. Imp. Coinage" ;
+    cor:authorityRaw "Nerva" ;
+    cor:dateRaw "96-98" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "den." ;
+    cor:weightRaw "3.02 gr." ;
+    cor:previousWeightRaw "2.90 gr. (crossed out)" ;
+    cor:obverseLegendRaw "IMP NERVA CAES AVG / P M TR P COS II P P" ;
+    cor:obverseTypeRaw "Head r., laureate." ;
+    cor:reverseLegendRaw "CONCORDIA EXERCITVVM" ;
+    cor:reverseTypeRaw "Two hands clasped, holding legionary eagle resting on prow." ;
+    cor:bibliographicReferenceRaw "Cohen 25" ;
+    cor:bibliographicReferenceRaw "R.I.C. II p. 223, no. 3" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/2/1934" ;
+    cor:excavationDate "1934-05-02"^^xsd:date ;
+    cor:excavationEntryRaw "8" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142; Morgan-Harland p. 151 (8)" ;
+        cor:notebookNumber 142 ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 151 ;
+        cor:notebookPageRaw "151" ;
+        cor:notebookEntryOrRange "8" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1874609773" ;
+    cor:databaseDepartmentRaw "RM" ;
+    cor:databaseAuthorityRaw "Nerva" ;
+    cor:databaseMintRaw "Rome" ;
+    cor:databaseDateRaw "96" ;
+    cor:databaseObverseLegendRaw "IMP NERVA CAES AVG P M TR P COS II P P" ;
+    cor:databaseObverseTypeRaw "Emperor head r., laureate" ;
+    cor:databaseReverseLegendRaw "CONCORDIA - EXERCITVVM" ;
+    cor:databaseReverseTypeRaw "Two hands clasped, holding legionary eagle resting on prow" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseWeightRaw "3.02" ;
+    cor:databaseDiameterRaw "18" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "RIC II, p. 223, #3 (Pl. 7.113); Cohen 25" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/2/1934, #8; Notebook 142, p. 151" ;
+    cor:databaseNoteRaw "Card 161; box annotation: RIC II, 2:8 (?)" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the normalized production date should follow the card's 96-98 range or the linked database's single year 96." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDateAssignment" ;
+        cor:rawValue "96-98" ;
+        cor:proposedValue "96" ;
+        cor:reason "The card gives 96-98, whereas the linked database records only 96."
+    ] .

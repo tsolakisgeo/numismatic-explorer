@@ -1,0 +1,108 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-232
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-232" ;
+    dcterms:source corid:card-COIN_X_1934_00232_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12.5"^^xsd:decimal ;
+    nmo:hasWeight "1.29"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-232-obverse ;
+    nmo:hasReverse corid:coin-1934-232-reverse ;
+    nmo:hasFindspot corid:place-agora-se-pd1-south-stoa-shop-i ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-pd1-south-stoa-shop-i
+    skos:prefLabel "Agora Southeast, Pottery Deposit 1, South Stoa Shop I"@en .
+
+corid:coin-1934-232-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus flying left, with koppa beneath"@en .
+
+corid:coin-1934-232-reverse
+    a nmo:Reverse ;
+    dcterms:description "Trident; lily to left and possible grain of corn to right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-232-reverse .
+
+corid:controlmark-1934-232-reverse
+    skos:prefLabel "Lily to left; possible grain of corn to right"@en .
+
+corid:card-COIN_X_1934_00232_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00232_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-232 ;
+    cor:sourceImageFilename "COIN_X_1934_00232_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-232" ;
+    cor:inventoryNumber "1934-232" ;
+    cor:classificationRaw "Gr." ;
+    cor:classificationNormalized "Greek" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "400-146 BC" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "12.5" ;
+    cor:weightRaw "1.29 g" ;
+    cor:obverseLegendRaw "Ϙ beneath" ;
+    cor:obverseTypeRaw "Pegasos flying l., beneath Ϙ" ;
+    cor:obverseAdditionalMarkRaw "(M ?)" ;
+    cor:reverseTypeRaw "Trident; to l. lily on long [?]; to r. • (grain of corn ?)" ;
+    cor:databaseReverseTypeRaw "Trident; Lily to left; Grain of corn (?) to right" ;
+    cor:databaseSymbolRaw "Koppa, lily, and grain of corn (?)" ;
+    cor:findspotRaw "Agora SE, PD1; S. Stoa Shop I" ;
+    cor:potteryDepositReference "PD1" ;
+    cor:excavationDateRaw "III/19/1934" ;
+    cor:excavationDate "1934-03-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; Broneer p. 113 #3-5" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "Broneer" ;
+        cor:notebookPage 113 ;
+        cor:notebookPageRaw "113" ;
+        cor:notebookEntryOrRange "3-5" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:archivalAnnotationRaw "originally on card 92 w/ coin 1934-" ;
+    cor:earlierCardNumber "92" ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:databaseNoteRaw "Originally on card with other card" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the possible obverse mark '(M ?)', the exact phrase after 'lily on long' on the reverse, whether the right-hand mark is a grain of corn, and the unfinished related coin number after '1934-'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseAdditionalMarkRaw" ;
+        cor:rawValue "(M ?)" ;
+        cor:reason "The small parenthetical mark beneath the obverse description is uncertain."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Trident; to l. lily on long [?]; to r. • (grain of corn ?)" ;
+        cor:proposedValue "Trident; lily to left; grain of corn (?) to right" ;
+        cor:reason "Part of the phrase following 'lily on long' is unclear, and the right-hand symbol is explicitly questioned."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "relatedInventoryNumber" ;
+        cor:rawValue "1934-" ;
+        cor:reason "The archival note begins a related coin number but does not preserve a visible completion."
+    ] .

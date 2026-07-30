@@ -1,0 +1,120 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-350
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-350" ;
+    dcterms:source corid:card-COIN_X_1934_00350_X_sideA ;
+    nmo:hasAuthority corid:authority-charles-i-of-anjou ;
+    nmo:hasStartDate "1266"^^xsd:gYear ;
+    nmo:hasEndDate "1278"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-denaro ;
+    nmo:hasMint corid:mint-brindisi ;
+    nmo:hasWeight "0.605"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-350-obverse ;
+    nmo:hasReverse corid:coin-1934-350-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cagiati, Monete e zecche delle Due Sicilie, vol. VI, p. 101, no. 39" ;
+    dcterms:bibliographicCitation "Sambon, Collection, no. 577" ;
+    dcterms:bibliographicCitation "Sambon, Monnayage de Charles" .
+
+corid:card-COIN_X_1934_00350_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00350_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-350 ;
+    cor:sourceImageFilename "COIN_X_1934_00350_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-350" ;
+    cor:inventoryNumber "1934-350" ;
+    cor:cardNumber "1273" ;
+    cor:authorityRaw "Charles I of Anjou 1266-1278" ;
+    cor:mintRaw "coined at Brindisi" ;
+    cor:materialRaw "Æ" ;
+    cor:denominationRaw "den." ;
+    cor:weightRaw "0.605 g." ;
+    cor:obverseLegendRaw "KAROL' DEI GRA" ;
+    cor:obverseTypeRaw "4 fleurs-de-lis in form of cross; in center, dot" ;
+    cor:reverseLegendRaw "SIC / ILI / E + / REX" ;
+    cor:reverseLegendNormalized "SICILIE + REX" ;
+    cor:reverseTypeRaw "Cross cutting inscription" ;
+    cor:editorialCorrectionRaw "Red E corrections were added to DEI on the obverse and to SICILIE and REX on the reverse." ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "11/1/1934" ;
+    cor:excavationDate "1934-11-01"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 144; G. R. Davidson p. 150 (23-26)" ;
+        cor:notebookNumber "144" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage "150"^^xsd:integer ;
+        cor:notebookEntryOrRange "23-26" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseContext [
+        a cor:DatabaseContext ;
+        cor:databaseDateRange "1266-1285" ;
+        cor:databaseMaterialRaw "Bi" ;
+        cor:databaseDiameter "15.5"^^xsd:decimal ;
+        cor:databaseAxis "2"^^xsd:integer ;
+        cor:databaseBibliographicCitation "Travaini, 98"
+    ] ;
+    cor:databaseDisagreement [
+        a cor:SourceDisagreement ;
+        cor:field "productionDateRange" ;
+        cor:cardValue "1266-1278" ;
+        cor:databaseValue "1266-1285" ;
+        cor:reason "The handwritten card ends the range at 1278, while the linked database record ends it at 1285."
+    ] ;
+    cor:databaseDisagreement [
+        a cor:SourceDisagreement ;
+        cor:field "material" ;
+        cor:cardValue "Æ" ;
+        cor:databaseValue "Bi" ;
+        cor:reason "The card identifies the material as bronze, while the linked database record identifies it as billon."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicCitation" ;
+        cor:rawValue "Cagiati, Monete ... delle Due Sicilie, vol. VI, p. 101, no. 39" ;
+        cor:proposedValue "Cagiati, Monete e zecche delle Due Sicilie, vol. VI, p. 101, no. 39" ;
+        cor:reason "The middle words of the handwritten title are not fully clear."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the card's end date 1278 versus database 1285, Æ versus database billon, the exact Cagiati title, and the red-corrected reverse legend." .
+
+corid:coin-1934-350-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "KAROL' DEI GRA" ;
+    dcterms:description "Four fleurs-de-lis arranged in the form of a cross, with a pellet at the center."@en .
+
+corid:coin-1934-350-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "SIC / ILI / E + / REX" ;
+    dcterms:description "A cross divides the inscription."@en .
+
+corid:authority-charles-i-of-anjou
+    a nmo:Authority ;
+    skos:prefLabel "Charles I of Anjou"@en .
+
+corid:mint-brindisi
+    a nmo:Mint ;
+    skos:prefLabel "Brindisi"@en .
+
+corid:denomination-denaro
+    a nmo:Denomination ;
+    skos:prefLabel "Denaro"@en .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

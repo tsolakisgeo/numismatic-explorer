@@ -1,0 +1,106 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-248
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-248" ;
+    dcterms:source corid:card-COIN_X_1934_00248_X_sideA ;
+    nmo:hasAuthority corid:authority-philip-of-tarentum ;
+    nmo:hasStartDate "1294"^^xsd:gYear ;
+    nmo:hasEndDate "1331"^^xsd:gYear ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-denier ;
+    nmo:hasObverse corid:coin-1934-248-obverse ;
+    nmo:hasReverse corid:coin-1934-248-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Schlum., p. 388, pl. XIII, 26" .
+
+corid:authority-philip-of-tarentum
+    a nmo:Authority ;
+    skos:prefLabel "Philip of Tarentum, Despot of Epirus"@en .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-denier
+    a nmo:Denomination ;
+    skos:prefLabel "Denier"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-248-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "✠ ·· PhS · P [ACH] TAR OR ··" ;
+    dcterms:description "Cross"@en .
+
+corid:coin-1934-248-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "NE PANTI CIVIS" ;
+    dcterms:description "Castle tournois, with fleur-de-lis below"@en .
+
+corid:card-COIN_X_1934_00248_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00248_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-248 ;
+    cor:sourceImageFilename "COIN_X_1934_00248_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-248" ;
+    cor:inventoryNumber "1934-248" ;
+    cor:earlierInventoryNumberRaw "1267" ;
+    cor:earlierInventoryNumber "1267" ;
+    cor:authorityRaw "Philip of Tarentum, Despot of Epirus" ;
+    cor:dateRaw "1294-1331" ;
+    cor:materialRaw "Billon" ;
+    cor:denominationRaw "den. ch" ;
+    cor:obverseLegendRaw "✠ ·· PhS · P [ACH] TAR OR ··" ;
+    cor:obverseTypeRaw "Cross." ;
+    cor:reverseLegendRaw "NE PANTI CIVIS" ;
+    cor:reverseTypeRaw "Castle Tournois; below, fleur-de-lis." ;
+    cor:bibliographicReferenceRaw "Schlum. p. 388. pl. XIII, 26" ;
+    cor:findspotRaw "Agora S.E." ;
+    cor:excavationDateRaw "3/29/1934" ;
+    cor:excavationDate "1934-03-29"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 147 (19-68)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 147 ;
+        cor:notebookPageRaw "147" ;
+        cor:notebookEntryOrRange "19-68" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= in Study Coll." ;
+    cor:counterfeitStatusRaw "Counterfeit" ;
+    cor:isCounterfeit true ;
+    cor:archivalAnnotationRaw "CONS. ✓" ;
+    cor:archivalAnnotationRaw "Counterfeit Index" ;
+    cor:databaseCoinId "-934315007" ;
+    cor:databaseStudyCollection true ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact obverse legend, especially the bracketed ACH and final OR, and the denomination abbreviation written after 'den.'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "✠ ·· PhS · P [ACH] TAR OR ··" ;
+        cor:reason "Several abbreviated letters and punctuation marks are difficult to distinguish."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denominationRaw" ;
+        cor:rawValue "den. ch" ;
+        cor:proposedValue "Denier" ;
+        cor:reason "The abbreviation following 'den.' is not fully clear."
+    ] .

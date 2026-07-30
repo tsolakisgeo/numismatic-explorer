@@ -1,0 +1,123 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-256
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-256" ;
+    dcterms:source corid:card-COIN_X_1934_00256_X_sideA ;
+    nmo:hasAuthority corid:authority-justin-i ;
+    nmo:hasStartDate "0518"^^xsd:gYear ;
+    nmo:hasEndDate "0527"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "10"^^xsd:decimal ;
+    nmo:hasWeight "0.74"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-256-obverse ;
+    nmo:hasReverse corid:coin-1934-256-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "cf. D.O.C. I, p. 50, 36 ff." ;
+    dcterms:bibliographicCitation "Wroth, I (Vandals), p. 37, 159 ff." .
+
+corid:authority-justin-i
+    a nmo:Authority ;
+    skos:prefLabel "Justin I"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:denomination-pentanummium
+    a nmo:Denomination ;
+    skos:prefLabel "Pentanummium"@en .
+
+corid:coin-1934-256-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "... VSTI" ;
+    dcterms:description "Bust right, described as barbarous, with drapery resembling Justinianic coins rather than late Roman coins"@en .
+
+corid:coin-1934-256-reverse
+    a nmo:Reverse ;
+    dcterms:description "Chi-Rho within two borders of dots"@en .
+
+corid:card-COIN_X_1934_00256_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00256_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-256 ;
+    cor:sourceImageFilename "COIN_X_1934_00256_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-256" ;
+    cor:inventoryNumber "1934-256" ;
+    cor:earlierInventoryNumberRaw "238" ;
+    cor:earlierInventoryNumber "238" ;
+    cor:classificationRaw "Justin I (or Imitation)" ;
+    cor:authorityRaw "Justin I" ;
+    cor:identificationQualifierRaw "or Imitation" ;
+    cor:dateRaw "c. 518-27 A.D." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "10" ;
+    cor:weightRaw ".74 g" ;
+    cor:obverseLegendRaw "... VSTI" ;
+    cor:obverseLegendNormalized "[--]VSTI-[--]" ;
+    cor:obverseTypeRaw "Bust r. (barbarous) but with drapery as in Justinian coins and not like late Roman." ;
+    cor:reverseTypeRaw "Chi-Rho within 2 borders of dots." ;
+    cor:bibliographicReferenceRaw "cf. D.O.C. I, p. 50, 36 ff." ;
+    cor:bibliographicReferenceRaw "Wroth, I (Vandals), p. 37, 159 ff." ;
+    cor:crossedOutBibliographicReferenceRaw "B.M.C. (Vandals?)" ;
+    cor:crossedOutIdentificationRaw "Barbarous? - Find of Justinian in Italy;" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "4/12/1934" ;
+    cor:excavationDate "1934-04-12"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 79 (5)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 79 ;
+        cor:notebookPageRaw "79" ;
+        cor:notebookEntryOrRange "5" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-1137136319" ;
+    cor:databaseClassificationRaw "Byzantine Copper/Bronze Imitative Pentanummium" ;
+    cor:databaseAuthorityRaw "Justin I or Justinian I" ;
+    cor:databaseDateRaw "AD 518-AD 565" ;
+    cor:databaseMintRaw "Uncertain" ;
+    cor:databaseDenominationRaw "pentanummium" ;
+    cor:databaseDenomination corid:denomination-pentanummium ;
+    cor:databaseObverseLegendRaw "[--]VSTI-[--]" ;
+    cor:databaseObverseTypeRaw "Bust r., diad., drap." ;
+    cor:databaseReverseTypeRaw "Chi-Rho in double circle." ;
+    cor:databaseAxisRaw "7" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date IV.12.1934, #5; Notebook 142 (Morgan), p. 79; Card #238" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the crossed-out initial identification, the faint obverse legend, and whether the card's Justin I attribution and c. 518-527 date should be broadened to the database's Justin I or Justinian I, 518-565." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "crossedOutIdentificationRaw" ;
+        cor:rawValue "Barbarous? - Find of Justinian in Italy;" ;
+        cor:reason "The crossed-out wording is partly obscured."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "... VSTI" ;
+        cor:proposedValue "[--]VSTI-[--]" ;
+        cor:reason "The legend is faint; the proposed bracketed form comes from the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "authorityAndDate" ;
+        cor:rawValue "Justin I (or Imitation), c. 518-27 A.D." ;
+        cor:proposedValue "Justin I or Justinian I, AD 518-565" ;
+        cor:reason "The linked database gives a broader attribution and chronology than the card."
+    ] .
+

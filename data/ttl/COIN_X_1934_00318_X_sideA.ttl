@@ -1,0 +1,111 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-318
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-318" ;
+    dcterms:source corid:card-COIN_X_1934_00318_X_sideA ;
+    nmo:hasAuthority corid:authority-thessalian-confederacy ;
+    nmo:hasStartDate "-0196"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "16"^^xsd:decimal ;
+    nmo:hasAxis 2 ;
+    nmo:hasObverse corid:coin-1934-318-obverse ;
+    nmo:hasReverse corid:coin-1934-318-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "BMC Thessaly, p. 5, no. 61" ;
+    cor:axisAssignmentBasis "linked coin database" .
+
+corid:authority-thessalian-confederacy
+    a nmo:Authority ;
+    skos:prefLabel "Thessalian Confederacy"@en ;
+    skos:altLabel "Thessaly, federal coinage"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-318-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of Zeus right, crowned with oak"@en .
+
+corid:coin-1934-318-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΘΕΣΣΑ" ;
+    dcterms:description "Athena Itonia right in fighting attitude; letters to right"@en .
+
+corid:card-COIN_X_1934_00318_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00318_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-318 ;
+    cor:sourceImageFilename "COIN_X_1934_00318_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-318" ;
+    cor:inventoryNumber "1934-318" ;
+    cor:earlierInventoryNumberRaw "93" ;
+    cor:earlierInventoryNumber "93" ;
+    cor:authorityRaw "Thessaly - federal" ;
+    cor:dateRaw "196-146" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "16" ;
+    cor:obverseTypeRaw "Head of Zeus r., crowned with oak" ;
+    cor:reverseLegendRaw "ΘΕΣΣΑ (up)" ;
+    cor:reverseLegendNormalized "ΘΕΣΣΑ" ;
+    cor:reverseTypeRaw "Athena Itonia r. in fighting attitude; to r. Ε J" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Thes.) p. 5, no. 61" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/12/1934" ;
+    cor:excavationDate "1934-05-12"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "Morgan-Harland p. 188 (1-2)" ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 188 ;
+        cor:notebookPageRaw "188" ;
+        cor:notebookEntryOrRange "1-2" ;
+        cor:notebookNumber 142 ;
+        cor:notebookIdentificationMethod "name, page, and range explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "In Study Collection" ;
+    cor:databaseCoinId "1587326549" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseAuthorityRaw "Thessalian Confederacy" ;
+    cor:databaseDateRaw "196-146 BC" ;
+    cor:databaseObverseTypeRaw "Head of Zeus facing r.; crowned with oak" ;
+    cor:databaseReverseLegendRaw "<gr>UESSA<gr> above Athena; [letters] to right" ;
+    cor:databaseReverseTypeRaw "Athena Itonia facing r. in fighting position" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "16" ;
+    cor:databaseAxisRaw "2" ;
+    cor:databaseBibliographicReferenceRaw "BMC Thess. p.5, no.61" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/12/1934; NB 142 p.188, 1-2" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact reverse legend and the two letters or symbols written to the right of Athena." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "ΘΕΣΣΑ (up)" ;
+        cor:proposedValue "ΘΕΣΣΑ" ;
+        cor:reason "The final letters are lightly written, and the parenthetical annotation appears to indicate that the legend is above."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "to r. Ε J" ;
+        cor:reason "The two marks to the right of Athena may be letters or control symbols and are not securely legible."
+    ] .

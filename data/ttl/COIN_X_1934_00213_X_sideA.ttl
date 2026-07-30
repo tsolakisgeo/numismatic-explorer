@@ -1,0 +1,104 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-213
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-213" ;
+    dcterms:source corid:card-COIN_X_1934_00213_X_sideA ;
+    nmo:hasMint corid:mint-aegina ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasWeight "1.79"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-213-obverse ;
+    nmo:hasReverse corid:coin-1934-213-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 143, nos. 206-211" .
+
+corid:mint-aegina
+    a nmo:Mint ;
+    skos:prefLabel "Aegina"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-213-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "A" ;
+    dcterms:description "Letter A between two dolphins facing upwards"@en .
+
+corid:coin-1934-213-reverse
+    a nmo:Reverse ;
+    dcterms:description "Incuse square of five compartments"@en .
+
+corid:card-COIN_X_1934_00213_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00213_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-213 ;
+    cor:sourceImageFilename "COIN_X_1934_00213_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-213" ;
+    cor:inventoryNumber "1934-213" ;
+    cor:earlierInventoryNumber "207" ;
+    cor:mintRaw "Aegina" ;
+    cor:dateRaw "after 404" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:terminusPostQuemRaw "after 404 BCE" ;
+    cor:databaseDateRaw "404 BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:weightRaw "1.79 g." ;
+    cor:axisRaw "downward arrow" ;
+    cor:obverseLegendRaw "A" ;
+    cor:obverseTypeRaw "A between two dolphins upwards" ;
+    cor:reverseTypeRaw "Incuse square of five compartments" ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 143, 206-211" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora S.E." ;
+    cor:excavationDateRaw "3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 85; (1-39); (40-41)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookEntryOrRange "1-39", "40-41" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseNoteRaw "Card missing" ;
+    cor:databaseCardStatusDisagreement true ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the encoding of the relative date 'after 404 BCE', whether both circled notebook ranges '1-39' and '40-41' apply to this coin, and the database note 'Card missing', which conflicts with the extant card image." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDate" ;
+        cor:rawValue "after 404" ;
+        cor:proposedValue "terminus post quem after 404 BCE" ;
+        cor:reason "The card gives a relative date rather than a closed production range."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookEntryOrRange" ;
+        cor:rawValue "(1-39); (40-41)" ;
+        cor:reason "Both ranges are visible after page 85, while the linked Metis record preserves only 1-39."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "databaseCardStatus" ;
+        cor:rawValue "Card missing" ;
+        cor:proposedValue "Card extant" ;
+        cor:reason "The linked database note conflicts with the uploaded inventory-card image."
+    ] .

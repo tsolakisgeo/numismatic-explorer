@@ -1,0 +1,110 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-230
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-230" ;
+    dcterms:source corid:card-COIN_X_1934_00230_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-230-obverse ;
+    nmo:hasReverse corid:coin-1934-230-reverse ;
+    nmo:hasFindspot corid:place-agora-se-pottery-deposit-1 ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-pottery-deposit-1
+    skos:prefLabel "Agora Southeast, Pottery Deposit 1"@en .
+
+corid:coin-1934-230-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus left, with koppa"@en .
+
+corid:coin-1934-230-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[ΔΙ] to left" ;
+    dcterms:description "Trident, with an uncertain letter group to the left and a trophy to the right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-230-reverse .
+
+corid:controlmark-1934-230-reverse
+    skos:prefLabel "Trophy to right of trident"@en .
+
+corid:card-COIN_X_1934_00230_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00230_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-230 ;
+    cor:sourceImageFilename "COIN_X_1934_00230_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00230_X_sideC ;
+    cor:inventoryNumberRaw "1934-230" ;
+    cor:inventoryNumber "1934-230" ;
+    cor:earlierInventoryNumberRaw "90" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "400-146" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "12" ;
+    cor:obverseLegendRaw "Ϙ" ;
+    cor:obverseTypeRaw "Pegasos l.; Ϙ" ;
+    cor:reverseLegendRaw "to l. [ΔΙ]" ;
+    cor:reverseTypeRaw "Trident; to l. [ΔΙ]; to r. TROPHY" ;
+    cor:multipleObjectAnnotationRaw "2 coins" ;
+    cor:relatedInventoryNumber "1934-821" ;
+    cor:archivalAnnotationRaw "2nd coin = 1934-821" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/17/1934" ;
+    cor:excavationDate "1934-03-17"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 110 (3-5)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 110 ;
+        cor:notebookPageRaw "110" ;
+        cor:notebookEntryOrRange "3-5" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "STUDY COLLECT. 1934-230" ;
+    cor:databaseNoteRaw "Originally on other card" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 90, the corrected reverse letters to the left of the trident as [ΔΙ], and the relationship of the second coin numbered 1934-821." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumberRaw" ;
+        cor:rawValue "90" ;
+        cor:reason "The upper-left pencil number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "to l. [ΔΙ]" ;
+        cor:reason "The blue correction is partly bracketed and the two letters are not completely secure."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "relatedInventoryNumber" ;
+        cor:rawValue "2nd coin = 1934-821" ;
+        cor:reason "The card documents two coins and identifies the second as 1934-821; the exact original card relationship should be verified."
+    ] .
+
+corid:card-COIN_X_1934_00230_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00230_X_sideC" .

@@ -1,0 +1,102 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-231
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-231" ;
+    dcterms:source corid:card-COIN_X_1934_00231_X_sideA ;
+    nmo:hasAuthority corid:authority-hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "26"^^xsd:decimal ;
+    nmo:hasWeight "13.2"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-231-obverse ;
+    nmo:hasReverse corid:coin-1934-231-reverse ;
+    nmo:hasFindspot corid:place-north-of-school-area-q ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 113" .
+
+corid:authority-hadrian
+    a nmo:Authority ;
+    skos:prefLabel "Hadrian"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school-area-q
+    skos:prefLabel "North of School, Area Q"@en .
+
+corid:coin-1934-231-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP TRA.... HADR...." ;
+    dcterms:description "Laureate bust of Hadrian right"@en .
+
+corid:coin-1934-231-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "L COR ... COLLAV." ;
+    dcterms:description "Poseidon seated left on a throne, holding a dolphin and a trident"@en .
+
+corid:card-COIN_X_1934_00231_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00231_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-231 ;
+    cor:sourceImageFilename "COIN_X_1934_00231_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-231" ;
+    cor:inventoryNumber "1934-231" ;
+    cor:earlierInventoryNumber "71" ;
+    cor:classificationRaw "Corinth - Hadrian" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:databaseDateRaw "AD 117-138" ;
+    cor:productionDateSource "linked_Metis_record" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "26" ;
+    cor:weightRaw "Wt. 13.2 gr" ;
+    cor:obverseLegendRaw "IMP TRA.... HADR...." ;
+    cor:obverseTypeRaw "Bust of Hadrian r., laureate" ;
+    cor:reverseLegendRaw "L COR ... COLLAV. (to r.)" ;
+    cor:reverseTypeRaw "Poseidon seated l. on throne, holding dolphin and trident" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 113" ;
+    cor:databaseBibliographicCitation "Edwards 113" ;
+    cor:findspotRaw "N. of School; Area Q" ;
+    cor:excavationDateRaw "3/19/1934" ;
+    cor:excavationDate "1934-03-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. H. Morgan p. 31 (1)" ;
+        cor:notebookName "G. H. Morgan" ;
+        cor:notebookPage 31 ;
+        cor:notebookPageRaw "31" ;
+        cor:notebookEntryOrRange "1" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 142 ;
+    cor:studyCollectionRaw "Coin in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the fragmentary obverse and reverse legends, especially the reverse ending read as COLLAV., and whether Cor. Coins 113 is equivalent to Edwards 113." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "IMP TRA.... HADR...." ;
+        cor:reason "Only a fragmentary legend is visible on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "L COR ... COLLAV. (to r.)" ;
+        cor:reason "The spacing and final letters are not completely clear."
+    ] .

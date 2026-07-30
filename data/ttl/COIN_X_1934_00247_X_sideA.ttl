@@ -1,0 +1,97 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-247
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-247" ;
+    dcterms:source corid:card-COIN_X_1934_00247_X_sideA ;
+    nmo:hasAuthority corid:authority-corinth ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-247-obverse ;
+    nmo:hasReverse corid:coin-1934-247-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection .
+
+corid:authority-corinth
+    a nmo:Authority ;
+    skos:prefLabel "Corinth"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII, 5.30 m"@en .
+
+corid:coin-1934-247-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus facing left"@en .
+
+corid:coin-1934-247-reverse
+    a nmo:Reverse ;
+    dcterms:description "Trident; uncertain letter or monogram to left; horned head of Pan facing right to right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-247-reverse-left .
+
+corid:controlmark-1934-247-reverse-left
+    skos:prefLabel "Uncertain letter or monogram to left of trident, possibly Σ"@en .
+
+corid:card-COIN_X_1934_00247_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00247_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-247 ;
+    cor:sourceImageFilename "COIN_X_1934_00247_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-247" ;
+    cor:inventoryNumber "1934-247" ;
+    cor:earlierInventoryNumberRaw "49" ;
+    cor:earlierInventoryNumber "49" ;
+    cor:classificationRaw "Corinth 400-146" ;
+    cor:dateRaw "400-146" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:obverseLegendRaw "Ϙ" ;
+    cor:obverseTypeRaw "Pegasos l.; Ϙ." ;
+    cor:reverseControlmarkRaw "to l., Σ?" ;
+    cor:reverseTypeRaw "Trident; to l., uncertain letter or monogram; to r., Pan's head, horned, r." ;
+    cor:findspotRaw "Agora SE (well VIII, 5.30 m), South Stoa" ;
+    cor:excavationDateRaw "3/29/1934" ;
+    cor:excavationDate "1934-03-29"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 145 (7)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 145 ;
+        cor:notebookPageRaw "145" ;
+        cor:notebookEntryOrRange "7" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= in Study Collection" ;
+    cor:archivalAnnotationRaw "E-F" ;
+    cor:databaseCoinId "-604456412" ;
+    cor:databaseNotebookReferenceRaw "Notebook 139 p. 145, 7" ;
+    cor:databaseReverseLegendRaw "[letter]" ;
+    cor:databaseReverseTypeRaw "Trident; Head of Pan to right; horned; facing r." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact letter or monogram shown to the left of the trident, provisionally read as Σ." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseControlmarkRaw" ;
+        cor:rawValue "to l., Σ?" ;
+        cor:proposedValue "Σ" ;
+        cor:reason "The handwritten symbol is visible but its exact letterform is not fully secure."
+    ] .

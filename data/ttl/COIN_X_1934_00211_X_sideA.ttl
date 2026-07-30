@@ -1,0 +1,121 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-211
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-211" ;
+    dcterms:source corid:card-COIN_X_1934_00211_X_sideA ;
+    nmo:hasAuthority corid:authority-isaac-ii ;
+    nmo:hasStartDate "1185"^^xsd:gYear ;
+    nmo:hasEndDate "1195"^^xsd:gYear ;
+    nmo:hasMint corid:mint-thessalonika ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "16"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-211-obverse ;
+    nmo:hasReverse corid:coin-1934-211-reverse ;
+    nmo:hasFindspot corid:place-christian-basilica-prothesis ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 597, type 3" ;
+    dcterms:bibliographicCitation "Cor. Coins no. 155" ;
+    dcterms:bibliographicCitation "Hendy, p. 145 and pl. 21, nos. 10-11" ;
+    dcterms:bibliographicCitation "D.O.C. IV.1, p. 390, no. 5" .
+
+corid:authority-isaac-ii
+    a nmo:Authority ;
+    skos:prefLabel "Isaac II Angelos"@en .
+
+corid:mint-thessalonika
+    a nmo:Mint ;
+    skos:prefLabel "Thessalonika"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-christian-basilica-prothesis
+    skos:prefLabel "Christian Basilica, north pit in the Prothesis"@en .
+
+corid:coin-1934-211-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "I / C / AAKI / OC ; Δ / M" ;
+    dcterms:description "Half-length figure of Isaac II facing, holding a cross and a sword in its sheath"@en .
+
+corid:coin-1934-211-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "O / X / A ; [X / MI]" ;
+    dcterms:description "Facing nimbate bust of Saint Michael, holding a scepter with jeweled top and a globus cruciger"@en .
+
+corid:card-COIN_X_1934_00211_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00211_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-211 ;
+    cor:sourceImageFilename "COIN_X_1934_00211_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-211" ;
+    cor:inventoryNumber "1934-211" ;
+    cor:legacyCardNumber "37" ;
+    cor:authorityRaw "Isaac II" ;
+    cor:dateRaw "1185-1195" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "16" ;
+    cor:axisRaw "downward arrow" ;
+    cor:obverseLegendRaw "I / C / AAKI / OC ; Δ / M" ;
+    cor:obverseTypeRaw "Half-length of Isaac II, facing, holding cross and sword in sheath" ;
+    cor:reverseLegendRaw "O / X / A ; [X / MI]" ;
+    cor:reverseTypeRaw "Bust of St. Michael nimb'd, facing, holding sceptre with jewelled top and globus cr." ;
+    cor:findspotRaw "Christian Basilica; N. pit in Prothesis" ;
+    cor:excavationDateRaw "3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "J. Stillwell p. 121 (4)" ;
+        cor:notebookName "J. Stillwell" ;
+        cor:notebookPage 121 ;
+        cor:notebookPageRaw "121" ;
+        cor:notebookEntryOrRange "4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 98 ;
+    cor:photographicReferenceRaw "75-H4-37 (obv)" ;
+    cor:attachedPhotographCount 1 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseMintRaw "Thessalonika" ;
+    cor:databaseObverseLegendRaw "O/X / AR - [X / MI]" ;
+    cor:databaseObverseTypeRaw "Bust of archangel Michael, beardless and nimbate, holding a jeweled scepter or spear and a globus cruciger" ;
+    cor:databaseReverseLegendRaw "ICA / AKI / OC - DE / CPO / THC" ;
+    cor:databaseReverseTypeRaw "Bust of emperor holding a scepter cruciger and anexikakia" ;
+    cor:faceAssignmentDisagreement true ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact segmented legends, the photographic reference '75-H4-37 (obv)', and the obverse/reverse assignment, which is opposite in the linked Metis record." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "I / C / AAKI / OC ; Δ / M" ;
+        cor:reason "The vertically arranged letters are partly unclear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "O / X / A ; [X / MI]" ;
+        cor:reason "The bracketed letters are difficult to read precisely."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographicReferenceRaw" ;
+        cor:rawValue "75-H4-37 (obv)" ;
+        cor:reason "The handwritten reference immediately above the notebook citation is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Card layout places Isaac II on the left and Saint Michael on the right" ;
+        cor:proposedValue "Metis assigns Saint Michael to the obverse and Isaac II to the reverse" ;
+        cor:reason "The inventory card and linked database assign the two types to opposite faces."
+    ] .

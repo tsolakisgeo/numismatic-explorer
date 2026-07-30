@@ -1,0 +1,161 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-238
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-238" ;
+    dcterms:source corid:card-COIN_X_1934_00238_X_sideA_etc ;
+    prov:wasDerivedFrom corid:metis-coin-1268188846 ;
+    nmo:hasAuthority corid:authority-corinth ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "11"^^xsd:decimal ;
+    nmo:hasWeight "1.86"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-238-obverse ;
+    nmo:hasReverse corid:coin-1934-238-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:coin-1934-238-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus facing left."@en .
+
+corid:coin-1934-238-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "D - O" ;
+    dcterms:description "Trident; oenochoe to right."@en ;
+    nmo:hasControlmark corid:controlmark-oenochoe-to-right .
+
+corid:coin-1934-1031
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-1031" ;
+    dcterms:source corid:card-COIN_X_1934_00238_X_sideA_etc .
+
+corid:coin-1934-913
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-913" ;
+    dcterms:source corid:card-COIN_X_1934_00238_X_sideA_etc .
+
+corid:coin-1934-912
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-912" ;
+    dcterms:source corid:card-COIN_X_1934_00238_X_sideA_etc .
+
+corid:coin-1934-911
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-911" ;
+    dcterms:source corid:card-COIN_X_1934_00238_X_sideA_etc .
+
+corid:card-COIN_X_1934_00238_X_sideA_etc
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00238_X_sideA_etc" ;
+    cor:documentsNumismaticObject
+        corid:coin-1934-238,
+        corid:coin-1934-1031,
+        corid:coin-1934-913,
+        corid:coin-1934-912,
+        corid:coin-1934-911 ;
+    cor:sourceImageFilename "COIN_X_1934_00238_X_sideA_etc.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-238 + 4 others!" ;
+    cor:inventoryNumber "1934-238" ;
+    cor:relatedInventoryNumber "1934-1031", "1934-913", "1934-912", "1934-911" ;
+    cor:secondaryNumberRaw "34" ;
+    cor:dateRaw "Corinth 400-146" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "11-12" ;
+    cor:databaseDiameterRaw "11" ;
+    cor:databaseWeightRaw "1.86" ;
+    cor:obverseTypeRaw "Pegasos l.; Ϙ." ;
+    cor:obverseLegendRaw "Ϙ" ;
+    cor:reverseTypeRaw "Trident." ;
+    cor:reverseLegendRaw "D - O" ;
+    cor:reverseControlMarksRaw "to l.; to r., cornucopiae; dolphin up.?; oenochoe; bull-amphora [crossed out]; O; Running griffin! (intrusive???!!!); inc. figure in r." ;
+    cor:multipleReferenceNoteRaw "1934-238 & 1934-1031" ;
+    cor:studyCollectionMarkRaw "1934-238 = in Study Coll. =" ;
+    cor:cardTransferNoteRaw
+        "new card + envelope associated with 1934-913",
+        "new card + envelope associated with 1934-912",
+        "new card + envelope associated with 1934-911" ;
+    cor:archivalNoteRaw "if there were 5 P/Ts, one now missing 2015/4/30" ;
+    cor:annotationDateRaw "2015/4/30" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 127 (1-7)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 127 ;
+        cor:notebookPageRaw "127" ;
+        cor:notebookEntryOrRange "1-7" ;
+        cor:notebookIdentificationMethod "explicit_on_card" ;
+        cor:databaseNotebookReferenceRaw "Notebook 139 p.127, 1-7"
+    ] ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/28/1934" ;
+    cor:excavationDate "1934-03-28"^^xsd:date ;
+    cor:databaseExcavationDateRaw "3/23/1934" ;
+    cor:databaseRecordNote "Originally on other card" ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDate" ;
+        cor:rawValue "3/28/1934" ;
+        cor:proposedValue "1934-03-28" ;
+        cor:reason "The linked database gives 3/23/1934, which conflicts with the visible card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseControlMarkAssignment" ;
+        cor:rawValue "to l.; to r., cornucopiae; dolphin up.?; oenochoe; bull-amphora [crossed out]; O; Running griffin! (intrusive???!!!); inc. figure in r." ;
+        cor:reason "The card groups five inventory numbers, and the individual reverse symbols cannot be assigned securely to particular coins from the layout alone."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameter" ;
+        cor:rawValue "11-12" ;
+        cor:proposedValue "11" ;
+        cor:reason "The card gives a range, while the linked database records 11 mm."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "cardTransferNotes" ;
+        cor:rawValue "new card + envelope ... 1934-913; new card + envelope ... 1934-912; new card + envelope ... 1934-911" ;
+        cor:reason "Some connecting words and the crossed-out red annotation are not fully legible."
+    ] ;
+    cor:databaseContext corid:metis-coin-1268188846 .
+
+corid:authority-corinth
+    a nmo:Authority ;
+    skos:prefLabel "Corinth"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-agora-se
+    a nmo:Find ;
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:controlmark-oenochoe-to-right
+    a cor:ControlMark ;
+    skos:prefLabel "Oenochoe to right"@en .
+
+corid:metis-coin-1268188846
+    a prov:Entity ;
+    dcterms:identifier "1268188846" ;
+    dcterms:description "Linked Metis coin record used as supporting database context."@en .
+
+# Human confirmation: verify the excavation-date conflict (card 3/28/1934 vs database 3/23/1934), the exact transfer-note wording and crossed-out text, and the assignment of the listed reverse symbols to the five coins.

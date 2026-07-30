@@ -1,0 +1,72 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-479
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-479" ;
+    dcterms:source corid:card-COIN_X_1934_00479_X_sideA ;
+    nmo:hasObverse corid:coin-1934-479-obverse ;
+    nmo:hasReverse corid:coin-1934-479-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00479_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00479_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-479 ;
+    cor:sourceImageFilename "COIN_X_1934_00479_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-479" ;
+    cor:inventoryNumber "1934-479" ;
+    cor:groupRaw "Gru 127" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-99-27A/28A" ;
+    cor:databaseLookupSource "direct_csv_index" ;
+    cor:databaseLinkMethod "composite_inventory_key" ;
+    cor:databaseInventoryCardID "8114907651723264000" ;
+    cor:databaseLinkedCoinID "-2044196851" ;
+    cor:databaseStudyCollectionStatus false ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 127" ;
+        cor:proposedValue "Group 127" ;
+        cor:reason "The expansion of the handwritten abbreviation is inferred."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDateRaw" ;
+        cor:rawValue "5/8/34" ;
+        cor:reason "The card does not make the month-day order explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographFaceAssignment" ;
+        cor:rawValue "Two unlabeled coin photographs, left and right" ;
+        cor:proposedValue "left photograph = obverse; right photograph = reverse" ;
+        cor:reason "The photographs are not explicitly labeled on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the expansion of 'Gru 127', the calendar interpretation of 5/8/34, and the assignment of the two photographs to obverse and reverse." .
+
+corid:coin-1934-479-obverse
+    a nmo:Obverse ;
+    dcterms:description "Unlabeled left photograph: worn coin face with a central rectangular or monogrammatic device and traces of a surrounding marginal legend."@en ;
+    cor:photographPosition "left" .
+
+corid:coin-1934-479-reverse
+    a nmo:Reverse ;
+    dcterms:description "Unlabeled right photograph: worn coin face with a central cross-like device and traces of a surrounding marginal legend."@en ;
+    cor:photographPosition "right" .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .

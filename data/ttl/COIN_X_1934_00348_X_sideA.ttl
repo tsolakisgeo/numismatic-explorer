@@ -1,0 +1,107 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-348
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-348" ;
+    dcterms:source corid:card-COIN_X_1934_00348_X_sideA ;
+    nmo:hasAuthority corid:authority-augustus ;
+    nmo:hasStartDate "-0002"^^xsd:gYear ;
+    nmo:hasEndDate "0014"^^xsd:gYear ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasMint corid:mint-lugdunum ;
+    nmo:hasObverse corid:coin-1934-348-obverse ;
+    nmo:hasReverse corid:coin-1934-348-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 43" ;
+    dcterms:bibliographicCitation "BMC I, p. 89, 519 ff." ;
+    dcterms:bibliographicCitation "RIC I (rev. ed.) 55.207" .
+
+corid:card-COIN_X_1934_00348_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00348_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-348 ;
+    cor:sourceImageFilename "COIN_X_1934_00348_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-348" ;
+    cor:inventoryNumber "1934-348" ;
+    cor:cardNumber "122" ;
+    cor:authorityRaw "Augustus - 27 B.C. - 14 A.D." ;
+    cor:dateAssignmentRaw "2 B.C. → 14 A.D." ;
+    cor:mintRaw "Lugdunum" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "den." ;
+    cor:obverseLegendRaw "[CAESAR. AVGVSTVS / DIVI. F. PATER. PATRIAE" ;
+    cor:obverseLegendNormalized "CAESAR AVGVSTVS DIVI F PATER PATRIAE" ;
+    cor:obverseTypeRaw "Head laureate r." ;
+    cor:reverseLegendRaw "C. L. CAESARES (in ex.) [AVGVSTI] / F. CO[S. DESIG.] PRINC. IVVENT." ;
+    cor:reverseLegendNormalized "C L CAESARES / AVGVSTI F COS DESIG PRINC IVVENT" ;
+    cor:reverseTypeRaw "Gaius and Lucius standing, each holding spear + shield; in field (above) simpulum (l.) and lituus (r.)." ;
+    cor:reverseSymbolRaw "simpulum (l.) and lituus (r.)" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "10/24/1934" ;
+    cor:excavationDate "1934-10-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 144; G. R. Davidson p. 117 (13-16)" ;
+        cor:notebookNumber "144" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage "117"^^xsd:integer ;
+        cor:notebookEntryOrRange "13-16" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:supersededBibliographicCitation "RIC I, p. 90, no. 350" ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "[CAESAR. AVGVSTVS / DIVI. F. PATER. PATRIAE" ;
+        cor:reason "The opening bracket marks a restored portion, but the precise extent of the restoration is not fully explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "C. L. CAESARES (in ex.) [AVGVSTI] / F. CO[S. DESIG.] PRINC. IVVENT." ;
+        cor:reason "Several portions are supplied in brackets, and the exact limits of the restorations require confirmation."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact limits of the bracketed legend restorations and whether the crossed-out RIC I, p. 90, no. 350 is correctly treated as superseded." .
+
+corid:coin-1934-348-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "[CAESAR. AVGVSTVS / DIVI. F. PATER. PATRIAE" ;
+    dcterms:description "Laureate head of Augustus facing right."@en .
+
+corid:coin-1934-348-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "C. L. CAESARES (in ex.) [AVGVSTI] / F. CO[S. DESIG.] PRINC. IVVENT." ;
+    dcterms:description "Gaius and Lucius stand facing, each holding a spear and shield; a simpulum appears above on the left and a lituus above on the right."@en .
+
+corid:authority-augustus
+    a nmo:Authority ;
+    skos:prefLabel "Augustus"@en ;
+    skos:exactMatch nm:augustus .
+
+corid:mint-lugdunum
+    a nmo:Mint ;
+    skos:prefLabel "Lugdunum"@en ;
+    skos:exactMatch nm:lugdunum .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en ;
+    skos:exactMatch nm:denarius .
+
+corid:place-agora-sw
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .

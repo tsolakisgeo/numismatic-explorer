@@ -1,0 +1,142 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-326
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-326" ;
+    dcterms:source corid:card-COIN_X_1934_00326_X_sideA ;
+    nmo:hasIssuer corid:issuer-inst-l-cas ;
+    nmo:hasStartDate "-0042"^^xsd:gYear ;
+    nmo:hasEndDate "-0041"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "16"^^xsd:decimal ;
+    nmo:hasAxis 1 ;
+    nmo:hasObverse corid:coin-1934-326-obverse ;
+    nmo:hasReverse corid:coin-1934-326-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. 529" ;
+    dcterms:bibliographicCitation "Fox 6 (same coin)" ;
+    dcterms:bibliographicCitation "Edwards not" ;
+    dcterms:bibliographicCitation "Amandry III, 42–41 B.C." ;
+    cor:axisAssignmentBasis "Die axis 1 is supplied by the linked database and is not explicitly written on the card." .
+
+corid:issuer-inst-l-cas
+    a nmo:Issuer ;
+    skos:prefLabel "Inst.–L. Cas."@en ;
+    skos:note "Abbreviated issuer designation supplied by the linked database; the fuller handwritten magistrate names on the card are not securely legible."@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:controlmark-koppa
+    a nmo:Controlmark ;
+    skos:prefLabel "Koppa"@en .
+
+corid:coin-1934-326-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "CORIN" ;
+    nmo:hasControlmark corid:controlmark-koppa ;
+    dcterms:description "Pegasus flying left; koppa beneath"@en .
+
+corid:coin-1934-326-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "NS CAS / IIVIR" ;
+    dcterms:description "Trident"@en .
+
+corid:card-COIN_X_1934_00326_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00326_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-326 ;
+    cor:sourceImageFilename "COIN_X_1934_00326_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-326" ;
+    cor:inventoryNumber "1934-326" ;
+    cor:earlierInventoryNumberRaw "42" ;
+    cor:earlierInventoryNumber "42" ;
+    cor:mintRaw "Corinth" ;
+    cor:magistracyRaw "IIVIR" ;
+    cor:issuerRaw "III C Inst... and L. Cas [full names uncertain]" ;
+    cor:periodRaw "Roman Republic" ;
+    cor:dateRaw "44-30; Amandry III, 42-41 B.C." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "16" ;
+    cor:obverseLegendRaw "CORIN" ;
+    cor:obverseTypeRaw "Pegasus flying l.; beneath, koppa" ;
+    cor:reverseLegendRaw "NS CAS / IIVIR" ;
+    cor:reverseTypeRaw "Trident" ;
+    cor:bibliographicReferenceRaw "B.M.C. 529" ;
+    cor:bibliographicReferenceRaw "Fox 6 (same coin)" ;
+    cor:bibliographicReferenceRaw "Edwards not" ;
+    cor:bibliographicReferenceRaw "Amandry III, 42-41 B.C." ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "5/18/1934" ;
+    cor:excavationDate "1934-05-18"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. H. Howland p. 33 (8)" ;
+        cor:notebookName "R. H. Howland" ;
+        cor:notebookPage 33 ;
+        cor:notebookPageRaw "33" ;
+        cor:notebookEntryOrRange "8" ;
+        cor:notebookNumber 146 ;
+        cor:notebookIdentificationMethod "name, page, and distinct circled entry explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin = In Study Collection" ;
+    cor:databaseCoinId "-236519927" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseDynastyRaw "Corinth Duoviri" ;
+    cor:databaseAuthorityRaw "Inst.-L. Cas." ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "42-41 BC" ;
+    cor:databaseObverseLegendRaw "CORINT" ;
+    cor:databaseObverseTypeRaw "Pegasus flying l.; koppa beneath" ;
+    cor:databaseReverseLegendRaw "NS CAS IIVIR" ;
+    cor:databaseReverseTypeRaw "trident" ;
+    cor:databaseControlmarkRaw "koppa" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "16" ;
+    cor:databaseAxisRaw "1" ;
+    cor:databaseBibliographicReferenceRaw "BMC 529, Fox 6, RHH pg. 33; Amandry II" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/18/1934, #8; Notebook 146, p. 33" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the abbreviated magistrate names, whether the obverse legend is CORIN or CORINT, and whether the card's Amandry reference is III rather than the database's II." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "issuerRaw" ;
+        cor:rawValue "III C Inst... and L. Cas [full names uncertain]" ;
+        cor:proposedValue "Inst.–L. Cas." ;
+        cor:reason "The magistrate names are abbreviated and partly unclear on the card; the proposed short form comes from the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "CORIN" ;
+        cor:proposedValue "CORINT" ;
+        cor:reason "The card appears to read CORIN, while the linked database records CORINT."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "Amandry III" ;
+        cor:proposedValue "Amandry II" ;
+        cor:reason "The visible card appears to cite Amandry III, while the linked database records Amandry II."
+    ] .

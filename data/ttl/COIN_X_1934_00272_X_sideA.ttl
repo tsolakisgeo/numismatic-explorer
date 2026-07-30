@@ -1,0 +1,150 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-272
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-272" ;
+    dcterms:source corid:card-COIN_X_1934_00272_X_sideA ;
+    nmo:hasAuthority corid:authority-roman-republic ;
+    nmo:hasIssuer corid:issuer-l-rustius ;
+    nmo:hasStartDate "-0075"^^xsd:gYear ;
+    nmo:hasEndDate "-0074"^^xsd:gYear ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "17.5"^^xsd:decimal ;
+    nmo:hasWeight "3.10"^^xsd:decimal ;
+    nmo:hasAxis 7 ;
+    nmo:hasObverse corid:coin-1934-272-obverse ;
+    nmo:hasReverse corid:coin-1934-272-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 398, no. 3271, pl. XLII, no. 14" ;
+    dcterms:bibliographicCitation "Sydenham 782" ;
+    cor:productionDateAssignmentBasis "Card gives ca. 75 B.C.; linked database records 75-74 B.C., noting that B.M.C. gives 75 B.C. and Sydenham gives 74 B.C." ;
+    cor:axisSource "linked coin database record" .
+
+corid:authority-roman-republic
+    a nmo:Authority ;
+    skos:prefLabel "Roman Republic"@en .
+
+corid:issuer-l-rustius
+    a nmo:Issuer ;
+    skos:prefLabel "L. Rustius"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:controlmark-star
+    a nmo:Controlmark ;
+    skos:prefLabel "Star"@en ;
+    skos:notation "*" .
+
+corid:coin-1934-272-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "S C" ;
+    nmo:hasControlmark corid:controlmark-star ;
+    dcterms:description "Head of Mars right, wearing a crested helmet; S C behind the neck and a star below the chin"@en .
+
+corid:coin-1934-272-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[L]RVSTI" ;
+    dcterms:description "Ram standing right; [L]RVSTI in the exergue"@en .
+
+corid:negative-75-11-24
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-24" .
+
+corid:negative-75-11-25
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-25" .
+
+corid:card-COIN_X_1934_00272_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00272_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-272 ;
+    cor:sourceImageFilename "COIN_X_1934_00272_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-272" ;
+    cor:inventoryNumber "1934-272" ;
+    cor:earlierInventoryNumberRaw "154" ;
+    cor:earlierInventoryNumber "154" ;
+    cor:classificationRaw "Roman Republic" ;
+    cor:authorityRaw "(L. Rustius)" ;
+    cor:dateRaw "ca. 75 B.C." ;
+    cor:materialRaw "AR" ;
+    cor:diameterRaw "17.5" ;
+    cor:weightRaw "3.10 gr." ;
+    cor:obverseLegendRaw "behind neck, S C; under chin [*]" ;
+    cor:obverseTypeRaw "Head of Mars r. in crested helmet" ;
+    cor:reverseLegendRaw "in ex. [L]RVSTI" ;
+    cor:reverseTypeRaw "Ram standing r." ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 398, no. 3271, pl. XLII, 14" ;
+    cor:bibliographicReferenceRaw "Sydenham, 782 + 74 B.C." ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "5/1/1934" ;
+    cor:excavationDate "1934-05-01"^^xsd:date ;
+    cor:excavationEntryRaw "3" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142; Morgan-Harland p. 142 (3)" ;
+        cor:notebookNumber 142 ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 142 ;
+        cor:notebookPageRaw "142" ;
+        cor:notebookEntryOrRange "3" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:negativeReferenceRaw "75-11-24, 25 (over)" ;
+    cor:photographicNegative corid:negative-75-11-24 ;
+    cor:photographicNegative corid:negative-75-11-25 ;
+    cor:databaseCoinId "1275369822" ;
+    cor:databaseDepartmentRaw "RR" ;
+    cor:databaseAuthorityRaw "L Rustius" ;
+    cor:databaseDateRaw "75-74 B.C." ;
+    cor:databaseObverseLegendRaw "S.C." ;
+    cor:databaseObverseTypeRaw "Head of Mars r. in crested helmet; under chin, [*]" ;
+    cor:databaseReverseTypeRaw "Ram standing r.; [L]RVSTI in exergue" ;
+    cor:databaseSymbolRaw "Obv: [*]; Rev: [L]RVSTI in ex." ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseWeightRaw "3.10" ;
+    cor:databaseDiameterRaw "17.5" ;
+    cor:databaseAxisRaw "7" ;
+    cor:databaseBibliographicReferenceRaw "BMC p. 398, no. 3271, pl. XLII, no. 14; Sydenham 782" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 05/1/1934, entry 3; Notebook 142, p. 142" ;
+    cor:databaseNoteRaw "Card 154; negatives 75-11-24 and 75-11-25; Sydenham 782 gives 74 B.C.; B.M.C. gives 75 B.C." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the obverse helmet is explicitly described as Corinthian and whether the normalized production range should be ca. 75 B.C. or 75-74 B.C." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseTypeRaw" ;
+        cor:rawValue "Head of Mars r. in crested [crossed-out word] helmet" ;
+        cor:proposedValue "Head of Mars right in a crested Corinthian helmet" ;
+        cor:reason "A word before 'helmet' is crossed out and may be 'Corinthian'."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateRaw" ;
+        cor:rawValue "ca. 75 B.C." ;
+        cor:proposedValue "75-74 B.C." ;
+        cor:reason "The card gives approximately 75 B.C.; the database notes differing B.M.C. and Sydenham dates."
+    ] .

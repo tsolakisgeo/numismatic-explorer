@@ -1,0 +1,38 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+corid:coin-1934-376
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-376" ;
+    dcterms:source corid:card-COIN_X_1934_00376_X_sideA ;
+    nmo:hasObverse corid:coin-1934-376-obverse ;
+    nmo:hasReverse corid:coin-1934-376-reverse .
+
+corid:card-COIN_X_1934_00376_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00376_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-376 ;
+    cor:sourceImageFilename "COIN_X_1934_00376_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-376" ;
+    cor:inventoryNumber "1934-376" ;
+    cor:groupRaw "Gru 24" ;
+    cor:negativeNumberRaw "08-94-1A/2A" ;
+    cor:photographicEvidence [
+        a cor:CoinPhotographPair ;
+        cor:leftPhotographDescription "Indistinct central figure or emblem within a marginal legend." ;
+        cor:rightPhotographDescription "Central cross-like or monogrammatic device within an inner circular border, surrounded by an indistinct marginal legend."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that 'Gru 24' means Group 24, the exact reading of negative number 08-94-1A/2A, and the obverse/reverse assignment and iconographic descriptions of the two photographs." .
+
+corid:coin-1934-376-obverse
+    a nmo:Obverse ;
+    dcterms:description "Indistinct central figure or emblem within an indistinct marginal legend."@en .
+
+corid:coin-1934-376-reverse
+    a nmo:Reverse ;
+    dcterms:description "Central cross-like or monogrammatic device within an inner circular border, surrounded by an indistinct marginal legend."@en .

@@ -1,0 +1,124 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-331
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-331" ;
+    dcterms:source corid:card-COIN_X_1934_00331_X_sideA ;
+    nmo:hasAuthority corid:authority-tiberius-iii ;
+    nmo:hasStartDate "0698"^^xsd:gYear ;
+    nmo:hasEndDate "0705"^^xsd:gYear ;
+    nmo:hasMint corid:mint-syracuse ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-331-obverse ;
+    nmo:hasReverse corid:coin-1934-331-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Sabatier II, p. 31, no. 13, pl. XXXVIII, 7" ;
+    dcterms:bibliographicCitation "D.O.C. II², p. 638, no. 32" ;
+    cor:denominationAssignmentBasis "Follis is supplied by the linked database and is not explicitly written on the card." ;
+    cor:axisAssignmentBasis "Die axis 6 is supplied by the linked database; the card shows a downward axis arrow." .
+
+corid:authority-tiberius-iii
+    a nmo:Authority ;
+    skos:prefLabel "Tiberius III Apsimar"@en ;
+    skos:altLabel "Tiberius III Apsimarus"@en .
+
+corid:mint-syracuse
+    a nmo:Mint ;
+    skos:prefLabel "Syracuse"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-331-obverse
+    a nmo:Obverse ;
+    dcterms:description "Facing youthful bust of Tiberius III in armour, holding a transverse spear; star in the left field"@en .
+
+corid:coin-1934-331-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "M" ;
+    nmo:hasMintmark corid:mintmark-scl ;
+    dcterms:description "Large M with cross-monogram above and palm branches to left and right"@en .
+
+corid:mintmark-scl
+    a nmo:Mintmark ;
+    skos:prefLabel "SCL"@en ;
+    skos:note "The exergual mintmark is supplied by the linked database and is only faintly or incompletely indicated on the card."@en .
+
+corid:card-COIN_X_1934_00331_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00331_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-331 ;
+    cor:sourceImageFilename "COIN_X_1934_00331_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-331" ;
+    cor:inventoryNumber "1934-331" ;
+    cor:earlierInventoryNumberRaw "502" ;
+    cor:earlierInventoryNumber "502" ;
+    cor:authorityRaw "Tiberius III Apsimarus" ;
+    cor:dateRaw "698-705" ;
+    cor:mintRaw "Syracuse" ;
+    cor:mintAnnotationRaw "(middle of Syracuse)" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:axisRaw "↓" ;
+    cor:obverseLegendRaw "no inscr." ;
+    cor:obverseTypeRaw "Bust of Tiberius III young, in armor, holding spear across; in l. field star" ;
+    cor:reverseTypeRaw "Large M; cross-monogram above; palm branches to left and right" ;
+    cor:reverseMintmarkRaw "SCL" ;
+    cor:overstrikeNoteRaw "possibly overstruck?" ;
+    cor:bibliographicReferenceRaw "Sabatier II p. 31, no. 13, pl. XXXVIII 7" ;
+    cor:bibliographicReferenceRaw "D.O.C. II² p. 638 #32" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "5/29/1934" ;
+    cor:excavationDate "1934-05-29"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 86 (18-24), NB 141" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 86 ;
+        cor:notebookPageRaw "86" ;
+        cor:notebookEntryOrRange "18-24" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "2063267494" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Tiberius III" ;
+    cor:databaseMintRaw "Syracuse" ;
+    cor:databaseDateRaw "698-705" ;
+    cor:databaseObverseLegendRaw "No inscription" ;
+    cor:databaseObverseTypeRaw "Bust facing, in armour, r.hand holds transverse spear; in l.field, star." ;
+    cor:databaseReverseTypeRaw "M" ;
+    cor:databaseSymbolRaw "rev.: cross-monogram above letter, palms to l.&r.; in ex. [SCL]" ;
+    cor:databaseUncertainTypeRaw "possibly overstruck?" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseDiameterRaw "21" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "Sabatier II, p.31, 13, pl.XXXVIII.7; DOC II, p.638, 32" ;
+    cor:databaseExcavationContextRaw "Agora S.E.; excavation date 05/29/1934, #18-24; Notebook 141 (Broneer), p.86; Card #502" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact reverse monograms and subsidiary letters, whether SCL is visibly present in the exergue, and the faint annotation beside the reverse." .

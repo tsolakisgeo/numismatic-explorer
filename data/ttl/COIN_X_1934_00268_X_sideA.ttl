@@ -1,0 +1,110 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-268
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-268" ;
+    dcterms:source corid:card-COIN_X_1934_00268_X_sideA ;
+    nmo:hasStartDate "-0271"^^xsd:gYear ;
+    nmo:hasEndDate "-0191"^^xsd:gYear ;
+    nmo:hasMint corid:mint-elis ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "20"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-268-obverse ;
+    nmo:hasReverse corid:coin-1934-268-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "cf. McClean, pl. 228, 2" ;
+    dcterms:bibliographicCitation "B.M.C., p. 72, no. 129; p. 74, no. 145" .
+
+corid:mint-elis
+    a nmo:Mint ;
+    skos:prefLabel "Elis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en ;
+    skos:altLabel "Agora SW"@en .
+
+corid:coin-1934-268-obverse
+    a nmo:Obverse ;
+    dcterms:description "Laureate head of Zeus right"@en .
+
+corid:coin-1934-268-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[F] [A]" ;
+    dcterms:description "Free horse trotting right; letters below"@en .
+
+corid:card-COIN_X_1934_00268_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00268_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-268 ;
+    cor:sourceImageFilename "COIN_X_1934_00268_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-268" ;
+    cor:inventoryNumber "1934-268" ;
+    cor:earlierInventoryNumberRaw "106" ;
+    cor:earlierInventoryNumber "106" ;
+    cor:mintRaw "Elis" ;
+    cor:dateRaw "271-191" ;
+    cor:chronologyReferenceRaw "(McCl. 323-191)" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "20" ;
+    cor:obverseTypeRaw "Head of Zeus r., laur." ;
+    cor:reverseLegendRaw "[letters]; below: [F] [A]" ;
+    cor:reverseTypeRaw "Free horse trotting r." ;
+    cor:bibliographicReferenceRaw "cf. McCl. pl. 228, 2" ;
+    cor:bibliographicReferenceRaw "BMC. p. 72, no. 129 or 145, p. 74" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "4/24/1934" ;
+    cor:excavationDate "1934-04-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 21 (28-35)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 21 ;
+        cor:notebookPageRaw "21" ;
+        cor:notebookEntryOrRange "28-35" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-1426218613" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Elis" ;
+    cor:databaseDateRaw "271 BC-191 BC" ;
+    cor:databaseObverseTypeRaw "Head of Zeus facing r.; wearing laureate" ;
+    cor:databaseReverseLegendRaw "[letters] above; [W A] below" ;
+    cor:databaseReverseTypeRaw "Horse trotting r." ;
+    cor:databaseSymbolRaw "Letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "20" ;
+    cor:databaseBibliographicReferenceRaw "McClean pl.228.2; BMC p.72 no.129 and p.74 no.145" ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 4/24/1934; Notebook 143 p.21, 28-35" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the two reverse letters below the horse and whether the card's B.M.C. citation intends p. 72 no. 129 and p. 74 no. 145." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "[F] [A]" ;
+        cor:proposedValue "[W A]" ;
+        cor:reason "The handwritten letter forms are unclear; the database transcribes them as W A."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "BMC. p. 72, no. 129 or 145, p. 74" ;
+        cor:proposedValue "B.M.C., p. 72, no. 129; p. 74, no. 145" ;
+        cor:reason "The card's punctuation and placement of no. 145 are faint; the database separates the two references."
+    ] .

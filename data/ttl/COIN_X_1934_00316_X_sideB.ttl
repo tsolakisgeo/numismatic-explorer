@@ -1,0 +1,72 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-316
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-316" ;
+    dcterms:source corid:card-COIN_X_1934_00316_X_sideB ;
+    nmo:hasCollection corid:study-collection .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:negative-75-11-34
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-34" ;
+    cor:depictsNumismaticObject corid:coin-1934-316 .
+
+corid:negative-75-11-35
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-35" ;
+    cor:depictsNumismaticObject corid:coin-1934-316 .
+
+corid:photo-print-1934-316-a
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00316_X_sideB ;
+    cor:sourceNegative corid:negative-75-11-34 ;
+    cor:depictsNumismaticObject corid:coin-1934-316 .
+
+corid:photo-print-1934-316-b
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00316_X_sideB ;
+    cor:sourceNegative corid:negative-75-11-35 ;
+    cor:depictsNumismaticObject corid:coin-1934-316 .
+
+corid:card-COIN_X_1934_00316_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00316_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-316 ;
+    cor:sourceImageFilename "COIN_X_1934_00316_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00316_X_sideA ;
+    cor:inventoryNumber "1934-316" ;
+    cor:earlierInventoryNumberRaw "1200?" ;
+    cor:negativeReferenceRaw "75-11-34; 75-11-35" ;
+    cor:photographicNegative corid:negative-75-11-34 ;
+    cor:photographicNegative corid:negative-75-11-35 ;
+    cor:attachedPhotograph corid:photo-print-1934-316-a ;
+    cor:attachedPhotograph corid:photo-print-1934-316-b ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs showing the two faces of the coin." ;
+    cor:imageArrangementRaw "The two photographs and their handwritten captions are mounted upside down relative to the scan orientation." ;
+    cor:archivalAnnotationRaw "113" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the isolated number at the upper right, the two negative numbers, and which photograph corresponds to each negative." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumberRaw" ;
+        cor:rawValue "1200?" ;
+        cor:reason "The isolated number at the upper right is faint and only partly legible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "negativeToPhotographAssignment" ;
+        cor:rawValue "75-11-34; 75-11-35" ;
+        cor:reason "The two captions are visible upside down, but their assignment to the left and right photographs should be checked."
+    ] .

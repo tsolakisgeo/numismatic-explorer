@@ -1,0 +1,118 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-332
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-332" ;
+    dcterms:source corid:card-COIN_X_1934_00332_X_sideA ;
+    nmo:hasAuthority corid:authority-anonymous-byzantine-hybrid-c-d ;
+    nmo:hasStartDate "1050"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "26"^^xsd:decimal ;
+    nmo:hasWeight "4.635"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-332-obverse ;
+    nmo:hasReverse corid:coin-1934-332-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "cf. Cor. Coins 105" ;
+    dcterms:bibliographicCitation "D.O.C. III², pp. 681–687" ;
+    cor:dateQualification "after" ;
+    cor:authorityAssignmentBasis "The blue card annotation and linked database reclassify the coin as an imitative anonymous hybrid rather than a regular issue of Constantine IX." ;
+    cor:denominationAssignmentBasis "Follis is stated in the blue annotation and confirmed by the linked database." ;
+    cor:axisAssignmentBasis "The card shows an upward axis arrow; the linked database records axis 12." .
+
+corid:authority-anonymous-byzantine-hybrid-c-d
+    a nmo:Authority ;
+    skos:prefLabel "Anonymous Byzantine imitative issue, hybrid Classes C/D"@en ;
+    skos:altLabel "Imitative follis, hybrid Classes C/D"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-332-obverse
+    a nmo:Obverse ;
+    dcterms:description "Half-length figure of Christ"@en .
+
+corid:coin-1934-332-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "IC - [ ] / AK - NI" ;
+    dcterms:description "Jeweled cross with letters in the angles"@en ;
+    cor:legendAssignmentBasis "The card preserves a diagram and partial letters; the linked database supplies the normalized arrangement IC - [ ] / AK - NI." .
+
+corid:card-COIN_X_1934_00332_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00332_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-332 ;
+    cor:sourceImageFilename "COIN_X_1934_00332_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00332_X_sideC ;
+    cor:inventoryNumberRaw "1934-332" ;
+    cor:inventoryNumber "1934-332" ;
+    cor:earlierInventoryNumberRaw "684" ;
+    cor:earlierInventoryNumber "684" ;
+    cor:authorityRaw "[Constantine IX]" ;
+    cor:authorityDateRaw "1042-1055" ;
+    cor:classificationRaw "Imit. Follis, Class C/--? Hybrid?" ;
+    cor:dateRaw "after 1050" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "26" ;
+    cor:weightRaw "4.635 gr." ;
+    cor:axisRaw "↑" ;
+    cor:obverseTypeRaw "(Half-length of Christ)" ;
+    cor:reverseLegendRaw "IC / ? (X) / AK / NI" ;
+    cor:reverseTypeRaw "Jeweled cross with letters in angles" ;
+    cor:bibliographicReferenceRaw "cf. Cor. Coins 105" ;
+    cor:bibliographicReferenceRaw "D.O.C. III² p. 681-687" ;
+    cor:catalogueNoteRaw "(incorrectly stamped)" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "5/30/1934" ;
+    cor:excavationDate "1934-05-30"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 88 (5-31), NB 141" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 88 ;
+        cor:notebookPageRaw "88" ;
+        cor:notebookEntryOrRange "5-31" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "= IN STUDY COLL." ;
+    cor:databaseCoinId "-909037747" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Anonymous Series Hybrid Classes C/D (after 1050)" ;
+    cor:databaseObverseLegendRaw "uncertain" ;
+    cor:databaseObverseTypeRaw "Half-length figure of Christ" ;
+    cor:databaseReverseLegendRaw "IC - [ ] / AK - NI" ;
+    cor:databaseReverseTypeRaw "Jeweled cross with letters in angles" ;
+    cor:databaseInformationRaw "Imitative" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseWeightRaw "4.635" ;
+    cor:databaseDiameterRaw "26" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "DOC III.2, p. 681-687; cf Edwards, 105" ;
+    cor:databaseNoteRaw "Imitation Follis, Class C1-?, Hybrid? Constantine IX, 1042-1055 (incorrectly stamped)" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 5/30/1934, #5-31; Notebook 139, p. 88" ;
+    cor:databaseConflictNote "The visible card records NB 141 and cites cf. Cor. Coins 105, whereas the linked database context gives Notebook 139 and cites cf. Edwards 105." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact hybrid class, the uncertain reverse letters and symbol, and the card-versus-database discrepancies in notebook number and the citation to Cor. Coins or Edwards." .

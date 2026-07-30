@@ -1,0 +1,135 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-244
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-244" ;
+    dcterms:source corid:card-COIN_X_1934_00244_X_sideA ;
+    nmo:hasAuthority corid:authority-nero ;
+    nmo:hasIssuer corid:issuer-m-ac-candidus ;
+    nmo:hasIssuer corid:issuer-q-ful-flaccus ;
+    nmo:hasStartDate "0054"^^xsd:gYear ;
+    nmo:hasEndDate "0056"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-244-obverse ;
+    nmo:hasReverse corid:coin-1934-244-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Fox 49" ;
+    dcterms:bibliographicCitation "B.M.C. 551" ;
+    dcterms:bibliographicCitation "Am. XX" .
+
+corid:authority-nero
+    a nmo:Authority ;
+    skos:prefLabel "Nero"@en .
+
+corid:issuer-m-ac-candidus
+    a nmo:Issuer ;
+    skos:prefLabel "M. Ac. Candidus"@en .
+
+corid:issuer-q-ful-flaccus
+    a nmo:Issuer ;
+    skos:prefLabel "Q. Ful. Flaccus"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-244-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "AGRIPP[INA] AVGVSTA" ;
+    dcterms:description "Bust of Agrippina right"@en .
+
+corid:coin-1934-244-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "... VIR COR." ;
+    dcterms:description "Poseidon in a biga drawn left by hippocamps"@en ;
+    nmo:hasMintmark corid:mintmark-1934-244-reverse .
+
+corid:mintmark-1934-244-reverse
+    skos:prefLabel "II VIR COR in exergue"@en .
+
+corid:card-COIN_X_1934_00244_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00244_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-244 ;
+    cor:sourceImageFilename "COIN_X_1934_00244_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-244" ;
+    cor:inventoryNumber "1934-244" ;
+    cor:earlierInventoryNumberRaw "133" ;
+    cor:earlierInventoryNumber "133" ;
+    cor:classificationRaw "Corinth II VIR" ;
+    cor:authorityRaw "Nero" ;
+    cor:dateRaw "54/55-55/56 A.D." ;
+    cor:issuerRaw "M. Ac. Candidus + Q. Ful. Flaccus" ;
+    cor:databaseAuthorityRaw "Candidus-Flaccus" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:databaseAxisRaw "6" ;
+    cor:obverseLegendRaw "AGRIPP[INA] AVGVSTA" ;
+    cor:databaseObverseLegendRaw "AGEIPP[INA] AVGVSTA" ;
+    cor:obverseTypeRaw "Bust of Agrippina r." ;
+    cor:reverseLegendRaw "... VIR COR." ;
+    cor:databaseReverseLegendRaw "FVL FLACCO" ;
+    cor:reverseTypeRaw "Poseidon in biga drawn by hippocamps l." ;
+    cor:databaseReverseTypeRaw "Poseidon in biga drawn by hippocamps l.; II VIR [COR] in exergue" ;
+    cor:reverseMintmarkRaw "II VIR COR" ;
+    cor:bibliographicReferenceRaw "Fox 49" ;
+    cor:bibliographicReferenceRaw "B.M.C. 551" ;
+    cor:bibliographicReferenceRaw "Am. XX" ;
+    cor:findspotRaw "Agora SE; South Stoa, Well VIII" ;
+    cor:excavationDateRaw "3/28/1934" ;
+    cor:excavationDate "1934-03-28"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 141 (6)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 141 ;
+        cor:notebookPageRaw "141" ;
+        cor:notebookEntryOrRange "6" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-1511844517" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the obverse legend's first letters, the exact reverse legend/exergual text, and the date notation 54/55-55/56 A.D." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "AGRIPP[INA] AVGVSTA" ;
+        cor:proposedValue "AGRIPPINA AVGVSTA" ;
+        cor:reason "The bracketed letters are supplied on the card, and the database begins the legend with the likely erroneous form AGEIPP."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "... VIR COR." ;
+        cor:proposedValue "FVL FLACCO; II VIR COR" ;
+        cor:reason "Only the ending VIR COR is clearly visible on the card; the linked database supplies FVL FLACCO and II VIR COR."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateRaw" ;
+        cor:rawValue "54/55-55/56 A.D." ;
+        cor:proposedValue "54-56 A.D." ;
+        cor:reason "The card gives regnal-year style paired years, while the linked database normalizes the range to 54-56."
+    ] .

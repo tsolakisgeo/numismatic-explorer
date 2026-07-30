@@ -1,0 +1,144 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-321
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-321" ;
+    dcterms:source corid:card-COIN_X_1934_00321_X_sideA ;
+    nmo:hasAuthority corid:authority-andronicus-i ;
+    nmo:hasStartDate "1183"^^xsd:gYear ;
+    nmo:hasEndDate "1185"^^xsd:gYear ;
+    nmo:hasMint corid:mint-uncertain-greek ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-half-tetarteron ;
+    nmo:hasDiameter "16.5"^^xsd:decimal ;
+    nmo:hasWeight "1.34"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-321-obverse ;
+    nmo:hasReverse corid:coin-1934-321-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "DOC IV.1, p. 353, no. 8" ;
+    cor:mintAssignmentBasis "The linked database assigns an uncertain Greek mint; no mint is written on the card." ;
+    cor:denominationAssignmentBasis "The linked database identifies the denomination as a half tetarteron; the denomination is not explicitly written on the card." ;
+    cor:axisAssignmentBasis "The linked database records die axis 6; the card shows a faint V-shaped or numerical mark between diameter and weight." ;
+    cor:faceAssignmentBasis "The card does not label the two type descriptions as obverse and reverse; their face assignments follow the linked database." .
+
+corid:authority-andronicus-i
+    a nmo:Authority ;
+    skos:prefLabel "Andronicus I Komnenos"@en ;
+    skos:altLabel "Andronicus I"@en .
+
+corid:mint-uncertain-greek
+    a nmo:Mint ;
+    skos:prefLabel "Uncertain Greek mint"@en .
+
+corid:denomination-half-tetarteron
+    a nmo:Denomination ;
+    skos:prefLabel "Half tetarteron"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-321-obverse
+    a nmo:Obverse ;
+    dcterms:description "Bust of the Virgin, nimbate and orans, wearing tunic and maphorion; beardless nimbate head of Christ on her breast"@en .
+
+corid:coin-1934-321-reverse
+    a nmo:Reverse ;
+    dcterms:description "Half-length figure of Andronicus I, holding a labarum and globus cruciger"@en .
+
+corid:card-COIN_X_1934_00321_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00321_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-321 ;
+    cor:sourceImageFilename "COIN_X_1934_00321_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-321" ;
+    cor:inventoryNumber "1934-321" ;
+    cor:earlierInventoryNumberRaw "1196" ;
+    cor:earlierInventoryNumber "1196" ;
+    cor:authorityRaw "Andronicus I" ;
+    cor:dateRaw "1183-1185" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "16.5" ;
+    cor:weightRaw "1.34 g" ;
+    cor:leftFaceTypeRaw "Half-length of Andronicus I, holding labarum and globus cr." ;
+    cor:rightFaceTypeRaw "Bust of virgin." ;
+    cor:obverseTypeRaw "Bust of virgin." ;
+    cor:reverseTypeRaw "Half-length of Andronicus I, holding labarum and globus cr." ;
+    cor:typeNumberRaw "Type 3" ;
+    cor:bibliographicReferenceRaw "D.O.C. IV¹ p. 353 n. 8" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "5/15/1934" ;
+    cor:excavationDate "1934-05-15"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer, p. 46 (7-11)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 46 ;
+        cor:notebookPageRaw "46" ;
+        cor:notebookEntryOrRange "7-11" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "name, page, and range explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Coll." ;
+    cor:databaseCoinId "-987323123" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Andronicus I, 1183-1185" ;
+    cor:databaseMintRaw "Uncertain Greek" ;
+    cor:databaseDateRaw "1183-1185" ;
+    cor:databaseObverseLegendRaw "[M-R - ΘV]" ;
+    cor:databaseObverseTypeRaw "Bust of Virgin nimbate orans, wearing tunic and maphorion; beardless, nimbate head of Christ on breast" ;
+    cor:databaseReverseLegendRaw "LND" ;
+    cor:databaseReverseTypeRaw "Bust of emperor wearing stemma, skaramangion or divitision, and sagion; holds in right hand labarum-headed scepter, and in left globus cruciger" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Half Tetarteron" ;
+    cor:databaseWeightRaw "1.34" ;
+    cor:databaseDiameterRaw "16.5" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "DOC IV.1, p. 353, 8; Hendy, p. 134, pl. 19, 4; BMC, p. 586, type 3" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 5/15/1934, #7-11; Notebook 141, p. 46" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint mark between diameter and weight, the obverse/reverse assignment of the two unlabeled card descriptions, and the database-only mint, denomination, axis, and legends." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "axis" ;
+        cor:rawValue "faint V-shaped or numerical mark" ;
+        cor:proposedValue "6" ;
+        cor:reason "The card mark is not securely legible; axis 6 is supplied by the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Left: emperor; right: Virgin" ;
+        cor:proposedValue "Obverse: Virgin; reverse: emperor" ;
+        cor:reason "The card does not label the two descriptions as obverse and reverse; the assignment follows the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mint" ;
+        cor:rawValue "not written on card" ;
+        cor:proposedValue "Uncertain Greek mint" ;
+        cor:reason "The mint is supplied only by the linked database."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denomination" ;
+        cor:rawValue "not written on card" ;
+        cor:proposedValue "Half tetarteron" ;
+        cor:reason "The denomination is supplied only by the linked database."
+    ] .

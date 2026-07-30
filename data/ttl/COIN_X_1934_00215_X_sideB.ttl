@@ -1,0 +1,98 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-215
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-215" ;
+    dcterms:source corid:card-COIN_X_1934_00215_X_sideB ;
+    nmo:hasAuthority corid:authority-arcadian-league ;
+    nmo:hasStartDate "-0363"^^xsd:gYear ;
+    nmo:hasEndDate "-0280"^^xsd:gYear ;
+    nmo:hasMint corid:mint-megalopolis ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasWeight "1.88"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-215-obverse ;
+    nmo:hasReverse corid:coin-1934-215-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. Peloponnesus, p. 174, no. 32" .
+
+corid:authority-arcadian-league
+    a nmo:Authority ;
+    skos:prefLabel "Arcadian League"@en .
+
+corid:mint-megalopolis
+    a nmo:Mint ;
+    skos:prefLabel "Megalopolis"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-215-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "I" ;
+    dcterms:description "Laureate head of Zeus left"@en .
+
+corid:coin-1934-215-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Δ (?)" ;
+    dcterms:description "Naked Pan seated left on a rock, right hand raised, holding a lagobolon in the left hand, with a garment spread on the rock and an eagle on the knee"@en .
+
+corid:card-COIN_X_1934_00215_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-215 ;
+    cor:sourceImageFilename "COIN_X_1934_00215_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide
+        corid:card-COIN_X_1934_00215_X_sideA,
+        corid:card-COIN_X_1934_00215_X_sideC ;
+    cor:attachedPhotographCount 2 ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-215-obverse ;
+        cor:photographicNegativeReferenceRaw "74-83-14" ;
+        cor:positionOnCard "left"
+    ] ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-215-reverse ;
+        cor:photographicNegativeReferenceRaw "74-83-15" ;
+        cor:positionOnCard "right"
+    ] ;
+    cor:databaseAuthorityRaw "Arcadian League" ;
+    cor:databaseMintRaw "Megalopolis" ;
+    cor:databaseDateRaw "363-280 BCE" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseWeightRaw "1.88" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseObverseLegendRaw "I" ;
+    cor:databaseObverseTypeRaw "Head of Zeus l.; laureate" ;
+    cor:databaseReverseLegendRaw "D (?)" ;
+    cor:databaseReverseTypeRaw "Pan naked; seated l. on rock; r. hand raised; holding lagobolon in l. hand; garment spread on rock; eagle on knee" ;
+    cor:databaseFindspotRaw "Agora SW" ;
+    cor:databaseExcavationDateRaw "3/10/1934" ;
+    cor:databaseNotebookReference "Notebook 140 p. 64" ;
+    cor:databaseNoteRaw "Coin box in tray does not agree with coin card on all information, especially the date; the box dates the coin to 175-168 BCE." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the left/right photograph face assignments and the reverse letter, represented in Metis as D (?) and normalized here tentatively as Δ." .
+
+corid:card-COIN_X_1934_00215_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideA" .
+
+corid:card-COIN_X_1934_00215_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideC" .

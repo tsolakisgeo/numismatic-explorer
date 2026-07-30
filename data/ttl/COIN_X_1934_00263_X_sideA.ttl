@@ -1,0 +1,148 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-263
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-263" ;
+    dcterms:source corid:card-COIN_X_1934_00263_X_sideA ;
+    nmo:hasAuthority corid:authority-augustus ;
+    nmo:hasIssuer corid:issuer-corinth-duoviri-1934-263 ;
+    nmo:hasStartDate "-0030"^^xsd:gYear ;
+    nmo:hasEndDate "-0030"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "10"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-263-obverse ;
+    nmo:hasReverse corid:coin-1934-263-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins, no. 22" ;
+    dcterms:bibliographicCitation "Amandry VII" .
+
+corid:authority-augustus
+    a nmo:Authority ;
+    skos:prefLabel "Augustus"@en .
+
+corid:issuer-corinth-duoviri-1934-263
+    a nmo:Authority ;
+    skos:prefLabel "M. Antonius Theophilus and P. Aebutius, Corinthian duoviri"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-263-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "M· AN· TEO IIQ" ;
+    dcterms:description "Dolphin right, within a border of dots"@en .
+
+corid:coin-1934-263-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "P. AEBVTIVS [---]" ;
+    dcterms:description "Trident, within a border of dots"@en .
+
+corid:card-COIN_X_1934_00263_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00263_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-263 ;
+    cor:sourceImageFilename "COIN_X_1934_00263_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-263" ;
+    cor:inventoryNumber "1934-263" ;
+    cor:earlierInventoryNumberRaw "42" ;
+    cor:earlierInventoryNumber "42" ;
+    cor:classificationRaw "Corinth IIVIR." ;
+    cor:authorityRaw "Augustus" ;
+    cor:dateRaw "24/23 (?) BC" ;
+    cor:correctedDateRaw "30 BC (AMANDRY VII)" ;
+    cor:issuerRaw "V. a. M. Antonius Theophilus + P. Aebutius" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "10" ;
+    cor:obverseLegendRaw "M· AN· TEO IIQ" ;
+    cor:obverseLegendAnnotationRaw "(a IIVIR Q?)" ;
+    cor:obverseTypeRaw "Dolphin r.; border of dots." ;
+    cor:reverseLegendRaw "P. AEBVTIVS --- off flan" ;
+    cor:reverseTypeRaw "Trident; border of dots." ;
+    cor:bibliographicReferenceRaw "Cor. Coins, no. 22." ;
+    cor:chronologyReferenceRaw "AMANDRY VII" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "4/18/1934" ;
+    cor:excavationDate "1934-04-18"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 175 (13-18); NB140" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookNumber 140 ;
+        cor:notebookPage 175 ;
+        cor:notebookPageRaw "175" ;
+        cor:notebookEntryOrRange "13-18" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "coin = in Study Collection" ;
+    cor:databaseCoinId "1858179349" ;
+    cor:databaseClassificationRaw "Greek Imperial/Roman Provincial Copper/Bronze Coin" ;
+    cor:databaseDynastyRaw "Corinth Duoviri" ;
+    cor:databaseIssuerRaw "Theophilus" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "30 BC" ;
+    cor:databaseObverseLegendRaw "MAT TEO II Q" ;
+    cor:databaseObverseTypeRaw "Dolphin r.; border of dots" ;
+    cor:databaseReverseLegendRaw "P AEBUTIUS" ;
+    cor:databaseReverseTypeRaw "Trident; border of dots" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "2.08" ;
+    cor:databaseDiameterRaw "10" ;
+    cor:databaseAxisRaw "11" ;
+    cor:databaseBibliographicReferenceRaw "Edw. 22; Amandry VII" ;
+    cor:databaseExcavationContextRaw "Agora SW; Excavation Date: 4/18/1943, #13-18; Notebook 140, pg. 175" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the overwritten date '24/23 (?) BC' versus the corrected '30 BC (AMANDRY VII)', the exact obverse legend and parenthetical annotation, the abbreviated issuer introduction 'V. a.', and the database excavation year 1943 versus the card's 1934." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateRaw" ;
+        cor:rawValue "24/23 (?) BC" ;
+        cor:proposedValue "30 BC" ;
+        cor:reason "The first date is overwritten, while a later card annotation and the database give 30 BC."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "M· AN· TEO IIQ" ;
+        cor:proposedValue "MAT TEO II Q" ;
+        cor:reason "The handwritten letter groups and separators are ambiguous; the proposed form is the database transcription."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendAnnotationRaw" ;
+        cor:rawValue "(a IIVIR Q?)" ;
+        cor:reason "The parenthetical annotation beneath the obverse legend is partly unclear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "issuerRaw" ;
+        cor:rawValue "V. a. M. Antonius Theophilus + P. Aebutius" ;
+        cor:reason "The abbreviated introduction before the two magistrates' names is not securely expanded."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "databaseExcavationContextRaw" ;
+        cor:rawValue "Excavation Date: 4/18/1943" ;
+        cor:proposedValue "4/18/1934" ;
+        cor:reason "The card clearly gives 1934, so the database year appears inconsistent."
+    ] .

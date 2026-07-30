@@ -1,0 +1,138 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-207
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-207" ;
+    dcterms:source corid:card-COIN_X_1934_00207_X_sideA ;
+    nmo:hasAuthority corid:authority-venetian-anonymous ;
+    nmo:hasStartDate "1491"^^xsd:gYear ;
+    nmo:hasEndDate "1491"^^xsd:gYear ;
+    nmo:hasMint corid:mint-zara ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-bagattino ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "1.14"^^xsd:decimal ;
+    nmo:hasAxis "2"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-207-obverse ;
+    nmo:hasReverse corid:coin-1934-207-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Papadopoli II, p. 550, no. 31" .
+
+corid:authority-venetian-anonymous
+    a nmo:Authority ;
+    skos:prefLabel "Venetian Anonymous"@en .
+
+corid:mint-zara
+    a nmo:Mint ;
+    skos:prefLabel "Zara"@en .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-bagattino
+    a nmo:Denomination ;
+    skos:prefLabel "Bagattino"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-207-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend ".S.SIMEON. IVSTVS. PROFATA" ;
+    dcterms:description "Nimbate Saint Simeon holding the nimbate infant Christ in his arms"@en .
+
+corid:coin-1934-207-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+[S]MARCVS. VENE[TI]" ;
+    dcterms:description "Lion of Saint Mark"@en .
+
+corid:card-COIN_X_1934_00207_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00207_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-207 ;
+    cor:sourceImageFilename "COIN_X_1934_00207_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-207" ;
+    cor:inventoryNumber "1934-207" ;
+    cor:legacyCardNumber "1281" ;
+    cor:classificationRaw "Zara, Venetian Colonial Coinage, law Feb. 10, 1491" ;
+    cor:authorityNormalized "Venetian Anonymous" ;
+    cor:mintRaw "Zara" ;
+    cor:dateRaw "1491" ;
+    cor:materialRaw "Billon" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:denominationRaw "den." ;
+    cor:denominationNormalized "bagattino" ;
+    cor:diameterRaw "18 mm." ;
+    cor:databaseWeightRaw "1.14" ;
+    cor:databaseAxisRaw "2?" ;
+    cor:obverseLegendRaw ".S.SIMEON. IVSTVS. PROFATA" ;
+    cor:obverseLegendNormalized ".S.SIMEON. IVSTVS. PROFETA" ;
+    cor:obverseTypeRaw "Saint nimbate holding in arms the infant Christ, nimbate" ;
+    cor:reverseLegendRaw "+[S]MARCVS. VENE[TI]" ;
+    cor:reverseTypeRaw "Lion of St. Mark" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/3/1934" ;
+    cor:excavationDate "1934-03-03"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 135; O. Broneer p. 69 (60-74)" ;
+        cor:notebookNumber 135 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 69 ;
+        cor:notebookPageRaw "69" ;
+        cor:notebookEntryOrRange "60-74" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:photographicNegativeReferenceRaw "NEG. 04-1-8N/9A-" ;
+    cor:attachedPhotographCount 2 ;
+    cor:piercingRaw "Pierced at approximately the 9 o'clock position on the obverse" ;
+    cor:studyCollectionRaw "coin = in Study Coll." ;
+    cor:databaseBibliographicCitation "Papadopoli II, pp. 550-551, nos. 31-32" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the card's 'den.' denotes a denaro or the Metis bagattino classification, the card-versus-Metis material reading Billon/AE, the normalized PROFETA spelling, the uncertain axis 2?, and the negative reference 'NEG. 04-1-8N/9A-'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "denomination" ;
+        cor:rawValue "den." ;
+        cor:proposedValue "bagattino" ;
+        cor:reason "The card abbreviation is ambiguous, while the linked Metis record identifies the denomination as bagattino."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "material" ;
+        cor:rawValue "Billon" ;
+        cor:proposedValue "AE" ;
+        cor:reason "The card explicitly reads Billon, while the linked Metis record gives AE."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendNormalized" ;
+        cor:rawValue ".S.SIMEON. IVSTVS. PROFATA" ;
+        cor:proposedValue ".S.SIMEON. IVSTVS. PROFETA" ;
+        cor:reason "The visible card reads PROFATA, while the linked Metis record normalizes it as PROFETA."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "axis" ;
+        cor:rawValue "2?" ;
+        cor:proposedValue "2" ;
+        cor:reason "The axis is supplied only by the linked Metis record and is explicitly uncertain there."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographicNegativeReferenceRaw" ;
+        cor:rawValue "NEG. 04-1-8N/9A-" ;
+        cor:reason "The final characters of the handwritten negative reference are not fully clear."
+    ] .

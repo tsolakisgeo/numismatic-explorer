@@ -1,0 +1,91 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-216
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-216" ;
+    dcterms:source corid:card-COIN_X_1934_00216_X_sideB ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0300"^^xsd:gYear ;
+    nmo:hasMint corid:mint-magnesia-on-maeander ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-hemidrachma ;
+    nmo:hasWeight "0.49"^^xsd:decimal ;
+    nmo:hasAxis "11"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-216-obverse ;
+    nmo:hasReverse corid:coin-1934-216-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Brett 1881" .
+
+corid:mint-magnesia-on-maeander
+    a nmo:Mint ;
+    skos:prefLabel "Magnesia on the Maeander"@en .
+
+corid:denomination-hemidrachma
+    a nmo:Denomination ;
+    skos:prefLabel "Hemidrachma"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-216-obverse
+    a nmo:Obverse ;
+    dcterms:description "Youth on horseback right, wearing a chlamys and holding a spear"@en .
+
+corid:coin-1934-216-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΜΑΓΝ..." ;
+    dcterms:description "Humped bull butting left"@en .
+
+corid:card-COIN_X_1934_00216_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00216_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-216 ;
+    cor:sourceImageFilename "COIN_X_1934_00216_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00216_X_sideA ;
+    cor:attachedPhotographCount 2 ;
+    cor:filmReferenceRaw "Film: 75-44-17, 16" ;
+    cor:filmReference "75-44-17", "75-44-16" ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-216-obverse ;
+        cor:positionOnCard "left" ;
+        cor:faceAssignmentMethod "inferred_from_visible_type"
+    ] ;
+    cor:attachedPhotograph [
+        a cor:AttachedCoinPhotograph ;
+        cor:depictedFace corid:coin-1934-216-reverse ;
+        cor:positionOnCard "right" ;
+        cor:faceAssignmentMethod "inferred_from_visible_type"
+    ] ;
+    cor:databaseMintRaw "Magnesia on Maeander" ;
+    cor:databaseDateRaw "350-300 BCE" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Hemidrachma" ;
+    cor:databaseWeightRaw "0.49" ;
+    cor:databaseAxisRaw "11" ;
+    cor:databaseObverseTypeRaw "Youth on horse r.; wearing chlamys; holding spear" ;
+    cor:databaseReverseLegendRaw "MAGN--" ;
+    cor:databaseReverseTypeRaw "Bull with hump butting l." ;
+    cor:databaseFindspotRaw "Agora SE; Pottery Deposit" ;
+    cor:databaseExcavationDateRaw "3/10/1934" ;
+    cor:databaseNotebookReference "Notebook 139 p. 85" ;
+    cor:databaseNoteRaw "Coin card in Pottery Deposit under Phlius because of original misidentification (card 212)" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether film 75-44-17 corresponds to the left obverse photograph and film 75-44-16 to the right reverse photograph." .
+
+corid:card-COIN_X_1934_00216_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00216_X_sideA" .

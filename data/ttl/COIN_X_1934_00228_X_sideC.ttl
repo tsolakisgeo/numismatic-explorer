@@ -1,0 +1,94 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-228
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-228" ;
+    dcterms:source corid:card-COIN_X_1934_00228_X_sideC ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12"^^xsd:decimal ;
+    nmo:hasWeight "1.85"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-228-obverse ;
+    nmo:hasReverse corid:coin-1934-228-reverse ;
+    nmo:hasFindspot corid:place-agora-se-pottery-deposit-1 ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 11" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-pottery-deposit-1
+    skos:prefLabel "Agora Southeast, Pottery Deposit 1"@en .
+
+corid:coin-1934-228-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus left, with koppa beneath"@en .
+
+corid:coin-1934-228-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Δ" ;
+    dcterms:description "Trident, with Δ to the left and an oinochoe to the right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-228-reverse .
+
+corid:controlmark-1934-228-reverse
+    skos:prefLabel "Δ to left; oinochoe to right"@en .
+
+corid:card-COIN_X_1934_00228_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00228_X_sideC" ;
+    cor:documentsNumismaticObject corid:coin-1934-228 ;
+    cor:sourceImageFilename "COIN_X_1934_00228_X_sideC.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "C" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00228_X_sideA ;
+    cor:inventoryNumberRaw "1934-228" ;
+    cor:inventoryNumber "1934-228" ;
+    cor:classificationRaw "Gr." ;
+    cor:classificationNormalized "Greek" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "400-146 BC" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "12" ;
+    cor:weightRaw "1.85 g" ;
+    cor:obverseLegendRaw "Ϙ beneath" ;
+    cor:obverseTypeRaw "Pegasos l., Ϙ beneath" ;
+    cor:reverseLegendRaw "Δ to l." ;
+    cor:reverseTypeRaw "Trident; to l., Δ; to r., oinochoe" ;
+    cor:findspotRaw "Agora SE, Pottery Deposit 1" ;
+    cor:excavationDateRaw "III/15/1934" ;
+    cor:excavationDate "1934-03-15"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139 p. 103 (6-7)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookPage 103 ;
+        cor:notebookPageRaw "103" ;
+        cor:notebookEntryOrRange "6-7" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:bibliographicReferenceRaw "Cor. Coins 11" ;
+    cor:archivalAnnotationRaw "originally 1 of 2 coins on card #85" ;
+    cor:earlierCardNumber "85" ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:databaseBibliographicCitation "Edwards 11" ;
+    cor:databaseNoteRaw "Coin originally on different card" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the overwritten reverse annotation as 'oinochoe' and the archival note 'originally 1 of 2 coins on card #85'." .
+
+corid:card-COIN_X_1934_00228_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00228_X_sideA" .

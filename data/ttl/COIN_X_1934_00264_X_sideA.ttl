@@ -1,0 +1,131 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-264
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-264" ;
+    dcterms:source corid:card-COIN_X_1934_00264_X_sideA ;
+    nmo:hasAuthority corid:authority-salonina ;
+    nmo:hasStartDate "0267"^^xsd:gYear ;
+    nmo:hasEndDate "0267"^^xsd:gYear ;
+    nmo:hasMint corid:mint-asia ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-antoninianus ;
+    nmo:hasDiameter "23"^^xsd:decimal ;
+    nmo:hasWeight "3.9"^^xsd:decimal ;
+    nmo:hasAxis 5 ;
+    nmo:hasObverse corid:coin-1934-264-obverse ;
+    nmo:hasReverse corid:coin-1934-264-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-shop-threshold-tunnel ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 105" ;
+    dcterms:bibliographicCitation "cf. R.I.C. 88; 267 A.D. (Asia)" .
+
+corid:authority-salonina
+    a nmo:Authority ;
+    skos:prefLabel "Salonina"@en ;
+    skos:altLabel "Cornelia Salonina"@en .
+
+corid:mint-asia
+    a nmo:Mint ;
+    skos:prefLabel "Asia mint"@en .
+
+corid:denomination-antoninianus
+    a nmo:Denomination ;
+    skos:prefLabel "Antoninianus"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw-shop-threshold-tunnel
+    skos:prefLabel "Agora Southwest, tunnel for shop threshold"@en .
+
+corid:coin-1934-264-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "SALONINA AVG" ;
+    dcterms:description "Diademed and draped bust of Salonina right, on a crescent"@en .
+
+corid:coin-1934-264-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "SALVS AVG" ;
+    dcterms:description "Salus standing left, holding a serpent in her arms"@en .
+
+corid:card-COIN_X_1934_00264_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00264_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-264 ;
+    cor:sourceImageFilename "COIN_X_1934_00264_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-264" ;
+    cor:inventoryNumber "1934-264" ;
+    cor:earlierInventoryNumberRaw "126" ;
+    cor:earlierInventoryNumber "126" ;
+    cor:authorityRaw "Salonina, wife of Gallienus (253-268)" ;
+    cor:dateRaw "267 A.D. (Asia)" ;
+    cor:materialRaw "AR" ;
+    cor:diameterRaw "23 mm" ;
+    cor:weightRaw "3.9 grammes" ;
+    cor:obverseLegendRaw "SALONINA AVG" ;
+    cor:obverseTypeRaw "Bust r., on crescent; diademed and draped" ;
+    cor:reverseLegendRaw "SALVS AVG" ;
+    cor:reverseTypeRaw "Salus standing l. with serpent in arms." ;
+    cor:reverseExergueRaw "none" ;
+    cor:bibliographicReferenceRaw "Cohen 105" ;
+    cor:bibliographicReferenceRaw "cf. R.I.C. 88 = 267 A.D. (Asia)" ;
+    cor:findspotRaw "Agora S.W.; Tunnel for shop threshold" ;
+    cor:excavationDateRaw "4/19/1934" ;
+    cor:excavationDate "1934-04-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB140; G. R. Davidson p. 182 (12-15)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookNumber 140 ;
+        cor:notebookPage 182 ;
+        cor:notebookPageRaw "182" ;
+        cor:notebookEntryOrRange "12-15" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "-142959259" ;
+    cor:databaseDepartmentRaw "RM" ;
+    cor:databaseAuthorityRaw "Salonina" ;
+    cor:databaseMintRaw "Asia" ;
+    cor:databaseDateRaw "267" ;
+    cor:databaseDenominationRaw "antoninianus" ;
+    cor:databaseObverseLegendRaw "SALONINA AVG" ;
+    cor:databaseObverseTypeRaw "Empress bust r., diademed and draped, on crescent" ;
+    cor:databaseReverseLegendRaw "SALVS AVG" ;
+    cor:databaseReverseTypeRaw "Salus standing r., feeding serpent in her arms" ;
+    cor:databaseSymbolRaw "Obv: crescent" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseWeightRaw "3,-.9" ;
+    cor:databaseDiameterRaw "23" ;
+    cor:databaseAxisRaw "5" ;
+    cor:databaseBibliographicReferenceRaw "cf. RIC V, i, p. 200, #88; Cohen 105" ;
+    cor:databaseNoteRaw "Card 126; no evidence of VIIC in ex, as RIC" ;
+    cor:databaseExcavationContextRaw "Agora SW; Tunnel for shop threshold; Excavation Date: 4/19/1934, #12-15; Notebook 140, p. 182" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether Salus faces left as written on the card or right as recorded in the database, and verify the faint exergual note 'none'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Salus standing l. with serpent in arms." ;
+        cor:proposedValue "Salus standing r., feeding serpent in her arms" ;
+        cor:reason "The card appears to read left, while the linked database records right."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseExergueRaw" ;
+        cor:rawValue "none" ;
+        cor:reason "The small note beneath the reverse description is faint."
+    ] .

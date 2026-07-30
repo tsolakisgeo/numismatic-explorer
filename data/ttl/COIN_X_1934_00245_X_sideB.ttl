@@ -1,0 +1,96 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-245
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-245" ;
+    dcterms:source corid:card-COIN_X_1934_00245_X_sideB ;
+    nmo:hasAuthority corid:authority-roman-republic ;
+    nmo:hasIssuer corid:issuer-q-minucius-thermus ;
+    nmo:hasStartDate "-0096"^^xsd:gYear ;
+    nmo:hasEndDate "-0095"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "2.45"^^xsd:decimal ;
+    nmo:hasAxis 4 ;
+    nmo:hasObverse corid:coin-1934-245-obverse ;
+    nmo:hasReverse corid:coin-1934-245-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Sydenham 592" ;
+    dcterms:bibliographicCitation "B.M.C. (Roman Republic), p. 302, no. 653, pl. XIV, 14" .
+
+corid:authority-roman-republic
+    a nmo:Authority ;
+    skos:prefLabel "Roman Republic"@en .
+
+corid:issuer-q-minucius-thermus
+    a nmo:Issuer ;
+    skos:prefLabel "Q. Minucius Thermus"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-245-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head left, wearing a crested helmet ornamented at the side with a feather and an amulet"@en .
+
+corid:coin-1934-245-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Q THERM MF" ;
+    dcterms:description "Two warriors fighting; at left, a Roman protects a fallen comrade; at right, a barbarian wears a horned helmet"@en .
+
+corid:card-COIN_X_1934_00245_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00245_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-245 ;
+    cor:sourceImageFilename "COIN_X_1934_00245_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00245_X_sideA ;
+    cor:attachedPhotographCount 2 ;
+    cor:attachedPhotographDescription "Two mounted black-and-white photographs showing the two faces of the broken coin, each photographed beside a scale" ;
+    cor:negativeReferenceRaw "Neg. 75-11-(32-33)" ;
+    cor:visibleSecondaryNumberRaw "8" ;
+    cor:databaseContextSource "all coins.csv" ;
+    cor:databaseCoinId "-49287159" ;
+    cor:databaseClassificationRaw "Roman Republican coin" ;
+    cor:databaseAuthorityRaw "Q [Minucius] Thermus" ;
+    cor:databaseMintRaw "Rome" ;
+    cor:databaseDateRaw "96-95 B.C." ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseDiameterRaw "19" ;
+    cor:databaseWeightRaw "2.45" ;
+    cor:databaseAxisRaw "4" ;
+    cor:databaseObverseTypeRaw "Head of Mars l., wearing crested helmet ornamented at sides with feather and amulet" ;
+    cor:databaseReverseLegendRaw "Q THERM MF" ;
+    cor:databaseReverseTypeRaw "Two warriors fighting; on l. Roman protecting fallen comrade, on r. barbarian with horned helmet" ;
+    cor:databaseBibliographicCitation "Sydenham 592; B.M.C. (Roman Republic), p. 302, no. 653, pl. XIV, 14" ;
+    cor:databaseFindspotRaw "Agora SE; South Stoa Well VIII; excavation date 03/28/1934, entry 3; Notebook 139, p. 141" ;
+    cor:databaseStudyCollection true ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the small handwritten '8' is a card or photograph number and whether 'Neg. 75-11-(32-33)' applies jointly to both mounted photographs." .
+
+corid:card-COIN_X_1934_00245_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00245_X_sideA" .

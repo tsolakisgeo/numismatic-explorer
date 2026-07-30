@@ -1,0 +1,144 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-245
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-245" ;
+    dcterms:source corid:card-COIN_X_1934_00245_X_sideA ;
+    nmo:hasAuthority corid:authority-roman-republic ;
+    nmo:hasIssuer corid:issuer-q-minucius-thermus ;
+    nmo:hasStartDate "-0096"^^xsd:gYear ;
+    nmo:hasEndDate "-0095"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "2.45"^^xsd:decimal ;
+    nmo:hasAxis 4 ;
+    nmo:hasObverse corid:coin-1934-245-obverse ;
+    nmo:hasReverse corid:coin-1934-245-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Roman Republic), p. 302, no. 653, pl. XIV, 14" ;
+    dcterms:bibliographicCitation "Sydenham 592" ;
+    dcterms:bibliographicCitation "RRC 319" .
+
+corid:authority-roman-republic
+    a nmo:Authority ;
+    skos:prefLabel "Roman Republic"@en .
+
+corid:issuer-q-minucius-thermus
+    a nmo:Issuer ;
+    skos:prefLabel "Q. Minucius Thermus"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-245-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head left, wearing a crested helmet ornamented at the side with a feather and an amulet; identified on the card as Mars, but as Roma in the Sydenham note"@en .
+
+corid:coin-1934-245-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Q THERM M F" ;
+    dcterms:description "Two warriors fighting; at left, a Roman protects a fallen comrade; at right, a barbarian wears a helmet with horns"@en .
+
+corid:card-COIN_X_1934_00245_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00245_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-245 ;
+    cor:sourceImageFilename "COIN_X_1934_00245_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00245_X_sideB ;
+    cor:inventoryNumberRaw "1934-245" ;
+    cor:inventoryNumber "1934-245" ;
+    cor:earlierInventoryNumberRaw "292" ;
+    cor:earlierInventoryNumber "292" ;
+    cor:classificationRaw "Roman Republican Coinage, circa 90 B.C." ;
+    cor:authorityRaw "Q. [Minucius] Thermus" ;
+    cor:databaseAuthorityRaw "Q [Minucius] Thermus" ;
+    cor:dateRaw "circa 90 B.C." ;
+    cor:sydenhamDateRaw "96-95 B.C." ;
+    cor:rrcDateRaw "103 BCE" ;
+    cor:databaseDateRaw "96-95 B.C." ;
+    cor:mintRaw "Rome" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "den." ;
+    cor:diameterRaw "19" ;
+    cor:weightRaw "2.45 gr." ;
+    cor:weightConditionRaw "part broken off; should be 3.95+" ;
+    cor:databaseAxisRaw "4" ;
+    cor:obverseTypeRaw "Head of Mars l., wearing crested helmet ornamented at side with feather and amulet" ;
+    cor:alternateObverseIdentificationRaw "Roma head l. (Syd.)" ;
+    cor:reverseLegendRaw "Q THERM M F" ;
+    cor:reverseTypeRaw "Two warriors fighting; on l. Roman protecting fallen comrade; on r. barbarian wears [helmet with horns]" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Rom. Rep.) p. 302, no. 653; pl. XIV, 14" ;
+    cor:bibliographicReferenceRaw "Sydenham 592" ;
+    cor:bibliographicReferenceRaw "RRC 319" ;
+    cor:findspotRaw "Agora S.E.; Well VIII; South Stoa" ;
+    cor:excavationDateRaw "3/28/1934" ;
+    cor:excavationDate "1934-03-28"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139; O. Broneer p. 141 (3)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 141 ;
+        cor:notebookPageRaw "141" ;
+        cor:notebookEntryOrRange "3" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin (broken) = in Study Collection" ;
+    cor:archivalAnnotationRaw "Photographs →" ;
+    cor:databaseNegativeReferenceRaw "75-11-32, 33" ;
+    cor:databaseCoinId "-49287159" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the obverse identification (Mars or Roma), the date assignment (circa 90, 96-95, or 103 B.C.), the expected complete weight written as '3.95+', and the spacing of the reverse legend Q THERM M F." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseType" ;
+        cor:rawValue "Head of Mars l." ;
+        cor:proposedValue "Head of Roma left" ;
+        cor:reason "The main description identifies Mars, while a later blue note attributes the identification to Roma according to Sydenham."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDate" ;
+        cor:rawValue "circa 90 B.C." ;
+        cor:proposedValue "96-95 B.C." ;
+        cor:reason "The card also cites Sydenham 96-95 B.C. and RRC 103 BCE."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "weightConditionRaw" ;
+        cor:rawValue "should be 3.95+" ;
+        cor:reason "The expected complete weight is written faintly and the final sign or digit is not fully secure."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "Q THERM M F" ;
+        cor:reason "The separation and abbreviation of the final letters are not completely clear."
+    ] .
+
+corid:card-COIN_X_1934_00245_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00245_X_sideB" .

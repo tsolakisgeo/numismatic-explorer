@@ -1,0 +1,95 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-215
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-215" ;
+    dcterms:source corid:card-COIN_X_1934_00215_X_sideC ;
+    nmo:hasAuthority corid:authority-arcadian-league ;
+    nmo:hasStartDate "-0363"^^xsd:gYear ;
+    nmo:hasEndDate "-0280"^^xsd:gYear ;
+    nmo:hasMint corid:mint-megalopolis ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasWeight "1.88"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-215-obverse ;
+    nmo:hasReverse corid:coin-1934-215-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. Peloponnesus, p. 174, no. 32" .
+
+corid:authority-arcadian-league
+    a nmo:Authority ;
+    skos:prefLabel "Arcadian League"@en .
+
+corid:mint-megalopolis
+    a nmo:Mint ;
+    skos:prefLabel "Megalopolis"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-215-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "I" ;
+    dcterms:description "Laureate head of Zeus left"@en .
+
+corid:coin-1934-215-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "D (?)" ;
+    dcterms:description "Naked Pan seated left on a rock, right hand raised, holding a lagobolon in the left hand, with a garment spread on the rock and an eagle on the knee"@en .
+
+corid:card-COIN_X_1934_00215_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideC" ;
+    cor:documentsNumismaticObject corid:coin-1934-215 ;
+    cor:sourceImageFilename "COIN_X_1934_00215_X_sideC.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "C" ;
+    cor:relatedCardSide
+        corid:card-COIN_X_1934_00215_X_sideA,
+        corid:card-COIN_X_1934_00215_X_sideB ;
+    cor:inventoryNumberRaw "1934-215" ;
+    cor:inventoryNumber "1934-215" ;
+    cor:legacyCardNumberRaw "#114" ;
+    cor:legacyCardNumber "114" ;
+    cor:authorityRaw "Arcadia-Federal" ;
+    cor:authorityNormalized "Arcadian League" ;
+    cor:dateRaw "363-about 280" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:endDateApproximate true ;
+    cor:collectionRaw "Study Collection" ;
+    cor:findspotRaw "Ag SW" ;
+    cor:findspotNormalized "Agora Southwest" ;
+    cor:excavationDateRaw "III/10/34" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:databaseMintRaw "Megalopolis" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseWeightRaw "1.88" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseObverseLegendRaw "I" ;
+    cor:databaseObverseTypeRaw "Head of Zeus l.; laureate" ;
+    cor:databaseReverseLegendRaw "D (?)" ;
+    cor:databaseReverseTypeRaw "Pan naked; seated l. on rock; r. hand raised; holding lagobolon in l. hand; garment spread on rock; eagle on knee" ;
+    cor:databaseNotebookReference "Notebook 140 p. 64" ;
+    cor:databaseNoteRaw "Coin box in tray does not agree with coin card on all information, especially the date; the box dates the coin to 175-168 BCE." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that '#114' is the legacy card number and that 'III/10/34' denotes 10 March 1934." .
+
+corid:card-COIN_X_1934_00215_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideA" .
+
+corid:card-COIN_X_1934_00215_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideB" .

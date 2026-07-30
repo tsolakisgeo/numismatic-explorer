@@ -1,0 +1,108 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-255
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-255" ;
+    dcterms:source corid:card-COIN_X_1934_00255_X_sideA ;
+    nmo:hasAuthority corid:authority-thessalian-confederacy ;
+    nmo:hasStartDate "-0196"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "20"^^xsd:decimal ;
+    nmo:hasAxis 3 ;
+    nmo:hasObverse corid:coin-1934-255-obverse ;
+    nmo:hasReverse corid:coin-1934-255-reverse ;
+    nmo:hasFindspot corid:place-north-of-school-first-century-ad-fill ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "cf. BMC (Thessaly), p. 5, 52ff." .
+
+corid:authority-thessalian-confederacy
+    a nmo:Authority ;
+    skos:prefLabel "Thessalian Confederacy"@en ;
+    skos:altLabel "Thessalian League"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school-first-century-ad-fill
+    skos:prefLabel "North of School, from first-century CE fill"@en .
+
+corid:coin-1934-255-obverse
+    a nmo:Obverse ;
+    dcterms:description "Laureate head of Apollo right"@en .
+
+corid:coin-1934-255-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[Ethnic]" ;
+    dcterms:description "Athena Alkis Itonia fighting right; uncertain letter to right"@en ;
+    nmo:hasControlmark corid:controlmark-1934-255-reverse-right .
+
+corid:controlmark-1934-255-reverse-right
+    skos:prefLabel "Uncertain letter to right of Athena, possibly R or K"@en .
+
+corid:card-COIN_X_1934_00255_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00255_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-255 ;
+    cor:sourceImageFilename "COIN_X_1934_00255_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-255" ;
+    cor:inventoryNumber "1934-255" ;
+    cor:earlierInventoryNumberRaw "92a" ;
+    cor:earlierInventoryNumber "92a" ;
+    cor:classificationRaw "THESSALY, 2nd c. B.C.; League 196-146 B.C." ;
+    cor:authorityRaw "League" ;
+    cor:dateRaw "196-146 B.C." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "20" ;
+    cor:axisRaw "→" ;
+    cor:obverseTypeRaw "Head of Apollo r., laur." ;
+    cor:reverseLegendRaw "[Ethnic]" ;
+    cor:reverseTypeRaw "Athena Alkis (Ithonia) fighting r.; to r., R or K?" ;
+    cor:bibliographicReferenceRaw "cf. BMC (Thessaly), p. 5, 52ff." ;
+    cor:findspotRaw "North of School; from 1st c. AD fill" ;
+    cor:excavationDateRaw "4/11/1934" ;
+    cor:excavationDate "1934-04-11"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 76, 9-12" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 76 ;
+        cor:notebookPageRaw "76" ;
+        cor:notebookEntryOrRange "9-12" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "coin = in study collection" ;
+    cor:databaseCoinId "1265204561" ;
+    cor:databaseAuthorityRaw "Thessalian Confederacy" ;
+    cor:databaseDateRaw "196 BC-146 BC" ;
+    cor:databaseObverseTypeRaw "Head of Apollo facing r.; laureate" ;
+    cor:databaseReverseLegendRaw "[ethnic] above; letters to r. of Athena" ;
+    cor:databaseReverseTypeRaw "Athena Alkis Itonia fighting r." ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "20" ;
+    cor:databaseAxisRaw "3" ;
+    cor:databaseExcavationContextRaw "North of School; From 1st c. AD fill; excavation date 4/11/1934; Notebook 142 p. 76, 9-12" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the epithet on the reverse is written 'Ithonia' or 'Itonia', and identify the uncertain letter to the right of Athena, provisionally read as R or K." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Athena Alkis (Ithonia) fighting r." ;
+        cor:proposedValue "Athena Alkis Itonia fighting right" ;
+        cor:reason "The handwritten epithet appears to read 'Ithonia', while the database normalizes it as 'Itonia'."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseControlmarkRaw" ;
+        cor:rawValue "to r., R or K?" ;
+        cor:reason "The card explicitly questions the identity of the letter."
+    ] .

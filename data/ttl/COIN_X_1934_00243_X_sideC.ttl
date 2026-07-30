@@ -1,0 +1,123 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-243
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-243" ;
+    dcterms:source corid:card-COIN_X_1934_00243_X_sideC ;
+    nmo:hasAuthority corid:authority-constantius-ii ;
+    nmo:hasStartDate "0330"^^xsd:gYear ;
+    nmo:hasEndDate "0335"^^xsd:gYear ;
+    nmo:hasMint corid:mint-nicomedia ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-243-obverse ;
+    nmo:hasReverse corid:coin-1934-243-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "LRBC I, 1119" ;
+    dcterms:bibliographicCitation "RIC VII, p. 633, no. 191" .
+
+corid:authority-constantius-ii
+    a nmo:Authority ;
+    skos:prefLabel "Constantius II"@en .
+
+corid:mint-nicomedia
+    a nmo:Mint ;
+    skos:prefLabel "Nicomedia"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa-well-viii
+    skos:prefLabel "Agora Southeast, South Stoa, Well VIII"@en .
+
+corid:coin-1934-243-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "FL IVL CONSTANTIVS NOB C" ;
+    dcterms:description "Laureate bust of Constantius II right"@en .
+
+corid:coin-1934-243-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "GLORIA EXERCITVS" ;
+    dcterms:description "Two standards"@en ;
+    nmo:hasMintmark corid:mintmark-1934-243-reverse .
+
+corid:mintmark-1934-243-reverse
+    skos:prefLabel "SMNE in exergue"@en .
+
+corid:card-COIN_X_1934_00243_X_sideC
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00243_X_sideC" ;
+    cor:documentsNumismaticObject corid:coin-1934-243 ;
+    cor:sourceImageFilename "COIN_X_1934_00243_X_sideC.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "C" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00243_X_sideA ;
+    cor:inventoryNumberRaw "1934-243" ;
+    cor:inventoryNumber "1934-243" ;
+    cor:classificationRaw "Rom." ;
+    cor:authorityRaw "Constantius II" ;
+    cor:dateRaw "350-335 A.D." ;
+    cor:databaseDateRaw "330-335" ;
+    cor:mintRaw "Nicomedia?" ;
+    cor:databaseMintRaw "Nicomedia" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "18" ;
+    cor:axisRaw "↓" ;
+    cor:databaseAxisRaw "6" ;
+    cor:obverseLegendRaw "FL IVL CONSTANTIVS NOB C" ;
+    cor:obverseTypeRaw "Bust r., laur." ;
+    cor:databaseObverseTypeRaw "Caesar bust r., laureate, draped and cuirassed" ;
+    cor:reverseLegendRaw "GLORIA EXERCITVS" ;
+    cor:reverseTypeRaw "Two standards" ;
+    cor:databaseReverseTypeRaw "Two soldiers standing, facing each other, reversed spears in outer hands, inner hands resting on shields; two standards between them" ;
+    cor:reverseMintmarkRaw "SMNE" ;
+    cor:bibliographicReferenceRaw "LRBC I, 1119" ;
+    cor:databaseBibliographicCitation "RIC VII, p. 633, no. 191" ;
+    cor:findspotRaw "Agora S.E. (S. Stoa, well VIII)" ;
+    cor:excavationDateRaw "III.27.1934" ;
+    cor:excavationDate "1934-03-27"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 141; O. Broneer p. 137 (1)" ;
+        cor:notebookNumber 141 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 137 ;
+        cor:notebookPageRaw "137" ;
+        cor:notebookEntryOrRange "1" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "in Study Collection" ;
+    cor:archivalAnnotationRaw "with Well 8 cards" ;
+    cor:archivalAnnotationRaw "Original card missing XII/2000" ;
+    cor:archivalAnnotationRaw "SMNE: on original card" ;
+    cor:databaseCoinId "-2072754341" ;
+    cor:databaseConservationReferenceRaw "CONS. 01-30" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the written date '350-335 A.D.' versus the database range 330-335, the tentative mint 'Nicomedia?', and whether the crossed archival note still records that the original card was missing in XII/2000." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "productionDate" ;
+        cor:rawValue "350-335 A.D." ;
+        cor:proposedValue "330-335 A.D." ;
+        cor:reason "The visible card gives a descending and historically problematic range, while the linked database gives 330-335."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintRaw" ;
+        cor:rawValue "Nicomedia?" ;
+        cor:proposedValue "Nicomedia" ;
+        cor:reason "The card includes a question mark, while the linked database identifies Nicomedia."
+    ] .
+
+corid:card-COIN_X_1934_00243_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00243_X_sideA" .

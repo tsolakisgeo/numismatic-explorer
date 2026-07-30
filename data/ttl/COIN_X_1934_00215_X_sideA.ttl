@@ -1,0 +1,112 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-215
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-215" ;
+    dcterms:source corid:card-COIN_X_1934_00215_X_sideA ;
+    nmo:hasAuthority corid:authority-arcadian-league ;
+    nmo:hasStartDate "-0363"^^xsd:gYear ;
+    nmo:hasEndDate "-0280"^^xsd:gYear ;
+    nmo:hasMint corid:mint-megalopolis ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasWeight "1.88"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-215-obverse ;
+    nmo:hasReverse corid:coin-1934-215-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Pel.), p. 174, no. 32" .
+
+corid:authority-arcadian-league
+    a nmo:Authority ;
+    skos:prefLabel "Arcadian League"@en .
+
+corid:mint-megalopolis
+    a nmo:Mint ;
+    skos:prefLabel "Megalopolis"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-215-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "I" ;
+    dcterms:description "Laureate head of Zeus left"@en .
+
+corid:coin-1934-215-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "A" ;
+    dcterms:description "Horned, naked Pan seated left on a rock, right hand raised and holding a lagobolon in the left hand; garment spread on the rock"@en .
+
+corid:card-COIN_X_1934_00215_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00215_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-215 ;
+    cor:sourceImageFilename "COIN_X_1934_00215_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "34-215" ;
+    cor:inventoryNumber "1934-215" ;
+    cor:legacyCardNumber "114" ;
+    cor:authorityRaw "Arcadia - Federal" ;
+    cor:dateRaw "363 - about 280" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:endDateApproximate true ;
+    cor:materialRaw "AR" ;
+    cor:weightRaw "1.88 gr." ;
+    cor:conditionRaw "edges broken off" ;
+    cor:axisDatabaseRaw "12" ;
+    cor:mintDatabaseRaw "Megalopolis" ;
+    cor:obverseLegendRaw "I" ;
+    cor:obverseTypeRaw "Head of Zeus l., laureate" ;
+    cor:reverseLegendRaw "A" ;
+    cor:reverseTypeRaw "Pan, horned, naked, seated l. on rock; r. hand raised; in l., lagobolon; garment spread on rock" ;
+    cor:databaseReverseTypeAdditionalDetail "eagle on knee" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Pel.) p. 174, no. 32" ;
+    cor:findspotRaw "Agora S.W." ;
+    cor:excavationDateRaw "March 3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. P. Daidon p. 64 (34); NB 140" ;
+        cor:notebookNumber 140 ;
+        cor:notebookName "G. P. Daidon" ;
+        cor:notebookPage 64 ;
+        cor:notebookPageRaw "64" ;
+        cor:notebookEntryOrRange "34" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:photographicNegativeReferenceRaw "74-83-14, -15 (over)" ;
+    cor:studyCollectionRaw "in study collection" ;
+    cor:databaseNoteRaw "Coin box in tray does not agree with coin card on all information, especially the date; the box dates the coin earlier, 175-168 BCE" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the notebook author's surname, the isolated obverse and reverse letters, and the negative reference '74-83-14, -15 (over)'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookName" ;
+        cor:rawValue "G. P. Daidon" ;
+        cor:reason "The handwritten surname is not fully clear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceLegends" ;
+        cor:rawValue "I on the obverse; A on the reverse" ;
+        cor:reason "The isolated letters are visible but their exact Greek forms require confirmation."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographicNegativeReferenceRaw" ;
+        cor:rawValue "74-83-14, -15 (over)" ;
+        cor:reason "The abbreviation and final parenthetical note are handwritten and somewhat faint."
+    ] .

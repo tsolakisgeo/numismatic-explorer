@@ -1,0 +1,85 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-227
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-227" ;
+    dcterms:source corid:card-COIN_X_1934_00227_X_sideA ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0300"^^xsd:gYear ;
+    nmo:hasMint corid:mint-colophon ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "17"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-227-obverse ;
+    nmo:hasReverse corid:coin-1934-227-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. Ionia, p. 39, no. 31" .
+
+corid:mint-colophon
+    a nmo:Mint ;
+    skos:prefLabel "Colophon"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-227-obverse
+    a nmo:Obverse ;
+    dcterms:description "Laureate head of Apollo right, with loose hair"@en .
+
+corid:coin-1934-227-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Κ Ο Λ above; ΗΓΗΣΙΑΝΑΞ below" ;
+    dcterms:description "Horseman on a horse prancing right, with chlamys flying behind; wearing a helmet and cuirass and holding a couched spear; lyre to left"@en ;
+    nmo:hasControlmark corid:controlmark-1934-227-reverse .
+
+corid:controlmark-1934-227-reverse
+    skos:prefLabel "Lyre to left"@en .
+
+corid:card-COIN_X_1934_00227_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00227_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-227 ;
+    cor:sourceImageFilename "COIN_X_1934_00227_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-227" ;
+    cor:inventoryNumber "1934-227" ;
+    cor:earlierInventoryNumber "278" ;
+    cor:mintRaw "Colophon" ;
+    cor:dateRaw "350-300" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "17" ;
+    cor:obverseTypeRaw "Head of Apollo r., laureate, hair loose" ;
+    cor:reverseLegendRaw "Κ Ο Λ (above); ΗΓΗΣΙΑΝΑΞ below" ;
+    cor:reverseLegendNormalized "ΚΟΛ; ΗΓΗΣΙΑΝΑΞ" ;
+    cor:reverseTypeRaw "Horseman on prancing horse r., chlamys flying behind, helmet, cuirass and spear couched; above, to l., lyre" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Ion.) p. 39, no. 31" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora S.E." ;
+    cor:excavationDateRaw "3/14/1934" ;
+    cor:excavationDate "1934-03-14"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 97 (1-4)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 97 ;
+        cor:notebookPageRaw "97" ;
+        cor:notebookEntryOrRange "1-4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "Envelope in S. Stoa well drawer, under Pottery Deposit, Shop I" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 278, the exact reverse legend—especially ΗΓΗΣΙΑΝΑΞ—and the wording of the faint envelope-location annotation." .

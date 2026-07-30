@@ -1,0 +1,99 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-216
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-216" ;
+    dcterms:source corid:card-COIN_X_1934_00216_X_sideA ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0300"^^xsd:gYear ;
+    nmo:hasMint corid:mint-magnesia-on-maeander ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-hemidrachma ;
+    nmo:hasDiameter "11"^^xsd:decimal ;
+    nmo:hasWeight "0.49"^^xsd:decimal ;
+    nmo:hasAxis "11"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-216-obverse ;
+    nmo:hasReverse corid:coin-1934-216-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Brett 1881" .
+
+corid:mint-magnesia-on-maeander
+    a nmo:Mint ;
+    skos:prefLabel "Magnesia on the Maeander"@en .
+
+corid:denomination-hemidrachma
+    a nmo:Denomination ;
+    skos:prefLabel "Hemidrachma"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-216-obverse
+    a nmo:Obverse ;
+    dcterms:description "Youth on horseback right, armored and holding a couched spear, with billowing chlamys"@en .
+
+corid:coin-1934-216-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΜΑΓΝ..." ;
+    dcterms:description "Humped bull butting left, with head facing"@en .
+
+corid:card-COIN_X_1934_00216_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00216_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-216 ;
+    cor:sourceImageFilename "COIN_X_1934_00216_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00216_X_sideB ;
+    cor:inventoryNumberRaw "34-216" ;
+    cor:inventoryNumber "1934-216" ;
+    cor:legacyCardNumber "212" ;
+    cor:mintIdentificationRaw "MAGNETES (IONIA, Magnesia-on-Meander)" ;
+    cor:earlierMisidentificationRaw "Phlius 431-320" ;
+    cor:databaseDateRaw "350-300 BCE" ;
+    cor:materialRaw "AR" ;
+    cor:earlierMaterialReadingRaw "AE" ;
+    cor:diameterRaw "11 mm" ;
+    cor:axisRaw "diagonal upward arrow" ;
+    cor:databaseWeightRaw "0.49" ;
+    cor:databaseAxisRaw "11" ;
+    cor:denominationDatabaseRaw "Hemidrachma" ;
+    cor:obverseTypeRaw "Youth on horse r., armored, with couched spear, billowing chlamys" ;
+    cor:earlierObverseTypeRaw "Bull l., butting; above, [unclear]" ;
+    cor:reverseLegendRaw "MAGN..." ;
+    cor:reverseTypeRaw "Humped bull butting l. w. head facing" ;
+    cor:earlierReverseTypeRaw "Athena [crossed out]" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 85 (1-41)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookEntryOrRange "1-41" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:archivalAnnotationRaw "Coin misident. in Hesp. '67 p. 375, 39" ;
+    cor:databaseNoteRaw "Coin card in Pottery Deposit under Phlius because of original misidentification (card 212)" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact reverse legend after ΜΑΓΝ, the crossed-out earlier type readings, and whether the card's diagonal axis arrow agrees with the database axis 11." .
+
+corid:card-COIN_X_1934_00216_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00216_X_sideB" .

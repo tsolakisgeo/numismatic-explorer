@@ -1,0 +1,50 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-466
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-466" ;
+    dcterms:source corid:card-COIN_X_1934_00466_X_sideA ;
+    nmo:hasObverse corid:coin-1934-466-obverse ;
+    nmo:hasReverse corid:coin-1934-466-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00466_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00466_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-466 ;
+    cor:sourceImageFilename "COIN_X_1934_00466_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-466" ;
+    cor:inventoryNumber "1934-466" ;
+    cor:groupRaw "Gru 114" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-99-3A/4A" ;
+    cor:leftPhotographDescription "Worn coin face with an indistinct central design and traces of a surrounding marginal legend."@en ;
+    cor:rightPhotographDescription "Worn coin face with a central cross-like or monogrammatic device and traces of a surrounding marginal legend."@en ;
+    cor:databaseLookupSource "direct_csv_index" ;
+    cor:databaseLinkMethod "composite_inventory_key" ;
+    cor:databaseInventoryCardID "8918264323309252608" ;
+    cor:databaseLinkedCoinID "-785411114" ;
+    cor:databaseStudyCollectionStatus false ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the meaning of 'Gru 114', the calendar interpretation of '5/8/34', and the assignment of the two photographs to obverse and reverse." .
+
+corid:coin-1934-466-obverse
+    a nmo:Obverse .
+
+corid:coin-1934-466-reverse
+    a nmo:Reverse .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .

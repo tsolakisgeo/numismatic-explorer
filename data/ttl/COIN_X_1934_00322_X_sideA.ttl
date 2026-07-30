@@ -1,0 +1,108 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-322
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-322" ;
+    dcterms:source corid:card-COIN_X_1934_00322_X_sideA ;
+    nmo:hasAuthority nm:hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "22"^^xsd:decimal ;
+    nmo:hasWeight "7.90"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-322-obverse ;
+    nmo:hasReverse corid:coin-1934-322-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Hesperia 1980, p. 17, 87a" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-322-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP CAESAR TRA HADRIANVS" ;
+    dcterms:description "Laureate head of Hadrian right"@en .
+
+corid:coin-1934-322-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "COL IVL / COR" ;
+    dcterms:description "Hexastyle temple"@en .
+
+corid:card-COIN_X_1934_00322_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00322_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-322 ;
+    cor:sourceImageFilename "COIN_X_1934_00322_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00322_X_sideB ;
+    cor:inventoryNumberRaw "1934-322" ;
+    cor:inventoryNumber "1934-322" ;
+    cor:earlierInventoryNumberRaw "75" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:dateRaw "117-138" ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "22" ;
+    cor:weightRaw "7.9 g" ;
+    cor:obverseLegendRaw "IMP CAESAR TRA HADRIANVS" ;
+    cor:obverseTypeRaw "Head of Hadrian r., laureate" ;
+    cor:reverseLegendRaw "COL IVL / COR" ;
+    cor:reverseTypeRaw "Hexastyle temple" ;
+    cor:identificationNoteRaw "Note. The temple is done and exactly like the one inscribed GENVS IVLI. I think it is the old Apollo type. H.M.E." ;
+    cor:publicationStampRaw "Publ.; Hesperia, 1980, p. 17, 87a" ;
+    cor:bibliographicReferenceRaw "Hesperia 1980, p. 17, 87a" ;
+    cor:comparativeReferenceRaw "BMC not, Im. not, NCP not" ;
+    cor:researchQuestionRaw "Would another specimen show pedimental sculpture?" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "5/15/1934" ;
+    cor:excavationDate "1934-05-15"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. H. Howland p. 17 (130)" ;
+        cor:notebookName "R. H. Howland" ;
+        cor:notebookPage 17 ;
+        cor:notebookPageRaw "17" ;
+        cor:notebookEntryOrRange "130" ;
+        cor:notebookNumber 142 ;
+        cor:notebookIdentificationMethod "name, page, and entry explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:archivalAnnotationRaw "(cover - photos)" ;
+    cor:databaseCoinId "-354762174" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseRegionRaw "Corinth" ;
+    cor:databaseAuthorityRaw "Hadrian" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "117-138" ;
+    cor:databaseObverseLegendRaw "IMP CAESAR TRA - HADRIANVS" ;
+    cor:databaseObverseTypeRaw "Head of Hadrian facing r.; wearing laureate" ;
+    cor:databaseReverseLegendRaw "COL IVL COR" ;
+    cor:databaseReverseTypeRaw "Hexastyle Doric temple" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "7.90" ;
+    cor:databaseDiameterRaw "22" ;
+    cor:databasePublicationRaw "Hesperia 1980, p. 17, 87a" ;
+    cor:databaseNoteRaw "Temple on reverse perhaps is Temple of Apollo" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/15/1934; Notebook 142 p.17, 130" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number '75' and the handwritten temple-identification note, especially the reading 'GENVS IVLI'." .

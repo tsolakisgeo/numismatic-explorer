@@ -1,0 +1,73 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-3
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-3" ;
+    dcterms:source corid:card-COIN_X_1934_00003_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasObverse corid:coin-1934-3-obverse ;
+    nmo:hasReverse corid:coin-1934-3-reverse ;
+    nmo:hasFindspot corid:place-lerna .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:coin-1934-3-obverse
+    a nmo:Obverse ;
+    dcterms:description "Pegasus flying left"@en .
+
+corid:coin-1934-3-reverse
+    a nmo:Reverse ;
+    dcterms:description "Trident"@en .
+
+corid:place-lerna
+    skos:prefLabel "Lerna"@en .
+
+corid:card-COIN_X_1934_00003_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00003_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-3 ;
+    cor:sourceImageFilename "COIN_X_1934_00003_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "Coin 1934-3" ;
+    cor:inventoryNumber "1934-3" ;
+    cor:earlierInventoryNumber "64" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "400-146" ;
+    cor:dateEraNormalized "BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "13" ;
+    cor:obverseTypeRaw "Pegasus flying l." ;
+    cor:reverseTypeRaw "Trident." ;
+    cor:findspotRaw "Lerna" ;
+    cor:excavationDateRaw "1933-1934" ;
+    cor:archivalAnnotationRaw "coins found in cleaning" ;
+    cor:archivalAnnotationRaw "NB -" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "J. de Waele, p. ①" ;
+        cor:notebookName "J. de Waele" ;
+        cor:notebookPage 1 ;
+        cor:notebookPageRaw "①" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "dateEraNormalized" ;
+        cor:rawValue "400-146" ;
+        cor:proposedValue "400-146 BCE" ;
+        cor:reason "The card gives the numeric range without an explicit era; BCE is supported by the appended Metis context."
+    ] .
+

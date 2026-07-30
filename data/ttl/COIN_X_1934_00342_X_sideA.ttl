@@ -1,0 +1,121 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-342
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-342" ;
+    dcterms:title "Roman imperial silver denarius of Titus, Rome, AD 80"@en ;
+    dcterms:source corid:card-COIN_X_1934_00342_X_sideA ;
+    prov:wasDerivedFrom
+        corid:card-COIN_X_1934_00342_X_sideA ,
+        corid:metis-coin-477804176 ;
+    nmo:hasAuthority nm:titus ;
+    nmo:hasStartDate "0080"^^xsd:gYear ;
+    nmo:hasEndDate "0080"^^xsd:gYear ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination nm:denarius ;
+    nmo:hasMint nm:rome ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "3.13"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-342-obverse ;
+    nmo:hasReverse corid:coin-1934-342-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation
+        "Cohen 313" ,
+        "R.I.C. p. 119, no. 24a" ,
+        "BMC II, 61-62" .
+
+corid:coin-1934-342-obverse
+    nmo:hasLegend "IMP. TITVS CAES. VESPASIAN\nAVG P M" ;
+    dcterms:description "Head of Titus right, laureate."@en .
+
+corid:coin-1934-342-reverse
+    nmo:hasLegend "TR P IX IMP XV COS VIII P P" ;
+    dcterms:description "Throne with triangular back on which are palmettes."@en .
+
+corid:card-COIN_X_1934_00342_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00342_X_sideA" ;
+    dcterms:title "Inventory Card, Side A: COIN 1934 342"@en ;
+    cor:documentsNumismaticObject corid:coin-1934-342 ;
+    cor:sourceImageFilename "COIN_X_1934_00342_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-342" ;
+    cor:inventoryNumber "1934-342" ;
+    cor:earlierInventoryNumber "160" ;
+    cor:authorityRaw "Titus 79-81" ;
+    cor:productionDateRaw "Rome, date = 80 A.D." ;
+    cor:materialRaw "AR" ;
+    cor:diameterRaw "diam. 18" ;
+    cor:weightRaw "3,13 gr." ;
+    cor:obverseLegendRaw "IMP. TITVS CAES. VESPASIAN / AVG P M" ;
+    cor:obverseTypeRaw "Head r., laureate." ;
+    cor:reverseLegendRaw "TR P IX IMP XV COS VIII P P" ;
+    cor:reverseTypeRaw "Throne with triangular back on which are palmettes (?)" ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "VI/5/34" ;
+    cor:excavationDate "1934-06-05"^^xsd:date ;
+    cor:collectionNoteRaw "Coin = in Study Collection" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "N/B 146; C. H. Morgan p. 91 (9)" ;
+        cor:notebookNumber 146 ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 91 ;
+        cor:notebookPageRaw "91" ;
+        cor:notebookEntryOrRange "9" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Throne with triangular back on which are palmettes (?)" ;
+        cor:proposedValue "Throne with triangular back on which are palmettes." ;
+        cor:databaseValue "Throne, draped with cloth, with triangular back and palmettes?" ;
+        cor:reason "The words 'triangular' and 'palmettes (?)' are later corrections over deleted wording; the linked database additionally includes 'draped with cloth,' which is not clearly visible on the card."
+    ] ;
+    dcterms:note "Human confirmation required: confirm the corrected reverse description, especially 'palmettes (?)', and whether the deleted wording supports the database phrase 'draped with cloth'."@en .
+
+corid:place-north-of-school
+    a skos:Concept ;
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:metis-coin-477804176
+    a cor:DatabaseRecord ;
+    dcterms:identifier "477804176" ;
+    dcterms:title "Linked Metis coin record for 1934-342"@en ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseReverseTypeRaw "Throne, draped with cloth, with triangular back and palmettes?" ;
+    cor:databaseReferenceRaw "BMCRE II, p. 233, #61-62; RIC II, p. 119, #24a; Cohen 313" .
+
+corid:claim-1934-342-denomination
+    a rdf:Statement , prov:Entity ;
+    rdf:subject corid:coin-1934-342 ;
+    rdf:predicate nmo:hasDenomination ;
+    rdf:object nm:denarius ;
+    prov:wasDerivedFrom corid:metis-coin-477804176 ;
+    dcterms:description "The denomination is supplied by the linked Metis record and is not explicitly written on the card."@en .
+
+corid:claim-1934-342-axis
+    a rdf:Statement , prov:Entity ;
+    rdf:subject corid:coin-1934-342 ;
+    rdf:predicate nmo:hasAxis ;
+    rdf:object "6"^^xsd:integer ;
+    prov:wasDerivedFrom corid:metis-coin-477804176 ;
+    dcterms:description "The die axis is supplied by the linked Metis record and is not explicitly written on the card."@en .

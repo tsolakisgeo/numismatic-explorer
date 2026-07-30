@@ -1,0 +1,66 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+corid:coin-1934-365
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-365" ;
+    dcterms:source corid:card-COIN_X_1934_00365_X_sideA ;
+    nmo:hasObverse corid:coin-1934-365-obverse ;
+    nmo:hasReverse corid:coin-1934-365-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00365_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00365_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-365 ;
+    cor:sourceImageFilename "COIN_X_1934_00365_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-365" ;
+    cor:inventoryNumber "1934-365" ;
+    cor:groupRaw "Gru 13" ;
+    cor:findspotRaw "Agora SW / Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-93-16/17" ;
+    cor:photographicEvidence [
+        a cor:CoinPhotographPair ;
+        cor:leftPhotographDescription "Cross within an inner circular border, surrounded by an indistinct marginal legend." ;
+        cor:rightPhotographDescription "Facing head or bust within an indistinct marginal legend."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 13" ;
+        cor:proposedValue "Group 13" ;
+        cor:reason "The abbreviated handwritten notation beside COIN is not fully explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDateRaw" ;
+        cor:rawValue "5/8/34" ;
+        cor:proposedValue "1934-05-08" ;
+        cor:reason "The numeric date is likely May 8, 1934, but its order is not explicit on this card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Two pasted photographs without written obverse/reverse labels" ;
+        cor:proposedValue "Right photograph as obverse; left photograph as reverse" ;
+        cor:reason "The proposed assignment is based on the apparent facing bust on the right and cross type on the left, not on written labels."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that 'Gru 13' means Group 13, that 5/8/34 is May 8, 1934, and that the right photograph is the obverse and the left photograph the reverse." .
+
+corid:coin-1934-365-obverse
+    a nmo:Obverse ;
+    dcterms:description "Facing head or bust within an indistinct marginal legend."@en .
+
+corid:coin-1934-365-reverse
+    a nmo:Reverse ;
+    dcterms:description "Cross within an inner circular border, surrounded by an indistinct marginal legend."@en .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW hoard"@en .

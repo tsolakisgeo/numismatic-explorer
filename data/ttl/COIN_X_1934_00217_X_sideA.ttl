@@ -1,0 +1,87 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-217
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-217" ;
+    dcterms:source corid:card-COIN_X_1934_00217_X_sideA ;
+    nmo:hasStartDate "-0323"^^xsd:gYear ;
+    nmo:hasEndDate "-0251"^^xsd:gYear ;
+    nmo:hasMint corid:mint-sicyon ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "16"^^xsd:decimal ;
+    nmo:hasWeight "2.85"^^xsd:decimal ;
+    nmo:hasAxis "3"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-217-obverse ;
+    nmo:hasReverse corid:coin-1934-217-reverse ;
+    nmo:hasFindspot corid:place-agora-se-south-stoa ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Warren 4C.1 (ii)" ;
+    dcterms:bibliographicCitation "B.M.C. p. 47" ;
+    dcterms:bibliographicCitation "Corinth Coins no. 313" .
+
+corid:mint-sicyon
+    a nmo:Mint ;
+    skos:prefLabel "Sicyon"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-south-stoa
+    skos:prefLabel "Agora Southeast, South Stoa"@en .
+
+corid:coin-1934-217-obverse
+    a nmo:Obverse ;
+    dcterms:description "Dove flying right"@en .
+
+corid:coin-1934-217-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "SI" ;
+    dcterms:description "SI within an olive wreath"@en .
+
+corid:card-COIN_X_1934_00217_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00217_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-217 ;
+    cor:sourceImageFilename "COIN_X_1934_00217_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-217" ;
+    cor:inventoryNumber "1934-217" ;
+    cor:classificationRaw "Gr." ;
+    cor:classificationNormalized "Greek" ;
+    cor:mintRaw "Sicyon" ;
+    cor:dateRaw "323-251 BC" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "16" ;
+    cor:weightRaw "2.85" ;
+    cor:databaseAxisRaw "3" ;
+    cor:obverseTypeRaw "Dove flying r." ;
+    cor:reverseLegendRaw "SI" ;
+    cor:reverseLegendNormalized "ΣΙ" ;
+    cor:reverseTypeRaw "SI in olive wreath" ;
+    cor:findspotRaw "Agora SE: S. Stoa" ;
+    cor:potteryDepositReference "Pottery Deposit 1934-1" ;
+    cor:excavationDateRaw "3/10/1934 #1-41" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:excavationReferenceRange "1-41" ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139 p. 85" ;
+        cor:notebookNumber 139 ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:archivalAnnotationRaw "originally on card #226 w/ 2 other coins" ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:databaseBibliographicCitation "Edwards no. 313" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the reverse legend as SI/ΣΙ, the archival note that the coin was originally on card 226 with two other coins, and whether the card citation 'Corinth Coins no. 313' corresponds to the database citation 'Edwards no. 313'." .
+

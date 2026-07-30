@@ -1,0 +1,138 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-315
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-315" ;
+    dcterms:source corid:card-COIN_X_1934_00315_X_sideA ;
+    nmo:hasStartDate "-0197"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-histiaea ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-tetrobol ;
+    nmo:hasDiameter "13"^^xsd:decimal ;
+    nmo:hasWeight "1.82"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-315-obverse ;
+    nmo:hasReverse corid:coin-1934-315-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "McClean 5731 ff." ;
+    dcterms:bibliographicCitation "Corinth Coins, no. 278" ;
+    dcterms:bibliographicCitation "BMC 34 ff." ;
+    cor:axisAssignmentBasis "linked coin database" .
+
+corid:mint-histiaea
+    a nmo:Mint ;
+    skos:prefLabel "Histiaea"@en .
+
+corid:denomination-tetrobol
+    a nmo:Denomination ;
+    skos:prefLabel "Tetrobol"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en ;
+    skos:altLabel "N. of School"@en .
+
+corid:coin-1934-315-obverse
+    a nmo:Obverse ;
+    dcterms:description "Head of a maenad right, wearing an earring and necklace and crowned with a vine wreath"@en .
+
+corid:coin-1934-315-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ΙΣΤΙ / ΙΣΤΙΑ" ;
+    dcterms:description "Histiaea seated right on the stern of a vessel, holding a stylis"@en .
+
+corid:negative-74-81-34
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-34" ;
+    cor:depictsNumismaticObject corid:coin-1934-315 .
+
+corid:negative-74-81-35
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-35" ;
+    cor:depictsNumismaticObject corid:coin-1934-315 .
+
+corid:card-COIN_X_1934_00315_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00315_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-315 ;
+    cor:sourceImageFilename "COIN_X_1934_00315_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00315_X_sideB ;
+    cor:inventoryNumberRaw "1934-315" ;
+    cor:inventoryNumber "1934-315" ;
+    cor:earlierInventoryNumberRaw "102" ;
+    cor:earlierInventoryNumber "102" ;
+    cor:mintRaw "Histiaea" ;
+    cor:dateRaw "197-146" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "tetr.obol" ;
+    cor:diameterRaw "13" ;
+    cor:weightRaw "1.82 gr." ;
+    cor:obverseTypeRaw "Head of Maenad r., wearing earring, necklace + vine-wreath" ;
+    cor:reverseLegendRaw "(IΣTI) above; below, ...]ΣTIA" ;
+    cor:reverseLegendNormalized "ΙΣΤΙ / ΙΣΤΙΑ" ;
+    cor:reverseTypeRaw "Histiaea r., seated on stern of vessel r., holding stylis" ;
+    cor:bibliographicReferenceRaw "cf. McClean 5731 ff." ;
+    cor:bibliographicReferenceRaw "Cor. Coins, no. 278" ;
+    cor:bibliographicReferenceRaw "BMC 34 ff." ;
+    cor:findspotRaw "N. of School" ;
+    cor:excavationDateRaw "MAY 5/9/1934" ;
+    cor:excavationDate "1934-05-09"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "Morgan-Harland p. 176 (11-13)" ;
+        cor:notebookName "Morgan-Harland" ;
+        cor:notebookPage 176 ;
+        cor:notebookPageRaw "176" ;
+        cor:notebookEntryOrRange "11-13" ;
+        cor:notebookNumber 142 ;
+        cor:notebookIdentificationMethod "name, page, and range explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "Coin in Study Collection" ;
+    cor:negativeReferenceRaw "Neg. 74-81-34-35 (over)" ;
+    cor:photographicNegative corid:negative-74-81-34 ;
+    cor:photographicNegative corid:negative-74-81-35 ;
+    cor:databaseCoinId "-1219138710" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Histiaea" ;
+    cor:databaseDateRaw "197-146 BC" ;
+    cor:databaseObverseTypeRaw "Head of Maenad r.; wearing earring, necklace, and vine-wreath" ;
+    cor:databaseReverseLegendRaw "[ISTI] above; I]STIA below" ;
+    cor:databaseReverseTypeRaw "Histiaea r.; seated on stern of vessel r.; holding stylis" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Tetrobol" ;
+    cor:databaseWeightRaw "1.82" ;
+    cor:databaseDiameterRaw "13" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseBibliographicReferenceRaw "BMC 34ff.; McClean 5731ff." ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/9/1934; Notebook 142 p.176" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact bracketed reverse legend, the crossed-out annotation above the reverse, and whether the handwritten date is explicitly prefixed 'MAY'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "(IΣTI) above; below, ...]ΣTIA" ;
+        cor:proposedValue "ΙΣΤΙ / ΙΣΤΙΑ" ;
+        cor:reason "Parts of both legend lines are bracketed, overwritten, or incomplete on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseAnnotation" ;
+        cor:rawValue "crossed-out text above the reverse type" ;
+        cor:reason "The annotation is too heavily cancelled to transcribe securely."
+    ] .

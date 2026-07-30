@@ -1,0 +1,106 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-229
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-229" ;
+    dcterms:source corid:card-COIN_X_1934_00229_X_sideA ;
+    nmo:hasAuthority corid:authority-c-naevius-balbus ;
+    nmo:hasStartDate "-0081"^^xsd:gYear ;
+    nmo:hasEndDate "-0073"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "20"^^xsd:decimal ;
+    nmo:hasWeight "2.82"^^xsd:decimal ;
+    nmo:hasAxis "10"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-229-obverse ;
+    nmo:hasReverse corid:coin-1934-229-reverse ;
+    nmo:hasFindspot corid:place-north-of-school-area-o ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. Roman Republic, p. 368, no. 2937" ;
+    dcterms:bibliographicCitation "Sydenham 769" .
+
+corid:authority-c-naevius-balbus
+    a nmo:Authority ;
+    skos:prefLabel "C. Naevius Balbus"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school-area-o
+    skos:prefLabel "North of School, Area O"@en .
+
+corid:coin-1934-229-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "S C; E" ;
+    dcterms:description "Head of Juno right, wearing a diadem, earring, and necklace, with long hair; S C behind and E below the chin"@en .
+
+corid:coin-1934-229-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "XXXIII; C. NAE. BALB." ;
+    dcterms:description "Victory in a triga right, with the horses galloping and the reins held in both hands; control number above and moneyer's name in the exergue"@en .
+
+corid:card-COIN_X_1934_00229_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00229_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-229 ;
+    cor:sourceImageFilename "COIN_X_1934_00229_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00229_X_sideB ;
+    cor:inventoryNumberRaw "1934-229" ;
+    cor:inventoryNumber "1934-229" ;
+    cor:earlierInventoryNumber "153" ;
+    cor:classificationRaw "Roman Republic" ;
+    cor:authorityRaw "(C. Naevius Balbus)" ;
+    cor:dateRaw "ca. 81-73 B.C." ;
+    cor:databaseDateRaw "78-77 BCE" ;
+    cor:mintRaw "Coinage of Rome" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "denarius" ;
+    cor:diameterRaw "20" ;
+    cor:weightRaw "2.82 gr." ;
+    cor:databaseAxisRaw "10" ;
+    cor:obverseLegendRaw "S C behind; E below chin" ;
+    cor:obverseTypeRaw "Head of Juno r., wearing diadem, earring & necklace; hair long" ;
+    cor:reverseLegendRaw "XXXIII above; C. NAE. BALB. in exergue" ;
+    cor:reverseTypeRaw "Victory in triga r., horses galloping, reins in both hands" ;
+    cor:edgeRaw "Edge serrated" ;
+    cor:bibliographicReferenceRaw "B.M.C. Rom. Rep. p. 368, no. 2937; Syd. 769" ;
+    cor:findspotRaw "N. of School; Area O" ;
+    cor:excavationDateRaw "3/15/1934" ;
+    cor:excavationDate "1934-03-15"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 142; G. H. Morgan p. 24 (10-16)" ;
+        cor:notebookNumber 142 ;
+        cor:notebookName "G. H. Morgan" ;
+        cor:notebookPage 24 ;
+        cor:notebookPageRaw "24" ;
+        cor:notebookEntryOrRange "10-16" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:photographicNegativeReferenceRaw "75-11-22, 23 (over)" ;
+    cor:databaseNoteRaw "Serrated Edge; Card 153; MI doubts E" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the card date ca. 81-73 BCE versus the database date 78-77 BCE, the obverse letter E below the chin, and the photographic reference 75-11-22, 23 (over)." .
+
+corid:card-COIN_X_1934_00229_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00229_X_sideB" .

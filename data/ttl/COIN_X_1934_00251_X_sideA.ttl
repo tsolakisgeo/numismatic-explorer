@@ -1,0 +1,116 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-251
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-251" ;
+    dcterms:source corid:card-COIN_X_1934_00251_X_sideA ;
+    nmo:hasAuthority corid:authority-augustus ;
+    nmo:hasStartDate "-0027"^^xsd:gYear ;
+    nmo:hasEndDate "0014"^^xsd:gYear ;
+    nmo:hasMint corid:mint-kos ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-251-obverse ;
+    nmo:hasReverse corid:coin-1934-251-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Caria), p. 216, nos. 219-223" .
+
+corid:authority-augustus
+    a nmo:Authority ;
+    skos:prefLabel "Augustus"@en .
+
+corid:mint-kos
+    a nmo:Mint ;
+    skos:prefLabel "Kos"@en ;
+    skos:altLabel "Cos"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-251-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "[ΣΕΒΑΣΤΟΣ]" ;
+    dcterms:description "Laureate head of Augustus right"@en .
+
+corid:coin-1934-251-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "KΩI[ΩN]" ;
+    dcterms:description "Laureate head of Asclepius right; magistrate's name below"@en .
+
+corid:card-COIN_X_1934_00251_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00251_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-251 ;
+    cor:sourceImageFilename "COIN_X_1934_00251_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-251" ;
+    cor:inventoryNumber "1934-251" ;
+    cor:earlierInventoryNumberRaw "229" ;
+    cor:earlierInventoryNumber "229" ;
+    cor:classificationRaw "Cos. Augustus" ;
+    cor:authorityRaw "Augustus" ;
+    cor:mintRaw "Cos." ;
+    cor:dateRaw "27 B.C.-A.D. 14" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:obverseLegendRaw "[ΣΕΒΑΣΤΟΣ]" ;
+    cor:obverseTypeRaw "Head of Augustus r., lau." ;
+    cor:reverseLegendRaw "KΩI[ΩN]" ;
+    cor:reverseLegendNormalized "ΚΩΙ[ΩΝ]" ;
+    cor:reverseTypeRaw "Head of Asklepios r., lau.; [below magistrate's name]" ;
+    cor:reverseAdditionalInscriptionRaw "17--" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Caria) p. 216 no. 219-223" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "6/2/1934" ;
+    cor:excavationDate "1934-06-02"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 103 (7-10)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 103 ;
+        cor:notebookPageRaw "103" ;
+        cor:notebookEntryOrRange "7-10" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1276323334" ;
+    cor:databaseClassificationRaw "Greek Imperial/Roman Provincial Copper/Bronze Coin" ;
+    cor:databaseMintRaw "Kos" ;
+    cor:databaseDateRaw "27 BC-AD 14" ;
+    cor:databaseObverseLegendRaw "[SEBASTOS]" ;
+    cor:databaseReverseLegendRaw "KVI[VN]; [name of magistrate]" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 6/2/1934; Notebook 141 p. 103, 7-10" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact reverse legend, provisionally read KΩI[ΩN] (normalized ΚΩΙ[ΩΝ]), and the faint notation '17--' beneath the magistrate-name note." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "KΩI[ΩN]" ;
+        cor:proposedValue "ΚΩΙ[ΩΝ]" ;
+        cor:reason "The card uses mixed or ambiguous letterforms, and the linked database gives the transliteration KVI[VN]."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseAdditionalInscriptionRaw" ;
+        cor:rawValue "17--" ;
+        cor:reason "The faint notation beneath the magistrate-name note is not fully legible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "databaseExcavationContextRaw" ;
+        cor:rawValue "Notebook 141 p. 103, 7-10" ;
+        cor:proposedValue "O. Broneer p. 103 (7-10)" ;
+        cor:reason "The database supplies notebook number 141, which is not visibly written on the card."
+    ] .

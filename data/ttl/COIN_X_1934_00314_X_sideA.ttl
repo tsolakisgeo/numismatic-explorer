@@ -1,0 +1,141 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-314
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-314" ;
+    dcterms:source corid:card-COIN_X_1934_00314_X_sideA ;
+    nmo:hasAuthority corid:authority-john-ii-komnenos ;
+    nmo:hasStartDate "1118"^^xsd:gYear ;
+    nmo:hasEndDate "1143"^^xsd:gYear ;
+    nmo:hasMint corid:mint-thessalonica ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-tetarteron ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasWeight "3.885"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-314-obverse ;
+    nmo:hasReverse corid:coin-1934-314-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Corinth Coins, no. 136, type 3" ;
+    dcterms:bibliographicCitation "Hendy, pl. 11, no. 11" ;
+    dcterms:bibliographicCitation "DOC IV, p. 270, no. 14" ;
+    cor:denominationAssignmentBasis "linked coin database" ;
+    cor:axisAssignmentBasis "linked coin database" .
+
+corid:authority-john-ii-komnenos
+    a nmo:Authority ;
+    skos:prefLabel "John II Komnenos"@en ;
+    skos:altLabel "John II"@en .
+
+corid:mint-thessalonica
+    a nmo:Mint ;
+    skos:prefLabel "Thessalonica"@en .
+
+corid:denomination-tetarteron
+    a nmo:Denomination ;
+    skos:prefLabel "Tetarteron"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en ;
+    skos:altLabel "Agora SE"@en .
+
+corid:coin-1934-314-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "+ Ιω ΔΕ" ;
+    dcterms:description "Bust of John II holding a jeweled sceptre"@en .
+
+corid:coin-1934-314-reverse
+    a nmo:Reverse ;
+    dcterms:description "Bust of Christ"@en .
+
+corid:card-COIN_X_1934_00314_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00314_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-314 ;
+    cor:sourceImageFilename "COIN_X_1934_00314_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-314" ;
+    cor:inventoryNumber "1934-314" ;
+    cor:earlierInventoryNumberRaw "928" ;
+    cor:earlierInventoryNumber "928" ;
+    cor:authorityRaw "John II" ;
+    cor:dateRaw "1118-1143" ;
+    cor:mintRaw "Thessalonica" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "21" ;
+    cor:weightRaw "3.885 gm." ;
+    cor:obverseLegendRaw "+ Iω ΔE" ;
+    cor:obverseTypeRaw "Bust of John II with jeweled sceptre" ;
+    cor:reverseTypeRaw "Bust of Christ" ;
+    cor:bibliographicReferenceRaw "Cor. Coins, no. 136, Type 3" ;
+    cor:bibliographicReferenceRaw "Hendy pl. II n.11" ;
+    cor:bibliographicReferenceRaw "D.O.C. IV p.270 n.14" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "5/9/1934" ;
+    cor:excavationDate "1934-05-09"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 34 (10-14)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 34 ;
+        cor:notebookPageRaw "34" ;
+        cor:notebookEntryOrRange "10-14" ;
+        cor:notebookNumber 141 ;
+        cor:notebookIdentificationMethod "name, page, and range explicit on card; notebook number supplied by linked database"
+    ] ;
+    cor:studyCollectionRaw "= in Study Coll." ;
+    cor:databaseCoinId "-160313135" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "John II" ;
+    cor:databaseMintRaw "Thessalonika" ;
+    cor:databaseDateRaw "1118-1143" ;
+    cor:databaseObverseLegendRaw "IC-XC" ;
+    cor:databaseObverseTypeRaw "Christ half length, bearded and nimbate, wearing tunic and kolobion, holds Gospels (open) in l. hand" ;
+    cor:databaseReverseLegendRaw "[IVDCC-]P[OT]" ;
+    cor:databaseReverseTypeRaw "Emperor bust, wearing stemma, divitision, and chlamys, holds in r. hand jeweled scepter on long shaft, in l., globus cruciger" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Tetarteron" ;
+    cor:databaseWeightRaw "3.89" ;
+    cor:databaseDiameterRaw "20" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "DOC IV p. 270, 14; Hendy p. 106, plates 11.11-12" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 5/9/1934, #10-14; Notebook 141 p. 34" ;
+    cor:databaseNoteRaw "Thessalonica variation 1; clipped; Corinth Coins no. 136, Type 3" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the card's obverse/reverse assignment, which is opposite the linked database, and whether 'Hendy pl. II n.11' means plate 11, no. 11." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Obverse: bust of John II with jeweled sceptre; Reverse: bust of Christ" ;
+        cor:proposedValue "Database assigns Christ to the obverse and John II to the reverse" ;
+        cor:reason "The visible card and linked database reverse the two face assignments."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "Hendy pl. II n.11" ;
+        cor:proposedValue "Hendy, pl. 11, no. 11" ;
+        cor:reason "The handwritten plate numeral may be read as Roman II or Arabic 11; database context supports plate 11."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameter" ;
+        cor:rawValue "21" ;
+        cor:proposedValue "20" ;
+        cor:reason "The card gives 21 mm, while the linked database gives 20 mm."
+    ] .

@@ -1,0 +1,130 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-275
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-275" ;
+    dcterms:source corid:card-COIN_X_1934_00275_X_sideA ;
+    nmo:hasAuthority corid:authority-domitian ;
+    nmo:hasStartDate "0081"^^xsd:gYear ;
+    nmo:hasEndDate "0096"^^xsd:gYear ;
+    nmo:hasMint corid:mint-thespiae ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "17"^^xsd:decimal ;
+    nmo:hasWeight "5.39"^^xsd:decimal ;
+    nmo:hasAxis 11 ;
+    nmo:hasObverse corid:coin-1934-275-obverse ;
+    nmo:hasReverse corid:coin-1934-275-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C. (Central Greece), no. 27" ;
+    cor:productionDateAssignmentBasis "The card identifies Domitian; the linked database supplies the reign range AD 81-96." .
+
+corid:authority-domitian
+    a nmo:Authority ;
+    skos:prefLabel "Domitian"@en .
+
+corid:mint-thespiae
+    a nmo:Mint ;
+    skos:prefLabel "Thespiae"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:coin-1934-275-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "ΑΥ ΔΟ ΚΑΙ ΣΕ ΓΕΡ" ;
+    dcterms:description "Laureate head of Domitian right"@en .
+
+corid:coin-1934-275-reverse
+    a nmo:Reverse ;
+    dcterms:description "Uncertain figure, possibly Apollo Kitharoidos standing facing with a lyre in the left hand, or a female figure standing right holding an uncertain object"@en .
+
+corid:card-COIN_X_1934_00275_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00275_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-275 ;
+    cor:sourceImageFilename "COIN_X_1934_00275_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "34-275" ;
+    cor:inventoryNumber "1934-275" ;
+    cor:earlierInventoryNumberRaw "98" ;
+    cor:earlierInventoryNumber "98" ;
+    cor:mintRaw "Thespiae" ;
+    cor:authorityRaw "Domitian" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "17" ;
+    cor:weightRaw "5.39 g" ;
+    cor:axisRaw "axes 11" ;
+    cor:obverseLegendRaw "AV ΔO KAI CEΓEP" ;
+    cor:obverseLegendNormalized "ΑΥ ΔΟ ΚΑΙ ΣΕ ΓΕΡ" ;
+    cor:obverseTypeRaw "Head of Domitian r., laureate." ;
+    cor:reverseLegendRaw "----" ;
+    cor:reverseTypeRaw "? Apollo Kitharoidos standing facing, with lyre in l. hand." ;
+    cor:revisedReverseTypeRaw "? Female figure stg. r., as RPC 2.272?" ;
+    cor:bibliographicReferenceRaw "B.M.C. (Cent. Gr.), no. 27" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "5/24/1934" ;
+    cor:excavationDate "1934-05-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "R. H. Howland p. 61 (4)" ;
+        cor:notebookName "R. H. Howland" ;
+        cor:notebookPage 61 ;
+        cor:notebookPageRaw "61" ;
+        cor:notebookEntryOrRange "4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "In Study Collection" ;
+    cor:databaseCoinId "-2000126627" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseAuthorityRaw "Domitian" ;
+    cor:databaseMintRaw "Thespiae" ;
+    cor:databaseDateRaw "81-96" ;
+    cor:databaseObverseLegendRaw "<gr>AV DO KAI - SE GER<gr>" ;
+    cor:databaseObverseTypeRaw "Head of Emperor r., laureate" ;
+    cor:databaseReverseLegendRaw "[ethnic]" ;
+    cor:databaseReverseTypeRaw "Apollo Kitharoidos standing facing; with lyre in l.?" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "5.39" ;
+    cor:databaseDiameterRaw "17" ;
+    cor:databaseAxisRaw "11" ;
+    cor:databaseBibliographicReferenceRaw "BMC Central, p. 93, no. 27" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/24/1934; Notebook 146 p.61, 4" ;
+    cor:databaseNoteRaw "Reverse obscure, perhaps female figure standing r. holding ?, as RPC 2.272." ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the reverse figure and object, the exact reverse legend, and whether the notebook number is 146 as supplied by the database, since it is not visible on the card." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseType" ;
+        cor:rawValue "? Apollo Kitharoidos standing facing, with lyre in l. hand." ;
+        cor:proposedValue "Female figure standing right holding an uncertain object, as RPC II 272?" ;
+        cor:reason "The card itself records competing identifications and marks both as uncertain."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "----" ;
+        cor:proposedValue "[ethnic]" ;
+        cor:reason "No legible reverse legend is transcribed on the card; the database labels it only as an ethnic."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "notebookNumber" ;
+        cor:rawValue "not visible on card" ;
+        cor:proposedValue "146" ;
+        cor:reason "Notebook 146 is supplied by the linked database, while the card visibly preserves only R. H. Howland p. 61 (4)."
+    ] .

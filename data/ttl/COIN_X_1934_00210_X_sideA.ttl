@@ -1,0 +1,112 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-210
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-210" ;
+    dcterms:source corid:card-COIN_X_1934_00210_X_sideA ;
+    nmo:hasAuthority corid:authority-andronicus-i ;
+    nmo:hasStartDate "1183"^^xsd:gYear ;
+    nmo:hasEndDate "1185"^^xsd:gYear ;
+    nmo:hasMint corid:mint-uncertain-greek ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-half-tetarteron ;
+    nmo:hasDiameter "17.5"^^xsd:decimal ;
+    nmo:hasWeight "1.98"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-210-obverse ;
+    nmo:hasReverse corid:coin-1934-210-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 586, type 3" ;
+    dcterms:bibliographicCitation "D.O.C. IV.1, p. 353, no. 8" .
+
+corid:authority-andronicus-i
+    a nmo:Authority ;
+    skos:prefLabel "Andronicus I"@en .
+
+corid:mint-uncertain-greek
+    a nmo:Mint ;
+    skos:prefLabel "Uncertain Greek mint"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:denomination-half-tetarteron
+    a nmo:Denomination ;
+    skos:prefLabel "Half tetarteron"@en ;
+    cor:identificationMethod "linked_Metis_record" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-210-obverse
+    a nmo:Obverse ;
+    dcterms:description "Half-length figure of Andronicus holding a labarum and globus cruciger"@en .
+
+corid:coin-1934-210-reverse
+    a nmo:Reverse ;
+    dcterms:description "Facing bust of the Virgin with a medallion on her breast"@en .
+
+corid:card-COIN_X_1934_00210_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00210_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-210 ;
+    cor:sourceImageFilename "COIN_X_1934_00210_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-210" ;
+    cor:inventoryNumber "1934-210" ;
+    cor:legacyCardNumber "1197" ;
+    cor:authorityRaw "Andronicus I" ;
+    cor:dateRaw "1183-1185" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "17.5" ;
+    cor:weightRaw "1.98 g." ;
+    cor:axisRaw "downward arrow" ;
+    cor:obverseTypeRaw "Half-length of Andronicus holding labarum and globus cr." ;
+    cor:reverseTypeRaw "Bust of Virgin facing; medallion on breast." ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "8/7/1934, corrected in blue to 3/7/1934" ;
+    cor:excavationDate "1934-03-07"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 76 (10-18)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 76 ;
+        cor:notebookPageRaw "76" ;
+        cor:notebookEntryOrRange "10-18" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "STUDY COLL." ;
+    cor:databaseMintRaw "Uncertain Greek" ;
+    cor:databaseDenominationRaw "Half Tetarteron" ;
+    cor:databaseObverseLegendRaw "<gr> M-R - U<gr>V" ;
+    cor:databaseObverseTypeRaw "Bust of Virgin nimbate orans, wearing tunic and maphorion; beardless, nimbate head of Christ on breast" ;
+    cor:databaseReverseLegendRaw "<gr>[LND]<gr" ;
+    cor:databaseReverseTypeRaw "Bust of emperor wearing stemma, skaramangion or divitision, and sagion; holding a labarum-headed scepter and globus cruciger" ;
+    cor:databaseBibliographicCitation "Hendy, p. 134, pl. 19, no. 4" ;
+    cor:faceAssignmentDisagreement true ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the blue correction of the excavation date from 8/7/1934 to 3/7/1934 and the obverse/reverse assignment, which is opposite in the linked Metis record." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "excavationDate" ;
+        cor:rawValue "8/7/1934 with blue 3 written below" ;
+        cor:proposedValue "1934-03-07" ;
+        cor:reason "The linked Metis record supports the blue correction to 3/7/1934."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Card layout places Andronicus on the left and the Virgin on the right" ;
+        cor:proposedValue "Metis assigns the Virgin to the obverse and the emperor to the reverse" ;
+        cor:reason "The image and linked database assign the two types to opposite faces."
+    ] .

@@ -1,0 +1,45 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-455
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-455" ;
+    dcterms:source corid:card-COIN_X_1934_00455_X_sideA ;
+    nmo:hasObverse corid:coin-1934-455-obverse ;
+    nmo:hasReverse corid:coin-1934-455-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00455_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00455_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-455 ;
+    cor:sourceImageFilename "COIN_X_1934_00455_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-455" ;
+    cor:inventoryNumber "1934-455" ;
+    cor:groupRaw "Gru 103" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-98-17/18" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the expansion of 'Gru 103', the calendar interpretation of '5/8/34', and the assignment of the two photographs to obverse and reverse." .
+
+corid:coin-1934-455-obverse
+    a nmo:Obverse ;
+    dcterms:description "Heavily worn central figural or monogrammatic design with traces of a surrounding marginal legend."@en .
+
+corid:coin-1934-455-reverse
+    a nmo:Reverse ;
+    dcterms:description "Heavily worn central figural or monogrammatic design with traces of a surrounding marginal legend."@en .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .

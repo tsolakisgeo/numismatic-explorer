@@ -1,0 +1,125 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-218
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-218" ;
+    dcterms:source corid:card-COIN_X_1934_00218_X_sideA ;
+    nmo:hasAuthority corid:authority-achaean-league ;
+    nmo:hasStartDate "-0191"^^xsd:gYear ;
+    nmo:hasEndDate "-0150"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "5.96"^^xsd:decimal ;
+    nmo:hasAxis "7"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-218-obverse ;
+    nmo:hasReverse corid:coin-1934-218-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., pp. 12-15" ;
+    dcterms:bibliographicCitation "Warren 2007, no. 196" .
+
+corid:authority-achaean-league
+    a nmo:Authority ;
+    skos:prefLabel "Achaean League"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-218-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "[-]OS" ;
+    dcterms:description "Zeus standing left, holding Nike in the right hand and a sceptre in the left"@en .
+
+corid:coin-1934-218-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "AXAIΩ[N] ... N ..." ;
+    dcterms:description "Achaea seated left, holding a wreath and a long sceptre"@en ;
+    nmo:hasControlmark corid:controlmark-1934-218-reverse .
+
+corid:controlmark-1934-218-reverse
+    skos:prefLabel "Uncertain letter N below or in field"@en .
+
+corid:card-COIN_X_1934_00218_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00218_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-218 ;
+    cor:sourceImageFilename "COIN_X_1934_00218_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-218" ;
+    cor:inventoryNumber "1934-218" ;
+    cor:earlierInventoryNumber "255" ;
+    cor:authorityRaw "Achaean League" ;
+    cor:mintRaw "Corinth (by J. Warren)" ;
+    cor:earlierMintReadingRaw "City uncertain" ;
+    cor:databaseDateRaw "191-150 BCE" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "19" ;
+    cor:databaseDiameterRaw "17" ;
+    cor:weightRaw "5.96 g." ;
+    cor:databaseAxisRaw "7" ;
+    cor:obverseLegendRaw "[-]OS" ;
+    cor:obverseTypeRaw "Zeus standing l.; holding Nike in r., and sceptre in l." ;
+    cor:obverseControlMarkRaw "mon. illegible" ;
+    cor:reverseLegendRaw "AXAIΩ[N] ... N ..." ;
+    cor:reverseTypeRaw "Achaia seated l., holding wreath & long sceptre" ;
+    cor:potteryDepositReference "PD 1934-1" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/10/1934" ;
+    cor:excavationDate "1934-03-10"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 85 (1-41)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookEntryOrRange "1-41" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "Study Coll." ;
+    cor:databasePublicationRaw "Warren 2007, no. 196" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 255, the fragmentary obverse and reverse legends, the uncertain reverse control letter, and the card diameter 19 mm versus the database diameter 17 mm." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "255" ;
+        cor:reason "The upper-left pencil number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "[-]OS" ;
+        cor:reason "Only a short fragment is visible and the first character is unclear."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "AXAIΩ[N] ... N ..." ;
+        cor:proposedValue "ΑΧΑΙΩΝ" ;
+        cor:reason "The ethnic is fragmentary and the additional field letter is uncertain."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameter" ;
+        cor:rawValue "19" ;
+        cor:proposedValue "17" ;
+        cor:reason "The card reads 19 mm, while the linked Metis record gives 17 mm."
+    ] .
+

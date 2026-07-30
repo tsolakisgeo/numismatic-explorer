@@ -1,0 +1,132 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-271
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-271" ;
+    dcterms:source corid:card-COIN_X_1934_00271_X_sideA ;
+    nmo:hasAuthority corid:authority-antoninus-pius ;
+    nmo:hasStartDate "0138"^^xsd:gYear ;
+    nmo:hasEndDate "0161"^^xsd:gYear ;
+    nmo:hasMint corid:mint-epidauros ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "24"^^xsd:decimal ;
+    nmo:hasWeight "9.63"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-271-obverse ;
+    nmo:hasReverse corid:coin-1934-271-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cor. Coins 422" ;
+    dcterms:bibliographicCitation "N.C.P., pl. L, 1" ;
+    cor:productionDateAssignmentBasis "linked coin database record" .
+
+corid:authority-antoninus-pius
+    a nmo:Authority ;
+    skos:prefLabel "Antoninus Pius"@en .
+
+corid:mint-epidauros
+    a nmo:Mint ;
+    skos:prefLabel "Epidauros"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en ;
+    skos:altLabel "Agora SE"@en .
+
+corid:coin-1934-271-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "ANTΩNEINOC ...." ;
+    dcterms:description "Laureate head of Antoninus Pius right"@en .
+
+corid:coin-1934-271-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "EΠI ΔA ... ΩN" ;
+    dcterms:description "Shepherd finding Asklepios being suckled by a goat; trees to right and left"@en .
+
+corid:card-COIN_X_1934_00271_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00271_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-271 ;
+    cor:sourceImageFilename "COIN_X_1934_00271_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-271" ;
+    cor:inventoryNumber "1934-271" ;
+    cor:earlierInventoryNumberRaw "273" ;
+    cor:earlierInventoryNumber "273" ;
+    cor:archivalAnnotationRaw "5 (circled)" ;
+    cor:mintRaw "Epidauros" ;
+    cor:authorityRaw "Antoninus Pius" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "24" ;
+    cor:weightRaw "9.63 gm." ;
+    cor:obverseLegendRaw "ANTΩNEINOC ...." ;
+    cor:obverseLegendNormalized "ΑΝΤΩΝΕΙΝΟΣ …" ;
+    cor:obverseTypeRaw "Head r., laureate." ;
+    cor:reverseLegendRaw "EΠI ΔA ... ΩN" ;
+    cor:reverseLegendNormalized "ΕΠΙΔΑΥΡΙΩΝ" ;
+    cor:reverseTypeRaw "Shepherd finding Asklepios suckled by goat; trees to r. + l." ;
+    cor:reverseSymbolRaw "parenthesized monogram or letter group" ;
+    cor:bibliographicReferenceRaw "Cor. Coins, 422" ;
+    cor:bibliographicReferenceRaw "N.C.P. L.1" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "4/28/1934" ;
+    cor:excavationDate "1934-04-28"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 14 (2-3)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 14 ;
+        cor:notebookPageRaw "14" ;
+        cor:notebookEntryOrRange "2-3" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "309136253" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseAuthorityRaw "Antoninus Pius" ;
+    cor:databaseMintRaw "Epidauros" ;
+    cor:databaseDateRaw "138-161" ;
+    cor:databaseObverseLegendRaw "ANTVNEINOC----" ;
+    cor:databaseObverseTypeRaw "Head of Emperor facing r.; wearing laureate" ;
+    cor:databaseReverseLegendRaw "EPI - DA - VN" ;
+    cor:databaseReverseTypeRaw "Shepherd finding Asclepius suckled by goat; trees to left and right" ;
+    cor:databaseSymbolRaw "Letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "9.13" ;
+    cor:databaseDiameterRaw "24" ;
+    cor:databaseBibliographicReferenceRaw "Edwards no.422; NCP pl.L-i" ;
+    cor:databaseExcavationContextRaw "Agora SE; excavation date 4/28/1934; Notebook 141 p.14, 2-3" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact surviving obverse and reverse legend letters, the parenthesized reverse monogram, the N.C.P. citation, and the card weight 9.63 g versus database weight 9.13 g." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendNormalized" ;
+        cor:rawValue "EΠI ΔA ... ΩN" ;
+        cor:proposedValue "ΕΠΙΔΑΥΡΙΩΝ" ;
+        cor:reason "Only separated portions of the ethnic are visibly written on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseSymbolRaw" ;
+        cor:rawValue "parenthesized monogram or letter group" ;
+        cor:reason "The small parenthesized mark at upper right is not securely legible."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "weightRaw" ;
+        cor:rawValue "9.63 gm." ;
+        cor:proposedValue "9.13 g" ;
+        cor:reason "The card visibly reads 9.63 gm., while the linked database record gives 9.13."
+    ] .

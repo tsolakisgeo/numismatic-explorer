@@ -1,0 +1,137 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-266
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-266" ;
+    dcterms:source corid:card-COIN_X_1934_00266_X_sideA ;
+    nmo:hasAuthority corid:authority-basil-i-and-constantine ;
+    nmo:hasStartDate "0868"^^xsd:gYear ;
+    nmo:hasEndDate "0870"^^xsd:gYear ;
+    nmo:hasMint corid:mint-constantinople ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "27"^^xsd:decimal ;
+    nmo:hasAxis 6 ;
+    nmo:hasObverse corid:coin-1934-266-obverse ;
+    nmo:hasReverse corid:coin-1934-266-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 439a" ;
+    dcterms:bibliographicCitation "Cor. Coins 90" ;
+    dcterms:bibliographicCitation "D.O.C. III², p. 493, no. 8a" .
+
+corid:authority-basil-i-and-constantine
+    a nmo:Authority ;
+    skos:prefLabel "Basil I and Constantine"@en .
+
+corid:mint-constantinople
+    a nmo:Mint ;
+    skos:prefLabel "Constantinople"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en ;
+    skos:altLabel "Agora SE"@en .
+
+corid:coin-1934-266-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "+bASILIOSSCONST AΥGG" ;
+    dcterms:description "Busts of Basil I and Constantine facing, with a labarum between them"@en .
+
+corid:coin-1934-266-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+bASIL / SCONSTAN / TINOSEnΘO / bASILEISR / OMAION" ;
+    dcterms:description "Five-line inscription"@en .
+
+corid:card-COIN_X_1934_00266_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00266_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-266 ;
+    cor:sourceImageFilename "COIN_X_1934_00266_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-266" ;
+    cor:inventoryNumber "1934-266" ;
+    cor:earlierInventoryNumberRaw "511" ;
+    cor:earlierInventoryNumber "511" ;
+    cor:authorityRaw "Basil I" ;
+    cor:authorityReignDateRaw "867-886" ;
+    cor:assignedProductionDateRaw "868-870" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "27 (edges broken) ↓ 28 mm" ;
+    cor:obverseLegendRaw "+bASILIOSSC... AΥGG" ;
+    cor:obverseTypeRaw "Busts of Basil I and Constantine facing; labarum between them." ;
+    cor:reverseLegendRaw "+bASIL / SCONSTAN / TINOSEnΘO / bASILEISR / OMAION" ;
+    cor:reverseTypeRaw "Five-line inscription." ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 439 a" ;
+    cor:bibliographicReferenceRaw "Cor. Coins 90" ;
+    cor:bibliographicReferenceRaw "D.O.C. III² p. 493 no. 8a" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "4/24/1934" ;
+    cor:excavationDate "1934-04-24"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 141; O. Broneer p. 7 (41-52)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookNumber 141 ;
+        cor:notebookPage 7 ;
+        cor:notebookPageRaw "7" ;
+        cor:notebookEntryOrRange "41-52" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "coin in Study Collection" ;
+    cor:databaseCoinId "-344381915" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseAuthorityRaw "Basil I & Constantine" ;
+    cor:databaseMintRaw "Constantinople" ;
+    cor:databaseDateRaw "868-870" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseObverseLegendRaw "+bASILIOSSCOnST AΥGG" ;
+    cor:databaseObverseTypeRaw "Busts of Basil & Const. facing, crowns w. cross; both right hands hold labarum in center, with four dots." ;
+    cor:databaseReverseLegendRaw "+bASIL / SCOnSTAn / TInOSEnΥO / bASILEISR / OMAIOn" ;
+    cor:databaseReverseTypeRaw "Five-line inscription." ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "27" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseBibliographicReferenceRaw "Ed. 90; BMC, p.439.a; DOC III, p.493, 8a." ;
+    cor:databaseNoteRaw "DOC: Class 1" ;
+    cor:databaseExcavationContextRaw "Agora S.E.; Excavation Date: 04/24/1934, #41-52; Notebook 141 (Broneer), p.7; Card #511" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the card records a diameter of 27 or 28 mm, and verify the exact mixed Greek/Latin letter forms in both legends, especially the third reverse line." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameterRaw" ;
+        cor:rawValue "27 (edges broken) ↓ 28 mm" ;
+        cor:proposedValue "27 mm" ;
+        cor:reason "The card shows both 27 and 28 mm; the database records 27 mm."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "+bASILIOSSC... AΥGG" ;
+        cor:proposedValue "+bASILIOSSCOnST AΥGG" ;
+        cor:reason "Several central letters are faint or compressed; the proposed form follows the linked database transcription."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "+bASIL / SCONSTAN / TINOSEnΘO / bASILEISR / OMAION" ;
+        cor:proposedValue "+bASIL / SCOnSTAn / TInOSEnΥO / bASILEISR / OMAIOn" ;
+        cor:reason "The handwritten third line and mixed letter forms are difficult to distinguish exactly."
+    ] .

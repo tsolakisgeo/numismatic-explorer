@@ -1,0 +1,122 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-225
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-225" ;
+    dcterms:source corid:card-COIN_X_1934_00225_X_sideA ;
+    nmo:hasAuthority corid:authority-tiberius-ii ;
+    nmo:hasStartDate "0579"^^xsd:gYear ;
+    nmo:hasEndDate "0579"^^xsd:gYear ;
+    nmo:hasMint corid:mint-constantinople ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "31.5"^^xsd:decimal ;
+    nmo:hasWeight "11.38"^^xsd:decimal ;
+    nmo:hasAxis "7"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-225-obverse ;
+    nmo:hasReverse corid:coin-1934-225-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., p. 109, nos. 27-28" ;
+    dcterms:bibliographicCitation "D.O.C. I, no. 11a" .
+
+corid:authority-tiberius-ii
+    a nmo:Authority ;
+    skos:prefLabel "Tiberius II Constantine"@en .
+
+corid:mint-constantinople
+    a nmo:Mint ;
+    skos:prefLabel "Constantinople"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en .
+
+corid:coin-1934-225-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "dM TIb CON STANT PP AVI" ;
+    dcterms:description "Facing bust of Tiberius II, holding a mappa in the uplifted right hand and a sceptre surmounted by an eagle in the left; cross above the eagle"@en .
+
+corid:coin-1934-225-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "ANNO / M / CONA" ;
+    dcterms:description "Large M with cross above; ANNO vertically to left, regnal-year mark to right, and CONA in the exergue"@en ;
+    nmo:hasMintmark corid:mintmark-cona .
+
+corid:mintmark-cona
+    skos:prefLabel "CONA"@en .
+
+corid:card-COIN_X_1934_00225_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00225_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-225 ;
+    cor:sourceImageFilename "COIN_X_1934_00225_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-225" ;
+    cor:inventoryNumber "1934-225" ;
+    cor:earlierInventoryNumber "406" ;
+    cor:authorityRaw "Tiberius II" ;
+    cor:reignDateRaw "578-582" ;
+    cor:databaseProductionDateRaw "579" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "31.5" ;
+    cor:databaseWeightRaw "11.38" ;
+    cor:databaseAxisRaw "7" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseMintRaw "Constantinople" ;
+    cor:obverseLegendRaw "dM TIb CON STANT PP AVI" ;
+    cor:databaseObverseLegendRaw "dM TIb CON-STANT PP AV" ;
+    cor:obverseTypeRaw "Bust of Tiberius II facing; mappa in uplifted r.; in l., sceptre surmounted by eagle, with cross above" ;
+    cor:reverseLegendRaw "ANNO; M; CONA" ;
+    cor:reverseTypeRaw "Large M with cross above; ANNO at left; regnal-year mark at right; CONA in exergue" ;
+    cor:regnalYearAnnotationRaw "year 579/580" ;
+    cor:bibliographicReferenceRaw "B.M.C. p. 109, wherein 27 + 28; D.O.C. I, 11a" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "3/14/1934" ;
+    cor:excavationDate "1934-03-14"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 77 (42-45)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 77 ;
+        cor:notebookPageRaw "77" ;
+        cor:notebookEntryOrRange "42-45" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 140 ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact obverse legend ending, the handwritten regnal-year annotation read as 'year 579/580', and the precise reverse mark to the right of M." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseLegendRaw" ;
+        cor:rawValue "dM TIb CON STANT PP AVI" ;
+        cor:proposedValue "dM TIb CON-STANT PP AV" ;
+        cor:reason "The final letters and word division are not completely clear; the proposed form follows the linked Metis record."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "regnalYearAnnotationRaw" ;
+        cor:rawValue "year 579/580" ;
+        cor:reason "The small handwritten annotation to the right of the reverse is difficult to read precisely."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseRegnalYearMark" ;
+        cor:rawValue "uncertain mark to right of M" ;
+        cor:reason "The exact numeral or symbol is not securely legible on the card image."
+    ] .

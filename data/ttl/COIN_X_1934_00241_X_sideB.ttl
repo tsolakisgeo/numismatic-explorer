@@ -1,0 +1,91 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-241
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-241" ;
+    dcterms:source corid:card-COIN_X_1934_00241_X_sideB ;
+    dcterms:bibliographicCitation "DOC IV.1, p. 429" ;
+    prov:wasDerivedFrom corid:metis-coin-270045473 ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "27"^^xsd:decimal ;
+    nmo:hasWeight "4.22"^^xsd:decimal ;
+    nmo:hasAxis "12"^^xsd:integer ;
+    nmo:hasObverse corid:coin-1934-241-obverse ;
+    nmo:hasReverse corid:coin-1934-241-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection .
+
+corid:coin-1934-241-obverse
+    a nmo:Obverse ;
+    dcterms:description "Bust of Christ facing, with a nimbus containing large pellets."@en .
+
+corid:coin-1934-241-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "[ ], A, P, L" ;
+    dcterms:description "Cross with letters at the ends and wedge-shaped elements in the angles; part of the outline is worn off."@en .
+
+corid:card-COIN_X_1934_00241_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00241_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-241 ;
+    cor:sourceImageFilename "COIN_X_1934_00241_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumber "1934-241" ;
+    cor:attachedPhotograph corid:photo-1934-241-obverse, corid:photo-1934-241-reverse ;
+    cor:negativeReferenceRaw "Neg. 03-19-(0,1)" ;
+    cor:negativeReference "03-19-(0,1)" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDiameterRaw "27" ;
+    cor:databaseWeightRaw "4.22" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseObverseTypeRaw "bust of Christ facing; nimbus with large pellets" ;
+    cor:databaseObverseLegendRaw "no inscription" ;
+    cor:databaseReverseTypeRaw "Cross, with letters [ ], A, P, L at ends and wedges in angles" ;
+    cor:databaseReverseLegendRaw "[ ], A, P, L" ;
+    cor:databaseFindspotRaw "Agora SE" ;
+    cor:databaseExcavationDateRaw "3/27/1934" ;
+    cor:databaseNotebookReferenceRaw "Notebook 139, p. 138" ;
+    cor:databaseBibliographicCitationRaw "DOC IV.1, p. 429" ;
+    cor:databaseEarlierCardNumberRaw "Card #206" ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "negativeReferenceRaw" ;
+        cor:rawValue "Neg. 03-19-(0,1)" ;
+        cor:reason "The first character inside the parentheses may be the numeral zero or the capital letter O."
+    ] ;
+    cor:databaseContext corid:metis-coin-270045473 .
+
+corid:photo-1934-241-obverse
+    a cor:AttachedPhotograph ;
+    cor:depictsFace corid:coin-1934-241-obverse ;
+    cor:positionOnCard "left" ;
+    dcterms:description "Mounted black-and-white photograph of the obverse."@en .
+
+corid:photo-1934-241-reverse
+    a cor:AttachedPhotograph ;
+    cor:depictsFace corid:coin-1934-241-reverse ;
+    cor:positionOnCard "right" ;
+    dcterms:description "Mounted black-and-white photograph of the reverse."@en .
+
+corid:place-agora-se
+    a cor:ExcavationFindspot ;
+    skos:prefLabel "Agora SE"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:metis-coin-270045473
+    a prov:Entity ;
+    dcterms:identifier "270045473" ;
+    dcterms:description "Linked Metis coin record used as supporting database context."@en .
+
+# Human confirmation: verify whether the first character in “(0,1)” is the numeral zero or the capital letter O.

@@ -1,0 +1,116 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-242
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-242" ;
+    dcterms:source corid:card-COIN_X_1934_00242_X_sideA ;
+    nmo:hasAuthority corid:authority-commodus ;
+    nmo:hasStartDate "0181"^^xsd:gYear ;
+    nmo:hasEndDate "0181"^^xsd:gYear ;
+    nmo:hasMint corid:mint-rome ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasWeight "1.95"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-242-obverse ;
+    nmo:hasReverse corid:coin-1934-242-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Cohen 803 (for reverse of 802)" ;
+    dcterms:bibliographicCitation "RIC, p. 368, no. 12; pl. XV 267" ;
+    dcterms:bibliographicCitation "BMC IV, p. 697, no. 55" .
+
+corid:authority-commodus
+    a nmo:Authority ;
+    skos:prefLabel "Commodus"@en .
+
+corid:mint-rome
+    a nmo:Mint ;
+    skos:prefLabel "Rome"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-242-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "M. COMMODVS ANTONINVS AVG" ;
+    dcterms:description "Laureate head of Commodus right"@en .
+
+corid:coin-1934-242-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "TR P VI [IMP] IIII COS III P P" ;
+    dcterms:description "Roma seated left, holding Victory and spear; shield upon her throne"@en .
+
+corid:card-COIN_X_1934_00242_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00242_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-242 ;
+    cor:sourceImageFilename "COIN_X_1934_00242_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-242" ;
+    cor:inventoryNumber "1934-242" ;
+    cor:earlierInventoryNumber "297" ;
+    cor:classificationRaw "Commodus; Roman Imperial Coinage" ;
+    cor:authorityRaw "Commodus" ;
+    cor:authorityReignRaw "176-192" ;
+    cor:productionDateRaw "year 181" ;
+    cor:mintRaw "Rome" ;
+    cor:materialRaw "AR" ;
+    cor:denominationRaw "den." ;
+    cor:diameterRaw "18 mm" ;
+    cor:weightRaw "1.95 gr." ;
+    cor:databaseAxisRaw "12" ;
+    cor:obverseLegendRaw "M. COMMODVS ANTONINVS AVG" ;
+    cor:obverseTypeRaw "Head r., laureate" ;
+    cor:reverseLegendRaw "TR P VI [IMP] IIII COS III P P" ;
+    cor:databaseReverseLegendRaw "TR P VI [IMP II]II COS III P P" ;
+    cor:reverseTypeRaw "Roma seated l., holding Victory & spear; shield upon her throne" ;
+    cor:databaseReverseTypeRaw "Roma seated l., holding Victory in r. and spear in l.; shield in front of throne" ;
+    cor:bibliographicReferenceRaw "Cohen 803 (for reverse of 802)" ;
+    cor:bibliographicReferenceRaw "R.I.C. p. 368, no. 12; pl. XV 267" ;
+    cor:bibliographicReferenceRaw "BMC IV, p. 697, 55" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/27/1934" ;
+    cor:excavationDate "1934-03-27"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 138 (14); NB 139" ;
+        cor:notebookNumber 139 ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 138 ;
+        cor:notebookPageRaw "138" ;
+        cor:notebookEntryOrRange "14" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1275652155" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the bracketed IMP portion and numeral count in the reverse legend, and the final plate notation in the RIC citation, read provisionally as 'pl. XV 267'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseLegendRaw" ;
+        cor:rawValue "TR P VI [IMP] IIII COS III P P" ;
+        cor:reason "The bracketed letters and following numeral strokes are tightly written."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "R.I.C. p. 368, no. 12; pl. XV 267" ;
+        cor:reason "The plate notation at the end of the handwritten citation is difficult to read."
+    ] .

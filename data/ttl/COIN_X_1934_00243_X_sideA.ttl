@@ -1,0 +1,152 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-243
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-243" ;
+    dcterms:source corid:card-COIN_X_1934_00243_X_sideA ;
+    dcterms:bibliographicCitation
+        "Cohen 104",
+        "Maurice III, p. 138, III, 3",
+        "RIC VII, p. 633, no. 191 (330-335)",
+        "RIC VII, p. 557, no. 113A (330-333)",
+        "LRBC I, no. 1119" ;
+    prov:wasDerivedFrom corid:metis-coin--2072754341 ;
+    nmo:hasAuthority corid:authority-constantius-ii ;
+    nmo:hasStartDate "0330"^^xsd:gYear ;
+    nmo:hasEndDate "0335"^^xsd:gYear ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "18"^^xsd:decimal ;
+    nmo:hasAxis "6"^^xsd:integer ;
+    nmo:hasMint corid:mint-attribution-nicomedia-or-heraclea ;
+    nmo:hasObverse corid:coin-1934-243-obverse ;
+    nmo:hasReverse corid:coin-1934-243-reverse ;
+    nmo:hasFindspot corid:findspot-agora-se-south-stoa-well-viii ;
+    nmo:hasCollection corid:study-collection .
+
+corid:coin-1934-243-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "FL IVL CONSTANTIVS NOB C" ;
+    dcterms:description "Bust of Constantius II as Caesar facing right, laureate, draped, and cuirassed."@en .
+
+corid:coin-1934-243-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "GLOR IA EXERCITVS" ;
+    dcterms:description "Two soldiers standing and facing one another, each holding a reversed spear and resting a hand on a shield; two standards between them."@en ;
+    nmo:hasMintmark corid:mintmark-1934-243 .
+
+corid:card-COIN_X_1934_00243_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00243_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-243 ;
+    cor:sourceImageFilename "COIN_X_1934_00243_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-243" ;
+    cor:inventoryNumber "1934-243" ;
+    cor:secondaryNumberRaw "350" ;
+    cor:authorityRaw "Constantius II" ;
+    cor:dateRaw "324-361" ;
+    cor:productionDateRaw "330-335 if Nicomedia; 330-333 if Heraclea" ;
+    cor:mintAttributionRaw "Heraclia? Nicomedia?" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "18" ;
+    cor:obverseLegendRaw "FL IVL CONSTANTIVS NOB C" ;
+    cor:obverseTypeRaw "Bust r., laureate." ;
+    cor:reverseLegendRaw "GLOR IA EXERCITVS" ;
+    cor:reverseTypeRaw "Two soldiers and two standards" ;
+    cor:mintmarkRaw "I above SMNE; alternative reading SMHE" ;
+    cor:findspotRaw "Agora SE; well V below floor; South Stoa, Well VIII" ;
+    cor:excavationDateRaw "3/27/1934" ;
+    cor:excavationDate "1934-03-27"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 137 (1)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 137 ;
+        cor:notebookPageRaw "137" ;
+        cor:notebookEntryOrRange "1" ;
+        cor:notebookIdentificationMethod "explicit_on_card" ;
+        cor:databaseNotebookNumber 141 ;
+        cor:databaseNotebookReferenceRaw "Notebook 141, p. 137"
+    ] ;
+    cor:studyCollectionMarkRaw "This coin is boxed in the Study Collection as Nicomedia" ;
+    cor:attributionNoteRaw "All depends on how one reads the third letter. N is possible and this coin is boxed in the Study Collection as Nicomedia, cf. RIC 7.633, 191 (330-335). However, H is also possible for Heraclea (RIC 7.557, 113A), 330-333. The bust is draped and cuirassed, not just cuirassed, which ought to favor Heraclea. The N's on the obverse are more obviously diagonal; legend and officina work for either." ;
+    cor:annotationDateRaw "M1 11/III/2015" ;
+    cor:databaseMintRaw "Nicomedia" ;
+    cor:databaseDateRangeRaw "330-335" ;
+    cor:databaseAxisRaw "6" ;
+    cor:databaseReferenceRaw "LRBC I, #1119; RIC VII p. 633 #191" ;
+    cor:databaseRecordNote "CONS. 01-30; Original card missing (12/2000)" ;
+    cor:requiresHumanReview true ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintAttribution" ;
+        cor:rawValue "Heraclia? Nicomedia?" ;
+        cor:proposedValue "Nicomedia" ;
+        cor:alternateProposedValue "Heraclea" ;
+        cor:reason "The third letter of the mintmark may be N or H. The card discusses evidence for both Nicomedia and Heraclea, while the linked database selects Nicomedia."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "mintmarkRaw" ;
+        cor:rawValue "I above SMNE; alternative reading SMHE" ;
+        cor:reason "The third letter is difficult to distinguish and determines the mint attribution."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "findspotRaw" ;
+        cor:rawValue "well V below floor" ;
+        cor:reason "The circled handwritten feature note appears to read 'well V below floor,' but the main findspot line and database identify South Stoa, Well VIII."
+    ] ;
+    cor:databaseContext corid:metis-coin--2072754341 .
+
+corid:authority-constantius-ii
+    a nmo:Authority ;
+    skos:prefLabel "Constantius II"@en .
+
+corid:mint-attribution-nicomedia-or-heraclea
+    a nmo:Mint ;
+    skos:prefLabel "Nicomedia or Heraclea (uncertain attribution)"@en ;
+    cor:candidateMint corid:mint-nicomedia, corid:mint-heraclea .
+
+corid:mint-nicomedia
+    a nmo:Mint ;
+    skos:prefLabel "Nicomedia"@en .
+
+corid:mint-heraclea
+    a nmo:Mint ;
+    skos:prefLabel "Heraclea"@en .
+
+corid:mintmark-1934-243
+    a cor:Mintmark ;
+    skos:prefLabel "Officina I above SMNE or SMHE"@en ;
+    cor:officinaMarkRaw "I" ;
+    cor:rawValue "SMNE / SMHE" ;
+    cor:proposedValue "SMNE" ;
+    cor:alternateProposedValue "SMHE" ;
+    cor:positionRaw "in exergue" .
+
+corid:findspot-agora-se-south-stoa-well-viii
+    a cor:ExcavationFindspot ;
+    skos:prefLabel "Agora SE, South Stoa, Well VIII"@en ;
+    cor:areaRaw "Agora SE" ;
+    cor:featureRaw "South Stoa" ;
+    cor:wellRaw "Well VIII" ;
+    cor:additionalFindspotNoteRaw "well V below floor" .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:metis-coin--2072754341
+    a prov:Entity ;
+    dcterms:identifier "-2072754341" ;
+    dcterms:description "Linked Metis coin record used as supporting database context."@en .
+
+# Human confirmation: verify whether the mintmark's third letter is N or H (Nicomedia versus Heraclea) and whether the circled findspot note reads “well V below floor.”

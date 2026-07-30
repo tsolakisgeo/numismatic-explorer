@@ -1,0 +1,120 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-324
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-324" ;
+    dcterms:source corid:card-COIN_X_1934_00324_X_sideB ;
+    nmo:hasAuthority corid:authority-marcus-antonius ;
+    nmo:hasStartDate "-0032"^^xsd:gYear ;
+    nmo:hasEndDate "-0031"^^xsd:gYear ;
+    nmo:hasMint corid:mint-legionary-coinage ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-denarius ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "3.25"^^xsd:decimal ;
+    nmo:hasAxis 4 ;
+    nmo:hasObverse corid:coin-1934-324-obverse ;
+    nmo:hasReverse corid:coin-1934-324-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Sydenham 1231" ;
+    dcterms:bibliographicCitation "BMC Roman Republic II, p. 529, no. 204" .
+
+corid:authority-marcus-antonius
+    a nmo:Authority ;
+    skos:prefLabel "Marcus Antonius"@en ;
+    skos:altLabel "Mark Antony"@en .
+
+corid:mint-legionary-coinage
+    a nmo:Mint ;
+    skos:prefLabel "Legionary coinage mint"@en .
+
+corid:denomination-denarius
+    a nmo:Denomination ;
+    skos:prefLabel "Denarius"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-324-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "ANT AVG / III VIR R.P.C." ;
+    dcterms:description "Galley right with rowers and a standard at the prow"@en .
+
+corid:coin-1934-324-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "LEG XII" ;
+    dcterms:description "Three standards: a legionary eagle between two signa; LEG XII below"@en .
+
+corid:negative-75-11-10
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-10" ;
+    cor:depictsNumismaticObject corid:coin-1934-324 .
+
+corid:negative-75-11-11
+    a cor:PhotographicNegative ;
+    dcterms:identifier "75-11-11" ;
+    cor:depictsNumismaticObject corid:coin-1934-324 .
+
+corid:photo-print-1934-324-upper
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00324_X_sideB ;
+    cor:positionOnCard "upper left" ;
+    cor:depictsNumismaticObject corid:coin-1934-324 ;
+    cor:associatedNegative corid:negative-75-11-10 ;
+    dcterms:description "Mounted black-and-white photograph of one face of the coin with a scale at right"@en .
+
+corid:photo-print-1934-324-lower
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00324_X_sideB ;
+    cor:positionOnCard "middle left" ;
+    cor:depictsNumismaticObject corid:coin-1934-324 ;
+    cor:associatedNegative corid:negative-75-11-11 ;
+    dcterms:description "Mounted black-and-white photograph of the other face of the coin with a scale at right"@en .
+
+corid:card-COIN_X_1934_00324_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00324_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-324 ;
+    cor:sourceImageFilename "COIN_X_1934_00324_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00324_X_sideA ;
+    cor:attachedPhotograph corid:photo-print-1934-324-upper ;
+    cor:attachedPhotograph corid:photo-print-1934-324-lower ;
+    cor:negativeReferenceRaw "75-11-10; 75-11-11" ;
+    cor:photographicNegative corid:negative-75-11-10 ;
+    cor:photographicNegative corid:negative-75-11-11 ;
+    cor:databaseCoinId "-1644739009" ;
+    cor:databaseDepartmentRaw "RR" ;
+    cor:databaseAuthorityRaw "Marcus Antonius" ;
+    cor:databaseMintRaw "Legionary Coinage" ;
+    cor:databaseDateRaw "32-31 BC" ;
+    cor:databaseObverseLegendRaw "ANT [AV]G above; IIIVIR R.P.C below" ;
+    cor:databaseObverseTypeRaw "Galley with rowers r., standard at prow" ;
+    cor:databaseReverseLegendRaw "LEG XII" ;
+    cor:databaseReverseTypeRaw "Three standards: legionary eagle between two signa; inscription below" ;
+    cor:databaseControlmarkRaw "Obv: star with tail" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "denarius" ;
+    cor:databaseWeightRaw "3.25" ;
+    cor:databaseDiameterRaw "19" ;
+    cor:databaseAxisRaw "4" ;
+    cor:databaseBibliographicReferenceRaw "Syd. 1231; BMC Rom Rep II, p. 529, no. 204" ;
+    cor:databaseNoteRaw "Card 155; Negative 75-11-10, 11; plated; minted by Antony for troops before Actium" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 5/15/1934, #119; Notebook 146, p. 13" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm which photographed face corresponds to negative 75-11-10 and which to 75-11-11; the worn photographs do not securely establish obverse/reverse assignment." .

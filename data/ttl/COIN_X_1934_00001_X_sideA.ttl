@@ -1,0 +1,56 @@
+@prefix coin: <https://example.org/corinth/coin/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+coin:COIN_X_1934_00001_X_sideA
+    a coin:CoinInventoryCard ;
+    coin:inventoryNumber "1934-1" ;
+    coin:earlierInventoryNumber "359" ;
+    coin:authorityRaw "Valentinian I" ;
+    coin:authority "Valentinian I" ;
+    coin:dateFrom 364 ;
+    coin:dateTo 378 ;
+    coin:era "CE" ;
+    coin:materialRaw "Æ" ;
+    coin:material "AE" ;
+    coin:diameterRaw "16" ;
+    coin:diameterMillimetres 16 ;
+    coin:obverseLegendRaw "...ANTINI..." ;
+    coin:obverseTypeRaw "Bust r., diademed." ;
+    coin:obverseTypeNormalized "Diademed bust right" ;
+    coin:reverseLegendRaw "... IAROM ...." ;
+    coin:reverseLegendNormalized "GLORIA ROMANORVM" ;
+    coin:reverseLegendIdentificationMethod "inferred" ;
+    coin:reverseLegendInferenceBasis "Inferred from the visible legend fragment and the reverse type; requires confirmation." ;
+    coin:reverseTypeRaw "Emperor striding r., dragging captive and holding labarum" ;
+    coin:reverseTypeNormalized "Emperor striding right, dragging a captive and holding a labarum" ;
+    coin:bibliographicReference "Cohen no. 12" ;
+    coin:notebookReference [
+        a coin:ExcavationNotebookReference ;
+        coin:notebookReferenceRaw "J. de Waele p. - (2)" ;
+        coin:notebookName "J. de Waele" ;
+        coin:notebookPageRaw "-" ;
+        coin:notebookEntryOrRange "2" ;
+        coin:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    coin:findspotRaw "Lerna Square" ;
+    coin:findspot "Lerna Square" ;
+    coin:excavationYear "1934"^^xsd:gYear ;
+    coin:archivalAnnotationRaw "NB -" ;
+    coin:sourceImageFilename "COIN_X_1934_00001_X_sideA.jpg" ;
+    coin:transcriptionMethod "vision analysis from inventory-card image" ;
+    coin:requiresHumanReview true ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "reverseLegendNormalized" ;
+        coin:rawValue "... IAROM ...." ;
+        coin:proposedValue "GLORIA ROMANORVM" ;
+        coin:reason "The full reverse legend is inferred rather than completely visible."
+    ] ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "notebookPage" ;
+        coin:rawValue "-" ;
+        coin:reason "No numeric notebook page is visible; the circled 2 is recorded separately as the entry or position on the page."
+    ] .

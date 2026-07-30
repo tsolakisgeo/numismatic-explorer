@@ -1,0 +1,141 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-319
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-319" ;
+    dcterms:source corid:card-COIN_X_1934_00319_X_sideA ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-jeton ;
+    nmo:hasDiameter "21"^^xsd:decimal ;
+    nmo:hasWeight "0.92"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-319-obverse ;
+    nmo:hasReverse corid:coin-1934-319-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    cor:conditionRaw "broken" ;
+    cor:axisAssignmentBasis "Linked coin database; the axis is not written on the card." .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-jeton
+    a nmo:Denomination ;
+    skos:prefLabel "Jeton"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-319-obverse
+    a nmo:Obverse ;
+    dcterms:description "Row of dots between two lines within a circle, with a cross over a monogram"@en .
+
+corid:coin-1934-319-reverse
+    a nmo:Reverse ;
+    dcterms:description "Same design as the obverse: row of dots between two lines within a circle, with a cross over a monogram"@en .
+
+corid:negative-92-56-30
+    a cor:PhotographicNegative ;
+    dcterms:identifier "92-56-30" ;
+    cor:depictsNumismaticObject corid:coin-1934-319 .
+
+corid:negative-92-56-31
+    a cor:PhotographicNegative ;
+    dcterms:identifier "92-56-31" ;
+    cor:depictsNumismaticObject corid:coin-1934-319 .
+
+corid:photo-print-1934-319-left
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00319_X_sideA ;
+    cor:depictsNumismaticObject corid:coin-1934-319 ;
+    cor:positionOnCard "lower centre-left" .
+
+corid:photo-print-1934-319-right
+    a cor:PhotographicPrint ;
+    cor:mountedOnCard corid:card-COIN_X_1934_00319_X_sideA ;
+    cor:depictsNumismaticObject corid:coin-1934-319 ;
+    cor:positionOnCard "lower centre-right" .
+
+corid:card-COIN_X_1934_00319_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00319_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-319 ;
+    cor:sourceImageFilename "COIN_X_1934_00319_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-319" ;
+    cor:inventoryNumber "1934-319" ;
+    cor:earlierInventoryNumberRaw "1285" ;
+    cor:earlierInventoryNumber "1285" ;
+    cor:archivalAnnotationRaw "7" ;
+    cor:denominationRaw "Jeton" ;
+    cor:materialRaw "Billon" ;
+    cor:diameterRaw "21 (broken)" ;
+    cor:weightRaw "0.92 g." ;
+    cor:obverseTypeRaw "Row of dots between two lines within circle" ;
+    cor:reverseTypeRaw "same" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "5/14/1934" ;
+    cor:excavationDate "1934-05-14"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 143; G. R. Davidson p. 104 (3-4)" ;
+        cor:notebookNumber 143 ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 104 ;
+        cor:notebookPageRaw "104" ;
+        cor:notebookEntryOrRange "3-4" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:studyCollectionRaw "in STUDY COLL." ;
+    cor:negativeReferenceRaw "Neg. 92-56-30/31" ;
+    cor:photographicNegative corid:negative-92-56-30 ;
+    cor:photographicNegative corid:negative-92-56-31 ;
+    cor:attachedPhotograph corid:photo-print-1934-319-left ;
+    cor:attachedPhotograph corid:photo-print-1934-319-right ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs showing the two faces of the broken jeton." ;
+    cor:databaseCoinId "-988834412" ;
+    cor:databaseDepartmentRaw "ME" ;
+    cor:databaseObverseTypeRaw "Row of dots between two lines; within circle; cross on monogram" ;
+    cor:databaseReverseTypeRaw "Same as obverse" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Jeton" ;
+    cor:databaseWeightRaw "0.92" ;
+    cor:databaseDiameterRaw "21" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 5/14/1934; Notebook 143 p.104, 3-4" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number '1285', the material disagreement between the card ('Billon') and database ('AE'), and the assignment of negatives 92-56-30 and 92-56-31 to the two attached photographs." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "1285" ;
+        cor:reason "The small pencil number at the upper left is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "material" ;
+        cor:rawValue "Billon" ;
+        cor:proposedValue "AE" ;
+        cor:reason "The card explicitly reads 'Billon', while the linked database records AE; the card reading is retained as primary."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "negativeToPhotographAssignment" ;
+        cor:rawValue "92-56-30/31" ;
+        cor:reason "The combined negative notation is visible, but the individual assignment of each negative to the left or right photograph is not explicit."
+    ] .

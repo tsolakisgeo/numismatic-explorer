@@ -1,0 +1,109 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-338
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-338" ;
+    dcterms:source corid:card-COIN_X_1934_00338_X_sideA ;
+    nmo:hasAuthority corid:authority-hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "19"^^xsd:decimal ;
+    nmo:hasWeight "8.45"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-338-obverse ;
+    nmo:hasReverse corid:coin-1934-338-reverse ;
+    nmo:hasFindspot corid:place-north-of-school ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Similar to Cor. Coins 129, but with variations" ;
+    dcterms:bibliographicCitation "cf. NCP F–XCVII" .
+
+corid:authority-hadrian
+    a nmo:Authority ;
+    skos:prefLabel "Hadrian"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:place-north-of-school
+    skos:prefLabel "North of School"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-338-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "IMP CAES ..." ;
+    dcterms:description "Laureate bust of Hadrian right"@en .
+
+corid:coin-1934-338-reverse
+    a nmo:Reverse ;
+    dcterms:description "Propylaea with a central arch and two columns on each side; above, a facing quadriga"@en .
+
+corid:card-COIN_X_1934_00338_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00338_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-338 ;
+    cor:sourceImageFilename "COIN_X_1934_00338_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00338_X_sideB ;
+    cor:inventoryNumberRaw "1934-338" ;
+    cor:inventoryNumber "1934-338" ;
+    cor:earlierInventoryNumberRaw "76" ;
+    cor:earlierInventoryNumber "76" ;
+    cor:mintRaw "Corinth" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:dateRaw "117-138 A.D." ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "19" ;
+    cor:physicalDescriptionRaw "thick" ;
+    cor:weightRaw "8.45 gr." ;
+    cor:obverseLegendRaw "IMP CAES ..." ;
+    cor:obverseTypeRaw "Bust of Hadrian r., laureate" ;
+    cor:reverseTypeRaw "Propylaea with central arch & 2 columns at each side; on top, quadriga facing" ;
+    cor:bibliographicReferenceRaw "Similar to Cor. Coins 129 but with variations" ;
+    cor:bibliographicReferenceRaw "cf. NCP F-XCVII" ;
+    cor:findspotRaw "North of School" ;
+    cor:excavationDateRaw "6/4/1934" ;
+    cor:excavationDate "1934-06-04"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "C. H. Morgan p. 85 (1-2)" ;
+        cor:notebookName "C. H. Morgan" ;
+        cor:notebookPage 85 ;
+        cor:notebookPageRaw "85" ;
+        cor:notebookEntryOrRange "1-2" ;
+        cor:notebookNumber 142 ;
+        cor:notebookIdentificationMethod "The name, page, and distinct circled range are explicit on the card; notebook number 142 is supplied by the linked database."
+    ] ;
+    cor:studyCollectionRaw "Coin = In Study Coll." ;
+    cor:archivalAnnotationRaw "(over photos)" ;
+    cor:databaseCoinId "-1900816705" ;
+    cor:databaseDepartmentRaw "GI" ;
+    cor:databaseRegionRaw "Corinth" ;
+    cor:databaseAuthorityRaw "Hadrian" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "117-138" ;
+    cor:databaseObverseLegendRaw "IMP CAES ---" ;
+    cor:databaseObverseTypeRaw "Bust of Hadrian facing r.; wearing laureate" ;
+    cor:databaseReverseTypeRaw "Propylaea with central arch and two columns on each side; quadriga facing on top" ;
+    cor:databaseSymbolRaw "Letters" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseWeightRaw "8.45" ;
+    cor:databaseDiameterRaw "19" ;
+    cor:databaseBibliographicReferenceRaw "NCP F-XCVII; Edwards 129" ;
+    cor:databaseExcavationContextRaw "North of School; excavation date 6/4/1934; Notebook 142 p.85, 1-2" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm whether the abbreviated citation should be expanded as 'NCP F–XCVII' and whether 'Cor. Coins 129' corresponds to Edwards 129." .

@@ -1,0 +1,46 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-462
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-462" ;
+    dcterms:source corid:card-COIN_X_1934_00462_X_sideA ;
+    nmo:hasObverse corid:coin-1934-462-obverse ;
+    nmo:hasReverse corid:coin-1934-462-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00462_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00462_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-462 ;
+    cor:sourceImageFilename "COIN_X_1934_00462_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-462" ;
+    cor:inventoryNumber "1934-462" ;
+    cor:groupRaw "Gru 110" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-98-31/32" ;
+    cor:photographAnnotationRaw "wrong photos" ;
+    cor:leftPhotographNegativeRaw "08-98-35" ;
+    cor:rightPhotographNegativeRaw "08-98-34" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the expansion of 'Gru 110', the calendar interpretation of '5/8/34', and the exact readings and relationship of the negative numbers 08-98-31/32, 08-98-35, and 08-98-34." .
+
+corid:coin-1934-462-obverse
+    a nmo:Obverse .
+
+corid:coin-1934-462-reverse
+    a nmo:Reverse .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .

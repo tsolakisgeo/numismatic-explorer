@@ -1,0 +1,52 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-407
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-407" ;
+    dcterms:source corid:card-COIN_X_1934_00407_X_sideA ;
+    nmo:hasObverse corid:coin-1934-407-obverse ;
+    nmo:hasReverse corid:coin-1934-407-reverse .
+
+corid:card-COIN_X_1934_00407_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00407_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-407 ;
+    cor:sourceImageFilename "COIN_X_1934_00407_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-407" ;
+    cor:inventoryNumber "1934-407" ;
+    cor:groupRaw "Gru 55" ;
+    cor:negativeNumberRaw "08-95-28/29" ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 55" ;
+        cor:proposedValue "Group 55" ;
+        cor:reason "The handwritten abbreviation is not expanded on the card."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Two pasted photographs without written obverse/reverse labels" ;
+        cor:proposedValue "Left photograph as obverse; right photograph as reverse" ;
+        cor:reason "The assignment follows the photographs' placement and is not explicitly stated on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm 'Gru 55' as Group 55, the left-obverse/right-reverse assignment, and the indistinct face descriptions." .
+
+corid:coin-1934-407-obverse
+    a nmo:Obverse ;
+    dcterms:description "Very worn or overexposed central figure or monogram-like device surrounded by traces of a marginal legend."@en .
+
+corid:coin-1934-407-reverse
+    a nmo:Reverse ;
+    dcterms:description "Worn central figure or monogram-like device surrounded by a partial marginal legend."@en .

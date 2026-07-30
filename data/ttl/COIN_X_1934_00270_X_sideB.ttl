@@ -1,0 +1,116 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-270
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-270" ;
+    dcterms:source corid:card-COIN_X_1934_00270_X_sideB ;
+    nmo:hasStartDate "-0350"^^xsd:gYear ;
+    nmo:hasEndDate "-0338"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ar ;
+    nmo:hasDenomination corid:denomination-drachma ;
+    nmo:hasDiameter "16.5"^^xsd:decimal ;
+    nmo:hasWeight "2.27"^^xsd:decimal ;
+    nmo:hasAxis 9 ;
+    nmo:hasObverse corid:coin-1934-270-obverse ;
+    nmo:hasReverse corid:coin-1934-270-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-well ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "B.M.C., pl. XI, no. 15" .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:denomination-drachma
+    a nmo:Denomination ;
+    skos:prefLabel "Drachma"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw-well
+    skos:prefLabel "Agora Southwest, well"@en ;
+    skos:altLabel "Agora SW"@en .
+
+corid:controlmark-koppa
+    a nmo:Controlmark ;
+    skos:prefLabel "Koppa"@en ;
+    skos:notation "Ϙ" .
+
+corid:controlmark-letter-a
+    a nmo:Controlmark ;
+    skos:prefLabel "Letter A"@en ;
+    skos:notation "A" .
+
+corid:coin-1934-270-obverse
+    a nmo:Obverse ;
+    dcterms:description "Pegasus flying left; koppa beneath"@en ;
+    nmo:hasControlmark corid:controlmark-koppa .
+
+corid:coin-1934-270-reverse
+    a nmo:Reverse ;
+    dcterms:description "Head of Peirene or Aphrodite left, with rolled hair, earring, and necklace; letter A to right"@en ;
+    nmo:hasControlmark corid:controlmark-letter-a .
+
+corid:negative-74-81-9
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-9" ;
+    cor:depictsFace corid:coin-1934-270-reverse ;
+    cor:negativeReferenceRaw "74-81-9" .
+
+corid:negative-74-81-10
+    a cor:PhotographicNegative ;
+    dcterms:identifier "74-81-10" ;
+    cor:depictsFace corid:coin-1934-270-obverse ;
+    cor:negativeReferenceRaw "74-81-10" .
+
+corid:card-COIN_X_1934_00270_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00270_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-270 ;
+    cor:sourceImageFilename "COIN_X_1934_00270_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00270_X_sideA ;
+    cor:inventoryNumber "1934-270" ;
+    cor:photographicNegative corid:negative-74-81-9 ;
+    cor:photographicNegative corid:negative-74-81-10 ;
+    cor:negativeReferenceRaw "74-81-9" ;
+    cor:negativeReferenceRaw "74-81-10" ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs of the coin, one for each face, each shown beside a scale." ;
+    cor:archivalAnnotationRaw "211" ;
+    cor:databaseCoinId "514559218" ;
+    cor:databaseDepartmentRaw "GR" ;
+    cor:databaseMintRaw "Corinth" ;
+    cor:databaseDateRaw "350 BC-338 BC" ;
+    cor:databaseObverseLegendRaw "koppa" ;
+    cor:databaseObverseTypeRaw "Pegasus flg l.; pointed wing" ;
+    cor:databaseReverseLegendRaw "A" ;
+    cor:databaseReverseTypeRaw "Head of Peirene/Aphrodite l.; hair rolled with end hanging in curls down neck; wearing earring and necklace" ;
+    cor:databaseSymbolRaw "letter" ;
+    cor:databaseMaterialRaw "AR" ;
+    cor:databaseDenominationRaw "Drachma" ;
+    cor:databaseWeightRaw "2.27" ;
+    cor:databaseDiameterRaw "16.5" ;
+    cor:databaseAxisRaw "9" ;
+    cor:databaseBibliographicReferenceRaw "BMC pl.XI.15" ;
+    cor:databaseExcavationContextRaw "Agora SW; found in well; excavation date 4/27/1934; Notebook 143 p.38" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint lower-right pencil annotation, read tentatively as '211'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "archivalAnnotationRaw" ;
+        cor:rawValue "211" ;
+        cor:reason "The lower-right pencil annotation is very faint."
+    ] .

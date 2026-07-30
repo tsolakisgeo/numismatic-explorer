@@ -1,0 +1,90 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-502
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-502" ;
+    dcterms:source corid:card-COIN_X_1934_00502_X_sideA ;
+    nmo:hasObverse corid:coin-1934-502-obverse ;
+    nmo:hasReverse corid:coin-1934-502-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00502_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00502_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-502 ;
+    cor:sourceImageFilename "COIN_X_1934_00502_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-502" ;
+    cor:inventoryNumber "1934-502" ;
+    cor:groupRaw "Gru 150" ;
+    cor:findspotRaw "Agora SW Hoard" ;
+    cor:excavationDateRaw "5/8/34" ;
+    cor:negativeNumberRaw "08-101-1A/2A" ;
+    cor:databaseContext corid:metis-inventory-card-8222676041257857024,
+                        corid:metis-coin-minus-707282132 ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 150" ;
+        cor:proposedValue "Group 150" ;
+        cor:reason "The expansion of the handwritten abbreviation 'Gru' is inferred."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "photographFaceAssignment" ;
+        cor:rawValue "Two unlabeled coin photographs, left and right" ;
+        cor:proposedValue "left photograph = obverse; right photograph = reverse" ;
+        cor:reason "The photographs are not explicitly labeled as obverse and reverse."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the expansion of 'Gru 150' and the assignment of the left and right photographs to obverse and reverse." .
+
+corid:coin-1934-502-obverse
+    a nmo:Obverse ;
+    dcterms:description "Photograph provisionally assigned as the obverse: a central monogrammatic or heraldic device with a surrounding marginal legend."@en ;
+    cor:photographPosition "left" .
+
+corid:coin-1934-502-reverse
+    a nmo:Reverse ;
+    dcterms:description "Photograph provisionally assigned as the reverse: a central cross-like device within a circular border, with a surrounding marginal legend."@en ;
+    cor:photographPosition "right" .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW Hoard"@en .
+
+corid:metis-inventory-card-8222676041257857024
+    a cor:DatabaseRecord ;
+    dcterms:identifier "8222676041257857024" ;
+    cor:databaseObjectType "COIN" ;
+    cor:databaseYearRaw "1934.0" ;
+    cor:databaseCardSide "A" ;
+    cor:databaseNumberRaw "502.0" ;
+    cor:databaseIconPath "\\InventoryCards\\COIN\\1934\\COIN_X_1934_00502_X_sideA.jpg" ;
+    cor:databaseFilename "COIN_X_1934_00502_X_sideA.jpg" ;
+    cor:databaseCoinOrObject "coin" ;
+    dcterms:created "2025-02-19T16:09:09+02:00"^^xsd:dateTime ;
+    dcterms:modified "2026-01-14T11:35:18+02:00"^^xsd:dateTime ;
+    dcterms:creator "ESPA2025. Herbst, J." ;
+    cor:databaseMultipleReference false ;
+    cor:databaseUserGroup "Corinth,Staff,Public" ;
+    cor:lookupSource "direct_csv_index" ;
+    cor:linkMethod "composite_inventory_key" .
+
+corid:metis-coin-minus-707282132
+    a cor:DatabaseRecord ;
+    dcterms:identifier "-707282132" ;
+    cor:databaseCoinNumber "502" ;
+    cor:databaseYear "1934" ;
+    dcterms:created "2013-11-12T14:02:27+02:00"^^xsd:dateTime ;
+    cor:databaseStudyCollectionStatus false ;
+    cor:databaseUserGroup "Corinth,Staff,Public" .

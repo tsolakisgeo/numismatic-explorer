@@ -1,0 +1,81 @@
+@prefix coin: <https://example.org/corinth/coin/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+coin:COIN_X_1934_00002_X_sideA
+    a coin:CoinInventoryCard ;
+    coin:inventoryNumber "1934-2" ;
+    coin:earlierInventoryNumber "635" ;
+    coin:authorityRaw "Arcadius" ;
+    coin:authority "Arcadius" ;
+    coin:dateFrom 395 ;
+    coin:dateTo 408 ;
+    coin:era "CE" ;
+    coin:materialRaw "Æ" ;
+    coin:material "AE" ;
+    coin:diameterRaw "11" ;
+    coin:diameterMillimetres 11 ;
+    coin:archivalAnnotationRaw "(cut down)" ;
+    coin:obverseLegendRaw "DN ARCADIV..." ;
+    coin:obverseLegendNormalized "DN ARCADIVS P F AVG" ;
+    coin:obverseLegendIdentificationMethod "inferred" ;
+    coin:obverseLegendInferenceBasis "The visible legend begins DN ARCADIV; the proposed expansion requires confirmation." ;
+    coin:obverseTypeRaw "Bust r., diademed." ;
+    coin:obverseTypeNormalized "Diademed bust right" ;
+    coin:reverseLegendRaw ".... PVBLICAE" ;
+    coin:reverseLegendNormalized "SALVS REI PVBLICAE" ;
+    coin:reverseLegendIdentificationMethod "inferred" ;
+    coin:reverseLegendInferenceBasis "The visible ending PVBLICAE and the reverse type suggest SALVS REI PVBLICAE; the full legend is not visible." ;
+    coin:reverseTypeRaw "Victory l., with trophy and captive" ;
+    coin:reverseTypeNormalized "Victory left, holding a trophy and accompanied by a captive" ;
+    coin:controlMarkRaw "vertical stroke above horizontal line" ;
+    coin:mintMarkRaw "[?]NSA" ;
+    coin:mintMarkNormalized "CONSA" ;
+    coin:mintMarkIdentificationMethod "inferred" ;
+    coin:mintMarkInferenceBasis "The exergual letters appear to end NSA; CONSA is proposed but the first letters are unclear." ;
+    coin:mint "Constantinople" ;
+    coin:mintIdentificationMethod "inferred_from_mint_mark" ;
+    coin:bibliographicReference "Sab. 41" ;
+    coin:notebookReference [
+        a coin:ExcavationNotebookReference ;
+        coin:notebookReferenceRaw "J. de Waele p. - (1)" ;
+        coin:notebookName "J. de Waele" ;
+        coin:notebookPageRaw "-" ;
+        coin:notebookEntryOrRange "1" ;
+        coin:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    coin:findspotRaw "Lerna Square" ;
+    coin:findspot "Lerna Square" ;
+    coin:excavationYear "1934"^^xsd:gYear ;
+    coin:archivalAnnotationRaw "NB -" ;
+    coin:sourceImageFilename "COIN_X_1934_00002_X_sideA.jpg" ;
+    coin:transcriptionMethod "vision analysis from inventory-card image" ;
+    coin:requiresHumanReview true ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "obverseLegendNormalized" ;
+        coin:rawValue "DN ARCADIV..." ;
+        coin:proposedValue "DN ARCADIVS P F AVG" ;
+        coin:reason "The ending is not fully visible."
+    ] ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "reverseLegendNormalized" ;
+        coin:rawValue ".... PVBLICAE" ;
+        coin:proposedValue "SALVS REI PVBLICAE" ;
+        coin:reason "The beginning of the legend is not visible."
+    ] ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "mintMarkNormalized" ;
+        coin:rawValue "[?]NSA" ;
+        coin:proposedValue "CONSA" ;
+        coin:reason "The first letters of the mint mark are unclear."
+    ] ;
+    coin:uncertainReading [
+        a coin:UncertainReading ;
+        coin:field "notebookPage" ;
+        coin:rawValue "-" ;
+        coin:reason "No numerical notebook page is visible; the circled 1 is recorded separately as the notebook entry or position."
+    ] .

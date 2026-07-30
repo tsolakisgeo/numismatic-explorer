@@ -1,0 +1,117 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-276
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-276" ;
+    dcterms:source corid:card-COIN_X_1934_00276_X_sideB ;
+    nmo:hasAuthority corid:authority-charles-i-of-anjou ;
+    nmo:hasStartDate "1266"^^xsd:gYear ;
+    nmo:hasEndDate "1285"^^xsd:gYear ;
+    nmo:hasMint corid:mint-messina ;
+    nmo:hasMaterial corid:material-billon ;
+    nmo:hasDenomination corid:denomination-denier ;
+    nmo:hasDiameter "15.5"^^xsd:decimal ;
+    nmo:hasWeight "0.565"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-276-obverse ;
+    nmo:hasReverse corid:coin-1934-276-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Travaini, NC 1993, pl. 24, no. 107" ;
+    cor:productionDateAssignmentBasis "The reign dates 1266-1285 are supplied by the linked coin database." ;
+    cor:diameterAssignmentBasis "The diameter 15.5 mm is supplied by the linked coin database and is not written on card side B." .
+
+corid:authority-charles-i-of-anjou
+    a nmo:Authority ;
+    skos:prefLabel "Charles I of Anjou"@en ;
+    skos:altLabel "Charles of Anjou"@en ;
+    skos:note "King of Sicily"@en .
+
+corid:mint-messina
+    a nmo:Mint ;
+    skos:prefLabel "Messina"@en .
+
+corid:material-billon
+    a nmo:Material ;
+    skos:prefLabel "Billon"@en .
+
+corid:denomination-denier
+    a nmo:Denomination ;
+    skos:prefLabel "Denier"@en ;
+    skos:altLabel "den."@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora Southwest"@en ;
+    skos:altLabel "Agora SW"@en .
+
+corid:coin-1934-276-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "KAR" ;
+    dcterms:description "KAR within a circle, with a suspension mark above; AR ligatured"@en .
+
+corid:coin-1934-276-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "+ REX SIC...IE" ;
+    dcterms:description "Cross within a circle, with fleurs-de-lis in the four angles"@en .
+
+corid:negative-04-1-6A
+    a cor:PhotographicNegative ;
+    dcterms:identifier "04-1-6A" ;
+    cor:negativeReferenceRaw "04-1-6A" ;
+    cor:depictsNumismaticObject corid:coin-1934-276 .
+
+corid:negative-04-1-7A
+    a cor:PhotographicNegative ;
+    dcterms:identifier "04-1-7A" ;
+    cor:negativeReferenceRaw "04-1-7A" ;
+    cor:depictsNumismaticObject corid:coin-1934-276 .
+
+corid:card-COIN_X_1934_00276_X_sideB
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00276_X_sideB" ;
+    cor:documentsNumismaticObject corid:coin-1934-276 ;
+    cor:sourceImageFilename "COIN_X_1934_00276_X_sideB.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "B" ;
+    cor:relatedCardSide corid:card-COIN_X_1934_00276_X_sideA ;
+    cor:inventoryNumber "1934-276" ;
+    cor:negativeReferenceRaw "Neg. 04-1-6A; 7A." ;
+    cor:photographicNegative corid:negative-04-1-6A ;
+    cor:photographicNegative corid:negative-04-1-7A ;
+    cor:photographDescriptionRaw "Two attached black-and-white photographs of a small coin, showing its two faces." ;
+    cor:imageArrangementRaw "Two photographs are attached near the upper left of the card; the collective caption below reads 'Neg. 04-1-6A; 7A.'" ;
+    cor:databaseCoinId "1112973571" ;
+    cor:databaseDepartmentRaw "OT" ;
+    cor:databaseAuthorityRaw "Charles I of Anjou" ;
+    cor:databaseMintRaw "Messina" ;
+    cor:databaseDateRaw "1266-1285" ;
+    cor:databaseObverseLegendRaw "illegible" ;
+    cor:databaseObverseTypeRaw "KAR within circle, suspension mark above, 'AR' ligatured." ;
+    cor:databaseReverseLegendRaw "+ REX SIC [..] IE" ;
+    cor:databaseReverseTypeRaw "Cross within circle, fleurs-de-lis in four angles." ;
+    cor:databaseMaterialRaw "Bi" ;
+    cor:databaseWeightRaw "0.565" ;
+    cor:databaseDiameterRaw "15.5" ;
+    cor:databaseBibliographicReferenceRaw "Travaini, NC 1993, pl.24, 107." ;
+    cor:databaseExcavationContextRaw "Agora S.W.; excavation date 05/04/1934, #29; Notebook 143 (Davidson), p.65; Card #1272" ;
+    cor:databaseStudyCollectionRaw "True" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm which photograph corresponds to negative 04-1-6A and which corresponds to 04-1-7A; the caption lists both references collectively rather than assigning one to each image." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "negativeToPhotographAssignment" ;
+        cor:rawValue "Neg. 04-1-6A; 7A." ;
+        cor:reason "The two negative numbers are visible, but the card does not explicitly map each number to the left or right photograph."
+    ] .

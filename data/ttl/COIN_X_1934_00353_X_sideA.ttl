@@ -1,0 +1,76 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-353
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-353" ;
+    dcterms:source corid:card-COIN_X_1934_00353_X_sideA ;
+    nmo:hasAuthority corid:authority-john-iii-vatatzes ;
+    nmo:hasStartDate "1222"^^xsd:gYear ;
+    nmo:hasEndDate "1254"^^xsd:gYear ;
+    nmo:hasMaterial nm:av ;
+    nmo:hasWeight "4.47"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-353-obverse ;
+    nmo:hasReverse corid:coin-1934-353-reverse ;
+    nmo:hasFindspot corid:place-agora-sw-hoard .
+
+corid:card-COIN_X_1934_00353_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00353_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-353 ;
+    cor:sourceImageFilename "COIN_X_1934_00353_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-353" ;
+    cor:inventoryNumber "1934-353" ;
+    cor:groupRaw "Gru 1" ;
+    cor:authorityRaw "John III Vatatzes" ;
+    cor:dateAssignmentRaw "1222-1254" ;
+    cor:materialRaw "AV" ;
+    cor:weightRaw "4.47g" ;
+    cor:findspotRaw "Agora SW / Hoard" ;
+    cor:excavationDateRaw "5/8/1934" ;
+    cor:excavationDate "1934-05-08"^^xsd:date ;
+    cor:archivalCommentRaw "Safe" ;
+    cor:negativeNumberRaw "08-92-25/26 ↓" ;
+    cor:photographicEvidence [
+        a cor:CoinPhotographPair ;
+        cor:leftPhotographDescription "Two standing figures; the taller figure is interpreted as John III and the second as the Virgin crowning him." ;
+        cor:rightPhotographDescription "Christ seated facing on a throne, holding a book."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "groupRaw" ;
+        cor:rawValue "Gru 1" ;
+        cor:proposedValue "Group 1" ;
+        cor:reason "The abbreviated handwritten notation beside COIN is not fully explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "faceAssignment" ;
+        cor:rawValue "Two pasted coin photographs without written obverse/reverse labels" ;
+        cor:proposedValue "Christ enthroned as obverse; John III crowned by the Virgin as reverse" ;
+        cor:reason "The face assignment is inferred from the photographed iconography rather than written on the card."
+    ] ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm that 'Gru 1' means Group 1 and that the photographed faces are assigned as Christ enthroned on the obverse and John III crowned by the Virgin on the reverse." .
+
+corid:coin-1934-353-obverse
+    a nmo:Obverse ;
+    dcterms:description "Christ seated facing on a throne and holding a book."@en .
+
+corid:coin-1934-353-reverse
+    a nmo:Reverse ;
+    dcterms:description "John III stands facing beside the Virgin, who appears to crown him."@en .
+
+corid:authority-john-iii-vatatzes
+    a nmo:Authority ;
+    skos:prefLabel "John III Vatatzes"@en .
+
+corid:place-agora-sw-hoard
+    a dcterms:Location ;
+    skos:prefLabel "Agora SW hoard"@en .

@@ -1,0 +1,104 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-209
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-209" ;
+    dcterms:source corid:card-COIN_X_1934_00209_X_sideA ;
+    nmo:hasAuthority corid:authority-septimius-severus ;
+    nmo:hasStartDate "0193"^^xsd:gYear ;
+    nmo:hasEndDate "0211"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "25"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-209-obverse ;
+    nmo:hasReverse corid:coin-1934-209-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Edwards no. 221" .
+
+corid:authority-septimius-severus
+    a nmo:Authority ;
+    skos:prefLabel "Septimius Severus"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-209-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "SEPT S ...." ;
+    dcterms:description "Bust of Septimius Severus right"@en .
+
+corid:coin-1934-209-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "CLI ... COR" ;
+    dcterms:description "Tyche standing facing, head left, holding a patera over a lighted altar and a cornucopia"@en .
+
+corid:card-COIN_X_1934_00209_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00209_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-209 ;
+    cor:sourceImageFilename "COIN_X_1934_00209_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:inventoryNumberRaw "1934-209" ;
+    cor:inventoryNumber "1934-209" ;
+    cor:earlierInventoryNumber "152" ;
+    cor:mintRaw "Corinth" ;
+    cor:authorityRaw "Septimius Severus" ;
+    cor:dateRaw "193-211" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "25" ;
+    cor:obverseLegendRaw "SEPT S ...." ;
+    cor:obverseTypeRaw "Bust r." ;
+    cor:reverseLegendRaw "CLI ... COR" ;
+    cor:reverseTypeRaw "Tyche standing facing, head l., holding patera over lighted altar and cornucopia" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/5/1934" ;
+    cor:excavationDate "1934-03-05"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 73 (22-59)" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 73 ;
+        cor:notebookPageRaw "73" ;
+        cor:notebookEntryOrRange "22-59" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:comparativeReferenceRaw "also - Agora SE '33 (170)" ;
+    cor:bibliographicReferenceRaw "cf. Ed. 221 (Caracalla)" ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the faint earlier number 152, the comparative note 'also - Agora SE '33 (170)', and the faint reference 'cf. Ed. 221 (Caracalla)'." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "earlierInventoryNumber" ;
+        cor:rawValue "152" ;
+        cor:reason "The upper-left pencil number is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "comparativeReferenceRaw" ;
+        cor:rawValue "also - Agora SE '33 (170)" ;
+        cor:reason "The handwritten comparative note is faint."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "bibliographicReferenceRaw" ;
+        cor:rawValue "cf. Ed. 221 (Caracalla)" ;
+        cor:proposedValue "Edwards no. 221" ;
+        cor:reason "The pencilled reference and parenthetical attribution are faint; Metis gives Edwards no. 221."
+    ] .

@@ -1,0 +1,115 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-333
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-333" ;
+    dcterms:source corid:card-COIN_X_1934_00333_X_sideA ;
+    nmo:hasStartDate "1000"^^xsd:gYear ;
+    nmo:hasEndDate "1199"^^xsd:gYear ;
+    nmo:hasMint corid:mint-trebizond ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDenomination corid:denomination-follis ;
+    nmo:hasDiameter "26"^^xsd:decimal ;
+    nmo:hasAxis 12 ;
+    nmo:hasObverse corid:coin-1934-333-obverse ;
+    nmo:hasReverse corid:coin-1934-333-reverse ;
+    nmo:hasFindspot corid:place-agora-sw ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "Type VI B; cf. Gr. 1007 var." ;
+    dcterms:bibliographicCitation "Cor. Coins 171, p. 150" ;
+    dcterms:bibliographicCitation "Schlum., p. 497, and Sup., p. 21" ;
+    dcterms:bibliographicCitation "D.O.C. IV¹, p. 430" ;
+    cor:dateAssignmentBasis "The normalized range represents the eleventh and twelfth centuries written on the card; the card also labels the coin 'Late Byzantine' and uncertain." ;
+    cor:axisAssignmentBasis "The upward arrow on the card is interpreted as die axis 12, agreeing with the linked database." .
+
+corid:mint-trebizond
+    a nmo:Mint ;
+    skos:prefLabel "Trebizond"@en .
+
+corid:denomination-follis
+    a nmo:Denomination ;
+    skos:prefLabel "Follis"@en .
+
+corid:place-agora-sw
+    skos:prefLabel "Agora SW"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:coin-1934-333-obverse
+    a nmo:Obverse ;
+    dcterms:description "Facing bust of the Virgin, wearing her usual dress, within a small circle"@en .
+
+corid:coin-1934-333-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "Φ / Π - Φ / Χ" ;
+    dcterms:description "Letters arranged around a central line, with groups of pellets in the angles, all within a plain circle"@en ;
+    cor:legendAssignmentBasis "The normalized Greek letters are read from the card's drawing with support from the linked database." .
+
+corid:card-COIN_X_1934_00333_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00333_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-333 ;
+    cor:sourceImageFilename "COIN_X_1934_00333_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-333" ;
+    cor:inventoryNumber "1934-333" ;
+    cor:earlierInventoryNumberRaw "1192" ;
+    cor:earlierInventoryNumber "1192" ;
+    cor:classificationRaw "Byz." ;
+    cor:dateRaw "(Late Byzantine coin - uncertain); 11th/12th cent." ;
+    cor:mintRaw "Trebizond" ;
+    cor:denominationRaw "Follis" ;
+    cor:typeRaw "Type VI B" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "26" ;
+    cor:axisRaw "↑" ;
+    cor:obverseTypeRaw "Bust of Virgin facing, wearing usual dress, within small circle" ;
+    cor:reverseLegendRaw "Drawing: Φ above, Π left, Φ right, Χ below, with pellet groups in the angles" ;
+    cor:reverseTypeRaw "Letters around center line with groups of pellets in angles; within plain circle" ;
+    cor:reverseMeasurementRaw "inner circle 20; on edge of flan" ;
+    cor:bibliographicReferenceRaw "Type VI B cf. Gr. 1007 var." ;
+    cor:bibliographicReferenceRaw "Cor. Coins 171 p. 150" ;
+    cor:bibliographicReferenceRaw "Schlum. p. 497 + Sup p. 21" ;
+    cor:bibliographicReferenceRaw "D.O.C. IV¹ p. 430" ;
+    cor:findspotRaw "Agora SW" ;
+    cor:excavationDateRaw "5/31/1934" ;
+    cor:excavationDate "1934-05-31"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "G. R. Davidson p. 176 (1-3)" ;
+        cor:notebookName "G. R. Davidson" ;
+        cor:notebookPage 176 ;
+        cor:notebookPageRaw "176" ;
+        cor:notebookEntryOrRange "1-3" ;
+        cor:notebookNumber 143 ;
+        cor:notebookIdentificationMethod "The name, page, and distinct circled range are explicit on the card; notebook number 143 is supplied by the linked database."
+    ] ;
+    cor:studyCollectionRaw "Coin = in Study Collection" ;
+    cor:databaseCoinId "1131122616" ;
+    cor:databaseDepartmentRaw "BY" ;
+    cor:databaseMintRaw "Trebizond" ;
+    cor:databaseObverseLegendRaw "no inscription" ;
+    cor:databaseObverseTypeRaw "Bust of Virgin facing; wearing usual dress; within small circle" ;
+    cor:databaseReverseLegendRaw "<gr>F<gr>, X, <gr>P<gr>, <gr>F<gr>" ;
+    cor:databaseReverseTypeRaw "Letters around center line with groups of pellets in angles; within plain circle" ;
+    cor:databaseMaterialRaw "AE" ;
+    cor:databaseDenominationRaw "Follis" ;
+    cor:databaseDiameterRaw "26" ;
+    cor:databaseAxisRaw "12" ;
+    cor:databaseBibliographicReferenceRaw "DOC IV.1, p. 430; Edwards p. 150, 171; cf. Grierson 1007; Schlum p. 497 and Sup., p. 21, pl. XIX, 24" ;
+    cor:databaseNoteRaw "Trebizond Follis, Type VI B; Reverse - inner circle (20 mm) on edge of flan; Schultz out; Card #1192" ;
+    cor:databaseExcavationContextRaw "Agora SW; excavation date 5/31/1934, #1-3; Notebook 143, p. 176" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the exact four reverse letters and whether the visible citation 'Cor. Coins 171 p. 150' should instead be parsed as Edwards p. 150, no. 171." .

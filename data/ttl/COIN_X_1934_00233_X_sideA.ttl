@@ -1,0 +1,116 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-233
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-233" ;
+    dcterms:source corid:card-COIN_X_1934_00233_X_sideA ;
+    nmo:hasStartDate "-0400"^^xsd:gYear ;
+    nmo:hasEndDate "-0146"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "12.3"^^xsd:decimal ;
+    nmo:hasWeight "2.01"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-233-obverse ;
+    nmo:hasReverse corid:coin-1934-233-reverse ;
+    nmo:hasFindspot corid:place-agora-se-pottery-deposit-1934-1 ;
+    nmo:hasCollection corid:study-collection .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se-pottery-deposit-1934-1
+    skos:prefLabel "Agora Southeast, Pottery Deposit 1934-1"@en .
+
+corid:coin-1934-233-obverse
+    a nmo:Obverse ;
+    nmo:hasLegend "Ϙ" ;
+    dcterms:description "Pegasus flying left, with koppa beneath"@en ;
+    nmo:hasControlmark corid:controlmark-1934-233-obverse .
+
+corid:controlmark-1934-233-obverse
+    skos:prefLabel "Possible M"@en .
+
+corid:coin-1934-233-reverse
+    a nmo:Reverse ;
+    nmo:hasLegend "N" ;
+    dcterms:description "Trident, with Nike to the left"@en ;
+    nmo:hasControlmark corid:controlmark-1934-233-reverse .
+
+corid:controlmark-1934-233-reverse
+    skos:prefLabel "Nike to left; letter N"@en .
+
+corid:card-COIN_X_1934_00233_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00233_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-233 ;
+    cor:sourceImageFilename "COIN_X_1934_00233_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-233" ;
+    cor:inventoryNumber "1934-233" ;
+    cor:classificationRaw "Gr." ;
+    cor:classificationNormalized "Greek" ;
+    cor:mintRaw "Corinth" ;
+    cor:dateRaw "400-146 BC" ;
+    cor:materialRaw "AE" ;
+    cor:diameterRaw "12.3" ;
+    cor:databaseDiameterRaw "12.5" ;
+    cor:weightRaw "2.01" ;
+    cor:obverseLegendRaw "Ϙ beneath" ;
+    cor:obverseTypeRaw "Pegasos flying l.; beneath Ϙ" ;
+    cor:obverseAdditionalMarkRaw "(M?)" ;
+    cor:reverseLegendRaw "N" ;
+    cor:reverseTypeRaw "Trident; to l. Nike - N" ;
+    cor:databaseReverseTypeRaw "Trident; Nike to left" ;
+    cor:databaseSymbolRaw "Letters and Nike" ;
+    cor:findspotRaw "Agora SE; Pottery Deposit 1934-1" ;
+    cor:potteryDepositReference "Pottery Deposit 1934-1" ;
+    cor:excavationDateRaw "III/19/1934" ;
+    cor:excavationDate "1934-03-19"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "NB 139 p. 113 (3-5)" ;
+        cor:notebookNumber 139 ;
+        cor:notebookPage 113 ;
+        cor:notebookPageRaw "113" ;
+        cor:notebookEntryOrRange "3-5" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:archivalAnnotationRaw "orig. on card #92 w/ 1934-232 + one other" ;
+    cor:earlierCardNumber "92" ;
+    cor:relatedInventoryNumber "1934-232" ;
+    cor:studyCollectionRaw "Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the possible obverse mark M, whether the reverse notation means Nike plus the letter N, and the card diameter 12.3 mm versus the database value 12.5 mm." ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "obverseAdditionalMarkRaw" ;
+        cor:rawValue "(M?)" ;
+        cor:proposedValue "M" ;
+        cor:reason "The card itself marks this reading with a question mark."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "reverseTypeRaw" ;
+        cor:rawValue "Trident; to l. Nike - N" ;
+        cor:proposedValue "Trident; Nike to left; letter N" ;
+        cor:reason "The punctuation and relationship between Nike and N are not completely explicit."
+    ] ;
+    cor:uncertainReading [
+        a cor:UncertainReading ;
+        cor:field "diameter" ;
+        cor:rawValue "12.3" ;
+        cor:proposedValue "12.5" ;
+        cor:reason "The visible card reads 12.3 mm, while the linked database gives 12.5 mm."
+    ] .

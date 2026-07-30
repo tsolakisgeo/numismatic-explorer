@@ -1,0 +1,93 @@
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix nm: <http://nomisma.org/id/> .
+@prefix cor: <https://example.org/corinth/ontology/> .
+@prefix corid: <https://example.org/corinth/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+corid:coin-1934-236
+    a nmo:NumismaticObject ;
+    dcterms:identifier "1934-236" ;
+    dcterms:source corid:card-COIN_X_1934_00236_X_sideA ;
+    nmo:hasAuthority corid:authority-hadrian ;
+    nmo:hasStartDate "0117"^^xsd:gYear ;
+    nmo:hasEndDate "0138"^^xsd:gYear ;
+    nmo:hasMint corid:mint-corinth ;
+    nmo:hasMaterial nm:ae ;
+    nmo:hasDiameter "24"^^xsd:decimal ;
+    nmo:hasWeight "9.4"^^xsd:decimal ;
+    nmo:hasObverse corid:coin-1934-236-obverse ;
+    nmo:hasReverse corid:coin-1934-236-reverse ;
+    nmo:hasFindspot corid:place-agora-se ;
+    nmo:hasCollection corid:study-collection ;
+    dcterms:bibliographicCitation "NCP-C, XXVII" .
+
+corid:authority-hadrian
+    a nmo:Authority ;
+    skos:prefLabel "Hadrian"@en .
+
+corid:mint-corinth
+    a nmo:Mint ;
+    skos:prefLabel "Corinth"@en .
+
+corid:study-collection
+    a dcterms:Collection ;
+    skos:prefLabel "Study Collection"@en .
+
+corid:place-agora-se
+    skos:prefLabel "Agora Southeast"@en .
+
+corid:coin-1934-236-obverse
+    a nmo:Obverse ;
+    dcterms:description "Laureate head of Hadrian"@en .
+
+corid:coin-1934-236-reverse
+    a nmo:Reverse ;
+    dcterms:description "Bellerophon, with shield on his left arm, striding right and seizing Pegasus by the bridle"@en .
+
+corid:card-COIN_X_1934_00236_X_sideA
+    a cor:InventoryCard ;
+    dcterms:identifier "COIN_X_1934_00236_X_sideA" ;
+    cor:documentsNumismaticObject corid:coin-1934-236 ;
+    cor:sourceImageFilename "COIN_X_1934_00236_X_sideA.jpg" ;
+    cor:transcriptionMethod "vision analysis from inventory-card image" ;
+    cor:cardSide "A" ;
+    cor:inventoryNumberRaw "1934-236" ;
+    cor:inventoryNumber "1934-236" ;
+    cor:earlierInventoryNumberRaw "[crossed out: ?-1416a]" ;
+    cor:classificationRaw "Corinth. Hadrian" ;
+    cor:authorityRaw "Hadrian" ;
+    cor:dateRaw "117-138 A.D." ;
+    cor:mintRaw "Corinth" ;
+    cor:materialRaw "Æ" ;
+    cor:diameterRaw "24" ;
+    cor:physicalDescriptionRaw "very thick" ;
+    cor:weightRaw "Wt. 9.4 gr." ;
+    cor:obverseLegendRaw "no inscription" ;
+    cor:obverseTypeRaw "Head laureate" ;
+    cor:crossedOutAttributionRaw "AVR NERO ... forgery?" ;
+    cor:reverseLegendRaw "(- no inscription)" ;
+    cor:reverseTypeRaw "Bellerophon with shield on l. arm striding r. and seizing Pegasus by bridle" ;
+    cor:conditionOrStyleNoteRaw "On tip of flan and r. leg of B. much too long." ;
+    cor:bibliographicReferenceRaw "NCP-C, XXVII" ;
+    cor:crossedOutBibliographicReference "cf. B.M.C. pl. XVIII 2" ;
+    cor:crossedOutBibliographicReference "Cor. Coins no. 61" ;
+    cor:databaseBibliographicCitation "NCP C-CCVII" ;
+    cor:findspotRaw "Agora SE" ;
+    cor:excavationDateRaw "3/22/1934" ;
+    cor:excavationDate "1934-03-22"^^xsd:date ;
+    cor:notebookReference [
+        a cor:ExcavationNotebookReference ;
+        cor:notebookReferenceRaw "O. Broneer p. 125 (14-21), corrected to 15-21" ;
+        cor:notebookName "O. Broneer" ;
+        cor:notebookPage 125 ;
+        cor:notebookPageRaw "125" ;
+        cor:notebookEntryOrRange "15-21" ;
+        cor:notebookEntryOrRangeRaw "14-21, corrected to 15-21" ;
+        cor:notebookIdentificationMethod "explicit_on_card"
+    ] ;
+    cor:databaseNotebookNumber 139 ;
+    cor:studyCollectionRaw "coin in Study Collection" ;
+    cor:requiresHumanReview true ;
+    cor:humanConfirmationNote "Confirm the crossed-out earlier number, the crossed-out attribution ending 'forgery?', the phrase 'On tip of flan', and the card citation NCP-C, XXVII versus the database citation NCP C-CCVII." .
